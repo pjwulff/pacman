@@ -1,0 +1,112 @@
+{
+    "image": "data/square-board.png",
+    "start": "4",
+    "nodes": {
+        "0": {
+            "x": 36,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "right": "1"
+            }
+        },
+        "1": {
+            "x": 60,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "0",
+                "right": "2"
+            }
+        },
+        "2": {
+            "x": 84,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "1",
+                "right": "3"
+            }
+        },
+        "3": {
+            "x": 108,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "2",
+                "right": "4"
+            }
+        },
+        "4": {
+            "x": 132,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "3",
+                "right": "5"
+            }
+        },
+        "5": {
+            "x": 156,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "4",
+                "right": "6"
+            }
+        },
+        "6": {
+            "x": 180,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "5",
+                "right": "7"
+            }
+        },
+        "7": {
+            "x": 204,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "6",
+                "right": "8"
+            }
+        },
+        "8": {
+            "x": 228,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "7",
+                "right": "9"
+            }
+        },
+        "9": {
+            "x": 252,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "8",
+                "right": "10"
+            }
+        },
+        "10": {
+            "x": 276,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "9",
+                "right": "11"
+            }
+        },
+        "11": {
+            "x": 300,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "10"
+            }
+        }
+    }
+}
