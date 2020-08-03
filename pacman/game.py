@@ -13,6 +13,7 @@ class Game:
         self.game_loop()
 
     def game_loop(self):
+        clock = pygame.time.Clock()
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -21,7 +22,11 @@ class Game:
             self.avatar.erase(self.screen)
             for dot in dots:
                 dot.erase(self.screen)
-            self.avatar.draw(self.screen)
+
+            self.avatar.update()
+
             for dot in dots:
                 dot.draw(self.screen)
+            self.avatar.draw(self.screen)
             pygame.display.flip()
+            clock.tick(60)
