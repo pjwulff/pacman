@@ -25,8 +25,8 @@ class Game:
 
             self.avatar.update()
 
-            self.avatar.draw(self.screen)
             for dot in dots:
                 dot.draw(self.screen)
+            self.avatar.draw(self.screen)
             pygame.display.flip()
             clock.tick(60)

@@ -107,6 +107,112 @@
             "neighbours": {
                 "left": "10"
             }
+        },
+        "12": {
+            "x": 372,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "right": "13"
+            }
+        },
+        "13": {
+            "x": 396,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "12",
+                "right": "14"
+            }
+        },
+        "14": {
+            "x": 420,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "13",
+                "right": "15"
+            }
+        },
+        "15": {
+            "x": 444,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "14",
+                "right": "16"
+            }
+        },
+        "16": {
+            "x": 468,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "15",
+                "right": "17"
+            }
+        },
+        "17": {
+            "x": 492,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "16",
+                "right": "18"
+            }
+        },
+        "18": {
+            "x": 516,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "17",
+                "right": "19"
+            }
+        },
+        "19": {
+            "x": 540,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "18",
+                "right": "20"
+            }
+        },
+        "20": {
+            "x": 564,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "19",
+                "right": "21"
+            }
+        },
+        "21": {
+            "x": 588,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "20",
+                "right": "22"
+            }
+        },
+        "22": {
+            "x": 612,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "21",
+                "right": "23"
+            }
+        },
+        "23": {
+            "x": 636,
+            "y": 108,
+            "contents": "dot",
+            "neighbours": {
+                "left": "22"
+            }
         }
     }
 }
