@@ -1,3 +1,5 @@
+import math
+
 class Node:
     def __init__(self, x, y):
         self.x_ = x
@@ -13,5 +15,13 @@ class Node:
     def set_neighbour(self, direction, neighbour):
         self.neighbours[direction] = neighbour
 
-    def get_neighbour(self, direction):
-        return self.neighbours[direction]
+    def neighbour(self, direction):
+        if direction in self.neighbours:
+            return self.neighbours[direction]
+        else:
+            return None
+
+    def distance(self, other):
+        dx = (other.x() - self.x()) ** 2
+        dy = (other.y() - self.y()) ** 2
+        return math.sqrt(dx + dy)

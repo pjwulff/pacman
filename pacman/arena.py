@@ -26,7 +26,7 @@ class Arena:
         for node_id in self.arena_data['nodes']:
             node = self.arena_data['nodes'][node_id]
             for direction in node['neighbours']:
-                neighbour = node['neighbours'][direction]
+                neighbour = self.nodes_[node['neighbours'][direction]]
                 self.nodes_[node_id].set_neighbour(direction, neighbour)
 
     def draw(self, screen, rect = None):
@@ -34,7 +34,7 @@ class Arena:
             screen.fill((0, 0, 0))
             screen.blit(self.image, self.screen_rect)
         else:
-            screen.blit(self.image, self.screen_rect, rect)
+            screen.blit(self.image, rect, rect)
 
     def start_pos(self):
         return self.nodes_[self.arena_data['start']]
