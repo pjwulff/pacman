@@ -12,12 +12,26 @@ class Avatar(Sprite):
         self._calculate_position()
         Sprite.__init__(self, arena, self.x_, self.y_, "data/avatar.png")
 
+    def _in_portal(self):
+        if self.from_pos.portal(self.direction) is not None:
+            return True
+        return False
+
     def _calculate_position(self):
         from_x = self.from_pos.x()
         from_y = self.from_pos.y()
 
         to_x = self.to_pos.x()
         to_y = self.to_pos.y()
+        if self._in_portal():
+            if self.direction == "left":
+                to_x -= self.arena.rect().width
+            elif self.direction == "right":
+                to_x += self.arena.rect().width
+            elif self.direction == "up":
+                to_y -= self.arena.rect().height
+            elif self.direction == "down":
+                to_y += self.arena.rect().height
         self.x_ = from_x + (to_x - from_x) * self.trans_pos
         self.y_ = from_y + (to_y - from_y) * self.trans_pos
 
@@ -58,13 +72,12 @@ class Avatar(Sprite):
             return "up"
 
     def update(self):
-        print(self.position())
         if self.arrived:
             self.direction = self._new_direction()
             if self.direction is not None:
                 self.to_pos = self.from_pos.neighbour(self.direction)
                 distance = self.to_pos.distance(self.from_pos)
-                self.speed = (120.0/60.0) / distance
+                self.speed = (180.0/60.0) / distance
                 self.arrived = False
             else:
                 self.speed = 0.0

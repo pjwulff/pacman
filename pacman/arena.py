@@ -18,7 +18,7 @@ class Arena:
             node = self.arena_data['nodes'][node_id]
             x = node['x']
             y = node['y']
-            new_node = Node(x, y)
+            new_node = Node(self, x, y)
             self.nodes_[node_id] = new_node
             if node['contents'] == "dot":
                 self.dots_ += [Dot(self, x, y)]
@@ -28,6 +28,10 @@ class Arena:
             for direction in node['neighbours']:
                 neighbour = self.nodes_[node['neighbours'][direction]]
                 self.nodes_[node_id].set_neighbour(direction, neighbour)
+            if 'portals' in node:
+                for direction in node['portals']:
+                    portal = self.nodes_[node['portals'][direction]]
+                    self.nodes_[node_id].set_portal(direction, portal)
 
     def draw(self, screen, rect = None):
         if rect is None:
@@ -41,3 +45,6 @@ class Arena:
 
     def dots(self):
         return self.dots_
+
+    def rect(self):
+        return self.screen_rect
