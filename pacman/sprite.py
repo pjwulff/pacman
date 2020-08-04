@@ -1,25 +1,28 @@
 import pygame
 
 class Sprite:
-    def __init__(self, arena, x, y, image):
-        self.arena = arena
-        self.x_ = x
-        self.y_ = y
-        self.image = pygame.image.load(image).convert()
-        self.rect_ = self.image.get_rect()
+    def __init__(self, arena, x, y, name):
+        self._name = name
+        self._arena = arena
+        self._x = x
+        self._y = y
+        self._image = pygame.image.load(f"data/{name}.png").convert()
+        self._rect = self._image.get_rect()
 
     def erase(self, screen):
-        self.arena.draw(screen, self.rect())
+        self._arena.draw(screen, self.rect())
 
     def draw(self, screen):
-        screen.blit(self.image, self.rect())
+        screen.blit(self._image, self.rect())
 
     def position(self):
-        return (self.x_, self.y_)
+        return (self._x, self._y)
 
     def rect(self):
         (x, y) = self.position()
-        x -= self.rect_.width/2
-        y -= self.rect_.height/2
-        r = self.rect_.move(x, y)
-        return r
+        x -= self._rect.width/2
+        y -= self._rect.height/2
+        return self._rect.move(x, y)
+
+    def name(self):
+        return self._name

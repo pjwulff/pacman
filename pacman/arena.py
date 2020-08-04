@@ -2,6 +2,8 @@ import json
 import pygame
 from .dot import *
 from .node import *
+from .power import *
+from .blinky import Blinky
 
 class Arena:
     def __init__(self):
@@ -10,18 +12,27 @@ class Arena:
         self.image = pygame.image.load(self.arena_data['image']).convert()
         self.screen_rect = self.image.get_rect()
         self.create_nodes()
+        self.create_ghosts()
 
     def create_nodes(self):
         self.nodes_ = {}
         self.dots_ = []
+        self.powers_ = []
         for node_id in self.arena_data['nodes']:
             node = self.arena_data['nodes'][node_id]
             x = node['x']
             y = node['y']
             new_node = Node(self, x, y)
+            if 'contents' in node:
+                if node['contents'] == "dot":
+                    dot = Dot(self, x, y)
+                    self.dots_ += [dot]
+                    new_node.set_contents(dot)
+                elif node['contents'] == "power":
+                    power = Power(self, x, y)
+                    self.powers_ += [power]
+                    new_node.set_contents(power)
             self.nodes_[node_id] = new_node
-            if node['contents'] == "dot":
-                self.dots_ += [Dot(self, x, y)]
 
         for node_id in self.arena_data['nodes']:
             node = self.arena_data['nodes'][node_id]
@@ -33,6 +44,12 @@ class Arena:
                     portal = self.nodes_[node['portals'][direction]]
                     self.nodes_[node_id].set_portal(direction, portal)
 
+    def create_ghosts(self):
+        self._ghosts = {"blinky": Blinky(self)}
+
+    def ghosts(self):
+        return self._ghosts
+
     def draw(self, screen, rect = None):
         if rect is None:
             screen.fill((0, 0, 0))
@@ -40,11 +57,24 @@ class Arena:
         else:
             screen.blit(self.image, rect, rect)
 
-    def start_pos(self):
-        return self.nodes_[self.arena_data['start']]
+    def eat(self, contents):
+        if contents.name() is "dot":
+            self.dots_.remove(contents)
+        elif contents.name() is "power":
+            self.powers_.remove(contents)
+
+    def scatter_target(self, name):
+        return self.arena_data['scatter-target'][name]
+
+    def start_pos(self, name):
+        pos = self.arena_data['start'][name]
+        return (self.nodes_[pos[0]], self.nodes_[pos[1]])
 
     def dots(self):
         return self.dots_
+
+    def powers(self):
+        return self.powers_
 
     def rect(self):
         return self.screen_rect

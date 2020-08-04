@@ -1,6 +1,15 @@
 {
     "image": "data/square-board.png",
-    "start": "4",
+    "scatter-target": {
+        "blinky": [612, 132],
+        "pinky": [60, 132],
+        "inky": [612, 756],
+        "clyde": [60, 756]
+    },
+    "start": {
+        "avatar": ["224", "225"],
+        "blinky": ["113", "114"]
+    },
     "nodes": {
         "0": {
             "x": 36,
@@ -279,7 +288,7 @@
         "30": {
             "x": 36,
             "y": 156,
-            "contents": "dot",
+            "contents": "power",
             "neighbours": {
                 "up": "24",
                 "down": "36"
@@ -324,7 +333,7 @@
         "35": {
             "x": 636,
             "y": 156,
-            "contents": "dot",
+            "contents": "power",
             "neighbours": {
                 "up": "29",
                 "down": "41"
@@ -936,7 +945,6 @@
         "101": {
             "x": 300,
             "y": 300,
-            "contents": "dot",
             "neighbours": {
                 "up": "89",
                 "down": "105"
@@ -945,7 +953,6 @@
         "102": {
             "x": 372,
             "y": 300,
-            "contents": "dot",
             "neighbours": {
                 "up": "90",
                 "down": "106"
@@ -973,7 +980,6 @@
         "105": {
             "x": 300,
             "y": 324,
-            "contents": "dot",
             "neighbours": {
                 "up": "101",
                 "down": "112"
@@ -982,7 +988,6 @@
         "106": {
             "x": 372,
             "y": 324,
-            "contents": "dot",
             "neighbours": {
                 "up": "102",
                 "down": "115"
@@ -1010,7 +1015,6 @@
         "109": {
             "x": 228,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "right": "110",
                 "down": "121"
@@ -1019,7 +1023,6 @@
         "110": {
             "x": 252,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "109",
                 "right": "111"
@@ -1028,7 +1031,6 @@
         "111": {
             "x": 276,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "110",
                 "right": "112"
@@ -1037,7 +1039,6 @@
         "112": {
             "x": 300,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "111",
                 "right": "113",
@@ -1047,7 +1048,6 @@
         "113": {
             "x": 324,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "112",
                 "right": "114"
@@ -1056,7 +1056,6 @@
         "114": {
             "x": 348,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "113",
                 "right": "115"
@@ -1065,7 +1064,6 @@
         "115": {
             "x": 372,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "114",
                 "right": "116",
@@ -1075,7 +1073,6 @@
         "116": {
             "x": 396,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "115",
                 "right": "117"
@@ -1084,7 +1081,6 @@
         "117": {
             "x": 420,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "116",
                 "right": "118"
@@ -1093,7 +1089,6 @@
         "118": {
             "x": 444,
             "y": 348,
-            "contents": "dot",
             "neighbours": {
                 "left": "117",
                 "down": "122"
@@ -1121,7 +1116,6 @@
         "121": {
             "x": 228,
             "y": 372,
-            "contents": "dot",
             "neighbours": {
                 "up": "109",
                 "down": "125"
@@ -1130,7 +1124,6 @@
         "122": {
             "x": 444,
             "y": 372,
-            "contents": "dot",
             "neighbours": {
                 "up": "118",
                 "down": "126"
@@ -1158,7 +1151,6 @@
         "125": {
             "x": 228,
             "y": 396,
-            "contents": "dot",
             "neighbours": {
                 "up": "121",
                 "down": "137"
@@ -1167,7 +1159,6 @@
         "126": {
             "x": 444,
             "y": 396,
-            "contents": "dot",
             "neighbours": {
                 "up": "122",
                 "down": "138"
@@ -1186,7 +1177,6 @@
         "128": {
             "x": 12,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "right": "129",
                 "left": "147"
@@ -1198,7 +1188,6 @@
         "129": {
             "x": 36,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "128",
                 "right": "130"
@@ -1207,7 +1196,6 @@
         "130": {
             "x": 60,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "129",
                 "right": "131"
@@ -1216,7 +1204,6 @@
         "131": {
             "x": 84,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "130",
                 "right": "132"
@@ -1225,7 +1212,6 @@
         "132": {
             "x": 108,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "131",
                 "right": "133"
@@ -1234,7 +1220,6 @@
         "133": {
             "x": 132,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "132",
                 "right": "134"
@@ -1254,7 +1239,6 @@
         "135": {
             "x": 180,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "134",
                 "right": "136"
@@ -1263,7 +1247,6 @@
         "136": {
             "x": 204,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "135",
                 "right": "137"
@@ -1272,7 +1255,6 @@
         "137": {
             "x": 228,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "136",
                 "up": "125",
@@ -1282,7 +1264,6 @@
         "138": {
             "x": 444,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "up": "126",
                 "right": "139",
@@ -1292,7 +1273,6 @@
         "139": {
             "x": 468,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "138",
                 "right": "140"
@@ -1301,7 +1281,6 @@
         "140": {
             "x": 492,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "139",
                 "right": "141"
@@ -1321,7 +1300,6 @@
         "142": {
             "x": 540,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "141",
                 "right": "143"
@@ -1330,7 +1308,6 @@
         "143": {
             "x": 564,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "142",
                 "right": "144"
@@ -1339,7 +1316,6 @@
         "144": {
             "x": 588,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "143",
                 "right": "145"
@@ -1348,7 +1324,6 @@
         "145": {
             "x": 612,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "144",
                 "right": "146"
@@ -1357,7 +1332,6 @@
         "146": {
             "x": 636,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "145",
                 "right": "147"
@@ -1366,7 +1340,6 @@
         "147": {
             "x": 660,
             "y": 420,
-            "contents": "dot",
             "neighbours": {
                 "left": "146",
                 "right": "128"
@@ -1388,7 +1361,6 @@
         "149": {
             "x": 228,
             "y": 444,
-            "contents": "dot",
             "neighbours": {
                 "up": "137",
                 "down": "153"
@@ -1397,7 +1369,6 @@
         "150": {
             "x": 444,
             "y": 444,
-            "contents": "dot",
             "neighbours": {
                 "up": "138",
                 "down": "154"
@@ -1425,7 +1396,6 @@
         "153": {
             "x": 228,
             "y": 468,
-            "contents": "dot",
             "neighbours": {
                 "up": "149",
                 "down": "157"
@@ -1434,7 +1404,6 @@
         "154": {
             "x": 444,
             "y": 468,
-            "contents": "dot",
             "neighbours": {
                 "up": "150",
                 "down": "166"
@@ -1462,7 +1431,6 @@
         "157": {
             "x": 228,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "up": "153",
                 "right": "158",
@@ -1472,7 +1440,6 @@
         "158": {
             "x": 252,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "157",
                 "right": "159"
@@ -1481,7 +1448,6 @@
         "159": {
             "x": 276,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "158",
                 "right": "160"
@@ -1490,7 +1456,6 @@
         "160": {
             "x": 300,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "159",
                 "right": "161"
@@ -1499,7 +1464,6 @@
         "161": {
             "x": 324,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "160",
                 "right": "162"
@@ -1508,7 +1472,6 @@
         "162": {
             "x": 348,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "161",
                 "right": "163"
@@ -1517,7 +1480,6 @@
         "163": {
             "x": 372,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "162",
                 "right": "164"
@@ -1526,7 +1488,6 @@
         "164": {
             "x": 396,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "163",
                 "right": "165"
@@ -1535,7 +1496,6 @@
         "165": {
             "x": 420,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "164",
                 "right": "166"
@@ -1544,7 +1504,6 @@
         "166": {
             "x": 444,
             "y": 492,
-            "contents": "dot",
             "neighbours": {
                 "left": "165",
                 "up": "154",
@@ -1573,7 +1532,6 @@
         "169": {
             "x": 228,
             "y": 516,
-            "contents": "dot",
             "neighbours": {
                 "up": "157",
                 "down": "173"
@@ -1582,7 +1540,6 @@
         "170": {
             "x": 444,
             "y": 516,
-            "contents": "dot",
             "neighbours": {
                 "up": "166",
                 "down": "174"
@@ -1610,7 +1567,6 @@
         "173": {
             "x": 228,
             "y": 540,
-            "contents": "dot",
             "neighbours": {
                 "up": "169",
                 "down": "184"
@@ -1619,7 +1575,6 @@
         "174": {
             "x": 444,
             "y": 540,
-            "contents": "dot",
             "neighbours": {
                 "up": "170",
                 "down": "193"
@@ -1971,7 +1926,7 @@
         "214": {
             "x": 36,
             "y": 636,
-            "contents": "dot",
+            "contents": "power",
             "neighbours": {
                 "right": "215",
                 "up": "208"
@@ -2064,7 +2019,6 @@
         "224": {
             "x": 324,
             "y": 636,
-            "contents": "dot",
             "neighbours": {
                 "left": "223",
                 "right": "225"
@@ -2073,7 +2027,6 @@
         "225": {
             "x": 348,
             "y": 636,
-            "contents": "dot",
             "neighbours": {
                 "left": "224",
                 "right": "226"
@@ -2166,7 +2119,7 @@
         "235": {
             "x": 636,
             "y": 636,
-            "contents": "dot",
+            "contents": "power",
             "neighbours": {
                 "left": "234",
                 "up": "213"

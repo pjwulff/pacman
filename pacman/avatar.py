@@ -1,98 +1,52 @@
 import pygame
-from .sprite import Sprite
+from .moving_sprite import MovingSprite
 
-class Avatar(Sprite):
+class Avatar(MovingSprite):
     def __init__(self, arena):
-        self.from_pos = arena.start_pos()
-        self.to_pos = arena.start_pos()
-        self.trans_pos = 0.0
-        self.speed = 0.0/60.0
-        self.direction = None
-        self.arrived = True
-        self._calculate_position()
-        Sprite.__init__(self, arena, self.x_, self.y_, "data/avatar.png")
-
-    def _in_portal(self):
-        if self.from_pos.portal(self.direction) is not None:
-            return True
-        return False
-
-    def _calculate_position(self):
-        from_x = self.from_pos.x()
-        from_y = self.from_pos.y()
-
-        to_x = self.to_pos.x()
-        to_y = self.to_pos.y()
-        if self._in_portal():
-            if self.direction == "left":
-                to_x -= self.arena.rect().width
-            elif self.direction == "right":
-                to_x += self.arena.rect().width
-            elif self.direction == "up":
-                to_y -= self.arena.rect().height
-            elif self.direction == "down":
-                to_y += self.arena.rect().height
-        self.x_ = from_x + (to_x - from_x) * self.trans_pos
-        self.y_ = from_y + (to_y - from_y) * self.trans_pos
+        MovingSprite.__init__(self, arena, "avatar")
 
     def _new_direction(self):
         keys_pressed = pygame.key.get_pressed()
-        if keys_pressed[pygame.K_LEFT] and self.from_pos.neighbour("left") is not None:
+        if keys_pressed[pygame.K_LEFT] and self._from_pos.neighbour("left") is not None:
             return "left"
-        elif keys_pressed[pygame.K_RIGHT] and self.from_pos.neighbour("right") is not None:
+        elif keys_pressed[pygame.K_RIGHT] and self._from_pos.neighbour("right") is not None:
             return "right"
-        elif keys_pressed[pygame.K_UP] and self.from_pos.neighbour("up") is not None:
+        elif keys_pressed[pygame.K_UP] and self._from_pos.neighbour("up") is not None:
             return "up"
-        elif keys_pressed[pygame.K_DOWN] and self.from_pos.neighbour("down") is not None:
+        elif keys_pressed[pygame.K_DOWN] and self._from_pos.neighbour("down") is not None:
             return "down"
-        if self.from_pos.neighbour(self.direction) is not None:
-            return self.direction
+        if self._from_pos.neighbour(self._direction) is not None:
+            return self._direction
         else:
             return None
 
     def _turn_around(self):
         keys_pressed = pygame.key.get_pressed()
-        if self.direction == "left" and keys_pressed[pygame.K_RIGHT]:
+        if self._direction == "left" and keys_pressed[pygame.K_RIGHT]:
             return True
-        if self.direction == "right" and keys_pressed[pygame.K_LEFT]:
+        if self._direction == "right" and keys_pressed[pygame.K_LEFT]:
             return True
-        if self.direction == "up" and keys_pressed[pygame.K_DOWN]:
+        if self._direction == "up" and keys_pressed[pygame.K_DOWN]:
             return True
-        if self.direction == "down" and keys_pressed[pygame.K_UP]:
+        if self._direction == "down" and keys_pressed[pygame.K_UP]:
             return True
+        return False
 
-    def _flip_direction(self):
-        if self.direction == "left":
-            return "right"
-        if self.direction == "right":
-            return "left"
-        if self.direction == "up":
-            return "down"
-        if self.direction == "down":
-            return "up"
+    def _eat(self):
+        contents = self._from_pos.contents()
+        if contents is not None:
+            self._from_pos.set_contents(None)
+            self._arena.eat(contents)
 
-    def update(self):
-        if self.arrived:
-            self.direction = self._new_direction()
-            if self.direction is not None:
-                self.to_pos = self.from_pos.neighbour(self.direction)
-                distance = self.to_pos.distance(self.from_pos)
-                self.speed = (180.0/60.0) / distance
-                self.arrived = False
-            else:
-                self.speed = 0.0
-        else:
-            if self._turn_around():
-                temp = self.from_pos
-                self.from_pos = self.to_pos
-                self.to_pos = temp
-                self.direction = self._flip_direction()
-                self.trans_pos = 1.0 - self.trans_pos
-            self.trans_pos += self.speed
-            self._calculate_position()
-            if self.trans_pos < 0.0:
-                self.trans_pos = 0.0
-            if self.trans_pos >= 1.0:
-                self.trans_pos = 0.0
-                self.from_pos = self.to_pos
-                self.arrived = True
+    def _pick_initial_direction(self):
+        self._direction = self._new_direction()
+        if self._direction is not None:
+            self._start = False
+            if self._from_pos.neighbour(self._direction) != self._to_pos:
+                temp = self._from_pos
+                self._from_pos = self._to_pos
+                self._to_pos = temp
+            self._calculate_speed()
+
+    def _update_arrived(self):
+        self._eat()
