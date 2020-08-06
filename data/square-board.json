@@ -10,7 +10,8 @@
         "avatar": ["224", "225"],
         "blinky": ["113", "114"],
         "pinky": ["prison-2/3", "prison-2/4"],
-        "inky": ["prison-2/1", "prison-2/2"]
+        "inky": ["prison-2/1", "prison-2/2"],
+        "clyde": ["prison-2/5", "prison-2/6"]
     },
     "nodes": {
         "0": {
@@ -2765,7 +2766,7 @@
             "x": 372,
             "y": 396,
             "neighbours": {
-                "right": "prison-1/6"
+                "left": "prison-1/4"
             }
         },
         "prison-1/6": {

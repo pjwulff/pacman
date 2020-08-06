@@ -6,6 +6,7 @@ from .power import *
 from .blinky import Blinky
 from .pinky import Pinky
 from .inky import Inky
+from .clyde import Clyde
 
 class Arena:
     def __init__(self):
@@ -50,7 +51,8 @@ class Arena:
         self._ghosts = {
             "blinky": Blinky(self),
             "pinky": Pinky(self),
-            "iinky": Inky(self),
+            "inky": Inky(self),
+            "clyde": Clyde(self),
         }
 
     def ghosts(self):

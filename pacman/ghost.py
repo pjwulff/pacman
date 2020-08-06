@@ -8,7 +8,7 @@ class Ghost(MovingSprite):
         self._scatter_target = self._arena.scatter_target(name)
         self._target = None
         self._reverse = True
-        self._speed_scale = 0.95
+        self._speed_scale = 1.0
 
     def set_mode(self, mode):
         if self._mode == "chase" and mode != "chase":
@@ -60,7 +60,7 @@ class Ghost(MovingSprite):
             self._reverse = False
         else:
             flipped = self._flip_direction()
-            if flipped in valid_directions:
+            if flipped in valid_directions and len(valid_directions) > 1:
                 valid_directions.remove(self._flip_direction())
 
         if self._mode == "frightened":
