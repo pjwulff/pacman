@@ -1,4 +1,4 @@
-import pygame
+import pygame, random
 from .moving_sprite import MovingSprite
 
 class Ghost(MovingSprite):
@@ -16,6 +16,7 @@ class Ghost(MovingSprite):
         if self._mode == "scatter" and mode != "scatter":
             self._reverse = True
         self._mode = mode
+        print(mode)
 
     def target(self, avatar, ghosts):
         return None
@@ -55,12 +56,18 @@ class Ghost(MovingSprite):
             valid_directions += ["up"]
         if self._from_pos.neighbour("down") is not None:
             valid_directions += ["down"]
-        valid_directions.remove(self._flip_direction())
-        best_direction = valid_directions[0]
-        best_distance = self._distance(best_direction, target)
-        for direction in valid_directions[1:]:
-            dist = self._distance(direction, target)
-            if dist < best_distance:
-                best_distance = dist
-                best_direction = direction
-        return best_direction
+        if self._reverse:
+            self._reverse = False
+        else:
+            valid_directions.remove(self._flip_direction())
+        if self._mode == "frightened":
+            return random.choice(valid_directions)
+        else:
+            best_direction = valid_directions[0]
+            best_distance = self._distance(best_direction, target)
+            for direction in valid_directions[1:]:
+                dist = self._distance(direction, target)
+                if dist < best_distance:
+                    best_distance = dist
+                    best_direction = direction
+            return best_direction
