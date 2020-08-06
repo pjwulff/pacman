@@ -4,6 +4,7 @@ from .dot import *
 from .node import *
 from .power import *
 from .blinky import Blinky
+from .pinky import Pinky
 
 class Arena:
     def __init__(self):
@@ -45,7 +46,10 @@ class Arena:
                     self.nodes_[node_id].set_portal(direction, portal)
 
     def create_ghosts(self):
-        self._ghosts = {"blinky": Blinky(self)}
+        self._ghosts = {
+            "blinky": Blinky(self),
+            "pinky": Pinky(self),
+        }
 
     def ghosts(self):
         return self._ghosts

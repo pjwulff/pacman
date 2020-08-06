@@ -13,6 +13,12 @@ class MovingSprite(Sprite):
         self._speed_scale = 1.0
         Sprite.__init__(self, arena, self._x, self._y, name)
 
+    def from_pos(self):
+        return self._from_pos
+
+    def to_pos(self):
+        return self._to_pos
+
     def _in_portal(self):
         if self._from_pos.portal(self._direction) is not None:
             return True
