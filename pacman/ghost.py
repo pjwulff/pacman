@@ -74,3 +74,6 @@ class Ghost(MovingSprite):
                     best_distance = dist
                     best_direction = direction
             return best_direction
+
+    def check_hit(self, avatar):
+        pass

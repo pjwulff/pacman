@@ -3,86 +3,70 @@ import pygame
 from .dot import *
 from .node import *
 from .power import *
-from .blinky import Blinky
-from .pinky import Pinky
-from .inky import Inky
-from .clyde import Clyde
 
 class Arena:
     def __init__(self):
         with open("data/square-board.json") as f:
-            self.arena_data = json.load(f)
-        self.image = pygame.image.load(self.arena_data['image']).convert()
-        self.screen_rect = self.image.get_rect()
-        self.create_nodes()
-        self.create_ghosts()
+            self._arena_data = json.load(f)
+        self._image = pygame.image.load(self._arena_data['image']).convert()
+        self._screen_rect = self._image.get_rect()
+        self._create_nodes()
 
-    def create_nodes(self):
-        self.nodes_ = {}
-        self.dots_ = []
-        self.powers_ = []
-        for node_id in self.arena_data['nodes']:
-            node = self.arena_data['nodes'][node_id]
+    def _create_nodes(self):
+        self._nodes = {}
+        self._dots = []
+        self._powers = []
+        for node_id in self._arena_data['nodes']:
+            node = self._arena_data['nodes'][node_id]
             x = node['x']
             y = node['y']
             new_node = Node(self, x, y)
             if 'contents' in node:
                 if node['contents'] == "dot":
                     dot = Dot(self, x, y)
-                    self.dots_ += [dot]
+                    self._dots += [dot]
                     new_node.set_contents(dot)
                 elif node['contents'] == "power":
                     power = Power(self, x, y)
-                    self.powers_ += [power]
+                    self._powers += [power]
                     new_node.set_contents(power)
-            self.nodes_[node_id] = new_node
+            self._nodes[node_id] = new_node
 
-        for node_id in self.arena_data['nodes']:
-            node = self.arena_data['nodes'][node_id]
+        for node_id in self._arena_data['nodes']:
+            node = self._arena_data['nodes'][node_id]
             for direction in node['neighbours']:
-                neighbour = self.nodes_[node['neighbours'][direction]]
-                self.nodes_[node_id].set_neighbour(direction, neighbour)
+                neighbour = self._nodes[node['neighbours'][direction]]
+                self._nodes[node_id].set_neighbour(direction, neighbour)
             if 'portals' in node:
                 for direction in node['portals']:
-                    portal = self.nodes_[node['portals'][direction]]
-                    self.nodes_[node_id].set_portal(direction, portal)
-
-    def create_ghosts(self):
-        self._ghosts = {
-            "blinky": Blinky(self),
-            "pinky": Pinky(self),
-            "inky": Inky(self),
-            "clyde": Clyde(self),
-        }
-
-    def ghosts(self):
-        return self._ghosts
+                    portal = self._nodes[node['portals'][direction]]
+                    self._nodes[node_id].set_portal(direction, portal)
 
     def draw(self, screen, rect = None):
         if rect is None:
             screen.fill((0, 0, 0))
-            screen.blit(self.image, self.screen_rect)
+            screen.blit(self._image, self._screen_rect)
         else:
-            screen.blit(self.image, rect, rect)
+            screen.blit(self._image, rect, rect)
 
     def eat(self, contents):
         if contents.name() is "dot":
-            self.dots_.remove(contents)
+            self._dots.remove(contents)
         elif contents.name() is "power":
-            self.powers_.remove(contents)
+            self._powers.remove(contents)
 
     def scatter_target(self, name):
-        return self.arena_data['scatter-target'][name]
+        return self._arena_data['scatter-target'][name]
 
     def start_pos(self, name):
-        pos = self.arena_data['start'][name]
-        return (self.nodes_[pos[0]], self.nodes_[pos[1]])
+        pos = self._arena_data['start'][name]
+        return (self._nodes[pos[0]], self._nodes[pos[1]])
 
     def dots(self):
-        return self.dots_
+        return self._dots
 
     def powers(self):
-        return self.powers_
+        return self._powers
 
     def rect(self):
-        return self.screen_rect
+        return self._screen_rect
