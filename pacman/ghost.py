@@ -9,6 +9,13 @@ class Ghost(MovingSprite):
         self._target = None
         self._reverse = True
         self._speed_scale = 1.0
+        self._scared_image = pygame.image.load("data/scared-ghost.png").convert()
+
+    def draw(self, screen):
+        if self._mode == "frighten":
+            screen.blit(self._scared_image, self.rect())
+        else:
+            MovingSprite.draw(self, screen)
 
     def set_mode(self, mode):
         if self._mode == "chase" and mode != "chase":
@@ -60,7 +67,7 @@ class Ghost(MovingSprite):
             if flipped in valid_directions and len(valid_directions) > 1:
                 valid_directions.remove(self._flip_direction())
 
-        if self._mode == "frightened":
+        if self._mode == "frighten":
             return random.choice(valid_directions)
         else:
             best_direction = valid_directions[0]

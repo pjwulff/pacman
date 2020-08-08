@@ -25,6 +25,7 @@ class GameState:
         self._frighten_duration = 7000
         self._current_ghost_behaviour = "scatter"
         self._ghost_behaviour_duration = self._scatter_duration
+        self._power_state = False
 
     def arena(self):
         return self._arena
@@ -52,6 +53,7 @@ class GameState:
             self._ghosts[ghost].update(self._avatar, self._ghosts)
 
         self._eat_dots()
+        self._eat_powers()
 
     def draw(self, screen):
         for dot in self._dots:
@@ -68,6 +70,19 @@ class GameState:
             if dot.collide(self._avatar):
                 # self._eat_dot(dot)
                 self._dots.remove(dot)
+
+    def _eat_powers(self):
+        for power in self._powers:
+            if power.collide(self._avatar):
+                self._eat_power()
+                self._powers.remove(power)
+
+    def _eat_power(self):
+        self._power_state = True
+        self._ghost_behaviour_start_time = pygame.time.get_ticks()
+        self._ghost_behaviour_duration = self._frighten_duration
+        for ghost in self._ghosts:
+            self._ghosts[ghost].set_mode("frighten")
 
     def _update_ghost_behaviour(self):
         current_time = pygame.time.get_ticks()
