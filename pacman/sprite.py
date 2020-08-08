@@ -24,5 +24,8 @@ class Sprite:
         y -= self._rect.height/2
         return self._rect.move(x, y)
 
+    def collide(self, other):
+        return self.rect().colliderect(other.rect())
+
     def name(self):
         return self._name

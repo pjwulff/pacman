@@ -60,7 +60,6 @@ class MovingSprite(Sprite):
         if self._start:
             self._pick_initial_direction()
         if self._arrived:
-            self._update_arrived()
             self._direction = self._new_direction()
             if self._direction is not None:
                 self._to_pos = self._from_pos.neighbour(self._direction)

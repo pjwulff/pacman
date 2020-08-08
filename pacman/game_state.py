@@ -50,7 +50,8 @@ class GameState:
         self._avatar.update()
         for ghost in self._ghosts:
             self._ghosts[ghost].update(self._avatar, self._ghosts)
-            self._ghosts[ghost].check_hit(self._avatar)
+
+        self._eat_dots()
 
     def draw(self, screen):
         for dot in self._dots:
@@ -61,6 +62,12 @@ class GameState:
             self._ghosts[ghost].draw(screen)
         self._avatar.draw(screen)
         pygame.display.flip()
+
+    def _eat_dots(self):
+        for dot in self._dots:
+            if dot.collide(self._avatar):
+                # self._eat_dot(dot)
+                self._dots.remove(dot)
 
     def _update_ghost_behaviour(self):
         current_time = pygame.time.get_ticks()

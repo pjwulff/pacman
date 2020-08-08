@@ -32,9 +32,6 @@ class Ghost(MovingSprite):
         self._target = self.target(avatar, ghosts)
         MovingSprite.update(self)
 
-    def _update_arrived(self):
-        pass
-
     def _distance(self, direction, target):
         next_tile = self._from_pos.neighbour(direction)
         dx = (next_tile.x() - target[0]) ** 2.0
@@ -74,6 +71,3 @@ class Ghost(MovingSprite):
                     best_distance = dist
                     best_direction = direction
             return best_direction
-
-    def check_hit(self, avatar):
-        pass

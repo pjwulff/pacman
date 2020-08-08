@@ -49,12 +49,6 @@ class Arena:
         else:
             screen.blit(self._image, rect, rect)
 
-    def eat(self, contents):
-        if contents.name() is "dot":
-            self._dots.remove(contents)
-        elif contents.name() is "power":
-            self._powers.remove(contents)
-
     def scatter_target(self, name):
         return self._arena_data['scatter-target'][name]
 

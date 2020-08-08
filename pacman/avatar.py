@@ -32,12 +32,6 @@ class Avatar(MovingSprite):
             return True
         return False
 
-    def _eat(self):
-        contents = self._from_pos.contents()
-        if contents is not None:
-            self._from_pos.set_contents(None)
-            self._arena.eat(contents)
-
     def _pick_initial_direction(self):
         self._direction = self._new_direction()
         if self._direction is not None:
@@ -47,6 +41,3 @@ class Avatar(MovingSprite):
                 self._from_pos = self._to_pos
                 self._to_pos = temp
             self._calculate_speed()
-
-    def _update_arrived(self):
-        self._eat()
