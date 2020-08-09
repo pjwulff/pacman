@@ -54,6 +54,7 @@ class GameState:
 
         self._eat_dots()
         self._eat_powers()
+        self._check_ghost_hit()
 
     def draw(self, screen):
         for dot in self._dots:
@@ -68,8 +69,11 @@ class GameState:
     def _eat_dots(self):
         for dot in self._dots:
             if dot.collide(self._avatar):
-                # self._eat_dot(dot)
+                self._eat_dot(dot)
                 self._dots.remove(dot)
+
+    def _eat_dot(self, dot):
+        pass
 
     def _eat_powers(self):
         for power in self._powers:
@@ -83,6 +87,20 @@ class GameState:
         self._ghost_behaviour_duration = self._frighten_duration
         for ghost in self._ghosts:
             self._ghosts[ghost].set_mode("frighten")
+
+    def _check_ghost_hit(self):
+        for ghost in self._ghosts:
+            if self._ghosts[ghost].collide(self._avatar):
+                if self._power_state:
+                    self._eat_ghost(ghost)
+                else:
+                    self._lose_life()
+
+    def _eat_ghost(self, ghost):
+        self._ghosts[ghost].kill()
+
+    def _lose_life(self):
+        print("Lost life!")
 
     def _update_ghost_behaviour(self):
         current_time = pygame.time.get_ticks()
@@ -98,4 +116,5 @@ class GameState:
                 self._ghost_behaviour_duration = self._scatter_duration
             for ghost in self._ghosts:
                 self._ghosts[ghost].set_mode(next_ghost_behaviour)
+            self._power_state = False
             self._ghost_behaviour_start_time = current_time

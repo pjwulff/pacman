@@ -10,6 +10,7 @@ class Ghost(MovingSprite):
         self._reverse = True
         self._speed_scale = 1.0
         self._scared_image = pygame.image.load("data/scared-ghost.png").convert()
+        self._alive = True
 
     def draw(self, screen):
         if self._mode == "frighten":
@@ -26,6 +27,9 @@ class Ghost(MovingSprite):
 
     def target(self, avatar, ghosts):
         return None
+
+    def kill(self):
+        pass
 
     def _pick_initial_direction(self):
         self._direction = "right"

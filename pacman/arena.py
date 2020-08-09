@@ -64,3 +64,6 @@ class Arena:
 
     def rect(self):
         return self._screen_rect
+
+    def ghost_return_position(self):
+        return self._arena_data['ghost-return']
