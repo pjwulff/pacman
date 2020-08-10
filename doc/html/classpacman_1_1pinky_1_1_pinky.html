@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +27,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Pacman
    </div>
-   <div id="projectbrief">A recreation of the original Pacman game in Python</div>
+   <div id="projectbrief">A recreation of the original Pacman game in Python.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classpacman_1_1pinky_1_1_pinky.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacepacman.html">pacman</a></li><li class="navelem"><a class="el" href="namespacepacman_1_1pinky.html">pinky</a></li><li class="navelem"><a class="el" href="classpacman_1_1pinky_1_1_pinky.html">Pinky</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -73,35 +89,39 @@ $(function() {
 <div class="title">pacman.pinky.Pinky Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The pink '<a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a>' ghost.  
+ <a href="classpacman_1_1pinky_1_1_pinky.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for pacman.pinky.Pinky:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1pinky_1_1_pinky__inherit__graph.png" border="0" usemap="#pacman_8pinky_8_pinky_inherit__map" alt="Inheritance graph"/></div>
 <map name="pacman_8pinky_8_pinky_inherit__map" id="pacman_8pinky_8_pinky_inherit__map">
-<area shape="rect" title=" " alt="" coords="41,244,192,271"/>
+<area shape="rect" title="The pink &#39;Pinky&#39; ghost." alt="" coords="41,244,192,271"/>
 <area shape="rect" href="classpacman_1_1ghost_1_1_ghost.html" title="Base class for all Ghost types." alt="" coords="39,169,195,196"/>
 <area shape="rect" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html" title="Base class for all sprites which move during gameplay." alt="" coords="5,80,228,121"/>
 <area shape="rect" href="classpacman_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="38,5,195,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for pacman.pinky.Pinky:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1pinky_1_1_pinky__coll__graph.png" border="0" usemap="#pacman_8pinky_8_pinky_coll__map" alt="Collaboration graph"/></div>
 <map name="pacman_8pinky_8_pinky_coll__map" id="pacman_8pinky_8_pinky_coll__map">
-<area shape="rect" title=" " alt="" coords="41,244,192,271"/>
+<area shape="rect" title="The pink &#39;Pinky&#39; ghost." alt="" coords="41,244,192,271"/>
 <area shape="rect" href="classpacman_1_1ghost_1_1_ghost.html" title="Base class for all Ghost types." alt="" coords="39,169,195,196"/>
 <area shape="rect" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html" title="Base class for all sprites which move during gameplay." alt="" coords="5,80,228,121"/>
 <area shape="rect" href="classpacman_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="38,5,195,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab23ec1118880f999b532105e046e988f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1pinky_1_1_pinky.html#ab23ec1118880f999b532105e046e988f">__init__</a> (self, arena)</td></tr>
+<tr class="memdesc:ab23ec1118880f999b532105e046e988f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> ghost.  <a href="classpacman_1_1pinky_1_1_pinky.html#ab23ec1118880f999b532105e046e988f">More...</a><br /></td></tr>
 <tr class="separator:ab23ec1118880f999b532105e046e988f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5366dadb6778dc7d44feac9a4a056878"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1pinky_1_1_pinky.html#a5366dadb6778dc7d44feac9a4a056878">target</a> (self, avatar, ghosts)</td></tr>
-<tr class="memdesc:a5366dadb6778dc7d44feac9a4a056878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the target for this ghost.  <a href="classpacman_1_1pinky_1_1_pinky.html#a5366dadb6778dc7d44feac9a4a056878">More...</a><br /></td></tr>
+<tr class="memdesc:a5366dadb6778dc7d44feac9a4a056878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the target for this <a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> ghost.  <a href="classpacman_1_1pinky_1_1_pinky.html#a5366dadb6778dc7d44feac9a4a056878">More...</a><br /></td></tr>
 <tr class="separator:a5366dadb6778dc7d44feac9a4a056878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classpacman_1_1ghost_1_1_ghost"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classpacman_1_1ghost_1_1_ghost')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classpacman_1_1ghost_1_1_ghost.html">pacman.ghost.Ghost</a></td></tr>
 <tr class="memitem:a37278ff7383025a6042f2aa4a6496a6c inherit pub_methods_classpacman_1_1ghost_1_1_ghost"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1ghost_1_1_ghost.html#a37278ff7383025a6042f2aa4a6496a6c">__init__</a> (self, arena, <a class="el" href="classpacman_1_1sprite_1_1_sprite.html#aa9b433f270def74afae70bc9849b19c7">name</a>)</td></tr>
@@ -148,14 +168,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9b433f270def74afae70bc9849b19c7 inherit pub_methods_classpacman_1_1sprite_1_1_sprite"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1sprite_1_1_sprite.html#aa9b433f270def74afae70bc9849b19c7">name</a> (self)</td></tr>
 <tr class="memdesc:aa9b433f270def74afae70bc9849b19c7 inherit pub_methods_classpacman_1_1sprite_1_1_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of this sprite.  <a href="classpacman_1_1sprite_1_1_sprite.html#aa9b433f270def74afae70bc9849b19c7">More...</a><br /></td></tr>
 <tr class="separator:aa9b433f270def74afae70bc9849b19c7 inherit pub_methods_classpacman_1_1sprite_1_1_sprite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_classpacman_1_1moving__sprite_1_1_moving_sprite"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classpacman_1_1moving__sprite_1_1_moving_sprite')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html">pacman.moving_sprite.MovingSprite</a></td></tr>
-<tr class="memitem:aebdbbe7ddb5275c0b2871c3171bcedf8 inherit pub_attribs_classpacman_1_1moving__sprite_1_1_moving_sprite"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#aebdbbe7ddb5275c0b2871c3171bcedf8">direction</a></td></tr>
-<tr class="separator:aebdbbe7ddb5275c0b2871c3171bcedf8 inherit pub_attribs_classpacman_1_1moving__sprite_1_1_moving_sprite"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The pink '<a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a>' ghost. </p>
+
+<p class="definition">Definition at line <a class="el" href="pinky_8py_source.html#l00004">4</a> of file <a class="el" href="pinky_8py_source.html">pinky.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab23ec1118880f999b532105e046e988f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab23ec1118880f999b532105e046e988f">&#9670;&nbsp;</a></span>__init__()</h2>
 
@@ -181,6 +199,16 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create a new <a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> ghost. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arena</td><td>The arena to which this <a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> belongs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pinky_8py_source.html#l00006">6</a> of file <a class="el" href="pinky_8py_source.html">pinky.py</a>.</p>
 
 </div>
 </div>
@@ -217,8 +245,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the target for this ghost. </p>
-<p>Must be overridden by subclasses.</p>
+<p>Get the target for this <a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> ghost. </p>
+<p><a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> will directly target the avatar as Blinky does, but will instead take into account the direction in which the avatar is moving and target four tiles ahead of the avatar's position.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">avatar</td><td>The avatar object in the same arena. </td></tr>
@@ -226,21 +254,27 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The coordinates to where this ghost should head in chase mode. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The coordinates of the <a class="el" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost.">Pinky</a> ghost in chase mode. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classpacman_1_1ghost_1_1_ghost.html#a80f8b6c905e1c4516b5be94092128219">pacman.ghost.Ghost</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="pinky_8py_source.html#l00012">12</a> of file <a class="el" href="pinky_8py_source.html">pinky.py</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>pacman/<a class="el" href="pinky_8py.html">pinky.py</a></li>
+<li>pacman/<a class="el" href="pinky_8py_source.html">pinky.py</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacepacman.html">pacman</a></li><li class="navelem"><a class="el" href="namespacepacman_1_1pinky.html">pinky</a></li><li class="navelem"><a class="el" href="classpacman_1_1pinky_1_1_pinky.html">Pinky</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

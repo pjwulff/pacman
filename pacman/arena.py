@@ -30,11 +30,9 @@ class Arena:
                 if node['contents'] == "dot":
                     dot = Dot(self, x, y)
                     self._dots += [dot]
-                    new_node.set_contents(dot)
                 elif node['contents'] == "power":
                     power = Power(self, x, y)
                     self._powers += [power]
-                    new_node.set_contents(power)
             self._nodes[node_id] = new_node
 
         for node_id in self._arena_data['nodes']:
@@ -92,3 +90,6 @@ class Arena:
 
         @returns The return position for the ghosts."""
         return self._arena_data['ghost-return']
+
+    def rect(self):
+        return self._screen_rect

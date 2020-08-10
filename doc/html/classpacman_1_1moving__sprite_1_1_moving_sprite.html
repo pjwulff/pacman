@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +27,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Pacman
    </div>
-   <div id="projectbrief">A recreation of the original Pacman game in Python</div>
+   <div id="projectbrief">A recreation of the original Pacman game in Python.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classpacman_1_1moving__sprite_1_1_moving_sprite.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,15 +81,9 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacepacman.html">pacman</a></li><li class="navelem"><a class="el" href="namespacepacman_1_1moving__sprite.html">moving_sprite</a></li><li class="navelem"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html">MovingSprite</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classpacman_1_1moving__sprite_1_1_moving_sprite-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">pacman.moving_sprite.MovingSprite Class Reference</div>  </div>
@@ -89,9 +104,9 @@ Inheritance diagram for pacman.moving_sprite.MovingSprite:</div>
 <area shape="rect" href="classpacman_1_1blinky_1_1_blinky.html" title="The red &#39;Blinky&#39; ghost." alt="" coords="5,244,164,271"/>
 <area shape="rect" href="classpacman_1_1clyde_1_1_clyde.html" title="The orange &#39;Clyde&#39; ghost." alt="" coords="189,244,343,271"/>
 <area shape="rect" href="classpacman_1_1inky_1_1_inky.html" title="The cyan &#39;Inky&#39; ghost." alt="" coords="368,244,503,271"/>
-<area shape="rect" href="classpacman_1_1pinky_1_1_pinky.html" title=" " alt="" coords="527,244,677,271"/>
+<area shape="rect" href="classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost." alt="" coords="527,244,677,271"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for pacman.moving_sprite.MovingSprite:</div>
 <div class="dyncontent">
@@ -100,7 +115,7 @@ Collaboration diagram for pacman.moving_sprite.MovingSprite:</div>
 <area shape="rect" title="Base class for all sprites which move during gameplay." alt="" coords="5,80,228,121"/>
 <area shape="rect" href="classpacman_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="38,5,195,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,14 +153,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9b433f270def74afae70bc9849b19c7 inherit pub_methods_classpacman_1_1sprite_1_1_sprite"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1sprite_1_1_sprite.html#aa9b433f270def74afae70bc9849b19c7">name</a> (self)</td></tr>
 <tr class="memdesc:aa9b433f270def74afae70bc9849b19c7 inherit pub_methods_classpacman_1_1sprite_1_1_sprite"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of this sprite.  <a href="classpacman_1_1sprite_1_1_sprite.html#aa9b433f270def74afae70bc9849b19c7">More...</a><br /></td></tr>
 <tr class="separator:aa9b433f270def74afae70bc9849b19c7 inherit pub_methods_classpacman_1_1sprite_1_1_sprite"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aebdbbe7ddb5275c0b2871c3171bcedf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#aebdbbe7ddb5275c0b2871c3171bcedf8">direction</a></td></tr>
-<tr class="separator:aebdbbe7ddb5275c0b2871c3171bcedf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for all sprites which move during gameplay. </p>
+
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00004">4</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af4dd21cdba64ca4c8e0feefe76b0ef05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4dd21cdba64ca4c8e0feefe76b0ef05">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -189,6 +201,8 @@ Public Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classpacman_1_1ghost_1_1_ghost.html#a37278ff7383025a6042f2aa4a6496a6c">pacman.ghost.Ghost</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00006">6</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -222,6 +236,8 @@ Here is the call graph for this function:</div>
 <p>This method returns the vertex this sprite was moving from.</p>
 <dl class="section return"><dt>Returns</dt><dd>The node in the graph this sprite is moving from. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00021">21</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
+
 </div>
 </div>
 <a id="a4d82259503ca84931f5f1cd6c7944563"></a>
@@ -243,13 +259,17 @@ Here is the call graph for this function:</div>
 <p>Moving sprites move between vertices in the graph. </p>
 <p>This method returns the vertex this sprite is moving towards.</p>
 <dl class="section return"><dt>Returns</dt><dd>The node in the graph this sprite is moving to. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00028">28</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563_cgraph.png" border="0" usemap="#classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563_cgraph" alt=""/></div>
 <map name="classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563_cgraph" id="classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563_cgraph">
-<area shape="rect" title="Moving sprites move between vertices in the graph." alt="" coords="5,5,228,47"/>
+<area shape="rect" title="Moving sprites move between vertices in the graph." alt="" coords="5,35,228,76"/>
 <area shape="rect" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#a0f088399c440b399dbea3bfa2584cd2c" title=" " alt="" coords="276,5,499,47"/>
+<area shape="rect" href="classpacman_1_1sprite_1_1_sprite.html#a60a4e5614a8155f6e16d53c931715ed3" title="Get the rect object describing this sprite." alt="" coords="294,71,481,98"/>
+<area shape="rect" href="classpacman_1_1sprite_1_1_sprite.html#a5f4f303c713a3792e458cdec5faeaaa1" title="Get the coordinates of this sprite." alt="" coords="547,71,760,98"/>
 </map>
 </div>
 
@@ -273,6 +293,8 @@ Here is the call graph for this function:</div>
 
 <p>Update this sprite over the span of time of one frame. </p>
 <p>This moves the sprite between two vertices in the graph. When it reaches a vertex it calls the protected _new_direction method to pick a new direction. This method must be overridden by subclasses. </p>
+
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00072">72</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -293,30 +315,19 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aebdbbe7ddb5275c0b2871c3171bcedf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebdbbe7ddb5275c0b2871c3171bcedf8">&#9670;&nbsp;</a></span>direction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pacman.moving_sprite.MovingSprite.direction</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>pacman/<a class="el" href="moving__sprite_8py.html">moving_sprite.py</a></li>
+<li>pacman/<a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacepacman.html">pacman</a></li><li class="navelem"><a class="el" href="namespacepacman_1_1moving__sprite.html">moving_sprite</a></li><li class="navelem"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html">MovingSprite</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

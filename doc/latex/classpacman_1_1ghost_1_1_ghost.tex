@@ -17,8 +17,7 @@ Inheritance diagram for pacman.\+ghost.\+Ghost\+:
 \end{figure}
 
 
-Collaboration diagram for pacman.\+ghost.\+Ghost\+:
-\nopagebreak
+Collaboration diagram for pacman.\+ghost.\+Ghost\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,13 +39,16 @@ def \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_ab293ff1817040418d39646ad5f5
 \begin{DoxyCompactList}\small\item\em Called when this ghost is touched by the avatar while a power pill is active. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a68c13af76a3129d523d0338a271a2635}{update}} (self, avatar, ghosts)
 \begin{DoxyCompactList}\small\item\em Move this ghost over the span of time of one frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Base class for all \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost}{Ghost}} types. 
 
 Handles duties common to all ghosts, including moving around the maze. This class expects the \textquotesingle{}target\textquotesingle{} method to be overridden by subclasses to find where the ghost should head during \textquotesingle{}chase\textquotesingle{} mode. 
+
+Definition at line 4 of file ghost.\+py.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a37278ff7383025a6042f2aa4a6496a6c}\label{classpacman_1_1ghost_1_1_ghost_a37278ff7383025a6042f2aa4a6496a6c}} 
@@ -72,6 +74,10 @@ Reimplemented from \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_spr
 
 
 
+Definition at line 9 of file ghost.\+py.
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_ade87ac85f8eaa1a9562db75cb4940c54}\label{classpacman_1_1ghost_1_1_ghost_ade87ac85f8eaa1a9562db75cb4940c54}} 
 \index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!draw@{draw}}
@@ -94,6 +100,10 @@ The ghost\textquotesingle{}s appearance will change when it is frightened.
 
 Reimplemented from \mbox{\hyperlink{classpacman_1_1sprite_1_1_sprite_a525951a3d59e43273eeb59350a10df61}{pacman.\+sprite.\+Sprite}}.
 
+
+
+Definition at line 24 of file ghost.\+py.
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -112,7 +122,11 @@ Here is the call graph for this function\+:
 
 Called when this ghost is touched by the avatar while a power pill is active. 
 
-This \textquotesingle{}kills\textquotesingle{} the ghost and causes it to return to the ghost prison in the centre of the maze. \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}\label{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}} 
+This \textquotesingle{}kills\textquotesingle{} the ghost and causes it to return to the ghost prison in the centre of the maze. 
+
+Definition at line 57 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}\label{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}} 
 \index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!set\_mode@{set\_mode}}
 \index{set\_mode@{set\_mode}!pacman.ghost.Ghost@{pacman.ghost.Ghost}}
 \doxysubsubsection{\texorpdfstring{set\_mode()}{set\_mode()}}
@@ -129,6 +143,10 @@ In the game ghosts will normally alternate between \textquotesingle{}scatter\tex
 {\em mode} & The movement mode this ghost should take on. Can be either \textquotesingle{}scatter\textquotesingle{}, \textquotesingle{}chase\textquotesingle{} or \textquotesingle{}frighten\textquotesingle{}. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 34 of file ghost.\+py.
+
 \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a80f8b6c905e1c4516b5be94092128219}\label{classpacman_1_1ghost_1_1_ghost_a80f8b6c905e1c4516b5be94092128219}} 
 \index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!target@{target}}
 \index{target@{target}!pacman.ghost.Ghost@{pacman.ghost.Ghost}}
@@ -155,8 +173,11 @@ The coordinates to where this ghost should head in chase mode.
 
 Reimplemented in \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky_a5366dadb6778dc7d44feac9a4a056878}{pacman.\+pinky.\+Pinky}}, \mbox{\hyperlink{classpacman_1_1inky_1_1_inky_a742f1f26abfc1f6e2ef0849ca94a6d8e}{pacman.\+inky.\+Inky}}, \mbox{\hyperlink{classpacman_1_1clyde_1_1_clyde_aaaa1951e23fae4bd3fc9317260961725}{pacman.\+clyde.\+Clyde}}, and \mbox{\hyperlink{classpacman_1_1blinky_1_1_blinky_a4edec7836b39e9edafc8c3b2979b9d2b}{pacman.\+blinky.\+Blinky}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Definition at line 49 of file ghost.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,8 +201,11 @@ Move this ghost over the span of time of one frame.
 {\em ghosts} & A dictionary of the ghosts in the same arena. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Definition at line 71 of file ghost.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

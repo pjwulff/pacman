@@ -10,7 +10,7 @@ The \mbox{\hyperlink{classpacman_1_1arena_1_1_arena}{Arena}} class is responsibl
 \item 
 def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_a09fcd504040758891d71ce2e39b3483d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
 \begin{DoxyCompactList}\small\item\em Constructs an \mbox{\hyperlink{classpacman_1_1arena_1_1_arena}{Arena}} object. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_a5615759eb0235171e5751124351db13b}{draw}} (self, screen, rect=None)
+def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_a5615759eb0235171e5751124351db13b}{draw}} (self, screen, \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_a3c90c9c135f6cf3963c4df596c7993c6}{rect}}=None)
 \begin{DoxyCompactList}\small\item\em Draws the entire arena background to the screen, or optionally just a section of it. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_abf30f23399c262f0e9a61786a642ecd8}{scatter\+\_\+target}} (self, name)
 \begin{DoxyCompactList}\small\item\em Extracts the \textquotesingle{}scatter-\/target\textquotesingle{} information from the maze J\+S\+ON file. \end{DoxyCompactList}\item 
@@ -21,13 +21,19 @@ def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_ad6bc24782257919f94b1a818fc9
 def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_a2cc7e23e76e60200d42e59885a9d5f20}{powers}} (self)
 \begin{DoxyCompactList}\small\item\em Get all the power pills in the arena. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_abb13f30732f39536810ea9a5bed13c24}{ghost\+\_\+return\+\_\+position}} (self)
-\begin{DoxyCompactList}\small\item\em Get the return position for the ghosts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the return position for the ghosts. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1arena_1_1_arena_a3c90c9c135f6cf3963c4df596c7993c6}{rect}} (self)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The \mbox{\hyperlink{classpacman_1_1arena_1_1_arena}{Arena}} class is responsible for loading mazes from J\+S\+ON files. 
 
 It also spawns the dots and power pills contained in the maze. This class extracts information from the J\+S\+ON maze file and makes it available to other objects. 
+
+Definition at line 7 of file arena.\+py.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_a09fcd504040758891d71ce2e39b3483d}\label{classpacman_1_1arena_1_1_arena_a09fcd504040758891d71ce2e39b3483d}} 
@@ -39,6 +45,10 @@ It also spawns the dots and power pills contained in the maze. This class extrac
 
 
 Constructs an \mbox{\hyperlink{classpacman_1_1arena_1_1_arena}{Arena}} object. 
+
+
+
+Definition at line 12 of file arena.\+py.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -63,6 +73,10 @@ Get all the dots in the arena.
 \begin{DoxyReturn}{Returns}
 A list of all the dots in the arena. 
 \end{DoxyReturn}
+
+
+Definition at line 76 of file arena.\+py.
+
 \mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_a5615759eb0235171e5751124351db13b}\label{classpacman_1_1arena_1_1_arena_a5615759eb0235171e5751124351db13b}} 
 \index{pacman.arena.Arena@{pacman.arena.Arena}!draw@{draw}}
 \index{draw@{draw}!pacman.arena.Arena@{pacman.arena.Arena}}
@@ -82,6 +96,10 @@ This is used to erase a sprite.
 {\em rect} & An optional Rect object to specify which part of the \mbox{\hyperlink{classpacman_1_1arena_1_1_arena}{Arena}} to drawn. If not given, this method draws the entire arena. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 48 of file arena.\+py.
+
 \mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_abb13f30732f39536810ea9a5bed13c24}\label{classpacman_1_1arena_1_1_arena_abb13f30732f39536810ea9a5bed13c24}} 
 \index{pacman.arena.Arena@{pacman.arena.Arena}!ghost\_return\_position@{ghost\_return\_position}}
 \index{ghost\_return\_position@{ghost\_return\_position}!pacman.arena.Arena@{pacman.arena.Arena}}
@@ -95,6 +113,10 @@ Get the return position for the ghosts.
 \begin{DoxyReturn}{Returns}
 The return position for the ghosts. 
 \end{DoxyReturn}
+
+
+Definition at line 88 of file arena.\+py.
+
 \mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_a2cc7e23e76e60200d42e59885a9d5f20}\label{classpacman_1_1arena_1_1_arena_a2cc7e23e76e60200d42e59885a9d5f20}} 
 \index{pacman.arena.Arena@{pacman.arena.Arena}!powers@{powers}}
 \index{powers@{powers}!pacman.arena.Arena@{pacman.arena.Arena}}
@@ -108,6 +130,28 @@ Get all the power pills in the arena.
 \begin{DoxyReturn}{Returns}
 A list of all the power pills in the arena. 
 \end{DoxyReturn}
+
+
+Definition at line 82 of file arena.\+py.
+
+\mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_a3c90c9c135f6cf3963c4df596c7993c6}\label{classpacman_1_1arena_1_1_arena_a3c90c9c135f6cf3963c4df596c7993c6}} 
+\index{pacman.arena.Arena@{pacman.arena.Arena}!rect@{rect}}
+\index{rect@{rect}!pacman.arena.Arena@{pacman.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}}
+{\footnotesize\ttfamily def pacman.\+arena.\+Arena.\+rect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file arena.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1arena_1_1_arena_a3c90c9c135f6cf3963c4df596c7993c6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_abf30f23399c262f0e9a61786a642ecd8}\label{classpacman_1_1arena_1_1_arena_abf30f23399c262f0e9a61786a642ecd8}} 
 \index{pacman.arena.Arena@{pacman.arena.Arena}!scatter\_target@{scatter\_target}}
 \index{scatter\_target@{scatter\_target}!pacman.arena.Arena@{pacman.arena.Arena}}
@@ -126,6 +170,10 @@ Extracts the \textquotesingle{}scatter-\/target\textquotesingle{} information fr
 \begin{DoxyReturn}{Returns}
 The coordinates of the scatter target. 
 \end{DoxyReturn}
+
+
+Definition at line 61 of file arena.\+py.
+
 \mbox{\Hypertarget{classpacman_1_1arena_1_1_arena_af165bfe4b9e8b414d06e53d85f04522a}\label{classpacman_1_1arena_1_1_arena_af165bfe4b9e8b414d06e53d85f04522a}} 
 \index{pacman.arena.Arena@{pacman.arena.Arena}!start\_pos@{start\_pos}}
 \index{start\_pos@{start\_pos}!pacman.arena.Arena@{pacman.arena.Arena}}
@@ -144,6 +192,10 @@ Extracts the start position information from the maze J\+S\+ON file.
 \begin{DoxyReturn}{Returns}
 The start position of the object. 
 \end{DoxyReturn}
+
+
+Definition at line 68 of file arena.\+py.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

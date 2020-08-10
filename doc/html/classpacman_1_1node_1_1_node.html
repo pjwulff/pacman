@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +27,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Pacman
    </div>
-   <div id="projectbrief">A recreation of the original Pacman game in Python</div>
+   <div id="projectbrief">A recreation of the original Pacman game in Python.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classpacman_1_1node_1_1_node.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacepacman.html">pacman</a></li><li class="navelem"><a class="el" href="namespacepacman_1_1node.html">node</a></li><li class="navelem"><a class="el" href="classpacman_1_1node_1_1_node.html">Node</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -73,31 +89,41 @@ $(function() {
 <div class="title">pacman.node.Node Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a vertex in the direction graph of the maze.  
+ <a href="classpacman_1_1node_1_1_node.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3f457bebee92ac5320c99fdd78afe73f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#a3f457bebee92ac5320c99fdd78afe73f">__init__</a> (self, arena, <a class="el" href="classpacman_1_1node_1_1_node.html#a2d3149738b5ef274926167cd11ef532d">x</a>, <a class="el" href="classpacman_1_1node_1_1_node.html#aaf5561f7f12d6a72c57d0ea6cb184bf5">y</a>)</td></tr>
+<tr class="memdesc:a3f457bebee92ac5320c99fdd78afe73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new node in the graph.  <a href="classpacman_1_1node_1_1_node.html#a3f457bebee92ac5320c99fdd78afe73f">More...</a><br /></td></tr>
 <tr class="separator:a3f457bebee92ac5320c99fdd78afe73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d3149738b5ef274926167cd11ef532d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#a2d3149738b5ef274926167cd11ef532d">x</a> (self)</td></tr>
+<tr class="memdesc:a2d3149738b5ef274926167cd11ef532d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the x coordinate of this node.  <a href="classpacman_1_1node_1_1_node.html#a2d3149738b5ef274926167cd11ef532d">More...</a><br /></td></tr>
 <tr class="separator:a2d3149738b5ef274926167cd11ef532d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf5561f7f12d6a72c57d0ea6cb184bf5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#aaf5561f7f12d6a72c57d0ea6cb184bf5">y</a> (self)</td></tr>
+<tr class="memdesc:aaf5561f7f12d6a72c57d0ea6cb184bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y coordinate of this node.  <a href="classpacman_1_1node_1_1_node.html#aaf5561f7f12d6a72c57d0ea6cb184bf5">More...</a><br /></td></tr>
 <tr class="separator:aaf5561f7f12d6a72c57d0ea6cb184bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3608202e2a71bf43979827b8d8c300e2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#a3608202e2a71bf43979827b8d8c300e2">set_contents</a> (self, <a class="el" href="classpacman_1_1node_1_1_node.html#ac97f91e67c9885a2f9eab87d62d3ea85">contents</a>)</td></tr>
-<tr class="separator:a3608202e2a71bf43979827b8d8c300e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac97f91e67c9885a2f9eab87d62d3ea85"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#ac97f91e67c9885a2f9eab87d62d3ea85">contents</a> (self)</td></tr>
-<tr class="separator:ac97f91e67c9885a2f9eab87d62d3ea85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95fc0cc857017a5fe24f164d8daece1f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#a95fc0cc857017a5fe24f164d8daece1f">set_neighbour</a> (self, direction, <a class="el" href="classpacman_1_1node_1_1_node.html#afa2e15622d4777998f36a5268cc4a11f">neighbour</a>)</td></tr>
+<tr class="memdesc:a95fc0cc857017a5fe24f164d8daece1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets another node in the graph as a neighbour to this node.  <a href="classpacman_1_1node_1_1_node.html#a95fc0cc857017a5fe24f164d8daece1f">More...</a><br /></td></tr>
 <tr class="separator:a95fc0cc857017a5fe24f164d8daece1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776e903699941f4d6cbbaec819d5bc2e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#a776e903699941f4d6cbbaec819d5bc2e">set_portal</a> (self, direction, <a class="el" href="classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce">portal</a>)</td></tr>
+<tr class="memdesc:a776e903699941f4d6cbbaec819d5bc2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets another node as a portal destination from this node.  <a href="classpacman_1_1node_1_1_node.html#a776e903699941f4d6cbbaec819d5bc2e">More...</a><br /></td></tr>
 <tr class="separator:a776e903699941f4d6cbbaec819d5bc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa2e15622d4777998f36a5268cc4a11f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#afa2e15622d4777998f36a5268cc4a11f">neighbour</a> (self, direction)</td></tr>
+<tr class="memdesc:afa2e15622d4777998f36a5268cc4a11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the neighbouring node in a particular direction.  <a href="classpacman_1_1node_1_1_node.html#afa2e15622d4777998f36a5268cc4a11f">More...</a><br /></td></tr>
 <tr class="separator:afa2e15622d4777998f36a5268cc4a11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10b4d33b83099c3dec87a0be41eee6ce"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce">portal</a> (self, direction)</td></tr>
+<tr class="memdesc:a10b4d33b83099c3dec87a0be41eee6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the portal node in a particular direction.  <a href="classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce">More...</a><br /></td></tr>
 <tr class="separator:a10b4d33b83099c3dec87a0be41eee6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1cdbc9024b6eda19004417b6e39983d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1node_1_1_node.html#ae1cdbc9024b6eda19004417b6e39983d">distance</a> (self, other)</td></tr>
 <tr class="separator:ae1cdbc9024b6eda19004417b6e39983d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a vertex in the direction graph of the maze. </p>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00003">3</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3f457bebee92ac5320c99fdd78afe73f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f457bebee92ac5320c99fdd78afe73f">&#9670;&nbsp;</a></span>__init__()</h2>
 
@@ -136,27 +162,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a new node in the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arena</td><td>The arena to which this node belonds. </td></tr>
+    <tr><td class="paramname">x,y</td><td>The coordinates of this node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00005">5</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac97f91e67c9885a2f9eab87d62d3ea85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac97f91e67c9885a2f9eab87d62d3ea85">&#9670;&nbsp;</a></span>contents()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def pacman.node.Node.contents </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae1cdbc9024b6eda19004417b6e39983d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1cdbc9024b6eda19004417b6e39983d">&#9670;&nbsp;</a></span>distance()</h2>
 
@@ -182,16 +201,22 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">The euclidean distance between two nodes. This method takes into
+account if one node is a portal to another.
+
+@param other The other node to which the distance should be calculated.
+@returns The euclidean distance between if not connected by a portal,
+or the logical distance if they do.</pre> 
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00064">64</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1node_1_1_node_ae1cdbc9024b6eda19004417b6e39983d_cgraph.png" border="0" usemap="#classpacman_1_1node_1_1_node_ae1cdbc9024b6eda19004417b6e39983d_cgraph" alt=""/></div>
 <map name="classpacman_1_1node_1_1_node_ae1cdbc9024b6eda19004417b6e39983d_cgraph" id="classpacman_1_1node_1_1_node_ae1cdbc9024b6eda19004417b6e39983d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,212,108"/>
-<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#a3f081c311f5a2e1e405ee01613bde83a" title="Get the arena associated with this game state." alt="" coords="260,5,533,32"/>
-<area shape="rect" href="classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce" title=" " alt="" coords="301,56,492,83"/>
-<area shape="rect" href="classpacman_1_1node_1_1_node.html#a2d3149738b5ef274926167cd11ef532d" title=" " alt="" coords="317,107,477,133"/>
-<area shape="rect" href="classpacman_1_1node_1_1_node.html#aaf5561f7f12d6a72c57d0ea6cb184bf5" title=" " alt="" coords="317,157,477,184"/>
+<area shape="rect" title=" " alt="" coords="5,56,212,83"/>
+<area shape="rect" href="classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce" title="Gets the portal node in a particular direction." alt="" coords="260,5,451,32"/>
+<area shape="rect" href="classpacman_1_1node_1_1_node.html#a2d3149738b5ef274926167cd11ef532d" title="Get the x coordinate of this node." alt="" coords="275,56,435,83"/>
+<area shape="rect" href="classpacman_1_1node_1_1_node.html#aaf5561f7f12d6a72c57d0ea6cb184bf5" title="Get the y coordinate of this node." alt="" coords="275,107,435,133"/>
 </map>
 </div>
 
@@ -223,6 +248,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Get the neighbouring node in a particular direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The label used to describe the direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The node in that direction if one exists, None otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00044">44</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+
 </div>
 </div>
 <a id="a10b4d33b83099c3dec87a0be41eee6ce"></a>
@@ -250,43 +286,26 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the portal node in a particular direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The label used to describe the direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The node in that direction if one exists, None otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00054">54</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1node_1_1_node_a10b4d33b83099c3dec87a0be41eee6ce_icgraph.png" border="0" usemap="#classpacman_1_1node_1_1_node_a10b4d33b83099c3dec87a0be41eee6ce_icgraph" alt=""/></div>
 <map name="classpacman_1_1node_1_1_node_a10b4d33b83099c3dec87a0be41eee6ce_icgraph" id="classpacman_1_1node_1_1_node_a10b4d33b83099c3dec87a0be41eee6ce_icgraph">
-<area shape="rect" title=" " alt="" coords="260,5,451,32"/>
+<area shape="rect" title="Gets the portal node in a particular direction." alt="" coords="260,5,451,32"/>
 <area shape="rect" href="classpacman_1_1node_1_1_node.html#ae1cdbc9024b6eda19004417b6e39983d" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a3608202e2a71bf43979827b8d8c300e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3608202e2a71bf43979827b8d8c300e2">&#9670;&nbsp;</a></span>set_contents()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def pacman.node.Node.set_contents </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>contents</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -322,6 +341,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Sets another node in the graph as a neighbour to this node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>A label to describe how the two nodes relate. </td></tr>
+    <tr><td class="paramname">neighbour</td><td>The node which neighbours this one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00029">29</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+
 </div>
 </div>
 <a id="a776e903699941f4d6cbbaec819d5bc2e"></a>
@@ -356,6 +386,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Sets another node as a portal destination from this node. </p>
+<p>This allows the avatar to wrap around the map as in the original game.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>A label to describe how the two nodes relate. </td></tr>
+    <tr><td class="paramname">portal</td><td>The node to which this node warps. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00036">36</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+
 </div>
 </div>
 <a id="a2d3149738b5ef274926167cd11ef532d"></a>
@@ -373,12 +415,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the x coordinate of this node. </p>
+<dl class="section return"><dt>Returns</dt><dd>The x coordinate of this node. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00017">17</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1node_1_1_node_a2d3149738b5ef274926167cd11ef532d_icgraph.png" border="0" usemap="#classpacman_1_1node_1_1_node_a2d3149738b5ef274926167cd11ef532d_icgraph" alt=""/></div>
 <map name="classpacman_1_1node_1_1_node_a2d3149738b5ef274926167cd11ef532d_icgraph" id="classpacman_1_1node_1_1_node_a2d3149738b5ef274926167cd11ef532d_icgraph">
-<area shape="rect" title=" " alt="" coords="260,5,420,32"/>
+<area shape="rect" title="Get the x coordinate of this node." alt="" coords="260,5,420,32"/>
 <area shape="rect" href="classpacman_1_1node_1_1_node.html#ae1cdbc9024b6eda19004417b6e39983d" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </div>
@@ -400,12 +447,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the y coordinate of this node. </p>
+<dl class="section return"><dt>Returns</dt><dd>the y coordinate of this node. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00023">23</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1node_1_1_node_aaf5561f7f12d6a72c57d0ea6cb184bf5_icgraph.png" border="0" usemap="#classpacman_1_1node_1_1_node_aaf5561f7f12d6a72c57d0ea6cb184bf5_icgraph" alt=""/></div>
 <map name="classpacman_1_1node_1_1_node_aaf5561f7f12d6a72c57d0ea6cb184bf5_icgraph" id="classpacman_1_1node_1_1_node_aaf5561f7f12d6a72c57d0ea6cb184bf5_icgraph">
-<area shape="rect" title=" " alt="" coords="260,5,420,32"/>
+<area shape="rect" title="Get the y coordinate of this node." alt="" coords="260,5,420,32"/>
 <area shape="rect" href="classpacman_1_1node_1_1_node.html#ae1cdbc9024b6eda19004417b6e39983d" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </div>
@@ -413,14 +465,18 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>pacman/<a class="el" href="node_8py.html">node.py</a></li>
+<li>pacman/<a class="el" href="node_8py_source.html">node.py</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacepacman.html">pacman</a></li><li class="navelem"><a class="el" href="namespacepacman_1_1node.html">node</a></li><li class="navelem"><a class="el" href="classpacman_1_1node_1_1_node.html">Node</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

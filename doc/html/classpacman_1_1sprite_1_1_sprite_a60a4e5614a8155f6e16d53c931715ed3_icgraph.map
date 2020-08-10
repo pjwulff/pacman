@@ -1,7 +1,8 @@
 <map id="pacman.sprite.Sprite.rect" name="pacman.sprite.Sprite.rect">
-<area shape="rect" id="node1" title="Get the rect object describing this sprite." alt="" coords="503,81,689,108"/>
-<area shape="rect" id="node2" href="$classpacman_1_1sprite_1_1_sprite.html#a6fd78759eac035738261940b69982ab5" title="Detects if this sprite overlaps another." alt="" coords="251,5,455,32"/>
-<area shape="rect" id="node3" href="$classpacman_1_1ghost_1_1_ghost.html#ade87ac85f8eaa1a9562db75cb4940c54" title="Draw this ghost to the screen." alt="" coords="257,56,449,83"/>
-<area shape="rect" id="node4" href="$classpacman_1_1sprite_1_1_sprite.html#a525951a3d59e43273eeb59350a10df61" title="Draw this sprite to the screen." alt="" coords="256,107,449,133"/>
+<area shape="rect" id="node1" title="Get the rect object describing this sprite." alt="" coords="521,107,708,133"/>
+<area shape="rect" id="node2" href="$classpacman_1_1sprite_1_1_sprite.html#a6fd78759eac035738261940b69982ab5" title="Detects if this sprite overlaps another." alt="" coords="260,5,464,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1ghost_1_1_ghost.html#ade87ac85f8eaa1a9562db75cb4940c54" title="Draw this ghost to the screen." alt="" coords="266,56,458,83"/>
+<area shape="rect" id="node4" href="$classpacman_1_1sprite_1_1_sprite.html#a525951a3d59e43273eeb59350a10df61" title="Draw this sprite to the screen." alt="" coords="265,107,459,133"/>
 <area shape="rect" id="node5" href="$classpacman_1_1sprite_1_1_sprite.html#af4f0e4d61ef58a86666337a3d58d19fb" title="Erase this sprite from the screen, so that it can be redrawn somewhere else." alt="" coords="5,132,203,159"/>
+<area shape="rect" id="node6" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#a4d82259503ca84931f5f1cd6c7944563" title="Moving sprites move between vertices in the graph." alt="" coords="251,209,473,250"/>
 </map>

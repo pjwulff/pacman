@@ -2,6 +2,11 @@
 \label{classpacman_1_1pinky_1_1_pinky}\index{pacman.pinky.Pinky@{pacman.pinky.Pinky}}
 
 
+The pink \textquotesingle{}\mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}}\textquotesingle{} ghost.  
+
+
+
+
 Inheritance diagram for pacman.\+pinky.\+Pinky\+:
 \nopagebreak
 \begin{figure}[H]
@@ -24,10 +29,16 @@ Collaboration diagram for pacman.\+pinky.\+Pinky\+:
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky_ab23ec1118880f999b532105e046e988f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, arena)
-\item 
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} ghost. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky_a5366dadb6778dc7d44feac9a4a056878}{target}} (self, avatar, ghosts)
-\begin{DoxyCompactList}\small\item\em Get the target for this ghost. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Get the target for this \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} ghost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The pink \textquotesingle{}\mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}}\textquotesingle{} ghost. 
+
+Definition at line 4 of file pinky.\+py.
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -36,6 +47,19 @@ def \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky_a5366dadb6778dc7d44feac9a4a0
 \index{\_\_init\_\_@{\_\_init\_\_}!pacman.pinky.Pinky@{pacman.pinky.Pinky}}
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def pacman.\+pinky.\+Pinky.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{arena }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The arena to which this \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} belongs. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file pinky.\+py.
 
 
 
@@ -48,9 +72,9 @@ def \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky_a5366dadb6778dc7d44feac9a4a0
 
 
 
-Get the target for this ghost. 
+Get the target for this \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} ghost. 
 
-Must be overridden by subclasses.
+\mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} will directly target the avatar as Blinky does, but will instead take into account the direction in which the avatar is moving and target four tiles ahead of the avatar\textquotesingle{}s position.
 
 
 \begin{DoxyParams}{Parameters}
@@ -60,11 +84,15 @@ Must be overridden by subclasses.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The coordinates to where this ghost should head in chase mode. 
+The coordinates of the \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky}{Pinky}} ghost in chase mode. 
 \end{DoxyReturn}
 
 
 Reimplemented from \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a80f8b6c905e1c4516b5be94092128219}{pacman.\+ghost.\+Ghost}}.
+
+
+
+Definition at line 12 of file pinky.\+py.
 
 
 

@@ -2,11 +2,11 @@
 <area shape="rect" id="node1" title="Base class for all displayable sprites." alt="" coords="189,5,346,32"/>
 <area shape="rect" id="node2" href="$classpacman_1_1dot_1_1_dot.html" title="Represents a dot in the maze." alt="" coords="5,87,132,114"/>
 <area shape="rect" id="node3" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html" title="Base class for all sprites which move during gameplay." alt="" coords="156,80,379,121"/>
-<area shape="rect" id="node10" href="$classpacman_1_1power_1_1_power.html" title=" " alt="" coords="403,87,564,114"/>
+<area shape="rect" id="node10" href="$classpacman_1_1power_1_1_power.html" title="A power pill." alt="" coords="403,87,564,114"/>
 <area shape="rect" id="node4" href="$classpacman_1_1avatar_1_1_avatar.html" title="Represents the controllable yellow avatar in the game." alt="" coords="93,169,258,196"/>
 <area shape="rect" id="node5" href="$classpacman_1_1ghost_1_1_ghost.html" title="Base class for all Ghost types." alt="" coords="283,169,439,196"/>
 <area shape="rect" id="node6" href="$classpacman_1_1blinky_1_1_blinky.html" title="The red &#39;Blinky&#39; ghost." alt="" coords="16,244,175,271"/>
 <area shape="rect" id="node7" href="$classpacman_1_1clyde_1_1_clyde.html" title="The orange &#39;Clyde&#39; ghost." alt="" coords="199,244,354,271"/>
 <area shape="rect" id="node8" href="$classpacman_1_1inky_1_1_inky.html" title="The cyan &#39;Inky&#39; ghost." alt="" coords="379,244,513,271"/>
-<area shape="rect" id="node9" href="$classpacman_1_1pinky_1_1_pinky.html" title=" " alt="" coords="537,244,688,271"/>
+<area shape="rect" id="node9" href="$classpacman_1_1pinky_1_1_pinky.html" title="The pink &#39;Pinky&#39; ghost." alt="" coords="537,244,688,271"/>
 </map>

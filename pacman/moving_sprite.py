@@ -44,13 +44,13 @@ class MovingSprite(Sprite):
         to_x = self._to_pos.x()
         to_y = self._to_pos.y()
         if self._in_portal():
-            if self.direction == "left":
+            if self._direction == "left":
                 to_x -= self._arena.rect().width
-            elif self.direction == "right":
+            elif self._direction == "right":
                 to_x += self._arena.rect().width
-            elif self.direction == "up":
+            elif self._direction == "up":
                 to_y -= self._arena.rect().height
-            elif self.direction == "down":
+            elif self._direction == "down":
                 to_y += self._arena.rect().height
         self._x = from_x + (to_x - from_x) * self._trans_pos
         self._y = from_y + (to_y - from_y) * self._trans_pos
