@@ -1,0 +1,8 @@
+<map id="pacman.game_state.GameState.update" name="pacman.game_state.GameState.update">
+<area shape="rect" id="node1" title="Update the game state for a single frame." alt="" coords="5,143,287,170"/>
+<area shape="rect" id="node2" href="$classpacman_1_1game__state_1_1_game_state.html#ab707592b2601b0b36debc468c6acc642" title=" " alt="" coords="335,5,571,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1game__state_1_1_game_state.html#abb203a8c77dcbd7109327162da9caed6" title=" " alt="" coords="335,71,571,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1game__state_1_1_game_state.html#a252a71d65c15b6006c2cb71153886898" title=" " alt="" coords="335,136,571,177"/>
+<area shape="rect" id="node5" href="$classpacman_1_1game__state_1_1_game_state.html#a1ccd91b8ddc11d0203200db4a9dc4ab6" title=" " alt="" coords="335,201,571,243"/>
+<area shape="rect" id="node6" href="$classpacman_1_1game_1_1_game.html#add682a8a75232ef721d138258ccd47c0" title=" " alt="" coords="360,267,545,294"/>
+</map>

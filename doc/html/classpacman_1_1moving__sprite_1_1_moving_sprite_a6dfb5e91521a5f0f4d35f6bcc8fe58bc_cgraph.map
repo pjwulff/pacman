@@ -1,0 +1,12 @@
+<map id="update" name="update">
+<area shape="rect" id="node1" title=" " alt="" coords="5,231,72,257"/>
+<area shape="rect" id="node2" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#a8caa29b4c6050af2376d765826c04b7c" title=" " alt="" coords="131,5,277,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#a2c47099db86bee86546c754664c0ff42" title=" " alt="" coords="137,56,271,83"/>
+<area shape="rect" id="node4" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#ad0b091188d23fa8baabd8c77f07b2456" title=" " alt="" coords="147,107,261,133"/>
+<area shape="rect" id="node5" href="$classpacman_1_1avatar_1_1_avatar.html#a2a8af12a085c4cc3e14d64627f823508" title=" " alt="" coords="120,158,288,199"/>
+<area shape="rect" id="node6" href="$classpacman_1_1ghost_1_1_ghost.html#a2a8af12a085c4cc3e14d64627f823508" title=" " alt="" coords="124,223,284,265"/>
+<area shape="rect" id="node7" href="$classpacman_1_1avatar_1_1_avatar.html#ae74b3158c31ef037946e00ccb0ef5848" title=" " alt="" coords="120,289,288,330"/>
+<area shape="rect" id="node8" href="$classpacman_1_1ghost_1_1_ghost.html#ae74b3158c31ef037946e00ccb0ef5848" title=" " alt="" coords="122,354,286,395"/>
+<area shape="rect" id="node9" href="$classpacman_1_1avatar_1_1_avatar.html#ae0d8ddd204433e215d596e6d27233d58" title=" " alt="" coords="120,419,288,461"/>
+<area shape="rect" id="node10" href="$classpacman_1_1ghost_1_1_ghost.html#ae0d8ddd204433e215d596e6d27233d58" title=" " alt="" coords="124,485,284,526"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pacman.game.Game.win" name="pacman.game.Game.win">
+<area shape="rect" id="node1" title=" " alt="" coords="335,5,520,32"/>
+<area shape="rect" id="node2" href="$classpacman_1_1game__state_1_1_game_state.html#aabdd85cb46529f9c09d9e64f897f91e2" title="Update the game state for a single frame." alt="" coords="5,5,287,32"/>
+</map>

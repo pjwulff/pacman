@@ -1,0 +1,4 @@
+<map id="pacman.dot.Dot" name="pacman.dot.Dot">
+<area shape="rect" id="node1" title="Represents a dot in the maze." alt="" coords="21,80,147,107"/>
+<area shape="rect" id="node2" href="$classpacman_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="5,5,163,32"/>
+</map>

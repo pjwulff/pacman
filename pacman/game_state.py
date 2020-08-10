@@ -7,7 +7,10 @@ from .inky import Inky
 from .clyde import Clyde
 
 class GameState:
+    """! Represents the state of the running game. This class also handles the
+    updating of the state and drawing it to the screen."""
     def __init__(self):
+        """! Construct a new GameState object."""
         self._lives = 3
         self._score = 0
         self._arena = Arena()
@@ -28,12 +31,19 @@ class GameState:
         self._power_state = False
 
     def arena(self):
+        """! Get the arena associated with this game state.
+
+        @returns The arena object associated with this game state."""
         return self._arena
 
     def start(self):
+        """! Performs necessary duties to start a new game."""
         self._ghost_behaviour_start_time = pygame.time.get_ticks()
 
     def erase(self, screen):
+        """! Erase all sprites from the screen.
+
+        @param screen The PyGame screen to draw on."""
         self._avatar.erase(screen)
         for ghost in self._ghosts:
             self._ghosts[ghost].erase(screen)
@@ -43,6 +53,7 @@ class GameState:
             power.erase(screen)
 
     def update(self):
+        """! Update the game state for a single frame."""
         if len(self._dots) == 0:
             self.win()
             sys.exit()
@@ -57,6 +68,9 @@ class GameState:
         self._check_ghost_hit()
 
     def draw(self, screen):
+        """! Draw all sprites to the screen.
+
+        @param screen The PyGame screen to draw on."""
         for dot in self._dots:
             dot.draw(screen)
         for power in self._powers:

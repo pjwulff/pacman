@@ -1,0 +1,151 @@
+\hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite}{}\doxysection{pacman.\+moving\+\_\+sprite.\+Moving\+Sprite Class Reference}
+\label{classpacman_1_1moving__sprite_1_1_moving_sprite}\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+
+
+Base class for all sprites which move during gameplay.  
+
+
+
+
+Inheritance diagram for pacman.\+moving\+\_\+sprite.\+Moving\+Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1moving__sprite_1_1_moving_sprite__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pacman.\+moving\+\_\+sprite.\+Moving\+Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classpacman_1_1moving__sprite_1_1_moving_sprite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, arena, \mbox{\hyperlink{classpacman_1_1sprite_1_1_sprite_aa9b433f270def74afae70bc9849b19c7}{name}})
+\begin{DoxyCompactList}\small\item\em Construct a new moving sprite object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_a9814dddf060fc49f2fbf480f1a26a7af}{from\+\_\+pos}} (self)
+\begin{DoxyCompactList}\small\item\em Moving sprites move between vertices in the graph. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563}{to\+\_\+pos}} (self)
+\begin{DoxyCompactList}\small\item\em Moving sprites move between vertices in the graph. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_a1387fdb74d17097ef42d1336936025b3}{update}} (self)
+\begin{DoxyCompactList}\small\item\em Update this sprite over the span of time of one frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_aebdbbe7ddb5275c0b2871c3171bcedf8}{direction}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all sprites which move during gameplay. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05}} 
+\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman.\+moving\+\_\+sprite.\+Moving\+Sprite.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{arena,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a new moving sprite object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The arena to which this moving sprite belongs. \\
+\hline
+{\em name} & The name of this moving sprite. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a37278ff7383025a6042f2aa4a6496a6c}{pacman.\+ghost.\+Ghost}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_a9814dddf060fc49f2fbf480f1a26a7af}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_a9814dddf060fc49f2fbf480f1a26a7af}} 
+\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!from\_pos@{from\_pos}}
+\index{from\_pos@{from\_pos}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+\doxysubsubsection{\texorpdfstring{from\_pos()}{from\_pos()}}
+{\footnotesize\ttfamily def pacman.\+moving\+\_\+sprite.\+Moving\+Sprite.\+from\+\_\+pos (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Moving sprites move between vertices in the graph. 
+
+This method returns the vertex this sprite was moving from.
+
+\begin{DoxyReturn}{Returns}
+The node in the graph this sprite is moving from. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563}} 
+\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!to\_pos@{to\_pos}}
+\index{to\_pos@{to\_pos}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+\doxysubsubsection{\texorpdfstring{to\_pos()}{to\_pos()}}
+{\footnotesize\ttfamily def pacman.\+moving\+\_\+sprite.\+Moving\+Sprite.\+to\+\_\+pos (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Moving sprites move between vertices in the graph. 
+
+This method returns the vertex this sprite is moving towards.
+
+\begin{DoxyReturn}{Returns}
+The node in the graph this sprite is moving to. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_a1387fdb74d17097ef42d1336936025b3}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_a1387fdb74d17097ef42d1336936025b3}} 
+\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!update@{update}}
+\index{update@{update}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def pacman.\+moving\+\_\+sprite.\+Moving\+Sprite.\+update (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Update this sprite over the span of time of one frame. 
+
+This moves the sprite between two vertices in the graph. When it reaches a vertex it calls the protected \+\_\+new\+\_\+direction method to pick a new direction. This method must be overridden by subclasses. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1moving__sprite_1_1_moving_sprite_a1387fdb74d17097ef42d1336936025b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_aebdbbe7ddb5275c0b2871c3171bcedf8}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_aebdbbe7ddb5275c0b2871c3171bcedf8}} 
+\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!direction@{direction}}
+\index{direction@{direction}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily pacman.\+moving\+\_\+sprite.\+Moving\+Sprite.\+direction}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman/\mbox{\hyperlink{moving__sprite_8py}{moving\+\_\+sprite.\+py}}\end{DoxyCompactItemize}

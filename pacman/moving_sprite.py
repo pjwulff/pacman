@@ -2,7 +2,12 @@ import pygame
 from .sprite import Sprite
 
 class MovingSprite(Sprite):
+    """! Base class for all sprites which move during gameplay."""
     def __init__(self, arena, name):
+        """! Construct a new moving sprite object.
+
+        @param arena The arena to which this moving sprite belongs.
+        @param name The name of this moving sprite."""
         (self._from_pos, self._to_pos) = arena.start_pos(name)
         self._trans_pos = 0.5
         self._arrived = False
@@ -14,9 +19,17 @@ class MovingSprite(Sprite):
         Sprite.__init__(self, arena, self._x, self._y, name)
 
     def from_pos(self):
+        """! Moving sprites move between vertices in the graph. This method
+        returns the vertex this sprite was moving from.
+
+        @returns The node in the graph this sprite is moving from."""
         return self._from_pos
 
     def to_pos(self):
+        """! Moving sprites move between vertices in the graph. This method
+        returns the vertex this sprite is moving towards.
+
+        @returns The node in the graph this sprite is moving to."""
         return self._to_pos
 
     def _in_portal(self):
@@ -57,6 +70,10 @@ class MovingSprite(Sprite):
             return "up"
 
     def update(self):
+        """! Update this sprite over the span of time of one frame. This moves
+        the sprite between two vertices in the graph. When it reaches a vertex
+        it calls the protected _new_direction method to pick a new direction.
+        This method must be overridden by subclasses."""
         if self._start:
             self._pick_initial_direction()
         if self._arrived:

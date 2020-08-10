@@ -5,7 +5,12 @@ from .node import *
 from .power import *
 
 class Arena:
+    """! The Arena class is responsible for loading mazes from JSON files.
+    It also spawns the dots and power pills contained in the maze. This class
+    extracts information from the JSON maze file and makes it available to
+    other objects."""
     def __init__(self):
+        """! Constructs an Arena object."""
         with open("data/square-board.json") as f:
             self._arena_data = json.load(f)
         self._image = pygame.image.load(self._arena_data['image']).convert()
@@ -43,6 +48,12 @@ class Arena:
                     self._nodes[node_id].set_portal(direction, portal)
 
     def draw(self, screen, rect = None):
+        """! Draws the entire arena background to the screen, or optionally
+        just a section of it. This is used to erase a sprite.
+
+        @param screen The PyGame screen object on which to draw.
+        @param rect An optional Rect object to specify which part of the Arena
+        to drawn. If not given, this method draws the entire arena."""
         if rect is None:
             screen.fill((0, 0, 0))
             screen.blit(self._image, self._screen_rect)
@@ -50,20 +61,34 @@ class Arena:
             screen.blit(self._image, rect, rect)
 
     def scatter_target(self, name):
+        """! Extracts the 'scatter-target' information from the maze JSON file.
+
+        @param name The name of the object to which the scatter target is associated.
+        @returns The coordinates of the scatter target."""
         return self._arena_data['scatter-target'][name]
 
     def start_pos(self, name):
+        """! Extracts the start position information from the maze JSON file.
+
+        @param name The name of the object to which the start position is associated.
+        @returns The start position of the object."""
         pos = self._arena_data['start'][name]
         return (self._nodes[pos[0]], self._nodes[pos[1]])
 
     def dots(self):
+        """! Get all the dots in the arena.
+
+        @returns A list of all the dots in the arena."""
         return self._dots
 
     def powers(self):
+        """! Get all the power pills in the arena.
+
+        @returns A list of all the power pills in the arena."""
         return self._powers
 
-    def rect(self):
-        return self._screen_rect
-
     def ghost_return_position(self):
+        """! Get the return position for the ghosts.
+
+        @returns The return position for the ghosts."""
         return self._arena_data['ghost-return']

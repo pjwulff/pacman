@@ -2,7 +2,16 @@ import pygame, random
 from .moving_sprite import MovingSprite
 
 class Ghost(MovingSprite):
+    """! Base class for all Ghost types. Handles duties common to all ghosts,
+    including moving around the maze. This class expects the 'target' method
+    to be overridden by subclasses to find where the ghost should head during
+    'chase' mode."""
     def __init__(self, arena, name):
+        """! Construct a new Ghost.
+
+        @param arena The arena to which this ghost belongs.
+        @param name The name of the ghost. This is used to extract relevant information
+        from the arena object."""
         MovingSprite.__init__(self, arena, name)
         self._mode = "scatter"
         self._scatter_target = self._arena.scatter_target(name)
@@ -13,12 +22,24 @@ class Ghost(MovingSprite):
         self._alive = True
 
     def draw(self, screen):
+        """! Draw this ghost to the screen. The ghost's appearance will change
+        when it is frightened.
+
+        @param screen The PyGame screen object to which this ghost should be drawn."""
         if self._mode == "frighten":
             screen.blit(self._scared_image, self.rect())
         else:
             MovingSprite.draw(self, screen)
 
     def set_mode(self, mode):
+        """! Set the movement mode for this ghost. In the game ghosts will normally
+        alternate between 'scatter' and 'chase' mode. In scatter mode the ghosts
+        will head towards to their own corner of the maze. In chase mode they
+        will chase the avatar in their own particular way. When the avatar
+        consumes a power pill the ghosts enter 'frighten' mode and move randomly.
+
+        @param mode The movement mode this ghost should take on. Can be either
+        'scatter', 'chase' or 'frighten'."""
         if self._mode == "chase" and mode != "chase":
             self._reverse = True
         if self._mode == "scatter" and mode != "scatter":
@@ -26,9 +47,17 @@ class Ghost(MovingSprite):
         self._mode = mode
 
     def target(self, avatar, ghosts):
+        """! Get the target for this ghost. Must be overridden by subclasses.
+
+        @param avatar The avatar object in the same arena.
+        @param ghosts A dictionary of the ghosts in the same arena.
+        @returns The coordinates to where this ghost should head in chase mode."""
         return None
 
     def kill(self):
+        """! Called when this ghost is touched by the avatar while a power pill
+        is active. This 'kills' the ghost and causes it to return to the ghost
+        prison in the centre of the maze."""
         pass
 
     def _pick_initial_direction(self):
@@ -40,6 +69,10 @@ class Ghost(MovingSprite):
         return False
 
     def update(self, avatar, ghosts):
+        """! Move this ghost over the span of time of one frame.
+
+        @param avatar The avatar object in the same arena.
+        @param ghosts A dictionary of the ghosts in the same arena."""
         self._target = self.target(avatar, ghosts)
         MovingSprite.update(self)
 

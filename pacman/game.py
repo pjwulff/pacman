@@ -2,7 +2,9 @@ import sys, pygame
 from .game_state import GameState
 
 class Game:
+    """! A class to control the running of the game."""
     def __init__(self):
+        """! Construct a new Game object."""
         self._screen_size = (672, 864)
         pygame.init()
         self._screen = pygame.display.set_mode(self._screen_size)

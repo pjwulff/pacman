@@ -1,0 +1,4 @@
+<map id="pacman.sprite.Sprite.draw" name="pacman.sprite.Sprite.draw">
+<area shape="rect" id="node1" title="Draw this sprite to the screen." alt="" coords="251,5,444,32"/>
+<area shape="rect" id="node2" href="$classpacman_1_1sprite_1_1_sprite.html#af4f0e4d61ef58a86666337a3d58d19fb" title="Erase this sprite from the screen, so that it can be redrawn somewhere else." alt="" coords="5,5,203,32"/>
+</map>

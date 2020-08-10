@@ -1,0 +1,7 @@
+<map id="pacman.arena.Arena.rect" name="pacman.arena.Arena.rect">
+<area shape="rect" id="node1" title=" " alt="" coords="503,81,689,108"/>
+<area shape="rect" id="node2" href="$classpacman_1_1sprite_1_1_sprite.html#a6fd78759eac035738261940b69982ab5" title="Detects if this sprite overlaps another." alt="" coords="251,5,455,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1ghost_1_1_ghost.html#ade87ac85f8eaa1a9562db75cb4940c54" title="Draw this sprite to the screen." alt="" coords="257,56,449,83"/>
+<area shape="rect" id="node4" href="$classpacman_1_1sprite_1_1_sprite.html#a525951a3d59e43273eeb59350a10df61" title="Draw this sprite to the screen." alt="" coords="256,107,449,133"/>
+<area shape="rect" id="node5" href="$classpacman_1_1sprite_1_1_sprite.html#af4f0e4d61ef58a86666337a3d58d19fb" title="Erase this sprite from the screen, so that it can be redrawn somewhere else." alt="" coords="5,132,203,159"/>
+</map>

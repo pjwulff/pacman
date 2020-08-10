@@ -1,0 +1,7 @@
+<map id="pacman.node.Node.distance" name="pacman.node.Node.distance">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,212,108"/>
+<area shape="rect" id="node2" href="$classpacman_1_1game__state_1_1_game_state.html#a3f081c311f5a2e1e405ee01613bde83a" title="Get the arena associated with this game state." alt="" coords="260,5,533,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce" title=" " alt="" coords="301,56,492,83"/>
+<area shape="rect" id="node4" href="$classpacman_1_1node_1_1_node.html#a2d3149738b5ef274926167cd11ef532d" title=" " alt="" coords="317,107,477,133"/>
+<area shape="rect" id="node5" href="$classpacman_1_1node_1_1_node.html#aaf5561f7f12d6a72c57d0ea6cb184bf5" title=" " alt="" coords="317,157,477,184"/>
+</map>
