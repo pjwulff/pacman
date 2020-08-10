@@ -40,6 +40,7 @@ class GameState:
     def start(self):
         """! Performs necessary duties to start a new game."""
         self._ghost_behaviour_start_time = pygame.time.get_ticks()
+        self._start_time = pygame.time.get_ticks()
 
     def erase(self, screen):
         """! Erase all sprites from the screen.
@@ -87,7 +88,7 @@ class GameState:
                 self._dots.remove(dot)
 
     def _eat_dot(self, dot):
-        pass
+        self._score += 10
 
     def _eat_powers(self):
         for power in self._powers:
@@ -101,6 +102,7 @@ class GameState:
         self._ghost_behaviour_duration = self._frighten_duration
         for ghost in self._ghosts:
             self._ghosts[ghost].set_mode("frighten")
+        self._score += 20
 
     def _check_ghost_hit(self):
         for ghost in self._ghosts:
@@ -113,11 +115,13 @@ class GameState:
 
     def _eat_ghost(self, ghost):
         self._ghosts[ghost].kill()
+        self._score += 50
 
     def _lose_life(self):
         if self._lives == 0:
             self._lose()
         else:
+            self._score -= 100
             self._lives -= 1
             self._avatar.return_to_spawn()
             for ghost in self._ghosts:
@@ -130,6 +134,13 @@ class GameState:
     def _win(self):
         self._over = True
         self._condition = "win"
+        self._score += 500 - (pygame.time.get_ticks() - self._start_time)/1000
+
+    def score(self):
+        """! Get the current score.
+
+        @returns The score."""
+        return self._score
 
     def over(self):
         """! Get the running state of the game.

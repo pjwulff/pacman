@@ -12,7 +12,6 @@ class Node:
         self._arena = arena
         self._neighbours = {}
         self._portals = {}
-        self._contents = None
 
     def x(self):
         """! Get the x coordinate of this node.
