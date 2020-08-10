@@ -1,4 +1,8 @@
 <map id="pacman.game.Game.__init__" name="pacman.game.Game.__init__">
-<area shape="rect" id="node1" title="Construct a new Game object." alt="" coords="5,5,175,47"/>
-<area shape="rect" id="node2" href="$classpacman_1_1game_1_1_game.html#aca93712c8634bb717b4e3d8cee557658" title=" " alt="" coords="223,13,464,39"/>
+<area shape="rect" id="node1" title="Construct a new Game object." alt="" coords="5,99,175,141"/>
+<area shape="rect" id="node2" href="$classpacman_1_1game_1_1_game.html#ab877f49b22f27f9cc762c990459f29cc" title=" " alt="" coords="236,5,451,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1game_1_1_game.html#aca93712c8634bb717b4e3d8cee557658" title=" " alt="" coords="223,56,464,83"/>
+<area shape="rect" id="node4" href="$classpacman_1_1game_1_1_game.html#a86101b5ef7e588280b749b294437e022" title=" " alt="" coords="245,107,441,133"/>
+<area shape="rect" id="node5" href="$classpacman_1_1game_1_1_game.html#a55358da5a5a1d6f1a7dc3a84dcd50d96" title=" " alt="" coords="244,157,443,184"/>
+<area shape="rect" id="node6" href="$classpacman_1_1game_1_1_game.html#aca86e66bc3d492465f3b5fbf7d703a1e" title=" " alt="" coords="247,208,439,235"/>
 </map>

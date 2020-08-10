@@ -122,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4dd21cdba64ca4c8e0feefe76b0ef05"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#af4dd21cdba64ca4c8e0feefe76b0ef05">__init__</a> (self, arena, <a class="el" href="classpacman_1_1sprite_1_1_sprite.html#aa9b433f270def74afae70bc9849b19c7">name</a>)</td></tr>
 <tr class="memdesc:af4dd21cdba64ca4c8e0feefe76b0ef05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new moving sprite object.  <a href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#af4dd21cdba64ca4c8e0feefe76b0ef05">More...</a><br /></td></tr>
 <tr class="separator:af4dd21cdba64ca4c8e0feefe76b0ef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac118614163beac3364ac4e9f4b92f965"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#ac118614163beac3364ac4e9f4b92f965">return_to_spawn</a> (self)</td></tr>
+<tr class="memdesc:ac118614163beac3364ac4e9f4b92f965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instructs this moving sprite to return to its spawn location.  <a href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#ac118614163beac3364ac4e9f4b92f965">More...</a><br /></td></tr>
+<tr class="separator:ac118614163beac3364ac4e9f4b92f965"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9814dddf060fc49f2fbf480f1a26a7af"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#a9814dddf060fc49f2fbf480f1a26a7af">from_pos</a> (self)</td></tr>
 <tr class="memdesc:a9814dddf060fc49f2fbf480f1a26a7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moving sprites move between vertices in the graph.  <a href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#a9814dddf060fc49f2fbf480f1a26a7af">More...</a><br /></td></tr>
 <tr class="separator:a9814dddf060fc49f2fbf480f1a26a7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,8 +211,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05_cgraph.png" border="0" usemap="#classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05_cgraph" alt=""/></div>
 <map name="classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05_cgraph" id="classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05_cgraph">
-<area shape="rect" title="Construct a new moving sprite object." alt="" coords="5,5,228,47"/>
+<area shape="rect" title="Construct a new moving sprite object." alt="" coords="5,39,228,80"/>
 <area shape="rect" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#aba5d887b83ea90e61f01ee1ab885215a" title=" " alt="" coords="276,5,499,47"/>
+<area shape="rect" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#ac118614163beac3364ac4e9f4b92f965" title="Instructs this moving sprite to return to its spawn location." alt="" coords="276,71,499,112"/>
 </map>
 </div>
 
@@ -236,7 +240,39 @@ Here is the call graph for this function:</div>
 <p>This method returns the vertex this sprite was moving from.</p>
 <dl class="section return"><dt>Returns</dt><dd>The node in the graph this sprite is moving from. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00021">21</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00028">28</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
+
+</div>
+</div>
+<a id="ac118614163beac3364ac4e9f4b92f965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac118614163beac3364ac4e9f4b92f965">&#9670;&nbsp;</a></span>return_to_spawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def pacman.moving_sprite.MovingSprite.return_to_spawn </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instructs this moving sprite to return to its spawn location. </p>
+<p>Used when the avatar is hit by a ghost and loses a life. </p>
+
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00017">17</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965_icgraph.png" border="0" usemap="#classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965_icgraph" alt=""/></div>
+<map name="classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965_icgraph" id="classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965_icgraph">
+<area shape="rect" title="Instructs this moving sprite to return to its spawn location." alt="" coords="276,5,499,47"/>
+<area shape="rect" href="classpacman_1_1moving__sprite_1_1_moving_sprite.html#af4dd21cdba64ca4c8e0feefe76b0ef05" title="Construct a new moving sprite object." alt="" coords="5,5,228,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -260,7 +296,7 @@ Here is the call graph for this function:</div>
 <p>This method returns the vertex this sprite is moving towards.</p>
 <dl class="section return"><dt>Returns</dt><dd>The node in the graph this sprite is moving to. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00028">28</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00035">35</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -294,7 +330,7 @@ Here is the call graph for this function:</div>
 <p>Update this sprite over the span of time of one frame. </p>
 <p>This moves the sprite between two vertices in the graph. When it reaches a vertex it calls the protected _new_direction method to pick a new direction. This method must be overridden by subclasses. </p>
 
-<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00072">72</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moving__sprite_8py_source.html#l00079">79</a> of file <a class="el" href="moving__sprite_8py_source.html">moving_sprite.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

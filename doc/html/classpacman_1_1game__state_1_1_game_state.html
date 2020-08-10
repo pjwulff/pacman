@@ -113,6 +113,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3942b99244cf5e65d022e890c91408eb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1game__state_1_1_game_state.html#a3942b99244cf5e65d022e890c91408eb">draw</a> (self, screen)</td></tr>
 <tr class="memdesc:a3942b99244cf5e65d022e890c91408eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw all sprites to the screen.  <a href="classpacman_1_1game__state_1_1_game_state.html#a3942b99244cf5e65d022e890c91408eb">More...</a><br /></td></tr>
 <tr class="separator:a3942b99244cf5e65d022e890c91408eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7001ba2af1d2b021d8bdc449a8a3dab"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1game__state_1_1_game_state.html#ab7001ba2af1d2b021d8bdc449a8a3dab">over</a> (self)</td></tr>
+<tr class="memdesc:ab7001ba2af1d2b021d8bdc449a8a3dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the running state of the game.  <a href="classpacman_1_1game__state_1_1_game_state.html#ab7001ba2af1d2b021d8bdc449a8a3dab">More...</a><br /></td></tr>
+<tr class="separator:ab7001ba2af1d2b021d8bdc449a8a3dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eee9f1d76f8e36ca7d60c1e55d63649"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpacman_1_1game__state_1_1_game_state.html#a9eee9f1d76f8e36ca7d60c1e55d63649">condition</a> (self)</td></tr>
+<tr class="memdesc:a9eee9f1d76f8e36ca7d60c1e55d63649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reason why the game is over.  <a href="classpacman_1_1game__state_1_1_game_state.html#a9eee9f1d76f8e36ca7d60c1e55d63649">More...</a><br /></td></tr>
+<tr class="separator:a9eee9f1d76f8e36ca7d60c1e55d63649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the state of the running game. </p>
@@ -162,7 +168,30 @@ Public Member Functions</h2></td></tr>
 <p>Get the arena associated with this game state. </p>
 <dl class="section return"><dt>Returns</dt><dd>The arena object associated with this game state. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00033">33</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00034">34</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
+
+</div>
+</div>
+<a id="a9eee9f1d76f8e36ca7d60c1e55d63649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eee9f1d76f8e36ca7d60c1e55d63649">&#9670;&nbsp;</a></span>condition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def pacman.game_state.GameState.condition </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the reason why the game is over. </p>
+<dl class="section return"><dt>Returns</dt><dd>the string "win" if the player won, "lose" if the player lost. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00140">140</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
 
 </div>
 </div>
@@ -247,7 +276,30 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00043">43</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00044">44</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
+
+</div>
+</div>
+<a id="ab7001ba2af1d2b021d8bdc449a8a3dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7001ba2af1d2b021d8bdc449a8a3dab">&#9670;&nbsp;</a></span>over()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def pacman.game_state.GameState.over </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the running state of the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the game is over, False otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00134">134</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
 
 </div>
 </div>
@@ -269,7 +321,7 @@ Here is the call graph for this function:</div>
 
 <p>Performs necessary duties to start a new game. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00039">39</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00040">40</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
 
 </div>
 </div>
@@ -291,18 +343,19 @@ Here is the call graph for this function:</div>
 
 <p>Update the game state for a single frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00055">55</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__state_8py_source.html#l00056">56</a> of file <a class="el" href="game__state_8py_source.html">game_state.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2_cgraph.png" border="0" usemap="#classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2_cgraph" alt=""/></div>
 <map name="classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2_cgraph" id="classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2_cgraph">
-<area shape="rect" title="Update the game state for a single frame." alt="" coords="5,143,287,170"/>
-<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#ab707592b2601b0b36debc468c6acc642" title=" " alt="" coords="335,5,571,47"/>
-<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#abb203a8c77dcbd7109327162da9caed6" title=" " alt="" coords="335,71,571,112"/>
-<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#a252a71d65c15b6006c2cb71153886898" title=" " alt="" coords="335,136,571,177"/>
-<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#a1ccd91b8ddc11d0203200db4a9dc4ab6" title=" " alt="" coords="335,201,571,243"/>
-<area shape="rect" href="classpacman_1_1game_1_1_game.html#add682a8a75232ef721d138258ccd47c0" title=" " alt="" coords="360,267,545,294"/>
+<area shape="rect" title="Update the game state for a single frame." alt="" coords="5,177,287,203"/>
+<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#ab707592b2601b0b36debc468c6acc642" title=" " alt="" coords="350,5,586,47"/>
+<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#abb203a8c77dcbd7109327162da9caed6" title=" " alt="" coords="350,71,586,112"/>
+<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#a252a71d65c15b6006c2cb71153886898" title=" " alt="" coords="350,136,586,177"/>
+<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#a1ccd91b8ddc11d0203200db4a9dc4ab6" title=" " alt="" coords="350,201,586,243"/>
+<area shape="rect" href="classpacman_1_1game_1_1_game.html#aca86e66bc3d492465f3b5fbf7d703a1e" title=" " alt="" coords="372,267,564,294"/>
+<area shape="rect" href="classpacman_1_1game__state_1_1_game_state.html#a65f61f8588c5a3e17ab5e3108ef0a6cf" title=" " alt="" coords="335,318,601,345"/>
 </map>
 </div>
 

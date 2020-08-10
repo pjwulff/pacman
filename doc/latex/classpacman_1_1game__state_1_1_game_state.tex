@@ -19,7 +19,11 @@ def \mbox{\hyperlink{classpacman_1_1game__state_1_1_game_state_a7407ccb87df2fa4a
 def \mbox{\hyperlink{classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2}{update}} (self)
 \begin{DoxyCompactList}\small\item\em Update the game state for a single frame. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1game__state_1_1_game_state_a3942b99244cf5e65d022e890c91408eb}{draw}} (self, screen)
-\begin{DoxyCompactList}\small\item\em Draw all sprites to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draw all sprites to the screen. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1game__state_1_1_game_state_ab7001ba2af1d2b021d8bdc449a8a3dab}{over}} (self)
+\begin{DoxyCompactList}\small\item\em Get the running state of the game. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1game__state_1_1_game_state_a9eee9f1d76f8e36ca7d60c1e55d63649}{condition}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the reason why the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -64,7 +68,24 @@ The arena object associated with this game state.
 \end{DoxyReturn}
 
 
-Definition at line 33 of file game\+\_\+state.\+py.
+Definition at line 34 of file game\+\_\+state.\+py.
+
+\mbox{\Hypertarget{classpacman_1_1game__state_1_1_game_state_a9eee9f1d76f8e36ca7d60c1e55d63649}\label{classpacman_1_1game__state_1_1_game_state_a9eee9f1d76f8e36ca7d60c1e55d63649}} 
+\index{pacman.game\_state.GameState@{pacman.game\_state.GameState}!condition@{condition}}
+\index{condition@{condition}!pacman.game\_state.GameState@{pacman.game\_state.GameState}}
+\doxysubsubsection{\texorpdfstring{condition()}{condition()}}
+{\footnotesize\ttfamily def pacman.\+game\+\_\+state.\+Game\+State.\+condition (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the reason why the game is over. 
+
+\begin{DoxyReturn}{Returns}
+the string \char`\"{}win\char`\"{} if the player won, \char`\"{}lose\char`\"{} if the player lost. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file game\+\_\+state.\+py.
 
 \mbox{\Hypertarget{classpacman_1_1game__state_1_1_game_state_a3942b99244cf5e65d022e890c91408eb}\label{classpacman_1_1game__state_1_1_game_state_a3942b99244cf5e65d022e890c91408eb}} 
 \index{pacman.game\_state.GameState@{pacman.game\_state.GameState}!draw@{draw}}
@@ -109,7 +130,24 @@ Erase all sprites from the screen.
 \end{DoxyParams}
 
 
-Definition at line 43 of file game\+\_\+state.\+py.
+Definition at line 44 of file game\+\_\+state.\+py.
+
+\mbox{\Hypertarget{classpacman_1_1game__state_1_1_game_state_ab7001ba2af1d2b021d8bdc449a8a3dab}\label{classpacman_1_1game__state_1_1_game_state_ab7001ba2af1d2b021d8bdc449a8a3dab}} 
+\index{pacman.game\_state.GameState@{pacman.game\_state.GameState}!over@{over}}
+\index{over@{over}!pacman.game\_state.GameState@{pacman.game\_state.GameState}}
+\doxysubsubsection{\texorpdfstring{over()}{over()}}
+{\footnotesize\ttfamily def pacman.\+game\+\_\+state.\+Game\+State.\+over (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the running state of the game. 
+
+\begin{DoxyReturn}{Returns}
+True if the game is over, False otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file game\+\_\+state.\+py.
 
 \mbox{\Hypertarget{classpacman_1_1game__state_1_1_game_state_adbbebaff6ebca7ac05672ba002e30ec0}\label{classpacman_1_1game__state_1_1_game_state_adbbebaff6ebca7ac05672ba002e30ec0}} 
 \index{pacman.game\_state.GameState@{pacman.game\_state.GameState}!start@{start}}
@@ -123,7 +161,7 @@ Performs necessary duties to start a new game.
 
 
 
-Definition at line 39 of file game\+\_\+state.\+py.
+Definition at line 40 of file game\+\_\+state.\+py.
 
 \mbox{\Hypertarget{classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2}\label{classpacman_1_1game__state_1_1_game_state_aabdd85cb46529f9c09d9e64f897f91e2}} 
 \index{pacman.game\_state.GameState@{pacman.game\_state.GameState}!update@{update}}
@@ -137,9 +175,10 @@ Update the game state for a single frame.
 
 
 
-Definition at line 55 of file game\+\_\+state.\+py.
+Definition at line 56 of file game\+\_\+state.\+py.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -7,8 +7,7 @@ Base class for all \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost}{Ghost}} type
 
 
 
-Inheritance diagram for pacman.\+ghost.\+Ghost\+:
-\nopagebreak
+Inheritance diagram for pacman.\+ghost.\+Ghost\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,6 +28,8 @@ Collaboration diagram for pacman.\+ghost.\+Ghost\+:\nopagebreak
 \item 
 def \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a37278ff7383025a6042f2aa4a6496a6c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, arena, \mbox{\hyperlink{classpacman_1_1sprite_1_1_sprite_aa9b433f270def74afae70bc9849b19c7}{name}})
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost}{Ghost}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a1bfbc29bf18b6559ea33199a0b2e2fc1}{alive}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the status of whether or not the ghost is alive; ie., can be interacted with by the avatar. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_ade87ac85f8eaa1a9562db75cb4940c54}{draw}} (self, screen)
 \begin{DoxyCompactList}\small\item\em Draw this ghost to the screen. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}{set\+\_\+mode}} (self, mode)
@@ -79,6 +80,23 @@ Definition at line 9 of file ghost.\+py.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a1bfbc29bf18b6559ea33199a0b2e2fc1}\label{classpacman_1_1ghost_1_1_ghost_a1bfbc29bf18b6559ea33199a0b2e2fc1}} 
+\index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!alive@{alive}}
+\index{alive@{alive}!pacman.ghost.Ghost@{pacman.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}}
+{\footnotesize\ttfamily def pacman.\+ghost.\+Ghost.\+alive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the status of whether or not the ghost is alive; ie., can be interacted with by the avatar. 
+
+\begin{DoxyReturn}{Returns}
+True if the ghost is alive, False otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file ghost.\+py.
+
 \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_ade87ac85f8eaa1a9562db75cb4940c54}\label{classpacman_1_1ghost_1_1_ghost_ade87ac85f8eaa1a9562db75cb4940c54}} 
 \index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!draw@{draw}}
 \index{draw@{draw}!pacman.ghost.Ghost@{pacman.ghost.Ghost}}
@@ -102,10 +120,9 @@ Reimplemented from \mbox{\hyperlink{classpacman_1_1sprite_1_1_sprite_a525951a3d5
 
 
 
-Definition at line 24 of file ghost.\+py.
+Definition at line 32 of file ghost.\+py.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,8 +141,16 @@ Called when this ghost is touched by the avatar while a power pill is active.
 
 This \textquotesingle{}kills\textquotesingle{} the ghost and causes it to return to the ghost prison in the centre of the maze. 
 
-Definition at line 57 of file ghost.\+py.
+Definition at line 67 of file ghost.\+py.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1ghost_1_1_ghost_ab293ff1817040418d39646ad5f5d0fd7_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}\label{classpacman_1_1ghost_1_1_ghost_a08af18352cbad9eed34e61d7b77c9797}} 
 \index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!set\_mode@{set\_mode}}
 \index{set\_mode@{set\_mode}!pacman.ghost.Ghost@{pacman.ghost.Ghost}}
@@ -145,7 +170,7 @@ In the game ghosts will normally alternate between \textquotesingle{}scatter\tex
 \end{DoxyParams}
 
 
-Definition at line 34 of file ghost.\+py.
+Definition at line 44 of file ghost.\+py.
 
 \mbox{\Hypertarget{classpacman_1_1ghost_1_1_ghost_a80f8b6c905e1c4516b5be94092128219}\label{classpacman_1_1ghost_1_1_ghost_a80f8b6c905e1c4516b5be94092128219}} 
 \index{pacman.ghost.Ghost@{pacman.ghost.Ghost}!target@{target}}
@@ -175,7 +200,7 @@ Reimplemented in \mbox{\hyperlink{classpacman_1_1pinky_1_1_pinky_a5366dadb6778dc
 
 
 
-Definition at line 49 of file ghost.\+py.
+Definition at line 59 of file ghost.\+py.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -203,7 +228,7 @@ Move this ghost over the span of time of one frame.
 \end{DoxyParams}
 
 
-Definition at line 71 of file ghost.\+py.
+Definition at line 82 of file ghost.\+py.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['target_138',['target',['../classpacman_1_1blinky_1_1_blinky.html#a4edec7836b39e9edafc8c3b2979b9d2b',1,'pacman.blinky.Blinky.target()'],['../classpacman_1_1clyde_1_1_clyde.html#aaaa1951e23fae4bd3fc9317260961725',1,'pacman.clyde.Clyde.target()'],['../classpacman_1_1ghost_1_1_ghost.html#a80f8b6c905e1c4516b5be94092128219',1,'pacman.ghost.Ghost.target()'],['../classpacman_1_1inky_1_1_inky.html#a742f1f26abfc1f6e2ef0849ca94a6d8e',1,'pacman.inky.Inky.target()'],['../classpacman_1_1pinky_1_1_pinky.html#a5366dadb6778dc7d44feac9a4a056878',1,'pacman.pinky.Pinky.target()']]],
-  ['to_5fpos_139',['to_pos',['../classpacman_1_1moving__sprite_1_1_moving_sprite.html#a4d82259503ca84931f5f1cd6c7944563',1,'pacman::moving_sprite::MovingSprite']]]
+  ['scatter_5ftarget_139',['scatter_target',['../classpacman_1_1arena_1_1_arena.html#abf30f23399c262f0e9a61786a642ecd8',1,'pacman::arena::Arena']]],
+  ['set_5fmode_140',['set_mode',['../classpacman_1_1ghost_1_1_ghost.html#a08af18352cbad9eed34e61d7b77c9797',1,'pacman::ghost::Ghost']]],
+  ['set_5fneighbour_141',['set_neighbour',['../classpacman_1_1node_1_1_node.html#a95fc0cc857017a5fe24f164d8daece1f',1,'pacman::node::Node']]],
+  ['set_5fportal_142',['set_portal',['../classpacman_1_1node_1_1_node.html#a776e903699941f4d6cbbaec819d5bc2e',1,'pacman::node::Node']]],
+  ['start_143',['start',['../classpacman_1_1game__state_1_1_game_state.html#adbbebaff6ebca7ac05672ba002e30ec0',1,'pacman::game_state::GameState']]],
+  ['start_5fpos_144',['start_pos',['../classpacman_1_1arena_1_1_arena.html#af165bfe4b9e8b414d06e53d85f04522a',1,'pacman::arena::Arena']]]
 ];

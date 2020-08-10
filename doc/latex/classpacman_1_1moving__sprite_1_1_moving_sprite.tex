@@ -7,8 +7,7 @@ Base class for all sprites which move during gameplay.
 
 
 
-Inheritance diagram for pacman.\+moving\+\_\+sprite.\+Moving\+Sprite\+:
-\nopagebreak
+Inheritance diagram for pacman.\+moving\+\_\+sprite.\+Moving\+Sprite\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,6 +28,8 @@ Collaboration diagram for pacman.\+moving\+\_\+sprite.\+Moving\+Sprite\+:\nopage
 \item 
 def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_af4dd21cdba64ca4c8e0feefe76b0ef05}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, arena, \mbox{\hyperlink{classpacman_1_1sprite_1_1_sprite_aa9b433f270def74afae70bc9849b19c7}{name}})
 \begin{DoxyCompactList}\small\item\em Construct a new moving sprite object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965}{return\+\_\+to\+\_\+spawn}} (self)
+\begin{DoxyCompactList}\small\item\em Instructs this moving sprite to return to its spawn location. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_a9814dddf060fc49f2fbf480f1a26a7af}{from\+\_\+pos}} (self)
 \begin{DoxyCompactList}\small\item\em Moving sprites move between vertices in the graph. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563}{to\+\_\+pos}} (self)
@@ -70,7 +71,8 @@ Reimplemented in \mbox{\hyperlink{classpacman_1_1ghost_1_1_ghost_a37278ff7383025
 
 Definition at line 6 of file moving\+\_\+sprite.\+py.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -97,8 +99,30 @@ The node in the graph this sprite is moving from.
 \end{DoxyReturn}
 
 
-Definition at line 21 of file moving\+\_\+sprite.\+py.
+Definition at line 28 of file moving\+\_\+sprite.\+py.
 
+\mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965}} 
+\index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!return\_to\_spawn@{return\_to\_spawn}}
+\index{return\_to\_spawn@{return\_to\_spawn}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
+\doxysubsubsection{\texorpdfstring{return\_to\_spawn()}{return\_to\_spawn()}}
+{\footnotesize\ttfamily def pacman.\+moving\+\_\+sprite.\+Moving\+Sprite.\+return\+\_\+to\+\_\+spawn (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Instructs this moving sprite to return to its spawn location. 
+
+Used when the avatar is hit by a ghost and loses a life. 
+
+Definition at line 17 of file moving\+\_\+sprite.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman_1_1moving__sprite_1_1_moving_sprite_ac118614163beac3364ac4e9f4b92f965_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563}\label{classpacman_1_1moving__sprite_1_1_moving_sprite_a4d82259503ca84931f5f1cd6c7944563}} 
 \index{pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}!to\_pos@{to\_pos}}
 \index{to\_pos@{to\_pos}!pacman.moving\_sprite.MovingSprite@{pacman.moving\_sprite.MovingSprite}}
@@ -116,10 +140,9 @@ The node in the graph this sprite is moving to.
 \end{DoxyReturn}
 
 
-Definition at line 28 of file moving\+\_\+sprite.\+py.
+Definition at line 35 of file moving\+\_\+sprite.\+py.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -138,7 +161,7 @@ Update this sprite over the span of time of one frame.
 
 This moves the sprite between two vertices in the graph. When it reaches a vertex it calls the protected \+\_\+new\+\_\+direction method to pick a new direction. This method must be overridden by subclasses. 
 
-Definition at line 72 of file moving\+\_\+sprite.\+py.
+Definition at line 79 of file moving\+\_\+sprite.\+py.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

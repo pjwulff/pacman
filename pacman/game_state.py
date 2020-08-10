@@ -29,6 +29,7 @@ class GameState:
         self._current_ghost_behaviour = "scatter"
         self._ghost_behaviour_duration = self._scatter_duration
         self._power_state = False
+        self._over = False
 
     def arena(self):
         """! Get the arena associated with this game state.
@@ -123,12 +124,24 @@ class GameState:
                 self._ghosts[ghost].return_to_spawn()
 
     def _lose(self):
-        print("You lose!")
-        sys.exit()
+        self._over = True
+        self._condition = "lose"
 
     def _win(self):
-        print("You win!")
-        sys.exit()
+        self._over = True
+        self._condition = "win"
+
+    def over(self):
+        """! Get the running state of the game.
+
+        @returns True if the game is over, False otherwise."""
+        return self._over
+
+    def condition(self):
+        """! Returns the reason why the game is over.
+
+        @returns the string "win" if the player won, "lose" if the player lost."""
+        return self._condition
 
     def _update_ghost_behaviour(self):
         current_time = pygame.time.get_ticks()
