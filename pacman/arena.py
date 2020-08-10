@@ -89,7 +89,8 @@ class Arena:
         """! Get the return position for the ghosts.
 
         @returns The return position for the ghosts."""
-        return self._arena_data['ghost-return']
+        pos = self._arena_data['ghost-return']
+        return self._nodes[pos]
 
     def rect(self):
         return self._screen_rect

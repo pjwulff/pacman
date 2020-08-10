@@ -8,15 +8,22 @@ class MovingSprite(Sprite):
 
         @param arena The arena to which this moving sprite belongs.
         @param name The name of this moving sprite."""
-        (self._from_pos, self._to_pos) = arena.start_pos(name)
+        self._arena = arena
+        self._name = name
+        self.return_to_spawn()
+        self._calculate_position()
+        Sprite.__init__(self, arena, self._x, self._y, name)
+
+    def return_to_spawn(self):
+        """! Instructs this moving sprite to return to its spawn location.
+        Used when the avatar is hit by a ghost and loses a life."""
+        (self._from_pos, self._to_pos) = self._arena.start_pos(self._name)
         self._trans_pos = 0.5
         self._arrived = False
         self._start = True
         self._direction = None
-        self._calculate_position()
         self._speed = 0.0
         self._speed_scale = 1.0
-        Sprite.__init__(self, arena, self._x, self._y, name)
 
     def from_pos(self):
         """! Moving sprites move between vertices in the graph. This method

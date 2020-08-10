@@ -19,14 +19,24 @@ class Ghost(MovingSprite):
         self._reverse = True
         self._speed_scale = 1.0
         self._scared_image = pygame.image.load("data/scared-ghost.png").convert()
+        self._eyes_image = pygame.image.load("data/eyes.png").convert()
         self._alive = True
+
+    def alive(self):
+        """! Gets the status of whether or not the ghost is alive; ie., can be
+        interacted with by the avatar.
+
+        @returns True if the ghost is alive, False otherwise."""
+        return self._alive
 
     def draw(self, screen):
         """! Draw this ghost to the screen. The ghost's appearance will change
         when it is frightened.
 
         @param screen The PyGame screen object to which this ghost should be drawn."""
-        if self._mode == "frighten":
+        if self._alive == False:
+            screen.blit(self._eyes_image, self.rect())
+        elif self._mode == "frighten":
             screen.blit(self._scared_image, self.rect())
         else:
             MovingSprite.draw(self, screen)
@@ -58,7 +68,8 @@ class Ghost(MovingSprite):
         """! Called when this ghost is touched by the avatar while a power pill
         is active. This 'kills' the ghost and causes it to return to the ghost
         prison in the centre of the maze."""
-        pass
+        self._alive = False
+        self._reverse = True
 
     def _pick_initial_direction(self):
         self._direction = "right"
@@ -83,7 +94,13 @@ class Ghost(MovingSprite):
         return dx + dy
 
     def _new_direction(self):
-        if self._mode == "chase":
+        if self._alive == False and self._from_pos == self._arena.ghost_return_position():
+            self._alive = True
+            self._mode = "scatter"
+        if self._alive == False:
+            pos = self._arena.ghost_return_position()
+            target = (pos.x(), pos.y())
+        elif self._mode == "chase":
             target = self._target
         elif self._mode == "scatter":
             target = self._scatter_target
@@ -104,7 +121,7 @@ class Ghost(MovingSprite):
             if flipped in valid_directions and len(valid_directions) > 1:
                 valid_directions.remove(self._flip_direction())
 
-        if self._mode == "frighten":
+        if self._mode == "frighten" and self._alive:
             return random.choice(valid_directions)
         else:
             best_direction = valid_directions[0]

@@ -1,4 +1,4 @@
-import pygame
+import pygame, sys
 from .arena import Arena
 from .avatar import Avatar
 from .blinky import Blinky
@@ -55,8 +55,7 @@ class GameState:
     def update(self):
         """! Update the game state for a single frame."""
         if len(self._dots) == 0:
-            self.win()
-            sys.exit()
+            self._win()
 
         self._update_ghost_behaviour()
         self._avatar.update()
@@ -104,7 +103,8 @@ class GameState:
 
     def _check_ghost_hit(self):
         for ghost in self._ghosts:
-            if self._ghosts[ghost].collide(self._avatar):
+            ghost_ = self._ghosts[ghost]
+            if ghost_.alive() and ghost_.collide(self._avatar):
                 if self._power_state:
                     self._eat_ghost(ghost)
                 else:
@@ -114,7 +114,21 @@ class GameState:
         self._ghosts[ghost].kill()
 
     def _lose_life(self):
-        print("Lost life!")
+        if self._lives == 0:
+            self._lose()
+        else:
+            self._lives -= 1
+            self._avatar.return_to_spawn()
+            for ghost in self._ghosts:
+                self._ghosts[ghost].return_to_spawn()
+
+    def _lose(self):
+        print("You lose!")
+        sys.exit()
+
+    def _win(self):
+        print("You win!")
+        sys.exit()
 
     def _update_ghost_behaviour(self):
         current_time = pygame.time.get_ticks()
