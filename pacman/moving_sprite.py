@@ -3,7 +3,7 @@ from .sprite import Sprite
 
 class MovingSprite(Sprite):
     """! Base class for all sprites which move during gameplay."""
-    def __init__(self, arena, name):
+    def __init__(self, arena, width, height, name):
         """! Construct a new moving sprite object.
 
         @param arena The arena to which this moving sprite belongs.
@@ -12,7 +12,7 @@ class MovingSprite(Sprite):
         self._name = name
         self.return_to_spawn()
         self._calculate_position()
-        Sprite.__init__(self, arena, self._x, self._y, name)
+        Sprite.__init__(self, arena, self._x, self._y, width, height, name)
 
     def return_to_spawn(self):
         """! Instructs this moving sprite to return to its spawn location.
@@ -25,6 +25,7 @@ class MovingSprite(Sprite):
         self._speed = 0.0
         self._speed_scale = 1.0
 
+    @property
     def from_pos(self):
         """! Moving sprites move between vertices in the graph. This method
         returns the vertex this sprite was moving from.
@@ -32,6 +33,7 @@ class MovingSprite(Sprite):
         @returns The node in the graph this sprite is moving from."""
         return self._from_pos
 
+    @property
     def to_pos(self):
         """! Moving sprites move between vertices in the graph. This method
         returns the vertex this sprite is moving towards.
@@ -39,26 +41,31 @@ class MovingSprite(Sprite):
         @returns The node in the graph this sprite is moving to."""
         return self._to_pos
 
+    @property
     def _in_portal(self):
         if self._from_pos.portal(self._direction) is not None:
             return True
         return False
 
-    def _calculate_position(self):
-        from_x = self._from_pos.x()
-        from_y = self._from_pos.y()
+    @property
+    def direction(self):
+        return self._direction
 
-        to_x = self._to_pos.x()
-        to_y = self._to_pos.y()
-        if self._in_portal():
+    def _calculate_position(self):
+        from_x = self._from_pos.x
+        from_y = self._from_pos.y
+
+        to_x = self._to_pos.x
+        to_y = self._to_pos.y
+        if self._in_portal:
             if self._direction == "left":
-                to_x -= self._arena.rect().width
+                to_x -= self._arena.rect.width
             elif self._direction == "right":
-                to_x += self._arena.rect().width
+                to_x += self._arena.rect.width
             elif self._direction == "up":
-                to_y -= self._arena.rect().height
+                to_y -= self._arena.rect.height
             elif self._direction == "down":
-                to_y += self._arena.rect().height
+                to_y += self._arena.rect.height
         self._x = from_x + (to_x - from_x) * self._trans_pos
         self._y = from_y + (to_y - from_y) * self._trans_pos
 

@@ -18,8 +18,8 @@ class Clyde(Ghost):
         @param avatar The avatar object in the same arena.
         @param ghosts A dictionary of the ghosts in the same arena.
         @returns The coordinates of Clyde's target in chase mode."""
-        (avatar_x, avatar_y) = avatar.position()
-        (clyde_x, clyde_y) = self.position()
+        (avatar_x, avatar_y) = avatar.position
+        (clyde_x, clyde_y) = self.position
         dx = (avatar_x - clyde_x) ** 2.0
         dy = (avatar_y - clyde_y) ** 2.0
         if (dx + dy) > 36864:

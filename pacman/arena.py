@@ -1,8 +1,8 @@
 import json
-import pygame
-from .dot import *
-from .node import *
-from .power import *
+from .dot import Dot
+from .node import Node
+from .power import Power
+from .rect import Rect
 
 class Arena:
     """! The Arena class is responsible for loading mazes from JSON files.
@@ -13,9 +13,12 @@ class Arena:
         """! Constructs an Arena object."""
         with open("data/square-board.json") as f:
             self._arena_data = json.load(f)
-        self._image = pygame.image.load(self._arena_data['image']).convert()
-        self._screen_rect = self._image.get_rect()
         self._create_nodes()
+        self._width = self._arena_data['width']
+        self._height = self._arena_data['height']
+
+    def image(self):
+        return self._arena_data['image']
 
     def _create_nodes(self):
         self._nodes = {}
@@ -44,19 +47,6 @@ class Arena:
                 for direction in node['portals']:
                     portal = self._nodes[node['portals'][direction]]
                     self._nodes[node_id].set_portal(direction, portal)
-
-    def draw(self, screen, rect = None):
-        """! Draws the entire arena background to the screen, or optionally
-        just a section of it. This is used to erase a sprite.
-
-        @param screen The PyGame screen object on which to draw.
-        @param rect An optional Rect object to specify which part of the Arena
-        to drawn. If not given, this method draws the entire arena."""
-        if rect is None:
-            screen.fill((0, 0, 0))
-            screen.blit(self._image, self._screen_rect)
-        else:
-            screen.blit(self._image, rect, rect)
 
     def scatter_target(self, name):
         """! Extracts the 'scatter-target' information from the maze JSON file.
@@ -92,5 +82,6 @@ class Arena:
         pos = self._arena_data['ghost-return']
         return self._nodes[pos]
 
+    @property
     def rect(self):
-        return self._screen_rect
+        return Rect(self._width, self._height)

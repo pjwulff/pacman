@@ -13,12 +13,14 @@ class Node:
         self._neighbours = {}
         self._portals = {}
 
+    @property
     def x(self):
         """! Get the x coordinate of this node.
 
         @returns The x coordinate of this node."""
         return self._x
 
+    @property
     def y(self):
         """! Get the y coordinate of this node.
 
@@ -67,16 +69,16 @@ class Node:
         @param other The other node to which the distance should be calculated.
         @returns The euclidean distance between if not connected by a portal,
         or the logical distance if they do."""
-        other_x = other.x()
-        other_y = other.y()
+        other_x = other.x
+        other_y = other.y
         if self.portal("left") == other:
-            other_x -= self._arena.rect().width
+            other_x -= self._arena.rect.width
         if self.portal("right") == other:
-            other_x += self._arena.rect().width
+            other_x += self._arena.rect.width
         if self.portal("up") == other:
-            other_x -= self._arena.rect().height
+            other_x -= self._arena.rect.height
         if self.portal("down") == other:
-            other_x += self._arena.rect().height
-        dx = (other_x - self.x()) ** 2
-        dy = (other_y - self.y()) ** 2
+            other_x += self._arena.rect.height
+        dx = (other_x - self.x) ** 2
+        dy = (other_y - self.y) ** 2
         return math.sqrt(dx + dy)

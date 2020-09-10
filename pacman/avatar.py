@@ -1,5 +1,7 @@
-import pygame
 from .moving_sprite import MovingSprite
+
+AVATAR_WIDTH = 30
+AVATAR_HEIGHT = 33
 
 class Avatar(MovingSprite):
     """! Represents the controllable yellow avatar in the game."""
@@ -8,17 +10,20 @@ class Avatar(MovingSprite):
         """! Create a new avatar.
 
         @param arena The arena object to which this avatar belongs."""
-        MovingSprite.__init__(self, arena, "avatar")
+        MovingSprite.__init__(self, arena, AVATAR_WIDTH, AVATAR_HEIGHT, "avatar")
+
+    def set_direction(self, direction):
+        self._user_direction = direction
 
     def _new_direction(self):
-        keys_pressed = pygame.key.get_pressed()
-        if keys_pressed[pygame.K_LEFT] and self._from_pos.neighbour("left") is not None:
+        direction = self._user_direction
+        if "left" in direction and self._from_pos.neighbour("left") is not None:
             return "left"
-        elif keys_pressed[pygame.K_RIGHT] and self._from_pos.neighbour("right") is not None:
+        elif "right" in direction and self._from_pos.neighbour("right") is not None:
             return "right"
-        elif keys_pressed[pygame.K_UP] and self._from_pos.neighbour("up") is not None:
+        elif "up" in direction and self._from_pos.neighbour("up") is not None:
             return "up"
-        elif keys_pressed[pygame.K_DOWN] and self._from_pos.neighbour("down") is not None:
+        elif "down" in direction and self._from_pos.neighbour("down") is not None:
             return "down"
         if self._from_pos.neighbour(self._direction) is not None:
             return self._direction
@@ -26,14 +31,14 @@ class Avatar(MovingSprite):
             return None
 
     def _turn_around(self):
-        keys_pressed = pygame.key.get_pressed()
-        if self._direction == "left" and keys_pressed[pygame.K_RIGHT]:
+        direction = self._user_direction
+        if self._direction == "left" and "right" in direction:
             return True
-        if self._direction == "right" and keys_pressed[pygame.K_LEFT]:
+        if self._direction == "right" and "left" in direction:
             return True
-        if self._direction == "up" and keys_pressed[pygame.K_DOWN]:
+        if self._direction == "up" and "down" in direction:
             return True
-        if self._direction == "down" and keys_pressed[pygame.K_UP]:
+        if self._direction == "down" and "up" in direction:
             return True
         return False
 

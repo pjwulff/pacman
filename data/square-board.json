@@ -1,5 +1,7 @@
 {
-    "image": "data/square-board.png",
+    "image": "square-board.png",
+    "width": 672,
+    "height": 864,
     "scatter-target": {
         "blinky": [612, 132],
         "pinky": [60, 132],

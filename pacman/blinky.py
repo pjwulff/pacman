@@ -17,4 +17,4 @@ class Blinky(Ghost):
         @param ghosts A dictionary for all ghosts in the arena.
 
         @returns The coordinate for the Blinky ghost in chase mode."""
-        return avatar.position()
+        return avatar.position

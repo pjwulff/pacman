@@ -1,4 +1,4 @@
-import pygame, sys
+import sys
 from .arena import Arena
 from .avatar import Avatar
 from .blinky import Blinky
@@ -8,8 +8,8 @@ from .clyde import Clyde
 
 class GameState:
     """! Represents the state of the running game. This class also handles the
-    updating of the state and drawing it to the screen."""
-    def __init__(self):
+    updating of the state."""
+    def __init__(self, time):
         """! Construct a new GameState object."""
         self._lives = 3
         self._score = 0
@@ -23,63 +23,53 @@ class GameState:
         }
         self._dots = self._arena.dots()
         self._powers = self._arena.powers()
-        self._chase_duration = 5000
-        self._scatter_duration = 20000
-        self._frighten_duration = 7000
+        self._chase_duration = 5.0
+        self._scatter_duration = 20.0
+        self._frighten_duration = 7.0
         self._current_ghost_behaviour = "scatter"
         self._ghost_behaviour_duration = self._scatter_duration
         self._power_state = False
         self._over = False
+        self._ghost_behaviour_start_time = time
+        self._start_time = time
 
+    @property
+    def avatar(self):
+        return self._avatar
+
+    @property
+    def ghosts(self):
+        return self._ghosts
+
+    @property
+    def dots(self):
+        return self._dots
+
+    @property
+    def powers(self):
+        return self._powers
+
+    @property
     def arena(self):
         """! Get the arena associated with this game state.
 
         @returns The arena object associated with this game state."""
         return self._arena
 
-    def start(self):
-        """! Performs necessary duties to start a new game."""
-        self._ghost_behaviour_start_time = pygame.time.get_ticks()
-        self._start_time = pygame.time.get_ticks()
-
-    def erase(self, screen):
-        """! Erase all sprites from the screen.
-
-        @param screen The PyGame screen to draw on."""
-        self._avatar.erase(screen)
-        for ghost in self._ghosts:
-            self._ghosts[ghost].erase(screen)
-        for dot in self._dots:
-            dot.erase(screen)
-        for power in self._powers:
-            power.erase(screen)
-
-    def update(self):
+    def update(self, time, direction):
         """! Update the game state for a single frame."""
         if len(self._dots) == 0:
-            self._win()
+            self._win(time)
 
-        self._update_ghost_behaviour()
+        self._avatar.set_direction(direction)
+        self._update_ghost_behaviour(time)
         self._avatar.update()
         for ghost in self._ghosts:
             self._ghosts[ghost].update(self._avatar, self._ghosts)
 
         self._eat_dots()
-        self._eat_powers()
+        self._eat_powers(time)
         self._check_ghost_hit()
-
-    def draw(self, screen):
-        """! Draw all sprites to the screen.
-
-        @param screen The PyGame screen to draw on."""
-        for dot in self._dots:
-            dot.draw(screen)
-        for power in self._powers:
-            power.draw(screen)
-        for ghost in self._ghosts:
-            self._ghosts[ghost].draw(screen)
-        self._avatar.draw(screen)
-        pygame.display.flip()
 
     def _eat_dots(self):
         for dot in self._dots:
@@ -90,15 +80,15 @@ class GameState:
     def _eat_dot(self, dot):
         self._score += 10
 
-    def _eat_powers(self):
+    def _eat_powers(self, time):
         for power in self._powers:
             if power.collide(self._avatar):
-                self._eat_power()
+                self._eat_power(time)
                 self._powers.remove(power)
 
-    def _eat_power(self):
+    def _eat_power(self, time):
         self._power_state = True
-        self._ghost_behaviour_start_time = pygame.time.get_ticks()
+        self._ghost_behaviour_start_time = time
         self._ghost_behaviour_duration = self._frighten_duration
         for ghost in self._ghosts:
             self._ghosts[ghost].set_mode("frighten")
@@ -107,7 +97,7 @@ class GameState:
     def _check_ghost_hit(self):
         for ghost in self._ghosts:
             ghost_ = self._ghosts[ghost]
-            if ghost_.alive() and ghost_.collide(self._avatar):
+            if ghost_.alive and ghost_.collide(self._avatar):
                 if self._power_state:
                     self._eat_ghost(ghost)
                 else:
@@ -131,31 +121,36 @@ class GameState:
         self._over = True
         self._condition = "lose"
 
-    def _win(self):
+    def _win(self, time):
         self._over = True
         self._condition = "win"
-        self._score += 500 - (pygame.time.get_ticks() - self._start_time)/1000
+        bonus = 500 - (time - self._start_time)
+        if bonus > 0:
+            self._score += bonus
 
+    @property
     def score(self):
         """! Get the current score.
 
         @returns The score."""
         return self._score
 
+    @property
     def over(self):
         """! Get the running state of the game.
 
         @returns True if the game is over, False otherwise."""
         return self._over
 
+    @property
     def condition(self):
         """! Returns the reason why the game is over.
 
         @returns the string "win" if the player won, "lose" if the player lost."""
         return self._condition
 
-    def _update_ghost_behaviour(self):
-        current_time = pygame.time.get_ticks()
+    def _update_ghost_behaviour(self, time):
+        current_time = time
         duration = current_time - self._ghost_behaviour_start_time
         if duration > self._ghost_behaviour_duration:
             if self._current_ghost_behaviour == "scatter":

@@ -1,5 +1,8 @@
-import pygame, random
+import random
 from .moving_sprite import MovingSprite
+
+GHOST_WIDTH = 42
+GHOST_HEIGHT = 42
 
 class Ghost(MovingSprite):
     """! Base class for all Ghost types. Handles duties common to all ghosts,
@@ -12,34 +15,25 @@ class Ghost(MovingSprite):
         @param arena The arena to which this ghost belongs.
         @param name The name of the ghost. This is used to extract relevant information
         from the arena object."""
-        MovingSprite.__init__(self, arena, name)
+        MovingSprite.__init__(self, arena, GHOST_WIDTH, GHOST_HEIGHT, name)
         self._mode = "scatter"
         self._scatter_target = self._arena.scatter_target(name)
         self._target = None
         self._reverse = True
         self._speed_scale = 1.0
-        self._scared_image = pygame.image.load("data/scared-ghost.png").convert()
-        self._eyes_image = pygame.image.load("data/eyes.png").convert()
         self._alive = True
 
+    @property
+    def scared(self):
+        return self._mode == "frighten"
+
+    @property
     def alive(self):
         """! Gets the status of whether or not the ghost is alive; ie., can be
         interacted with by the avatar.
 
         @returns True if the ghost is alive, False otherwise."""
         return self._alive
-
-    def draw(self, screen):
-        """! Draw this ghost to the screen. The ghost's appearance will change
-        when it is frightened.
-
-        @param screen The PyGame screen object to which this ghost should be drawn."""
-        if self._alive == False:
-            screen.blit(self._eyes_image, self.rect())
-        elif self._mode == "frighten":
-            screen.blit(self._scared_image, self.rect())
-        else:
-            MovingSprite.draw(self, screen)
 
     def set_mode(self, mode):
         """! Set the movement mode for this ghost. In the game ghosts will normally
@@ -89,8 +83,8 @@ class Ghost(MovingSprite):
 
     def _distance(self, direction, target):
         next_tile = self._from_pos.neighbour(direction)
-        dx = (next_tile.x() - target[0]) ** 2.0
-        dy = (next_tile.y() - target[1]) ** 2.0
+        dx = (next_tile.x - target[0]) ** 2.0
+        dy = (next_tile.y - target[1]) ** 2.0
         return dx + dy
 
     def _new_direction(self):
@@ -99,7 +93,7 @@ class Ghost(MovingSprite):
             self._mode = "scatter"
         if self._alive == False:
             pos = self._arena.ghost_return_position()
-            target = (pos.x(), pos.y())
+            target = (pos.x, pos.y)
         elif self._mode == "chase":
             target = self._target
         elif self._mode == "scatter":
