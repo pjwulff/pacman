@@ -28,7 +28,6 @@ class Game:
         return False
 
     def _game_loop(self):
-        print("game loop")
         state = GameState(self._game_view.time)
         view = self._game_view.game_view(state)
         view.tick(self._internal_step, sys.exit)

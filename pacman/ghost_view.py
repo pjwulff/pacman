@@ -17,8 +17,9 @@ class GhostView(SpriteView):
         """! Draw this sprite to the screen.
 
         @param screen The PyGame screen to which this sprite to draw."""
-        if self._sprite.alive and not self._sprite.scared:
-            screen.blit(self._image, self.rect)
-            screen.blit(self._eyes[self._sprite.direction], self.rect)
+        if self._sprite.scared and self._sprite.alive:
+                screen.blit(self._scared_image, self.rect)
         else:
-            screen.blit(self._scared_image, self.rect)
+            if self._sprite.alive:
+                screen.blit(self._image, self.rect)
+            screen.blit(self._eyes[self._sprite.direction], self.rect)
