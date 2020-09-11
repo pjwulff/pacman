@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import pacman
+import pacman_game as pacman
 
 if __name__ == "__main__":
     pacman_game = pacman.Game()

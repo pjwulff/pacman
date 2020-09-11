@@ -1,10 +1,11 @@
-import pygame
+import pygame, pkg_resources
 from .arena import Arena
 
 class ArenaView:
     def __init__(self, arena):
         self._arena = arena
-        self._image = pygame.image.load(f"data/{arena.image()}").convert()
+        path = pkg_resources.resource_filename(__name__, f"data/{arena.image()}")
+        self._image = pygame.image.load(path).convert()
         self._screen_rect = self._image.get_rect()
 
     def draw(self, screen, rect = None):

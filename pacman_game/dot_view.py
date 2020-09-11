@@ -1,4 +1,4 @@
-import pygame
+import pygame, pkg_resources
 from .sprite_view import SpriteView
 
 class InternalView(SpriteView):
@@ -8,7 +8,8 @@ class InternalView(SpriteView):
 class DotView:
     def __init__(self, arena_view):
         self._arena_view = arena_view
-        self._image = pygame.image.load("data/dot.png").convert()
+        path = pkg_resources.resource_filename(__name__, "data/dot.png")
+        self._image = pygame.image.load(path).convert()
 
     def view(self, dot):
         return InternalView(dot, self._image, self._arena_view)

@@ -1,11 +1,12 @@
-import pygame
+import pygame, pkg_resources
 
 class BannerView:
     def __init__(self, screen, message, next, exit, score):
         self._banner(screen, message, next, exit, score)
 
     def _banner(self, screen, mode, next, exit, score):
-        image = pygame.image.load(f"data/{mode}.png").convert()
+        path = pkg_resources.resource_filename(__name__, f"data/{mode}.png")
+        image = pygame.image.load(path).convert()
         image_rect = image.get_rect().move(228, 258)
         screen.fill((0, 0, 0))
         screen.blit(image, image_rect)

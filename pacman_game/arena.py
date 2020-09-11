@@ -1,4 +1,5 @@
 import json
+import pkg_resources
 from .dot import Dot
 from .node import Node
 from .power import Power
@@ -11,7 +12,8 @@ class Arena:
     other objects."""
     def __init__(self):
         """! Constructs an Arena object."""
-        with open("data/square-board.json") as f:
+        path = pkg_resources.resource_filename(__name__, "data/square-board.json")
+        with open(path) as f:
             self._arena_data = json.load(f)
         self._create_nodes()
         self._width = self._arena_data['width']

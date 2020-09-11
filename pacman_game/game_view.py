@@ -1,4 +1,4 @@
-import pygame
+import pygame, pkg_resources
 from .arena_view import ArenaView
 from .avatar_view import AvatarView
 from .banner_view import BannerView
