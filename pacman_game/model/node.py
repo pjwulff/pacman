@@ -1,14 +1,14 @@
 import math
+from .coordinate import Coordinate
 
 class Node:
     """! Represents a vertex in the direction graph of the maze."""
-    def __init__(self, arena, x, y):
+    def __init__(self, arena, coordinate):
         """! Create a new node in the graph.
 
         @param arena The arena to which this node belonds.
         @param x,y The coordinates of this node."""
-        self._x = x
-        self._y = y
+        self._coordinate = coordinate
         self._arena = arena
         self._neighbours = {}
         self._portals = {}
@@ -18,21 +18,25 @@ class Node:
         """! Get the x coordinate of this node.
 
         @returns The x coordinate of this node."""
-        return self._x
+        return self._coordinate.x
 
     @property
     def y(self):
         """! Get the y coordinate of this node.
 
         @returns the y coordinate of this node."""
-        return self._y
+        return self._coordinate.y
+    
+    @property
+    def coordinate(self):
+        return self._coordinate
 
     def set_neighbour(self, direction, neighbour):
         """! Sets another node in the graph as a neighbour to this node.
 
         @param direction A label to describe how the two nodes relate.
         @param neighbour The node which neighbours this one."""
-        self._neighbours[direction] = neighbour
+        self._neighbours[str(direction)] = neighbour
 
     def set_portal(self, direction, portal):
         """! Sets another node as a portal destination from this node.
@@ -40,15 +44,15 @@ class Node:
 
         @param direction A label to describe how the two nodes relate.
         @param portal The node to which this node warps."""
-        self._portals[direction] = portal
+        self._portals[str(direction)] = portal
 
     def neighbour(self, direction):
         """! Get the neighbouring node in a particular direction.
 
         @param direction The label used to describe the direction.
         @returns The node in that direction if one exists, None otherwise."""
-        if direction in self._neighbours:
-            return self._neighbours[direction]
+        if str(direction) in self._neighbours:
+            return self._neighbours[str(direction)]
         else:
             return None
 
@@ -57,8 +61,8 @@ class Node:
 
         @param direction The label used to describe the direction.
         @returns The node in that direction if one exists, None otherwise."""
-        if direction in self._portals:
-            return self._portals[direction]
+        if str(direction) in self._portals:
+            return self._portals[str(direction)]
         else:
             return None
 

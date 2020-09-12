@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-import pacman_game as pacman
+from pacman_game.game import Game
+import sys
 
 if __name__ == "__main__":
-    pacman_game = pacman.Game()
+    game = Game()
+    sys.exit(game.run(sys.argv))

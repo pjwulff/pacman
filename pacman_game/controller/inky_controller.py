@@ -1,13 +1,8 @@
-import pygame
-from .ghost import Ghost
+from .ghost_controller import GhostController
 
-class Inky(Ghost):
-    """! The cyan 'Inky' ghost."""
-    def __init__(self, arena):
-        """! Construct a new Inky ghost.
-
-        @param arena The arena object to which this Inky belongs."""
-        Ghost.__init__(self, arena, "inky")
+class InkyController(GhostController):
+    def __init__(self, sprite):
+        super().__init__(sprite)
 
     def target(self, avatar, ghosts):
         """! Get the target for the Inky ghost in chase mode. Inky uses a complicated
@@ -25,7 +20,7 @@ class Inky(Ghost):
         dy = avatar_to.y - avatar_from.y
         x = avatar_from.x + 2*dx
         y = avatar_from.y + 2*dy
-        (blinky_x, blinky_y) = ghosts["blinky"].position
-        x = 2*x - blinky_x
-        y = 2*y - blinky_y
+        coord = ghosts["blinky"].coordinate
+        x = 2*x - coord.x
+        y = 2*y - coord.y
         return (x, y)

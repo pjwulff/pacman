@@ -11,6 +11,7 @@ setup(
     package_data={
         "pacman_game": ["data/*"],
     },
+    include_package_data=True,
     install_requires=['pygobject'],
     scripts=['pacman']
 )

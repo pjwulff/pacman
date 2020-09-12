@@ -1,13 +1,8 @@
-import pygame
-from .ghost import Ghost
+from .ghost_controller import GhostController
 
-class Blinky(Ghost):
-    """! The red 'Blinky' ghost."""
-    def __init__(self, arena):
-        """! Create a new Blinky ghost.
-
-        @param arena The arena object to which this Blinky ghost belongs."""
-        Ghost.__init__(self, arena, "blinky")
+class BlinkyController(GhostController):
+    def __init__(self, sprite):
+        super().__init__(sprite)
 
     def target(self, avatar, ghosts):
         """! Get the target for the Blinky ghost. Blinky's target is the
@@ -17,4 +12,4 @@ class Blinky(Ghost):
         @param ghosts A dictionary for all ghosts in the arena.
 
         @returns The coordinate for the Blinky ghost in chase mode."""
-        return avatar.position
+        return avatar.coordinate

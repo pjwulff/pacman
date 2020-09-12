@@ -1,13 +1,8 @@
-import pygame
-from .ghost import Ghost
+from .ghost_controller import GhostController
 
-class Clyde(Ghost):
-    """! The orange 'Clyde' ghost."""
-    def __init__(self, arena):
-        """! Create a new Clyde ghost.
-
-        @param arena The arena to which this Clyde belongs."""
-        Ghost.__init__(self, arena, "clyde")
+class ClydeController(GhostController):
+    def __init__(self, sprite):
+        super().__init__(sprite)
 
     def target(self, avatar, ghosts):
         """ Get the target for the Clyde ghost. When Clyde is more than
@@ -18,8 +13,8 @@ class Clyde(Ghost):
         @param avatar The avatar object in the same arena.
         @param ghosts A dictionary of the ghosts in the same arena.
         @returns The coordinates of Clyde's target in chase mode."""
-        (avatar_x, avatar_y) = avatar.position
-        (clyde_x, clyde_y) = self.position
+        (avatar_x, avatar_y) = avatar.coordinate
+        (clyde_x, clyde_y) = self.coordinate
         dx = (avatar_x - clyde_x) ** 2.0
         dy = (avatar_y - clyde_y) ** 2.0
         if (dx + dy) > 36864:

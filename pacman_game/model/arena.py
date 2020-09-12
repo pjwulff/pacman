@@ -1,5 +1,6 @@
 import json
 import pkg_resources
+from .coordinate import Coordinate
 from .dot import Dot
 from .node import Node
 from .power import Power
@@ -12,7 +13,7 @@ class Arena:
     other objects."""
     def __init__(self):
         """! Constructs an Arena object."""
-        path = pkg_resources.resource_filename(__name__, "data/square-board.json")
+        path = pkg_resources.resource_filename(__name__, "../data/boards/square-board.json")
         with open(path) as f:
             self._arena_data = json.load(f)
         self._create_nodes()
@@ -30,13 +31,14 @@ class Arena:
             node = self._arena_data['nodes'][node_id]
             x = node['x']
             y = node['y']
-            new_node = Node(self, x, y)
+            coordinate = Coordinate(x, y)
+            new_node = Node(self, coordinate)
             if 'contents' in node:
                 if node['contents'] == "dot":
-                    dot = Dot(self, x, y)
+                    dot = Dot(self, coordinate)
                     self._dots += [dot]
                 elif node['contents'] == "power":
-                    power = Power(self, x, y)
+                    power = Power(self, coordinate)
                     self._powers += [power]
             self._nodes[node_id] = new_node
 
@@ -55,7 +57,8 @@ class Arena:
 
         @param name The name of the object to which the scatter target is associated.
         @returns The coordinates of the scatter target."""
-        return self._arena_data['scatter-target'][name]
+        s = self._arena_data['scatter-target'][name]
+        return Coordinate(s[0], s[1])
 
     def start_pos(self, name):
         """! Extracts the start position information from the maze JSON file.

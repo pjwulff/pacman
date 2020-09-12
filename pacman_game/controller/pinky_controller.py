@@ -1,13 +1,8 @@
-import pygame
-from .ghost import Ghost
+from .ghost_controller import GhostController
 
-class Pinky(Ghost):
-    """! The pink 'Pinky' ghost."""
-    def __init__(self, arena):
-        """! Create a new Pinky ghost.
-
-        @param arena The arena to which this Pinky belongs."""
-        Ghost.__init__(self, arena, "pinky")
+class PinkyController(GhostController):
+    def __init__(self, sprite):
+        super().__init__(sprite)
 
     def target(self, avatar, ghosts):
         """! Get the target for this Pinky ghost.
