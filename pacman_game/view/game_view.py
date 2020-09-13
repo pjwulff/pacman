@@ -51,10 +51,14 @@ class GameView(Gtk.DrawingArea):
         cr.show_text("LIVES")
         cr.move_to(60, 48)
         cr.show_text(str(self._state.lives))
-        cr.move_to(320, 24)
+        cr.move_to(240, 24)
         cr.show_text("HIGH SCORE")
-        cr.move_to(320, 48)
+        cr.move_to(240, 48)
         cr.show_text(str(self._state.score))
+        cr.move_to(480, 24)
+        cr.show_text("LEVEL")
+        cr.move_to(480, 48)
+        cr.show_text(str(self._state.level))
     
     def tick(self):
         self.queue_draw()

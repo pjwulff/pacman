@@ -4,27 +4,20 @@ from ..model.direction import Direction
 from .moving_sprite_controller import MovingSpriteController
 
 class GhostController(MovingSpriteController):
-    def __init__(self, sprite):
+    def __init__(self, sprite, difficulty):
         super().__init__(sprite)
-        self.speed_scale = 0.75
+        if difficulty == "easy":
+            self.speed_scale = 0.25
+        elif difficulty == "medium":
+            self.speed_scale = 0.5
+        elif difficulty == "hard":
+            self.speed_scale = 0.75
         self._scatter_target = sprite.scatter_target
         self._target = Coordinate()
         self._reverse = False
-
-    def set_mode(self, mode):
-        """! Set the movement mode for this ghost. In the game ghosts will normally
-        alternate between 'scatter' and 'chase' mode. In scatter mode the ghosts
-        will head towards to their own corner of the maze. In chase mode they
-        will chase the avatar in their own particular way. When the avatar
-        consumes a power pill the ghosts enter 'frighten' mode and move randomly.
-
-        @param mode The movement mode this ghost should take on. Can be either
-        'scatter', 'chase' or 'frighten'."""
-        if self.mode == "chase" and mode != "chase":
-            self._reverse = True
-        if self.mode == "scatter" and mode != "scatter":
-            self._reverse = True
-        self.mode = mode
+        
+    def increase_difficulty(self):
+        self.speed_scale = (1.0 + self.speed_scale) / 2.0
 
     def target(self, avatar, ghosts):
         """! Get the target for this ghost. Must be overridden by subclasses.
@@ -66,6 +59,18 @@ class GhostController(MovingSpriteController):
 
     @mode.setter
     def mode(self, mode):
+        """! Set the movement mode for this ghost. In the game ghosts will normally
+        alternate between 'scatter' and 'chase' mode. In scatter mode the ghosts
+        will head towards to their own corner of the maze. In chase mode they
+        will chase the avatar in their own particular way. When the avatar
+        consumes a power pill the ghosts enter 'frighten' mode and move randomly.
+
+        @param mode The movement mode this ghost should take on. Can be either
+        'scatter', 'chase' or 'frighten'."""
+        if self.sprite.mode == "chase" and mode != "chase":
+            self.sprite.reverse = True
+        if self.sprite.mode == "scatter" and mode != "scatter":
+            self.sprite.reverse = True
         self.sprite.mode = mode
 
     def _new_direction(self):

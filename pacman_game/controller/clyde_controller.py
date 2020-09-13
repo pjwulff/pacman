@@ -1,8 +1,8 @@
 from .ghost_controller import GhostController
 
 class ClydeController(GhostController):
-    def __init__(self, sprite):
-        super().__init__(sprite)
+    def __init__(self, sprite, difficulty):
+        super().__init__(sprite, difficulty)
 
     def target(self, avatar, ghosts):
         """ Get the target for the Clyde ghost. When Clyde is more than

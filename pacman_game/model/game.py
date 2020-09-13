@@ -13,6 +13,7 @@ class GameState:
         self.shape = shape
         self.lives = 3
         self.score = 0
+        self.level = 1
         self._arena = Arena()
         self._avatar = Avatar(self._arena)
         self._ghosts = {
@@ -21,12 +22,24 @@ class GameState:
             "inky": Inky(self._arena),
             "clyde": Clyde(self._arena),
         }
-        self._dots = self._arena.dots()
-        self._powers = self._arena.powers()
         self.power_state = False
         self.over = False
-        self.ghost_behaviour_start_time = time.monotonic()
-        self._start_time = time.monotonic()
+    
+    @property
+    def start_time(self):
+        return self._start_time
+    
+    @start_time.setter
+    def start_time(self, start_time):
+        self._start_time = start_time
+    
+    @property
+    def level(self):
+        return self._level
+    
+    @level.setter
+    def level(self, level):
+        self._level = level
     
     @property
     def chase_duration(self):
@@ -126,11 +139,11 @@ class GameState:
 
     @property
     def dots(self):
-        return self._dots
+        return self._arena.dots
 
     @property
     def powers(self):
-        return self._powers
+        return self._arena.powers
 
     @property
     def arena(self):

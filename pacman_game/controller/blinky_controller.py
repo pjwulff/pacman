@@ -1,8 +1,8 @@
 from .ghost_controller import GhostController
 
 class BlinkyController(GhostController):
-    def __init__(self, sprite):
-        super().__init__(sprite)
+    def __init__(self, sprite, difficulty):
+        super().__init__(sprite, difficulty)
 
     def target(self, avatar, ghosts):
         """! Get the target for the Blinky ghost. Blinky's target is the

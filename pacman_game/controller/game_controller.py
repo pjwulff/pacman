@@ -1,4 +1,5 @@
 import time
+from .arena_controller import ArenaController
 from .avatar_controller import AvatarController
 from .blinky_controller import BlinkyController
 from ..model.game import GameState
@@ -6,20 +7,23 @@ from ..model.game import GameState
 class InternalController:
     def __init__(self, state):
         self._state = state
+        self._arena_controller = ArenaController(state.arena)
         self._avatar_controller = AvatarController(state.avatar)
         ghosts = state.ghosts
         self._ghost_controllers = {
-            "blinky": BlinkyController(ghosts["blinky"]),
-            "clyde": BlinkyController(ghosts["clyde"]),
-            "inky": BlinkyController(ghosts["inky"]),
-            "pinky": BlinkyController(ghosts["pinky"]),
+            "blinky": BlinkyController(ghosts["blinky"], state.difficulty),
+            "clyde": BlinkyController(ghosts["clyde"], state.difficulty),
+            "inky": BlinkyController(ghosts["inky"], state.difficulty),
+            "pinky": BlinkyController(ghosts["pinky"], state.difficulty),
         }
         self._current_time = time.monotonic()
+        self.state.start_time = self._current_time
         self.state.chase_duration = 5.0
         self.state.scatter_duration = 20.0
         self.state.frighten_duration = 7.0
         self.state.current_ghost_behaviour = "scatter"
         self.state.ghost_behaviour_duration = self.state.scatter_duration
+        self.state.ghost_behaviour_start_time = self._current_time
     
     @property
     def state(self):
@@ -32,6 +36,7 @@ class InternalController:
         
         if len(self.state.dots) == 0:
             self._win(current_time)
+            return True
         self._update_ghosts(delta)
         self._avatar_controller.step(delta)
 
@@ -115,11 +120,35 @@ class InternalController:
         self.state.condition = "lose"
 
     def _win(self, time):
-        self.state.over = True
-        self.state.condition = "win"
+        self._increase_difficulty()
+        self.state.level += 1
         bonus = 500 - (time - self.state.start_time)
+        bonus *= self.state.level
         if bonus > 0:
-            self.state.score += bonus
+            self.state.score += int(bonus)
+        self.state.start_time = time
+        self._arena_controller.reset()
+        self._avatar_controller.return_to_spawn()
+        for ghost in self._ghost_controllers:
+            self._ghost_controllers[ghost].return_to_spawn()
+        self.state.current_ghost_behaviour = "scatter"
+        self.state.ghost_behaviour_duration = self.state.scatter_duration
+    
+    def _increase_difficulty(self):
+        for ghost in self._ghost_controllers:
+            self._ghost_controllers[ghost].increase_difficulty()
+        if self.state.difficulty == "easy":
+            self.state.chase_duration *= 1.01
+            self.state.scatter_duration *= 0.99
+            self.state.frighten_duration *= 0.99
+        elif self.state.difficulty == "medium":
+            self.state.chase_duration *= 1.05
+            self.state.scatter_duration *= 0.95
+            self.state.frighten_duration *= 0.95
+        elif self.state.difficulty == "hard":
+            self.state.chase_duration *= 1.1
+            self.state.scatter_duration *= 0.9
+            self.state.frighten_duration *= 0.9
     
     def add_direction(self, direction):
         self._avatar_controller.add_direction(direction)

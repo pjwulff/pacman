@@ -16,14 +16,14 @@ class Arena:
         path = pkg_resources.resource_filename(__name__, "../data/boards/square-board.json")
         with open(path) as f:
             self._arena_data = json.load(f)
-        self._create_nodes()
+        self.create_nodes()
         self._width = self._arena_data['width']
         self._height = self._arena_data['height']
 
     def image(self):
         return self._arena_data['image']
 
-    def _create_nodes(self):
+    def create_nodes(self):
         self._nodes = {}
         self._dots = []
         self._powers = []
@@ -68,12 +68,14 @@ class Arena:
         pos = self._arena_data['start'][name]
         return (self._nodes[pos[0]], self._nodes[pos[1]])
 
+    @property
     def dots(self):
         """! Get all the dots in the arena.
 
         @returns A list of all the dots in the arena."""
         return self._dots
 
+    @property
     def powers(self):
         """! Get all the power pills in the arena.
 
