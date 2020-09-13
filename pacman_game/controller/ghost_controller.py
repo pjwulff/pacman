@@ -46,6 +46,8 @@ class GhostController(MovingSpriteController):
 
     def _distance(self, direction, target):
         next_tile = self.from_pos.neighbour(direction)
+        if next_tile is None or target is None:
+            return 1000.0
         dx = (next_tile.x - target.x) ** 2.0
         dy = (next_tile.y - target.y) ** 2.0
         return dx + dy

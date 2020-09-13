@@ -42,6 +42,19 @@ class GameView(Gtk.DrawingArea):
         for ghost in self._ghost_views:
             self._ghost_views[ghost].draw(cr)
         self._avatar_view.draw(cr)
+        self._draw_hud(cr)
+    
+    def _draw_hud(self, cr):
+        cr.set_font_size(24)
+        cr.set_source_rgb(1.0, 1.0, 1.0)
+        cr.move_to(60, 24)
+        cr.show_text("LIVES")
+        cr.move_to(60, 48)
+        cr.show_text(str(self._state.lives))
+        cr.move_to(320, 24)
+        cr.show_text("HIGH SCORE")
+        cr.move_to(320, 48)
+        cr.show_text(str(self._state.score))
     
     def tick(self):
         self.queue_draw()

@@ -15,6 +15,11 @@ class InternalController:
             "pinky": BlinkyController(ghosts["pinky"]),
         }
         self._current_time = time.monotonic()
+        self.state.chase_duration = 5.0
+        self.state.scatter_duration = 20.0
+        self.state.frighten_duration = 7.0
+        self.state.current_ghost_behaviour = "scatter"
+        self.state.ghost_behaviour_duration = self.state.scatter_duration
     
     @property
     def state(self):
@@ -127,6 +132,6 @@ class GameController:
     def __init__(self):
         pass
     
-    def start_game(self):
-        state = GameState()
+    def start_game(self, difficulty, shape):
+        state = GameState(difficulty, shape)
         return InternalController(state)

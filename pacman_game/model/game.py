@@ -7,8 +7,10 @@ from .inky import Inky
 from .clyde import Clyde
 
 class GameState:
-    def __init__(self):
+    def __init__(self, difficulty, shape):
         """! Construct a new GameState object."""
+        self.difficulty = difficulty
+        self.shape = shape
         self.lives = 3
         self.score = 0
         self._arena = Arena()
@@ -21,11 +23,6 @@ class GameState:
         }
         self._dots = self._arena.dots()
         self._powers = self._arena.powers()
-        self._chase_duration = 5.0
-        self._scatter_duration = 20.0
-        self._frighten_duration = 7.0
-        self.current_ghost_behaviour = "scatter"
-        self.ghost_behaviour_duration = self._scatter_duration
         self.power_state = False
         self.over = False
         self.ghost_behaviour_start_time = time.monotonic()
@@ -35,13 +32,25 @@ class GameState:
     def chase_duration(self):
         return self._chase_duration
     
+    @chase_duration.setter
+    def chase_duration(self, duration):
+        self._chase_duration = duration
+    
     @property
     def scatter_duration(self):
         return self._scatter_duration
     
+    @scatter_duration.setter
+    def scatter_duration(self, duration):
+        self._scatter_duration = duration
+    
     @property
     def frighten_duration(self):
         return self._frighten_duration
+    
+    @frighten_duration.setter
+    def frighten_duration(self, duration):
+        self._frighten_duration = duration
     
     @property
     def start_time(self):
