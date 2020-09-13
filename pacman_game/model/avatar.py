@@ -1,6 +1,6 @@
 from .moving_sprite import MovingSprite
 
-AVATAR_RADIUS = 15
+AVATAR_RADIUS = 9
 
 class Avatar(MovingSprite):
     """! Represents the controllable yellow avatar in the game."""

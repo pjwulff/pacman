@@ -17,7 +17,7 @@ class GhostController(MovingSpriteController):
         self._reverse = False
         
     def increase_difficulty(self):
-        self.speed_scale = (1.0 + self.speed_scale) / 2.0
+        self.speed_scale = (1.0 + 9*self.speed_scale) / 10.0
 
     def target(self, avatar, ghosts):
         """! Get the target for this ghost. Must be overridden by subclasses.
@@ -102,7 +102,7 @@ class GhostController(MovingSpriteController):
             if flipped in valid_directions and len(valid_directions) > 1:
                 valid_directions.remove(flipped)
 
-        if self.mode == "frighten" and self.alive:
+        if (self.mode == "frighten" or self.mode == "scatter") and self.alive:
             return Direction(random.choice(valid_directions))
         else:
             valid_directions = [Direction(d) for d in valid_directions]

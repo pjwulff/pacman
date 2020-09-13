@@ -1,10 +1,11 @@
 import sys, time
-from .arena import Arena
+from .square_arena import SquareArena
 from .avatar import Avatar
 from .blinky import Blinky
 from .pinky import Pinky
 from .inky import Inky
 from .clyde import Clyde
+from .rect import Rect
 
 class GameState:
     def __init__(self, difficulty, shape):
@@ -14,7 +15,7 @@ class GameState:
         self.lives = 3
         self.score = 0
         self.level = 1
-        self._arena = Arena()
+        self._arena = SquareArena(Rect(13, 21))
         self._avatar = Avatar(self._arena)
         self._ghosts = {
             "blinky": Blinky(self._arena),
@@ -151,6 +152,10 @@ class GameState:
 
         @returns The arena object associated with this game state."""
         return self._arena
+
+    @arena.setter
+    def arena(self, arena):
+        self._arena = arena
 
     @property
     def score(self):

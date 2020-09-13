@@ -1,30 +1,22 @@
-from gi.repository import Gtk
-from gi.repository import Gdk
-import cairo
-
-import pkg_resources
-from ..model.arena import Arena
-from ..model.rect import Rect
-
 class ArenaView:
     def __init__(self, arena):
         self._arena = arena
-        path = pkg_resources.resource_filename(__name__, f"../data/images/{arena.image()}")
-        self._image = cairo.ImageSurface.create_from_png(path)
-        self._screen_rect = Rect(self._image.get_width(), self._image.get_height())
-
-    def draw(self, cr):
-        """! Draws the entire arena background to the screen, or optionally
-        just a section of it. This is used to erase a sprite.
-
-        @param screen The PyGame screen object on which to draw.
-        @param rect An optional Rect object to specify which part of the Arena
-        to drawn. If not given, this method draws the entire arena."""
-        cr.set_source_rgb(0, 0, 0)
-        cr.paint()
-        cr.set_source_surface(self._image, 0, 0)
-        cr.paint()
+        self._rect = arena.rect
     
     @property
     def rect(self):
-        return self._screen_rect
+        return self._rect
+    
+    def draw(self, cr):
+        width = self.rect.width
+        height = self.rect.height
+        cr.set_source_rgb(0, 0, 0)
+        cr.paint()
+        cr.set_source_rgb(0.0, 0.0, 1.0)
+        cr.set_line_width(2.0)
+        cr.move_to(24, 96)
+        cr.line_to(width-24, 96)
+        cr.line_to(width-24, height-24)
+        cr.line_to(24, height-24)
+        cr.line_to(24, 96)
+        cr.stroke()

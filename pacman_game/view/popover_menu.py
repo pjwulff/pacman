@@ -47,7 +47,7 @@ class PopoverMenu(Gtk.PopoverMenu):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self._difficulty_box = ToggleGroup("Easy", "Medium", "Hard")
-        self._shape_box = ToggleGroup("Rectangular", "Hexagonal", "Graph")
+        self._shape_box = ToggleGroup("Square", "Hexagonal", "Graph")
         self._box = Gtk.Box()
         self._box.set_orientation(Gtk.Orientation.VERTICAL)
         self._box.add(self._difficulty_box)
@@ -70,5 +70,5 @@ class PopoverMenu(Gtk.PopoverMenu):
         
     @property
     def shape(self):
-        lst = ["rectangular", "hexagonal", "graph"]
+        lst = ["square", "hexagonal", "graph"]
         return lst[self._shape_box.selection]

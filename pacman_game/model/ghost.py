@@ -1,7 +1,7 @@
 import random
 from .moving_sprite import MovingSprite
 
-GHOST_RADIUS = 18
+GHOST_RADIUS = 9
 
 class Ghost(MovingSprite):
     """! Base class for all Ghost types. Handles duties common to all ghosts,

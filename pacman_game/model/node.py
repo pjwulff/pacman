@@ -10,6 +10,7 @@ class Node:
         @param x,y The coordinates of this node."""
         self._coordinate = coordinate
         self._arena = arena
+        self._geoneighbours = {}
         self._neighbours = {}
         self._portals = {}
 
@@ -56,6 +57,26 @@ class Node:
         else:
             return None
 
+    def geoneighbour(self, direction):
+        if str(direction) in self._geoneighbours:
+            return self._geoneighbours[str(direction)]
+        else:
+            return None
+
+    def set_geoneighbour(self, direction, neighbour):
+        """! Sets another node in the graph as a neighbour to this node.
+
+        @param direction A label to describe how the two nodes relate.
+        @param neighbour The node which neighbours this one."""
+        self._geoneighbours[str(direction)] = neighbour
+
+    def remove_geoneighbour(self, direction):
+        """! Sets another node in the graph as a neighbour to this node.
+
+        @param direction A label to describe how the two nodes relate.
+        @param neighbour The node which neighbours this one."""
+        self._geoneighbours[str(direction)] = None
+
     def portal(self, direction):
         """! Gets the portal node in a particular direction.
 
@@ -65,6 +86,14 @@ class Node:
             return self._portals[str(direction)]
         else:
             return None
+    
+    @property
+    def neighbours(self):
+        return self._neighbours
+    
+    @property
+    def geoneighbours(self):
+        return self._geoneighbours
 
     def distance(self, other):
         """ The euclidean distance between two nodes. This method takes into

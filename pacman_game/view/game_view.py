@@ -2,12 +2,12 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gdk, Gtk, GObject
 import pkg_resources
-from .arena_view import ArenaView
 from .avatar_view import AvatarView
 from .banner_view import BannerView
 from .dot_view import DotView
 from .ghost_view import GhostView
 from .power_view import PowerView
+from .square_arena_view import SquareArenaView
 
 
 class GameView(Gtk.DrawingArea):
@@ -17,7 +17,8 @@ class GameView(Gtk.DrawingArea):
         self._controller = controller
         self._state = state
         self._next = next
-        self._arena_view = ArenaView(state.arena)
+        if state.shape == "square":
+            self._arena_view = SquareArenaView(state.arena)
         self._avatar_view = AvatarView(state.avatar, self._arena_view)
         self._ghost_views = {}
         for ghost in state.ghosts:

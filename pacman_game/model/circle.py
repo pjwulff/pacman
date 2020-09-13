@@ -18,7 +18,7 @@ class Circle(Shape):
     
     def collide(self, other):
         distance = self.coordinate.distance(other.coordinate)
-        return distance <= (self.radius + other.radius)
+        return distance < (self.radius + other.radius)
 
     def __str__(self):
         return f"{self.x}, {self.y}, {self.radius}"
