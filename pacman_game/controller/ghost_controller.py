@@ -6,7 +6,7 @@ from .moving_sprite_controller import MovingSpriteController
 class GhostController(MovingSpriteController):
     def __init__(self, sprite):
         super().__init__(sprite)
-        self.speed_scale = 0.9
+        self.speed_scale = 0.75
         self._scatter_target = sprite.scatter_target
         self._target = Coordinate()
         self._reverse = False
@@ -68,12 +68,12 @@ class GhostController(MovingSpriteController):
 
     def _new_direction(self):
         target = None
-        if self.alive == False and self.from_pos == self.sprite.return_position:
-            self.alive = True
-            self.mode = "scatter"
         if self.alive == False:
-            pos = self.sprite.return_position
-            target = Coordinate(pos.x, pos.y)
+            if self.from_pos == self.sprite.return_position:
+                self.alive = True
+            else:
+                pos = self.sprite.return_position
+                target = Coordinate(pos.x, pos.y)
         elif self.mode == "chase":
             target = self._target
         elif self.mode == "scatter":

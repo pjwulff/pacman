@@ -11,11 +11,12 @@ from .power_view import PowerView
 
 
 class GameView(Gtk.DrawingArea):
-    def __init__(self, controller, state, **kwargs):
+    def __init__(self, controller, state, next, **kwargs):
         super().__init__(**kwargs)
         self.set_can_focus(True)
         self._controller = controller
         self._state = state
+        self._next = next
         self._arena_view = ArenaView(state.arena)
         self._avatar_view = AvatarView(state.avatar, self._arena_view)
         self._ghost_views = {}
@@ -44,8 +45,10 @@ class GameView(Gtk.DrawingArea):
     
     def tick(self):
         self.queue_draw()
-        self._controller.step()
-        return True
+        cont = self._controller.step()
+        if not cont:
+            self._next(self._state.condition, self._state.score)
+        return cont
     
     def on_key_press(self, widget, event):
         if event.keyval == Gdk.KEY_Down:

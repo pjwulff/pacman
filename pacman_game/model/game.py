@@ -44,6 +44,14 @@ class GameState:
         return self._frighten_duration
     
     @property
+    def start_time(self):
+        return self._start_time
+
+    @start_time.setter
+    def start_time(self, start_time):
+        self._start_time = start_time
+
+    @property
     def lives(self):
         return self._lives
     
@@ -132,10 +140,3 @@ class GameState:
     @score.setter
     def score(self, score):
         self._score = score
-
-    @property
-    def condition(self):
-        """! Returns the reason why the game is over.
-
-        @returns the string "win" if the player won, "lose" if the player lost."""
-        return self._condition

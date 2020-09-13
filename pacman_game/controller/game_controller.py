@@ -19,20 +19,23 @@ class InternalController:
     @property
     def state(self):
         return self._state
-    
+
     def step(self):
         current_time = time.monotonic()
         delta = current_time - self._current_time
         self._current_time = current_time
         
         if len(self.state.dots) == 0:
-            self._win()
+            self._win(current_time)
         self._update_ghosts(delta)
         self._avatar_controller.step(delta)
 
         self._eat_dots()
         self._eat_powers()
         self._check_ghost_hit()
+        if self.state.over:
+            return False
+        return True
     
     def _update_ghosts(self, delta):
         for ghost in self._ghost_controllers:

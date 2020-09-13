@@ -31,9 +31,8 @@ class PacmanWindow(Gtk.ApplicationWindow):
         self._controller = controller
         self._titlebar = TitleBar(controller)
         self.set_titlebar(self._titlebar)
-        self._view = BannerView("START", self.get_application().start_game)
-        self.add(self._view)
         self.set_resizable(False)
+        self._view = None
     
     @property
     def view(self):
@@ -41,6 +40,7 @@ class PacmanWindow(Gtk.ApplicationWindow):
     
     @view.setter
     def view(self, view):
-        self.remove(self._view)
+        if self._view is not None:
+            self.remove(self._view)
         self._view = view
         self.add(view)
