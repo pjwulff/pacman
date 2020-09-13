@@ -1,49 +1,75 @@
 import cairo
-import pkg_resources
+import math
 from .sprite_view import SpriteView
 
 class GhostView(SpriteView):
     def __init__(self, ghost, arena_view):
-        path = pkg_resources.resource_filename(__name__, f"../data/images/{ghost.name}.png")
-        image = cairo.ImageSurface.create_from_png(path)
-        SpriteView.__init__(self, ghost, image, arena_view)
-        path = pkg_resources.resource_filename(__name__, "../data/images/scared-ghost.png")
-        self._scared_image = cairo.ImageSurface.create_from_png(path)
-        eyes_path = {
-            "up": "../data/images/eyes-up.png",
-            "down": "../data/images/eyes-down.png",
-            "left": "../data/images/eyes-left.png",
-            "right": "../data/images/eyes-right.png",
-        }
-        self._eyes = {}
-        for path in eyes_path:
-            p = pkg_resources.resource_filename(__name__, eyes_path[path])
-            self._eyes[path] = cairo.ImageSurface.create_from_png(p)
+        SpriteView.__init__(self, ghost, None, arena_view)
 
     def draw(self, cr):
         """! Draw this sprite to the screen.
 
         @param screen The PyGame screen to which this sprite to draw."""
-        r = self.rect
-        x = r.x - r.width/2
-        y = r.y - r.height/2
+        coord = self._sprite.coordinate
         if self._sprite.scared and self._sprite.alive:
-            cr.set_source_surface(self._scared_image, x, y)
-            cr.paint()
+            self._draw_scared(cr, coord.x, coord.y)
         else:
             if self._sprite.alive:
-                cr.set_source_surface(self._image, x, y)
-                cr.paint()
-            direction = self._sprite.direction
-            if "left" in direction:
-                d = "left"
-            elif "right" in direction:
-                d = "right"
-            elif "up" in direction:
-                d = "up"
-            elif "down" in direction:
-                d = "down"
-            else:
-                d = "up"
-            cr.set_source_surface(self._eyes[d], x, y)
-            cr.paint()
+                self._draw_body(cr, coord.x, coord.y)
+            self._draw_eyes(cr, coord.x, coord.y)
+
+    def _set_colour(self, cr):
+        if self._sprite.name == "blinky":
+            cr.set_source_rgb(1.0, 0.0, 0.0)
+        elif self._sprite.name == "pinky":
+            cr.set_source_rgb(1.0, 0.0, 1.0)
+        elif self._sprite.name == "inky":
+            cr.set_source_rgb(0.5, 1.0, 1.0)
+        elif self._sprite.name == "clyde":
+            cr.set_source_rgb(1.0, 0.5, 0.0)
+
+    def _draw_body(self, cr, x, y):
+        self._set_colour(cr)
+        cr.move_to(x, y)
+        cr.arc(x, y, 9, math.pi, 0)
+        cr.close_path()
+        cr.fill()
+        cr.move_to(x + 9, y)
+        cr.line_to(x + 9, y + 9)
+        cr.line_to(x - 9, y + 9)
+        cr.line_to(x - 9, y)
+        cr.close_path()
+        cr.fill()
+
+    def _draw_eyes(self, cr, x, y):
+        fr = self._sprite.from_pos
+        to = self._sprite.to_pos
+        dx = to.x - fr.x
+        dy = to.y - fr.y
+        angle = math.atan2(dy, dx)
+        ox = 2.0*math.cos(angle)
+        oy = 2.0*math.sin(angle)
+        cr.move_to(x+ox, y+oy)
+        cr.set_source_rgb(0.0, 0.0, 0.0)
+        cr.arc(x+ox-4.5, y+ox-2, 2.5, 0, 2*math.pi)
+        cr.close_path()
+        cr.fill()
+        cr.arc(x+ox+4.5, y+ox-2, 2.5, 0, 2*math.pi)
+        cr.close_path()
+        cr.fill()
+        cr.set_source_rgb(1.0, 1.0, 1.0)
+        cr.arc(x+ox-4.5, y+ox-2, 2, 0, 2*math.pi)
+        cr.close_path()
+        cr.fill()
+        cr.arc(x+ox+4.5, y+ox-2, 2, 0, 2*math.pi)
+        cr.close_path()
+        cr.fill()
+        cr.set_source_rgb(0.0, 0.0, 0.0)
+        ox = 2.5*math.cos(angle)
+        oy = 2.5*math.sin(angle)
+        cr.arc(x+ox-4.5, y+ox-2, 1, 0, 2*math.pi)
+        cr.close_path()
+        cr.fill()
+        cr.arc(x+ox+4.5, y+ox-2, 1, 0, 2*math.pi)
+        cr.close_path()
+        cr.fill()
