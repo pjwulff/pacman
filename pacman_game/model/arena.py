@@ -97,8 +97,14 @@ class Arena:
     def start_pos(self, name):
         if name == "avatar":
             return self._avatar_start
-        else:
-            return self._ghost_start
+        elif name == "blinky":
+            return self._blinky_start
+        elif name == "pinky":
+            return self._pinky_start
+        elif name == "inky":
+            return self._inky_start
+        elif name == "clyde":
+            return self._clyde_start
 
     @property
     def logical_width(self):
@@ -126,8 +132,7 @@ class Arena:
         """! Get the return position for the ghosts.
 
         @returns The return position for the ghosts."""
-        pos = self._arena_data['ghost-return']
-        return self._nodes[pos]
+        return self._ghost_return[0]
 
     @property
     def nodes(self):

@@ -6,8 +6,8 @@ from .sprite_view import SpriteView
 AVATAR_RADIUS = 9
 
 class AvatarView(SpriteView):
-    def __init__(self, avatar, arena_view):
-        SpriteView.__init__(self, avatar, None, arena_view)
+    def __init__(self, avatar):
+        SpriteView.__init__(self, avatar)
 
     def draw(self, cr):
         coord = self._sprite.coordinate

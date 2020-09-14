@@ -28,7 +28,19 @@ class SquareArena(Arena):
                     nodes[i][j].set_geoneighbour(Direction("up"), nodes[i][j-1])
         self._avatar_start = (nodes[width//2-1][2*height//3], nodes[width//2][2*height//3])
         self._join(self._avatar_start[0], self._avatar_start[1])
-        self._ghost_start = (nodes[width//2-1][height//2-2], nodes[width//2][height//2-2])
-        self._join(self._ghost_start[0], self._ghost_start[1])
+        self._ghost_return = (nodes[width//2-1][height//2-2], nodes[width//2][height//2-2])
+        self._join(self._ghost_return[0], self._ghost_return[1])
         self._ghost_return = nodes[width//2][height//2-3]
+
+        self._pinky_start = (nodes[0][0], nodes[1][0])
+        self._join(self._pinky_start[0], self._pinky_start[1])
+
+        self._blinky_start = (nodes[width-2][0], nodes[width-1][0])
+        self._join(self._blinky_start[0], self._blinky_start[1])
+
+        self._inky_start = (nodes[width-1][height-2], nodes[width-1][height-1])
+        self._join(self._inky_start[0], self._inky_start[1])
+
+        self._clyde_start = (nodes[0][height-2], nodes[0][height-1])
+        self._join(self._clyde_start[0], self._clyde_start[1])
         return nodes

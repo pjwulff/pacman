@@ -8,9 +8,6 @@ setup(
     author='Peter Leddiman',
     author_email='peter.leddiman@gmail.com',
     packages=['pacman_game'],
-    package_data={
-        "pacman_game": ["data/*"],
-    },
     include_package_data=True,
     install_requires=['pygobject'],
     scripts=['pacman']

@@ -17,16 +17,15 @@ class GameView(Gtk.DrawingArea):
         self._controller = controller
         self._state = state
         self._next = next
+        self._scale = 1.5
         if state.shape == "square":
             self._arena_view = SquareArenaView(state.arena)
-        self._avatar_view = AvatarView(state.avatar, self._arena_view)
+        self._avatar_view = AvatarView(state.avatar)
         self._ghost_views = {}
         for ghost in state.ghosts:
-            self._ghost_views[ghost] = GhostView(state.ghosts[ghost], self._arena_view)
-        self._dot_view = DotView(self._arena_view)
-        self._power_view = PowerView(self._arena_view)
+            self._ghost_views[ghost] = GhostView(state.ghosts[ghost])
         rect = self._arena_view.rect
-        self.set_size_request(rect.width, rect.height)
+        self.set_size_request(rect.width * self._scale, rect.height * self._scale)
         self.set_visible(True)
         self.connect("draw", self.draw)
         self.connect("key-press-event", self.on_key_press)
@@ -35,11 +34,12 @@ class GameView(Gtk.DrawingArea):
         
     
     def draw(self, widget, cr):
+        cr.scale(self._scale, self._scale)
         self._arena_view.draw(cr)
         for dot in self._state.dots:
-            self._dot_view.view(dot).draw(cr)
+            DotView(dot).draw(cr)
         for power in self._state.powers:
-            self._power_view.view(power).draw(cr)
+            PowerView(power).draw(cr)
         for ghost in self._ghost_views:
             self._ghost_views[ghost].draw(cr)
         self._avatar_view.draw(cr)

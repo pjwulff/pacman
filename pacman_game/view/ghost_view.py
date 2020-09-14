@@ -3,8 +3,8 @@ import math
 from .sprite_view import SpriteView
 
 class GhostView(SpriteView):
-    def __init__(self, ghost, arena_view):
-        SpriteView.__init__(self, ghost, None, arena_view)
+    def __init__(self, ghost):
+        SpriteView.__init__(self, ghost)
 
     def draw(self, cr):
         """! Draw this sprite to the screen.
