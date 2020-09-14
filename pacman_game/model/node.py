@@ -87,8 +87,8 @@ class Node:
         for n in self.neighbours:
             if n is None:
                 raise self.neighbours
-            a = self.angle(n)
-            if abs(target - a) <= math.pi/8.:
+            a = abs(target - self.angle(n))
+            if a <= math.pi/8. or (2*math.pi - a) < math.pi/8.:
                 return n
         return None
 

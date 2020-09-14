@@ -50,9 +50,9 @@ class Arena:
 
     def _most_target(self, x, y):
         target = Node(Coordinate(x, y))
-        best_node = self._nodes[0]
-        best_distance = self._nodes[0].distance(target)
-        for node in self._nodes[1:]:
+        best_node = None
+        best_distance = 100000.0
+        for node in self._nodes:
             if len(node.geoneighbours) < 2:
                 continue
             distance = node.distance(target)
@@ -74,7 +74,11 @@ class Arena:
                     neighbour = node.geoneighbours[0]
                     node.remove_geoneighbour(neighbour)
                     neighbour.remove_geoneighbour(node)
-        node = nodes[0]
+        node = None
+        for n in nodes:
+            if len(n.geoneighbours) > 2:
+                node = n
+                break
         for neighbour in node.geoneighbours:
             walls += [(node, neighbour)]
         for node in nodes:

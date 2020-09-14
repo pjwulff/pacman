@@ -43,5 +43,4 @@ class HexagonalArena(Arena):
                         if j < (height - 1):
                             node.add_geoneighbour(nodes[num+width])
                             nodes[num+width].add_geoneighbour(node)
-        middle = num_nodes // 2
         return nodes

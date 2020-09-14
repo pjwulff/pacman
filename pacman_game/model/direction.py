@@ -111,5 +111,7 @@ class Direction:
         d = ["right", "right-up", "up", "left-up", "left", "left-down", "down", "right-down"]
         for direction in d:
             direction = Direction(direction)
-            if abs(direction.angle - angle) <= math.pi/8.:
+            e = abs(direction.angle - angle)
+            fe = 2*math.pi - e
+            if e <= math.pi/8. or fe <= math.pi/8.:
                 return direction
