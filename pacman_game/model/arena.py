@@ -22,14 +22,16 @@ class Arena:
     def generate(self):
         width = self.logical_width
         height = self.logical_height
-        self._nodes = self._generate_nodes(width, height)
-        self._avatar_start = self._most_middle()
-        self._ghost_return = self._nodes[0]
-        self._pinky_start = self._most_top_left()
-        self._blinky_start = self._most_top_right()
-        self._inky_start = self._most_bottom_right()
-        self._clyde_start = self._most_bottom_left()
-        self._generate_maze()
+        while (True):
+            self._nodes = self._generate_nodes(width, height)
+            self._avatar_start = self._most_middle()
+            self._ghost_return = self._nodes[0]
+            self._pinky_start = self._most_top_left()
+            self._blinky_start = self._most_top_right()
+            self._inky_start = self._most_bottom_right()
+            self._clyde_start = self._most_bottom_left()
+            if self._generate_maze():
+                break
         self._dots = self._generate_dots()
         self._powers = self._generate_powers()
     
@@ -79,6 +81,8 @@ class Arena:
             if len(n.geoneighbours) > 2:
                 node = n
                 break
+        if node is None:
+            return False
         for neighbour in node.geoneighbours:
             walls += [(node, neighbour)]
         for node in nodes:
@@ -97,6 +101,7 @@ class Arena:
                         walls += [(b, neighbour)]
             walls.remove(wall)
         self._remove_dead_ends()
+        return True
     
     def _remove_dead_ends(self):
         for node in self._nodes:
@@ -123,7 +128,13 @@ class Arena:
         return dots
     
     def _generate_powers(self):
-        return []
+        powers = []
+        while len(powers) < 4:
+            dot = random.choice(self._dots)
+            power = Power(dot.coordinate)
+            self._dots.remove(dot)
+            powers += [power]
+        return powers
         
     def scatter_target(self, name):
         targets = {

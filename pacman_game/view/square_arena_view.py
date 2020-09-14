@@ -1,3 +1,4 @@
+from ..model.angle import *
 from .arena_view import ArenaView
 
 class SquareArenaView(ArenaView):
@@ -8,29 +9,15 @@ class SquareArenaView(ArenaView):
         super().draw(cr)
         width = self._arena.logical_width
         height = self._arena.logical_height
-        for i in range(width):
-            for j in range(height):
-                node = self._arena.nodes[i+j*width]
-                directions = [node.direction(n) for n in node.geoneighbours]
-                if None in directions:
-                    print("wut", directions)
-                for direction in directions:
-                    neighbour = node.neighbour(direction)
-                    if neighbour is None:
-                        direction = str(direction)
-                        if direction == "left":
-                            cr.move_to(node.x - 12, node.y - 12)
-                            cr.line_to(node.x - 12, node.y + 12)
-                            cr.stroke()
-                        elif direction == "right":
-                            cr.move_to(node.x + 12, node.y - 12)
-                            cr.line_to(node.x + 12, node.y + 12)
-                            cr.stroke()
-                        elif direction == "up":
-                            cr.move_to(node.x - 12, node.y - 12)
-                            cr.line_to(node.x + 12, node.y - 12)
-                            cr.stroke()
-                        elif direction == "down":
-                            cr.move_to(node.x - 12, node.y + 12)
-                            cr.line_to(node.x + 12, node.y + 12)
-                            cr.stroke()
+        for node in self._arena.nodes:
+            for neighbour in node.geoneighbours:
+                if neighbour not in node.neighbours:
+                    angle = node.direction(neighbour)
+                    perp = normalise(angle + math.pi/2.0)
+                    ox = 12 * math.cos(angle)
+                    oy = 12 * math.sin(angle)
+                    px = 12 * math.cos(perp)
+                    py = 12 * math.sin(perp)
+                    cr.move_to(node.x+ox+px, node.y-oy-py)
+                    cr.line_to(node.x+ox-px, node.y-oy+py)
+                    cr.stroke()

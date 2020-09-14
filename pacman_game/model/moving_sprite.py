@@ -1,5 +1,4 @@
 from .coordinate import Coordinate
-from .direction import Direction
 from .sprite import Sprite
 
 class MovingSprite(Sprite):
@@ -15,8 +14,8 @@ class MovingSprite(Sprite):
         self._from_pos = self.start_pos
         self._to_pos = self._from_pos
         self.trans_pos = 0.0
-        self.direction = Direction()
         self.calculate_position()
+        self._last_angle = None
         
     @property
     def trans_pos(self):
@@ -61,14 +60,13 @@ class MovingSprite(Sprite):
 
     @to_pos.setter
     def to_pos(self, to_pos):
-        if to_pos is None:
-            raise
         self._to_pos = to_pos
 
     @property
     def direction(self):
-        return self._direction
-    
-    @direction.setter
-    def direction(self, direction):
-        self._direction = direction
+        if self.from_pos == self.to_pos:
+            return self._last_angle
+        d = self.from_pos.direction(self.to_pos)
+        if d is not None:
+            self._last_angle = d
+        return d

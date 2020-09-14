@@ -1,6 +1,6 @@
 import random
+from ..model.angle import *
 from ..model.coordinate import Coordinate
-from ..model.direction import Direction
 from .moving_sprite_controller import MovingSpriteController
 
 class GhostController(MovingSpriteController):
@@ -14,6 +14,7 @@ class GhostController(MovingSpriteController):
             self.speed_scale = 0.75
         self._target = Coordinate()
         self._reverse = False
+        self._last_pos = None
         
     def increase_difficulty(self):
         self.speed_scale = (1.0 + 9*self.speed_scale) / 10.0
@@ -35,14 +36,6 @@ class GhostController(MovingSpriteController):
     
     def plan(self, avatar, ghosts):
         self._target = self.target(avatar, ghost)
-
-    def _distance(self, direction, target):
-        next_tile = self.from_pos.neighbour(direction)
-        if next_tile is None or target is None:
-            return 1000.0
-        dx = (next_tile.x - target.x) ** 2.0
-        dy = (next_tile.y - target.y) ** 2.0
-        return dx + dy
 
     @property
     def alive(self):
@@ -77,9 +70,8 @@ class GhostController(MovingSpriteController):
         if self.alive == False:
             if self.from_pos == self.sprite.start_pos:
                 self.alive = True
-            else:
-                pos = self.sprite.start_pos
-                target = Coordinate(pos.x, pos.y)
+            pos = self.sprite.start_pos
+            target = Coordinate(pos.x, pos.y)
         elif self.mode == "chase":
             target = self._target
         elif self.mode == "frighten":
@@ -89,7 +81,7 @@ class GhostController(MovingSpriteController):
         if self._reverse:
             self._reverse = False
         else:
-            op_neighbour = self.from_pos.neighbour(self.direction.flip())
+            op_neighbour = self._last_pos
             if op_neighbour in valid_neighbours and len(valid_neighbours) > 1:
                 valid_neighbours.remove(op_neighbour)
 
@@ -104,4 +96,6 @@ class GhostController(MovingSpriteController):
                     best_distance = dist
                     best_neighbour = neighbour
             neighbour = best_neighbour
+        if neighbour is not None:
+            self._last_pos = self.from_pos
         return self.from_pos.direction(neighbour)

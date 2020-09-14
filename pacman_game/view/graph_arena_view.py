@@ -2,7 +2,7 @@ import cairo
 import math
 from .arena_view import ArenaView
 
-class HexagonalArenaView(ArenaView):
+class GraphArenaView(ArenaView):
     def __init__(self, arena):
         super().__init__(arena)
 

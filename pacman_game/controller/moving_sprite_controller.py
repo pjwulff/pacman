@@ -1,4 +1,4 @@
-from ..model.direction import Direction
+from ..model.angle import *
 
 class MovingSpriteController:
     def __init__(self, sprite):
@@ -10,7 +10,7 @@ class MovingSpriteController:
         self._sprite.return_to_spawn()
         self._arrived = False
         self._start = True
-        self.target_direction = Direction()
+        self.target_direction = None
         self.speed = 0.0
 
     @property
@@ -20,20 +20,18 @@ class MovingSpriteController:
     @target_direction.setter
     def target_direction(self, target_direction):
         self._target_direction = target_direction
-        if target_direction == self.direction.flip():
+        if target_direction is not None and self.direction is not None and opposite(target_direction, self.direction) and not self._arrived:
             self._turn_around()
     
-    def add_direction(self, direction):
-        self.target_direction.add_direction(direction)
-    
-    def remove_direction(self, direction):
-        self.target_direction.remove_direction(direction)
+    def set_direction(self, direction):
+        self.target_direction = direction
     
     def _turn_around(self):
         temp = self.sprite.from_pos
         self.sprite.from_pos = self.sprite.to_pos
         self.sprite.to_pos = temp
         self.sprite.trans_pos = 1.0 - self.sprite.trans_pos
+        self.sprite.calculate_position()
     
     @property
     def from_pos(self):
@@ -46,10 +44,6 @@ class MovingSpriteController:
     @property
     def direction(self):
         return self.sprite.direction
-    
-    @direction.setter
-    def direction(self, direction):
-        self.sprite.direction = direction
         
     @property
     def speed(self):
@@ -71,7 +65,7 @@ class MovingSpriteController:
         distance = self.sprite.to_pos.distance(self.sprite.from_pos)
         if distance == 0.0:
             return 0.0000
-        self._speed = self.speed_scale * 150.0 / distance
+        self._speed = self.speed_scale * 100.0 / distance
 
     def step(self, delta):
         """! Update this sprite over the span of time of one frame. This moves
@@ -80,16 +74,16 @@ class MovingSpriteController:
         This method must be overridden by subclasses."""
         if self._start:
             direction = self._new_direction()
-            if direction.valid:
-                self.direction = direction
+            if direction is not None:
                 self._calculate_speed()
                 self._start = False
         if self._arrived:
-            self.direction = self._new_direction()
-            new_to = self.sprite.from_pos.neighbour(self.direction)
+            direction = self._new_direction()
+            new_to = self.sprite.from_pos.neighbour(direction, math.pi/4.)
             if new_to is not None:
                 self.sprite.to_pos = new_to
                 self._calculate_speed()
+                self.sprite.calculate_position()
                 self._arrived = False
             else:
                 self.speed = 0
@@ -106,8 +100,8 @@ class MovingSpriteController:
 
     def _new_direction(self):
         direction = self.target_direction
-        if direction.valid:
-            neighbour = self.sprite.from_pos.neighbour(direction)
+        if direction is not None:
+            neighbour = self.sprite.from_pos.neighbour(direction, math.pi/4.)
             if neighbour is not None:
-                return direction.copy()
+                return direction
         return self.direction

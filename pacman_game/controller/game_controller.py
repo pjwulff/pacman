@@ -152,11 +152,8 @@ class InternalController:
             self.state.scatter_duration *= 0.9
             self.state.frighten_duration *= 0.9
     
-    def add_direction(self, direction):
-        self._avatar_controller.add_direction(direction)
-    
-    def remove_direction(self, direction):
-        self._avatar_controller.remove_direction(direction)
+    def set_direction(self, direction):
+        self._avatar_controller.set_direction(direction)
 
 
 class GameController:

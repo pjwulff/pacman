@@ -1,4 +1,5 @@
 import cairo
+import math
 from .sprite_view import SpriteView
 
 POWER_RADIUS = 4

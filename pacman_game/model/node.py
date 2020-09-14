@@ -1,6 +1,6 @@
 import math
 from .coordinate import Coordinate
-from .direction import Direction
+from .angle import *
 
 class Node:
     """! Represents a vertex in the direction graph of the maze."""
@@ -70,28 +70,19 @@ class Node:
     def is_geoneighbour(self, node):
         return node in self.geoneighbours
 
-    def angle(self, node):
-        dx = node.x - self.x
-        dy = node.y - self.y
-        a = math.atan2(-dy, dx)
-        if a >= 2 * math.pi:
-            a -= 2 * math.pi
-        elif a < 0:
-            a += 2 * math.pi
-        return a
-
-    def neighbour(self, direction):
-        if not direction.valid:
+    def neighbour(self, direction, threshold = math.pi/8.):
+        if direction is None:
             return None
-        target = direction.angle
+        best_neighbour = None
+        best_error = 1000.0
         for n in self.neighbours:
-            if n is None:
-                raise self.neighbours
-            a = abs(target - self.angle(n))
-            if a <= math.pi/8. or (2*math.pi - a) < math.pi/8.:
-                return n
-        return None
+            error = angle(self.direction(n), direction)
+            if error <= threshold and error < best_error:
+                best_error = error
+                best_neighbour = n
+        return best_neighbour
 
     def direction(self, node):
-        a = self.angle(node)
-        return Direction.from_angle(a)
+        dx = node.x - self.x
+        dy = node.y - self.y
+        return normalise(math.atan2(-dy, dx))

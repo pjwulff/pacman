@@ -5,6 +5,7 @@ from .sprite_view import SpriteView
 class GhostView(SpriteView):
     def __init__(self, ghost):
         SpriteView.__init__(self, ghost)
+        self._last_angle = 0
 
     def draw(self, cr):
         """! Draw this sprite to the screen.
@@ -35,6 +36,19 @@ class GhostView(SpriteView):
         elif self._sprite.name == "clyde":
             cr.set_source_rgb(1.0, 0.5, 0.0)
 
+    def _draw_scared(self, cr, x, y):
+        cr.set_source_rgb(0, 0, 0.5)
+        cr.move_to(x, y)
+        cr.arc(x, y, 9, math.pi, 0)
+        cr.close_path()
+        cr.fill()
+        cr.move_to(x + 9, y)
+        cr.line_to(x + 9, y + 9)
+        cr.line_to(x - 9, y + 9)
+        cr.line_to(x - 9, y)
+        cr.close_path()
+        cr.fill()
+
     def _draw_body(self, cr, x, y):
         self._set_colour(cr)
         cr.move_to(x, y)
@@ -49,11 +63,11 @@ class GhostView(SpriteView):
         cr.fill()
 
     def _draw_eyes(self, cr, x, y):
-        fr = self._sprite.from_pos
-        to = self._sprite.to_pos
-        dx = to.x - fr.x
-        dy = to.y - fr.y
-        angle = math.atan2(dy, dx)
+        angle = self._sprite.direction
+        if angle is None:
+            angle = self._last_angle
+        else:
+            self._last_angle = angle
         ox = 2.0*math.cos(angle)
         oy = 2.0*math.sin(angle)
         cr.move_to(x+ox, y+oy)
@@ -73,7 +87,7 @@ class GhostView(SpriteView):
         cr.fill()
         cr.set_source_rgb(0.0, 0.0, 0.0)
         ox = 2.5*math.cos(angle)
-        oy = 2.5*math.sin(angle)
+        oy = 2.5*math.sin(-angle)
         cr.arc(x+ox-4.5, y+ox-2, 1, 0, 2*math.pi)
         cr.close_path()
         cr.fill()
