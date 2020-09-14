@@ -5,13 +5,15 @@ from .sprite import Sprite
 class MovingSprite(Sprite):
     """! Base class for all sprites which move during gameplay."""
     def __init__(self, arena, radius, name):
-        Sprite.__init__(self, arena, Coordinate(0, 0), radius, name)
+        Sprite.__init__(self, Coordinate(0, 0), radius, name)
+        self._arena = arena
         self.return_to_spawn()
     
     def return_to_spawn(self):
         """! Instructs this moving sprite to return to its spawn location.
         Used when the avatar is hit by a ghost and loses a life."""
-        (self._from_pos, self._to_pos) = self.start_pos
+        self._from_pos = self.start_pos
+        self._to_pos = self._from_pos
         self.trans_pos = 0.0
         self.direction = Direction()
         self.calculate_position()
@@ -30,21 +32,12 @@ class MovingSprite(Sprite):
         to_x = self.to_pos.x
         to_y = self.to_pos.y
         
-        if self._in_portal:
-            if "left" in self.direction:
-                to_x -= self._arena.rect.width
-            elif "right" in self.direction:
-                to_x += self._arena.rect.width
-            if "up" in self.direction:
-                to_y -= self._arena.rect.height
-            elif "down" in self.direction:
-                to_y += self._arena.rect.height
         self.x = from_x + (to_x - from_x) * self._trans_pos
         self.y = from_y + (to_y - from_y) * self._trans_pos
     
     @property
     def start_pos(self):
-        return self._arena.start_pos(self.name)
+        return self._arena.start_pos(self.name)[0]
 
     @property
     def from_pos(self):
@@ -68,13 +61,9 @@ class MovingSprite(Sprite):
 
     @to_pos.setter
     def to_pos(self, to_pos):
+        if to_pos is None:
+            raise
         self._to_pos = to_pos
-
-    @property
-    def _in_portal(self):
-        if self.from_pos.portal(self.direction) is not None:
-            return True
-        return False
 
     @property
     def direction(self):

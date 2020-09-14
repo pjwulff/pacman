@@ -85,32 +85,24 @@ class GhostController(MovingSpriteController):
             target = self._target
         elif self.mode == "scatter":
             target = self._scatter_target
-        valid_directions = []
-        if self.from_pos.neighbour("left") is not None:
-            valid_directions += ["left"]
-        if self.from_pos.neighbour("right") is not None:
-            valid_directions += ["right"]
-        if self.from_pos.neighbour("up") is not None:
-            valid_directions += ["up"]
-        if self.from_pos.neighbour("down") is not None:
-            valid_directions += ["down"]
+        valid_neighbours = self.from_pos.neighbours[:]
 
         if self._reverse:
             self._reverse = False
         else:
-            flipped = str(self.direction.flip())
-            if flipped in valid_directions and len(valid_directions) > 1:
-                valid_directions.remove(flipped)
+            op_neighbour = self.from_pos.neighbour(self.direction.flip())
+            if op_neighbour in valid_neighbours and len(valid_neighbours) > 1:
+                valid_neighbours.remove(op_neighbour)
 
         if (self.mode == "frighten" or self.mode == "scatter") and self.alive:
-            return Direction(random.choice(valid_directions))
+            neighbour = random.choice(valid_neighbours)
         else:
-            valid_directions = [Direction(d) for d in valid_directions]
-            best_direction = valid_directions[0]
-            best_distance = self._distance(best_direction, target)
-            for direction in valid_directions[1:]:
-                dist = self._distance(direction, target)
+            best_neighbour = valid_neighbours[0]
+            best_distance = best_neighbour.distance(target)
+            for neighbour in valid_neighbours[1:]:
+                dist = neighbour.distance(target)
                 if dist < best_distance:
                     best_distance = dist
-                    best_direction = direction
-            return best_direction
+                    best_neighbour = neighbour
+            neighbour = best_neighbour
+        return self.from_pos.direction(neighbour)

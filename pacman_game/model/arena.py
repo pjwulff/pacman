@@ -1,6 +1,5 @@
 import random
 from .coordinate import Coordinate
-from .direction import Direction
 from .dot import Dot
 from .node import Node
 from .power import Power
@@ -29,19 +28,15 @@ class Arena:
         self._powers = self._generate_powers()
     
     def _join(self, node_a, node_b):
-        for direction in node_a.geoneighbours:
-            if node_b == node_a.geoneighbour(direction):
-                node_a.set_neighbour(direction, node_b)
-        for direction in node_b.geoneighbours:
-            if node_a == node_b.geoneighbour(direction):
-                node_b.set_neighbour(direction, node_a)
+        node_a.add_neighbour(node_b)
+        node_b.add_neighbour(node_a)
     
     def _generate_maze(self):
         walls = []
         nodes = self._nodes
         node = nodes[self._logical_width//2][self._logical_height-1]
-        for direction in node.geoneighbours:
-            walls += [(node, node.geoneighbour(direction))]
+        for neighbour in node.geoneighbours:
+            walls += [(node, neighbour)]
         for i in range(self._logical_width):
             for j in range(self._logical_height):
                 nodes[i][j].visited = False
@@ -54,10 +49,9 @@ class Arena:
             if not b.visited:
                 self._join(a, b)
                 b.visited = True
-                for direction in b.geoneighbours:
-                    neighbour = b.geoneighbour(direction)
-                    if neighbour is not None and not neighbour.visited:
-                        walls += [(b, b.geoneighbour(Direction(direction)))]
+                for neighbour in b.geoneighbours:
+                    if not neighbour.visited:
+                        walls += [(b, neighbour)]
             walls.remove(wall)
         self._remove_dead_ends()
     
@@ -66,19 +60,15 @@ class Arena:
             for j in range(self._logical_height):
                 node = self._nodes[i][j]
                 while len(node.neighbours) < 2:
-                    lst = list(node.geoneighbours.keys())
-                    direction = random.choice(lst)
-                    if node.neighbour(direction) is None:
-                        neighbour = node.geoneighbour(direction)
-                        if neighbour is not None:
-                            self._join(node, neighbour)
+                    neighbour = random.choice(node.geoneighbours)
+                    self._join(node, neighbour)
     
     def _generate_dots(self):
         dots = []
         for i in range(self._logical_width):
             for j in range(self._logical_height):
                 node = self._nodes[i][j]
-                dot = Dot(self, node.coordinate)
+                dot = Dot(node.coordinate)
                 dots += [dot]
         return dots
     

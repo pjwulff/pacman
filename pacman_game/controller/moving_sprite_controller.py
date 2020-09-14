@@ -69,6 +69,8 @@ class MovingSpriteController:
 
     def _calculate_speed(self):
         distance = self.sprite.to_pos.distance(self.sprite.from_pos)
+        if distance == 0.0:
+            return 0.0000
         self._speed = self.speed_scale * 150.0 / distance
 
     def step(self, delta):
@@ -78,22 +80,23 @@ class MovingSpriteController:
         This method must be overridden by subclasses."""
         if self._start:
             direction = self._new_direction()
-            if direction is not None:
+            if direction.valid:
                 self.direction = direction
                 self._calculate_speed()
                 self._start = False
         if self._arrived:
             self.direction = self._new_direction()
-            if self.direction is not None:
-                self.sprite.to_pos = self.sprite.from_pos.neighbour(self.direction)
+            new_to = self.sprite.from_pos.neighbour(self.direction)
+            if new_to is not None:
+                self.sprite.to_pos = new_to
                 self._calculate_speed()
                 self._arrived = False
             else:
-                self.speed = 0.0
+                self.speed = 0
         else:
             self.sprite.trans_pos += self._speed * delta
             self.sprite.calculate_position()
-            if self.sprite.trans_pos < 0.0:
+            if self.sprite.trans_pos <= 0.0:
                 self.sprite.trans_pos = 0.0
                 self._arrived = True
             if self.sprite.trans_pos >= 1.0:
@@ -103,23 +106,8 @@ class MovingSpriteController:
 
     def _new_direction(self):
         direction = self.target_direction
-        if "left" in direction and self.sprite.from_pos.neighbour("left") is not None:
-            return Direction("left")
-        elif "right" in direction and self.sprite.from_pos.neighbour("right") is not None:
-            return Direction("right")
-        elif "up" in direction and self.sprite.from_pos.neighbour("up") is not None:
-            return Direction("up")
-        elif "down" in direction and self.sprite.from_pos.neighbour("down") is not None:
-            return Direction("down")
-        if self.sprite.from_pos.neighbour(self.direction) is not None:
-            return self.direction
-        else:
-            return None
-
-    def _pick_initial_direction(self):
-        self.direction = self._new_direction()
-        if self.direction.valid():
-            self._start = False
-            if self.sprite.from_pos.neighbour(self.direction) != self.sprite.to_pos:
-                self._turn_around()
-            self._calculate_speed()
+        if direction.valid:
+            neighbour = self.sprite.from_pos.neighbour(direction)
+            if neighbour is not None:
+                return direction.copy()
+        return self.direction

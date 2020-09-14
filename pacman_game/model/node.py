@@ -1,18 +1,17 @@
 import math
 from .coordinate import Coordinate
+from .direction import Direction
 
 class Node:
     """! Represents a vertex in the direction graph of the maze."""
-    def __init__(self, arena, coordinate):
+    def __init__(self, coordinate):
         """! Create a new node in the graph.
 
         @param arena The arena to which this node belonds.
         @param x,y The coordinates of this node."""
         self._coordinate = coordinate
-        self._arena = arena
-        self._geoneighbours = {}
-        self._neighbours = {}
-        self._portals = {}
+        self._geoneighbours = []
+        self._neighbours = []
 
     @property
     def x(self):
@@ -27,91 +26,72 @@ class Node:
 
         @returns the y coordinate of this node."""
         return self._coordinate.y
+
+    @property
+    def neighbours(self):
+        return self._neighbours
+
+    @property
+    def geoneighbours(self):
+        return self._geoneighbours
     
     @property
     def coordinate(self):
         return self._coordinate
 
-    def set_neighbour(self, direction, neighbour):
-        """! Sets another node in the graph as a neighbour to this node.
+    def add_neighbour(self, neighbour):
+        if neighbour is None:
+            raise "wtf"
+        if neighbour not in self.neighbours:
+            self._neighbours += [neighbour]
 
-        @param direction A label to describe how the two nodes relate.
-        @param neighbour The node which neighbours this one."""
-        self._neighbours[str(direction)] = neighbour
+    def remove_neighbour(self, neighbour):
+        if neighbour is None:
+            raise "wtf"
+        self._neighbours.remove(neighbour)
 
-    def set_portal(self, direction, portal):
-        """! Sets another node as a portal destination from this node.
-        This allows the avatar to wrap around the map as in the original game.
+    def add_geoneighbour(self, neighbour):
+        if neighbour not in self.geoneighbours:
+            self._geoneighbours += [neighbour]
 
-        @param direction A label to describe how the two nodes relate.
-        @param portal The node to which this node warps."""
-        self._portals[str(direction)] = portal
-
-    def neighbour(self, direction):
-        """! Get the neighbouring node in a particular direction.
-
-        @param direction The label used to describe the direction.
-        @returns The node in that direction if one exists, None otherwise."""
-        if str(direction) in self._neighbours:
-            return self._neighbours[str(direction)]
-        else:
-            return None
-
-    def geoneighbour(self, direction):
-        if str(direction) in self._geoneighbours:
-            return self._geoneighbours[str(direction)]
-        else:
-            return None
-
-    def set_geoneighbour(self, direction, neighbour):
-        """! Sets another node in the graph as a neighbour to this node.
-
-        @param direction A label to describe how the two nodes relate.
-        @param neighbour The node which neighbours this one."""
-        self._geoneighbours[str(direction)] = neighbour
-
-    def remove_geoneighbour(self, direction):
-        """! Sets another node in the graph as a neighbour to this node.
-
-        @param direction A label to describe how the two nodes relate.
-        @param neighbour The node which neighbours this one."""
-        self._geoneighbours[str(direction)] = None
-
-    def portal(self, direction):
-        """! Gets the portal node in a particular direction.
-
-        @param direction The label used to describe the direction.
-        @returns The node in that direction if one exists, None otherwise."""
-        if str(direction) in self._portals:
-            return self._portals[str(direction)]
-        else:
-            return None
-    
-    @property
-    def neighbours(self):
-        return self._neighbours
-    
-    @property
-    def geoneighbours(self):
-        return self._geoneighbours
+    def remove_geneighbour(self, geoneighbour):
+        self._geoneighbours.remove(neighbour)
 
     def distance(self, other):
-        """ The euclidean distance between two nodes. This method takes into
-        account if one node is a portal to another.
-
-        @param other The other node to which the distance should be calculated.
-        @returns The euclidean distance between if not connected by a portal,
-        or the logical distance if they do."""
         other_x = other.x
         other_y = other.y
-        if self.portal("left") == other:
-            other_x -= self._arena.rect.width
-        if self.portal("right") == other:
-            other_x += self._arena.rect.width
-        if self.portal("up") == other:
-            other_x -= self._arena.rect.height
-        if self.portal("down") == other:
-            other_x += self._arena.rect.height
         dx = (other_x - self.x) ** 2
         dy = (other_y - self.y) ** 2
         return math.sqrt(dx + dy)
+
+    def is_neighbour(self, node):
+        return node in self.neighbours
+
+    def is_geoneighbour(self, node):
+        return node in self.geoneighbours
+
+    def angle(self, node):
+        dx = node.x - self.x
+        dy = node.y - self.y
+        a = math.atan2(-dy, dx)
+        if a >= 2 * math.pi:
+            a -= 2 * math.pi
+        elif a < 0:
+            a += 2 * math.pi
+        return a
+
+    def neighbour(self, direction):
+        if not direction.valid:
+            return None
+        target = direction.angle
+        for n in self.neighbours:
+            if n is None:
+                raise self.neighbours
+            a = self.angle(n)
+            if abs(target - a) <= math.pi/8.:
+                return n
+        return None
+
+    def direction(self, node):
+        a = self.angle(node)
+        return Direction.from_angle(a)

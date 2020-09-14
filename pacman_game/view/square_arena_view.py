@@ -11,10 +11,13 @@ class SquareArenaView(ArenaView):
         for i in range(width):
             for j in range(height):
                 node = self._arena.nodes[i][j]
-                directions = list(node.geoneighbours.keys())
+                directions = [node.direction(n) for n in node.geoneighbours]
+                if None in directions:
+                    print("wut", directions)
                 for direction in directions:
                     neighbour = node.neighbour(direction)
                     if neighbour is None:
+                        direction = str(direction)
                         if direction == "left":
                             cr.move_to(node.x - 12, node.y - 12)
                             cr.line_to(node.x - 12, node.y + 12)

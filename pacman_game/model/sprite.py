@@ -4,13 +4,12 @@ class Sprite:
     """! Base class for all displayable sprites.
 
     """
-    def __init__(self, arena, coordinate, radius, name):
+    def __init__(self, coordinate, radius, name):
         """! Base constructor for sprites.
 
         @param arena The arena to which this sprite belongs.
         @param x,y   The coordinates where this sprite should spawn.
         @param name  The name of this sprite."""
-        self._arena = arena
         self._coordinate = coordinate
         self._radius = radius
         self._name = name
