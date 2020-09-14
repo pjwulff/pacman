@@ -5,7 +5,7 @@ import pkg_resources
 class BannerView(Gtk.DrawingArea):
     def __init__(self, message, next, score = None, **kwargs):
         super().__init__(**kwargs)
-        self.set_size_request(672, 884)
+        self.set_size_request(240, 384)
         self.set_visible(True)
         self.add_events(Gdk.EventMask.BUTTON_PRESS_MASK)
         self._message = message

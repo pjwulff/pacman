@@ -12,7 +12,7 @@ class MovingSprite(Sprite):
         """! Instructs this moving sprite to return to its spawn location.
         Used when the avatar is hit by a ghost and loses a life."""
         (self._from_pos, self._to_pos) = self.start_pos
-        self.trans_pos = 0.5
+        self.trans_pos = 0.0
         self.direction = Direction()
         self.calculate_position()
         

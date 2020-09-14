@@ -15,7 +15,7 @@ class GameState:
         self.lives = 3
         self.score = 0
         self.level = 1
-        self._arena = SquareArena(Rect(13, 21))
+        self._arena = SquareArena(Rect(8, 13))
         self._avatar = Avatar(self._arena)
         self._ghosts = {
             "blinky": Blinky(self._arena),

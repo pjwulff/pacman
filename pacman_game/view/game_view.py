@@ -46,19 +46,22 @@ class GameView(Gtk.DrawingArea):
         self._draw_hud(cr)
     
     def _draw_hud(self, cr):
+        rect = self._arena_view.rect
         cr.set_font_size(24)
         cr.set_source_rgb(1.0, 1.0, 1.0)
-        cr.move_to(60, 24)
+        cr.move_to(0, 24)
         cr.show_text("LIVES")
-        cr.move_to(60, 48)
+        cr.move_to(0, 48)
         cr.show_text(str(self._state.lives))
-        cr.move_to(240, 24)
-        cr.show_text("HIGH SCORE")
-        cr.move_to(240, 48)
+        (_, _, width, _, _, _) = cr.text_extents("SCORE")
+        cr.move_to(rect.width/2 - width/2, 24)
+        cr.show_text("SCORE")
+        cr.move_to(rect.width/2 - width/2, 48)
         cr.show_text(str(self._state.score))
-        cr.move_to(480, 24)
+        (_, _, width, _, _, _) = cr.text_extents("LEVEL")
+        cr.move_to(rect.width - width, 24)
         cr.show_text("LEVEL")
-        cr.move_to(480, 48)
+        cr.move_to(rect.width - width, 48)
         cr.show_text(str(self._state.level))
     
     def tick(self):
