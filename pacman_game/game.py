@@ -21,7 +21,7 @@ class Game(Gtk.Application):
         self._win = self.props.active_window
         if not self._win:
             self._win = PacmanWindow(application=self)
-            self._display_banner("START", self.start_game)
+            self._display_banner(self.start_game)
         self._win.present()
     
     def start_game(self):
@@ -32,13 +32,6 @@ class Game(Gtk.Application):
         view = GameView(controller, controller.state, self._display_banner)
         self._win.view = view
 
-    def _display_banner(self, condition, score = None):
-        self._win.enable()
-        if condition == "win":
-            message = "WIN"
-        elif condition == "lose":
-            message = "LOSE"
-        else:
-            message = condition
-        view = BannerView(message, self.start_game, score)
+    def _display_banner(self, next, score = None):
+        view = BannerView(self.start_game, score)
         self._win.view = view
