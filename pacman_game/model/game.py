@@ -1,5 +1,6 @@
 import sys, time
 from .square_arena import SquareArena
+from .hexagonal_arena import HexagonalArena
 from .avatar import Avatar
 from .blinky import Blinky
 from .pinky import Pinky
@@ -15,7 +16,7 @@ class GameState:
         self.lives = 3
         self.score = 0
         self.level = 1
-        self._arena = SquareArena(Rect(8, 13))
+        self._arena = HexagonalArena(Rect(13, 8))
         self._avatar = Avatar(self._arena)
         self._ghosts = {
             "blinky": Blinky(self._arena),

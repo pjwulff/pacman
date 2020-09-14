@@ -54,7 +54,7 @@ class Node:
         if neighbour not in self.geoneighbours:
             self._geoneighbours += [neighbour]
 
-    def remove_geneighbour(self, geoneighbour):
+    def remove_geoneighbour(self, neighbour):
         self._geoneighbours.remove(neighbour)
 
     def distance(self, other):

@@ -23,10 +23,44 @@ class Arena:
         width = self.logical_width
         height = self.logical_height
         self._nodes = self._generate_nodes(width, height)
+        self._avatar_start = self._most_middle()
+        self._ghost_return = self._nodes[0]
+        self._pinky_start = self._most_top_left()
+        self._blinky_start = self._most_top_right()
+        self._inky_start = self._most_bottom_right()
+        self._clyde_start = self._most_bottom_left()
         self._generate_maze()
         self._dots = self._generate_dots()
         self._powers = self._generate_powers()
     
+    def _most_middle(self):
+        return self._most_target((self._width - 48)/2+48, (self._height-120)/2+120)
+
+    def _most_top_left(self):
+        return self._most_target(0, 0)
+
+    def _most_top_right(self):
+        return self._most_target(self._width, 0)
+
+    def _most_bottom_left(self):
+        return self._most_target(0, self._height)
+
+    def _most_bottom_right(self):
+        return self._most_target(self._width, self._height)
+
+    def _most_target(self, x, y):
+        target = Node(Coordinate(x, y))
+        best_node = self._nodes[0]
+        best_distance = self._nodes[0].distance(target)
+        for node in self._nodes[1:]:
+            if len(node.geoneighbours) < 2:
+                continue
+            distance = node.distance(target)
+            if distance < best_distance:
+                best_distance = distance
+                best_node = node
+        return best_node
+
     def _join(self, node_a, node_b):
         node_a.add_neighbour(node_b)
         node_b.add_neighbour(node_a)
@@ -34,6 +68,12 @@ class Arena:
     def _generate_maze(self):
         walls = []
         nodes = self._nodes
+        for node in nodes:
+            if len(node.geoneighbours) < 2:
+                while len(node.geoneighbours) > 0:
+                    neighbour = node.geoneighbours[0]
+                    node.remove_geoneighbour(neighbour)
+                    neighbour.remove_geoneighbour(node)
         node = nodes[0]
         for neighbour in node.geoneighbours:
             walls += [(node, neighbour)]
@@ -41,7 +81,7 @@ class Arena:
             node.visited = False
         nodes[0].visited = True
         
-        while len(walls):
+        while len(walls) > 0:
             wall = random.choice(walls)
             a = wall[0]
             b = wall[1]
@@ -56,15 +96,26 @@ class Arena:
     
     def _remove_dead_ends(self):
         for node in self._nodes:
-            while len(node.neighbours) < 2:
-                neighbour = random.choice(node.geoneighbours)
-                self._join(node, neighbour)
+            if len(node.geoneighbours) > 1:
+                while len(node.neighbours) < 2:
+                    neighbour = random.choice(node.geoneighbours)
+                    self._join(node, neighbour)
     
     def _generate_dots(self):
         dots = []
+        starts = [
+            self._avatar_start,
+            self._blinky_start,
+            self._clyde_start,
+            self._inky_start,
+            self._pinky_start,
+        ]
         for node in self._nodes:
-            dot = Dot(node.coordinate)
-            dots += [dot]
+            if len(node.neighbours) > 0:
+                if node in starts:
+                    continue
+                dot = Dot(node.coordinate)
+                dots += [dot]
         return dots
     
     def _generate_powers(self):

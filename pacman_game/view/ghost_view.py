@@ -10,6 +10,13 @@ class GhostView(SpriteView):
         """! Draw this sprite to the screen.
 
         @param screen The PyGame screen to which this sprite to draw."""
+        cr.save()
+        cr.set_line_width(3)
+        self._set_colour(cr)
+        cr.arc(self._sprite.start_pos.x, self._sprite.start_pos.y, 12, 0, 2*math.pi)
+        cr.close_path()
+        cr.stroke()
+        cr.restore()
         coord = self._sprite.coordinate
         if self._sprite.scared and self._sprite.alive:
             self._draw_scared(cr, coord.x, coord.y)

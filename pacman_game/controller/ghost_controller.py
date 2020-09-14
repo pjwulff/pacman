@@ -12,7 +12,6 @@ class GhostController(MovingSpriteController):
             self.speed_scale = 0.5
         elif difficulty == "hard":
             self.speed_scale = 0.75
-        self._scatter_target = sprite.scatter_target
         self._target = Coordinate()
         self._reverse = False
         
@@ -76,15 +75,15 @@ class GhostController(MovingSpriteController):
     def _new_direction(self):
         target = None
         if self.alive == False:
-            if self.from_pos == self.sprite.return_position:
+            if self.from_pos == self.sprite.start_pos:
                 self.alive = True
             else:
-                pos = self.sprite.return_position
+                pos = self.sprite.start_pos
                 target = Coordinate(pos.x, pos.y)
         elif self.mode == "chase":
             target = self._target
-        elif self.mode == "scatter":
-            target = self._scatter_target
+        elif self.mode == "frighten":
+            target = self.sprite.start_pos
         valid_neighbours = self.from_pos.neighbours[:]
 
         if self._reverse:
@@ -94,7 +93,7 @@ class GhostController(MovingSpriteController):
             if op_neighbour in valid_neighbours and len(valid_neighbours) > 1:
                 valid_neighbours.remove(op_neighbour)
 
-        if (self.mode == "frighten" or self.mode == "scatter") and self.alive:
+        if self.mode == "scatter" and self.alive:
             neighbour = random.choice(valid_neighbours)
         else:
             best_neighbour = valid_neighbours[0]

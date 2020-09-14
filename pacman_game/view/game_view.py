@@ -8,6 +8,7 @@ from .dot_view import DotView
 from .ghost_view import GhostView
 from .power_view import PowerView
 from .square_arena_view import SquareArenaView
+from .hexagonal_arena_view import HexagonalArenaView
 
 
 class GameView(Gtk.DrawingArea):
@@ -19,7 +20,7 @@ class GameView(Gtk.DrawingArea):
         self._next = next
         self._scale = 1.5
         if state.shape == "square":
-            self._arena_view = SquareArenaView(state.arena)
+            self._arena_view = HexagonalArenaView(state.arena)
         self._avatar_view = AvatarView(state.avatar)
         self._ghost_views = {}
         for ghost in state.ghosts:

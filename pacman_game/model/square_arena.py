@@ -1,6 +1,5 @@
 from .arena import Arena
 from .coordinate import Coordinate
-from .direction import Direction
 from .node import Node
 
 class SquareArena(Arena):
