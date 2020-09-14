@@ -37,7 +37,7 @@ class MovingSprite(Sprite):
     
     @property
     def start_pos(self):
-        return self._arena.start_pos(self.name)[0]
+        return self._arena.start_pos(self.name)
 
     @property
     def from_pos(self):

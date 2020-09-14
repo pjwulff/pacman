@@ -10,7 +10,7 @@ class SquareArenaView(ArenaView):
         height = self._arena.logical_height
         for i in range(width):
             for j in range(height):
-                node = self._arena.nodes[i][j]
+                node = self._arena.nodes[i+j*width]
                 directions = [node.direction(n) for n in node.geoneighbours]
                 if None in directions:
                     print("wut", directions)

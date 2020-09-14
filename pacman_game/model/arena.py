@@ -34,13 +34,12 @@ class Arena:
     def _generate_maze(self):
         walls = []
         nodes = self._nodes
-        node = nodes[self._logical_width//2][self._logical_height-1]
+        node = nodes[0]
         for neighbour in node.geoneighbours:
             walls += [(node, neighbour)]
-        for i in range(self._logical_width):
-            for j in range(self._logical_height):
-                nodes[i][j].visited = False
-        node.visited = True
+        for node in nodes:
+            node.visited = False
+        nodes[0].visited = True
         
         while len(walls):
             wall = random.choice(walls)
@@ -56,20 +55,16 @@ class Arena:
         self._remove_dead_ends()
     
     def _remove_dead_ends(self):
-        for i in range(self._logical_width):
-            for j in range(self._logical_height):
-                node = self._nodes[i][j]
-                while len(node.neighbours) < 2:
-                    neighbour = random.choice(node.geoneighbours)
-                    self._join(node, neighbour)
+        for node in self._nodes:
+            while len(node.neighbours) < 2:
+                neighbour = random.choice(node.geoneighbours)
+                self._join(node, neighbour)
     
     def _generate_dots(self):
         dots = []
-        for i in range(self._logical_width):
-            for j in range(self._logical_height):
-                node = self._nodes[i][j]
-                dot = Dot(node.coordinate)
-                dots += [dot]
+        for node in self._nodes:
+            dot = Dot(node.coordinate)
+            dots += [dot]
         return dots
     
     def _generate_powers(self):
