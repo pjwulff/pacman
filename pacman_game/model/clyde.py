@@ -9,4 +9,6 @@ class Clyde(Ghost):
         Ghost.__init__(self, arena, "clyde")
     
     def target(self, avatar, ghosts):
-        return avatar.coordinate
+        if avatar.coordinate.distance(self.coordinate) > 8*24:
+            return avatar.coordinate
+        return self.start_pos
