@@ -12,7 +12,7 @@ class GhostView(SpriteView):
 
         @param screen The PyGame screen to which this sprite to draw."""
         cr.save()
-        #self._draw_path(cr)
+        # self._draw_path(cr)
         cr.set_line_width(3)
         self._set_colour(cr)
         cr.arc(self._sprite.start_pos.x, self._sprite.start_pos.y, 12, 0, 2*math.pi)
@@ -29,7 +29,7 @@ class GhostView(SpriteView):
 
     def _draw_path(self, cr):
         cr.save()
-        cr.set_source_rgb(1, 1, 1)
+        self._set_colour(cr)
         cr.set_line_width(1)
         path = self._sprite._path
         if path is not None:

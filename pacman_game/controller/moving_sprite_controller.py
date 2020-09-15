@@ -67,18 +67,18 @@ class MovingSpriteController:
             return 0.0000
         self._speed = self.speed_scale * 100.0 / distance
 
-    def step(self, delta, nodes):
+    def step(self, delta):
         """! Update this sprite over the span of time of one frame. This moves
         the sprite between two vertices in the graph. When it reaches a vertex
         it calls the protected _new_direction method to pick a new direction.
         This method must be overridden by subclasses."""
         if self._start:
-            direction = self._new_direction(nodes)
+            direction = self._new_direction()
             if direction is not None:
                 self._calculate_speed()
                 self._start = False
         if self._arrived:
-            direction = self._new_direction(nodes)
+            direction = self._new_direction()
             new_to = self.sprite.from_pos.neighbour(direction, math.pi/4.)
             if new_to is not None:
                 self.sprite.to_pos = new_to
@@ -98,7 +98,7 @@ class MovingSpriteController:
                 self.sprite.from_pos = self.sprite.to_pos
                 self._arrived = True
 
-    def _new_direction(self, nodes):
+    def _new_direction(self):
         direction = self.target_direction
         if direction is not None:
             neighbour = self.sprite.from_pos.neighbour(direction, math.pi/4.)

@@ -1,4 +1,6 @@
 import random
+from itertools import count
+from queue import PriorityQueue
 from .coordinate import Coordinate
 from .dot import Dot
 from .node import Node
@@ -32,6 +34,38 @@ class Arena:
                 break
         self._dots = self._generate_dots()
         self._powers = self._generate_powers()
+        self._generate_heuristics()
+    
+    def _generate_heuristic(self, target):
+        unique = count()
+        cost = {}
+        queue = PriorityQueue()
+        cost[target] = 0.0
+        for neighbour in target.neighbours:
+            g = target.distance(neighbour)
+            queue.put((g, (next(unique), neighbour, g)))
+        while not queue.empty():
+            elem = queue.get()
+            node = elem[1][1]
+            cost_ = elem[1][2]
+            if node in cost:
+                if cost[node] > cost_:
+                    raise
+                continue
+            cost[node] = cost_
+            for neighbour in node.neighbours:
+                g = cost_ + node.distance(neighbour)
+                queue.put((g, (next(unique), neighbour, g)))
+        return cost
+    
+    def _generate_heuristics(self):
+        self._heuristics = {}
+        for node in self._nodes:
+            self._heuristics[node] = self._generate_heuristic(node)
+    
+    def heuristic(self, source, target):
+        if target in self._heuristics[source]:
+            return self._heuristics[source][target]
     
     def _most_middle(self):
         return self._most_target(self._width/2, self._height/2)
@@ -60,6 +94,9 @@ class Arena:
                 best_distance = distance
                 best_node = node
         return best_node
+
+    def closest_node(self, x, y):
+        return self._most_target(x, y)
 
     def _join(self, node_a, node_b):
         node_a.add_neighbour(node_b)

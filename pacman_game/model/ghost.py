@@ -1,4 +1,6 @@
 import random
+from itertools import count
+from queue import PriorityQueue
 from .moving_sprite import MovingSprite
 
 GHOST_RADIUS = 9
@@ -53,3 +55,36 @@ class Ghost(MovingSprite):
     @property
     def scatter_target(self):
         return self._arena.scatter_target(self.name)
+    
+    def path(self, source, target, prev = None):
+        target_node = self._arena.closest_node(target.x, target.y)
+        unique = count()
+        queue = PriorityQueue()
+        if source == target_node:
+            return None
+        for neighbour in source.neighbours:
+            if neighbour == prev:
+                continue
+            g = source.distance(neighbour)
+            h = self._arena.heuristic(neighbour, target_node)
+            if h is None:
+                h = target_node.distance(neighbour)
+            f = g + h
+            queue.put((f, (next(unique), g, neighbour, [prev, source, neighbour])))
+        while not queue.empty():
+            elem = queue.get()
+            cost = elem[1][1]
+            node = elem[1][2]
+            path = elem[1][3][:]
+            prev = path[-1]
+            if node == target_node:
+                return path
+            for neighbour in node.neighbours:
+                if neighbour == prev:
+                    continue
+                g = cost + node.distance(neighbour)
+                h = self._arena.heuristic(neighbour, target_node)
+                if h is None:
+                    h = target_node.distance(neighbour)
+                f = g + h
+                queue.put((f, (next(unique), g, neighbour, path + [neighbour])))

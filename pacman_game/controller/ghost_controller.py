@@ -72,27 +72,19 @@ class GhostController(MovingSpriteController):
         self._last_pos = self.from_pos
         return self.from_pos.direction(random.choice(neighbours))
     
-    def _respawn_direction(self, nodes):
+    def _respawn_direction(self):
         if self.from_pos == self.sprite.start_pos:
             self.alive = True
         pos = self.sprite.start_pos
         target = Coordinate(pos.x, pos.y)
-        return self._generic_direction(target, nodes)
+        return self._generic_direction(target)
     
-    def _generic_direction(self, target, nodes):
-        closest_node = None
-        closest = 100000.0
-        for node in nodes:
-            d = target.distance(node.coordinate)
-            if d < closest:
-                closest = d
-                closest_node = node
-        target = closest_node
+    def _generic_direction(self, target):
         if self._reverse:
             self._reverse = False
-            self.sprite._path = self.from_pos.astar(target, None)
+            self.sprite._path = self.sprite.path(self.from_pos, target)
         else:
-            self.sprite._path = self.from_pos.astar(target, self._last_pos)
+            self.sprite._path = self.sprite.path(self.from_pos, target, self._last_pos)
         if self.sprite._path is None:
             return self._scatter_direction()
         neighbour = self.sprite._path[2]
@@ -102,15 +94,15 @@ class GhostController(MovingSpriteController):
             self.sprite._path = None
         return self.from_pos.direction(neighbour)
         
-    def _chase_direction(self, nodes):
-        return self._generic_direction(self._target, nodes)
+    def _chase_direction(self):
+        return self._generic_direction(self._target)
 
-    def _new_direction(self, nodes):
+    def _new_direction(self):
         if not self.alive:
-            return self._respawn_direction(nodes)
+            return self._respawn_direction()
         elif self.mode == "scatter":
             return self._scatter_direction()
         elif self.mode == "chase":
-            return self._chase_direction(nodes)
+            return self._chase_direction()
         elif self.mode == "frighten":
-            return self._respawn_direction(nodes)
+            return self._respawn_direction()

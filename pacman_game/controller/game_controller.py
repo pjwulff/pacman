@@ -33,7 +33,7 @@ class InternalController:
             self._win(current_time)
             return True
         self._update_ghosts(delta)
-        self._avatar_controller.step(delta, nodes)
+        self._avatar_controller.step(delta)
 
         self._eat_dots()
         self._eat_powers()
@@ -45,10 +45,9 @@ class InternalController:
     def _update_ghosts(self, delta):
         avatar = self.state.avatar
         ghosts = self.state.ghosts
-        nodes = self.state.arena.nodes
         for ghost in self._ghost_controllers:
             self._ghost_controllers[ghost].update_target(avatar, ghosts)
-            self._ghost_controllers[ghost].step(delta, nodes)
+            self._ghost_controllers[ghost].step(delta)
         self._update_ghost_behaviour()
 
     def _update_ghost_behaviour(self):
