@@ -7,6 +7,7 @@ class MovingSprite(Sprite):
         Sprite.__init__(self, Coordinate(0, 0), radius, name)
         self._arena = arena
         self.return_to_spawn()
+        self._last_angle = None
     
     def return_to_spawn(self):
         """! Instructs this moving sprite to return to its spawn location.

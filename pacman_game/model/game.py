@@ -18,11 +18,11 @@ class GameState:
         self.score = 0
         self.level = 1
         if shape == "square":
-            self._arena = SquareArena(Rect(13, 8))
+            self._arena = SquareArena(13, 8)
         elif shape == "hexagonal":
-            self._arena = HexagonalArena(Rect(13, 8))
+            self._arena = HexagonalArena(13, 8)
         elif shape == "graph":
-            self._arena = GraphArena(Rect(13, 8))
+            self._arena = GraphArena(13, 8)
         self._avatar = Avatar(self._arena)
         self._ghosts = {
             "blinky": Blinky(self._arena),

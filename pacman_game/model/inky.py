@@ -7,3 +7,6 @@ class Inky(Ghost):
 
         @param arena The arena object to which this Inky belongs."""
         Ghost.__init__(self, arena, "inky")
+    
+    def target(self, avatar, ghosts):
+        return avatar.coordinate

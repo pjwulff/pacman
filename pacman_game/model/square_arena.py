@@ -3,16 +3,16 @@ from .coordinate import Coordinate
 from .node import Node
 
 class SquareArena(Arena):
-    def __init__(self, rect):
-        super().__init__(rect)
+    def __init__(self, width, height):
+        super().__init__(width, height, (width-1)*24, (height-1)*24)
     
     def _generate_nodes(self, width, height):
         num_nodes = width * height
         nodes = [None] * num_nodes
         for i in range(width):
             for j in range(height):
-                x = 36 + i*24
-                y = 108 + j*24
+                x = i*24
+                y = j*24
                 node = Node(Coordinate(x, y))
                 nodes[i+j*width] = node
         for i in range(width):

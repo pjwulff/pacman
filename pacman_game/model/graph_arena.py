@@ -6,8 +6,8 @@ from .coordinate import Coordinate
 from .node import Node
 
 class GraphArena(Arena):
-    def __init__(self, rect):
-        super().__init__(rect)
+    def __init__(self, width, height):
+        super().__init__(width, height, (width-1)*24, (height-1)*24)
 
     def _too_close(self, node, nodes):
         for n in nodes:
@@ -21,8 +21,8 @@ class GraphArena(Arena):
         n = 0
         for i in range(width * height // 2):
             while True:
-                x = random.uniform(36, 36 + (width-1)*24)
-                y = random.uniform(108, 108 + (height-1)*24)
+                x = random.uniform(0, (width-1)*24)
+                y = random.uniform(0, (height-1)*24)
                 node = Node(Coordinate(x, y))
                 if not self._too_close(node, nodes):
                     nodes += [node]

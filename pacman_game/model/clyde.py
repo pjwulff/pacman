@@ -7,3 +7,6 @@ class Clyde(Ghost):
 
         @param arena The arena to which this Clyde belongs."""
         Ghost.__init__(self, arena, "clyde")
+    
+    def target(self, avatar, ghosts):
+        return avatar.coordinate

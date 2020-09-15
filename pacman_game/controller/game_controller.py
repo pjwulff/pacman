@@ -1,9 +1,6 @@
 import time
 from .avatar_controller import AvatarController
-from .blinky_controller import BlinkyController
-from .clyde_controller import ClydeController
-from .inky_controller import InkyController
-from .pinky_controller import PinkyController
+from .ghost_controller import GhostController
 from ..model.game import GameState
 
 class InternalController:
@@ -12,10 +9,10 @@ class InternalController:
         self._avatar_controller = AvatarController(state.avatar)
         ghosts = state.ghosts
         self._ghost_controllers = {
-            "blinky": BlinkyController(ghosts["blinky"], state.difficulty),
-            "clyde": ClydeController(ghosts["clyde"], state.difficulty),
-            "inky": InkyController(ghosts["inky"], state.difficulty),
-            "pinky": PinkyController(ghosts["pinky"], state.difficulty),
+            "blinky": GhostController(ghosts["blinky"], state.difficulty),
+            "clyde": GhostController(ghosts["clyde"], state.difficulty),
+            "inky": GhostController(ghosts["inky"], state.difficulty),
+            "pinky": GhostController(ghosts["pinky"], state.difficulty),
         }
         self.state.chase_duration = 5.0
         self.state.scatter_duration = 20.0
@@ -30,12 +27,13 @@ class InternalController:
         current_time = time.monotonic()
         delta = current_time - self._current_time
         self._current_time = current_time
+        nodes = self.state.arena.nodes
         
         if len(self.state.dots) == 0:
             self._win(current_time)
             return True
         self._update_ghosts(delta)
-        self._avatar_controller.step(delta)
+        self._avatar_controller.step(delta, nodes)
 
         self._eat_dots()
         self._eat_powers()
@@ -45,8 +43,12 @@ class InternalController:
         return True
     
     def _update_ghosts(self, delta):
+        avatar = self.state.avatar
+        ghosts = self.state.ghosts
+        nodes = self.state.arena.nodes
         for ghost in self._ghost_controllers:
-            self._ghost_controllers[ghost].step(delta)
+            self._ghost_controllers[ghost].update_target(avatar, ghosts)
+            self._ghost_controllers[ghost].step(delta, nodes)
         self._update_ghost_behaviour()
 
     def _update_ghost_behaviour(self):
@@ -134,7 +136,8 @@ class InternalController:
         self.state.arena.generate()
         self._avatar_controller.return_to_spawn()
         for ghost in self._ghost_controllers:
-            self._ghost_controllers[ghost].return_to_spawn()
+            self._ghost_controllers[ghost].reset()
+        self.state.power_state = False
     
     def _increase_difficulty(self):
         for ghost in self._ghost_controllers:

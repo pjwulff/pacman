@@ -4,7 +4,8 @@ from .arena_view import ArenaView
 
 class GraphArenaView(ArenaView):
     def __init__(self, arena):
-        super().__init__(arena)
+        rect = arena.rect
+        super().__init__(arena, rect.width, rect.height)
 
     def draw(self, cr):
         width = self._arena.logical_width

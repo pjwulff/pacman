@@ -15,17 +15,19 @@ class GhostController(MovingSpriteController):
         self._target = Coordinate()
         self._reverse = False
         self._last_pos = None
+    
+    def reset(self):
+        self.return_to_spawn()
+        self._sprite.alive = True
+        self._reverse = False
+        self._sprite.mode = "scatter"
         
     def increase_difficulty(self):
         self.speed_scale = (1.0 + 9*self.speed_scale) / 10.0
-
-    def target(self, avatar, ghosts):
-        """! Get the target for this ghost. Must be overridden by subclasses.
-
-        @param avatar The avatar object in the same arena.
-        @param ghosts A dictionary of the ghosts in the same arena.
-        @returns The coordinates to where this ghost should head in chase mode."""
-        return None
+    
+    def update_target(self, avatar, ghosts):
+        if self._arrived:
+            self._target = self.sprite.target(avatar, ghosts)
 
     def kill(self):
         """! Called when this ghost is touched by the avatar while a power pill
@@ -33,9 +35,6 @@ class GhostController(MovingSpriteController):
         prison in the centre of the maze."""
         self.alive = False
         self._reverse = True
-    
-    def plan(self, avatar, ghosts):
-        self._target = self.target(avatar, ghost)
 
     @property
     def alive(self):
@@ -65,7 +64,15 @@ class GhostController(MovingSpriteController):
             self.sprite.reverse = True
         self.sprite.mode = mode
 
-    def _new_direction(self):
+    def _new_direction(self, nodes):
+        if self.alive and self.mode == "scatter":
+            neighbours = self.from_pos.neighbours[:]
+            if self._last_pos in neighbours:
+                neighbours.remove(self._last_pos)
+            self.sprite._path = None
+            self._last_pos = self.from_pos
+            return self.from_pos.direction(random.choice(neighbours))
+            
         target = None
         if self.alive == False:
             if self.from_pos == self.sprite.start_pos:
@@ -76,26 +83,26 @@ class GhostController(MovingSpriteController):
             target = self._target
         elif self.mode == "frighten":
             target = self.sprite.start_pos
-        valid_neighbours = self.from_pos.neighbours[:]
-
+            
+        closest_node = None
+        closest = 100000.0
+        for node in nodes:
+            d = target.distance(node.coordinate)
+            if d < closest:
+                closest = d
+                closest_node = node
+        target = closest_node
+        
         if self._reverse:
             self._reverse = False
+            self.sprite._path = self.from_pos.astar(target, None)
         else:
-            op_neighbour = self._last_pos
-            if op_neighbour in valid_neighbours and len(valid_neighbours) > 1:
-                valid_neighbours.remove(op_neighbour)
-
-        if self.mode == "scatter" and self.alive:
-            neighbour = random.choice(valid_neighbours)
-        else:
-            best_neighbour = valid_neighbours[0]
-            best_distance = best_neighbour.distance(target)
-            for neighbour in valid_neighbours[1:]:
-                dist = neighbour.distance(target)
-                if dist < best_distance:
-                    best_distance = dist
-                    best_neighbour = neighbour
-            neighbour = best_neighbour
+            self.sprite._path = self.from_pos.astar(target, self._last_pos)
+            
+        neighbour = self.sprite._path[2]
         if neighbour is not None:
             self._last_pos = self.from_pos
+            self._last_pos = self.from_pos
+        else:
+            self.sprite._path = None
         return self.from_pos.direction(neighbour)

@@ -17,6 +17,10 @@ class Ghost(MovingSprite):
         MovingSprite.__init__(self, arena, GHOST_RADIUS, name)
         self.alive = True
         self.mode = "scatter"
+        self._path = None
+    
+    def target(self, avatar, ghosts):
+        pass
     
     @property
     def mode(self):

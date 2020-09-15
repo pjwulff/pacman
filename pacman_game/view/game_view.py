@@ -28,7 +28,7 @@ class GameView(Gtk.DrawingArea):
         for ghost in state.ghosts:
             self._ghost_views[ghost] = GhostView(state.ghosts[ghost])
         rect = self._arena_view.rect
-        self.set_size_request(rect.width * self._scale, rect.height * self._scale)
+        self.set_size_request((rect.width + 48) * self._scale, (rect.height + 96) * self._scale)
         self.set_visible(True)
         self.connect("draw", self.draw)
         self.connect("key-press-event", self.on_key_press)
@@ -38,6 +38,8 @@ class GameView(Gtk.DrawingArea):
     
     def draw(self, widget, cr):
         cr.scale(self._scale, self._scale)
+        cr.save()
+        cr.translate(24, 72)
         self._arena_view.draw(cr)
         for dot in self._state.dots:
             DotView(dot).draw(cr)
@@ -46,26 +48,27 @@ class GameView(Gtk.DrawingArea):
         for ghost in self._ghost_views:
             self._ghost_views[ghost].draw(cr)
         self._avatar_view.draw(cr)
+        cr.restore()
         self._draw_hud(cr)
         self._keys = [False]*4
     
     def _draw_hud(self, cr):
-        rect = self._arena_view.rect
+        width = self._arena_view.rect.width + 48
         cr.set_font_size(24)
         cr.set_source_rgb(1.0, 1.0, 1.0)
         cr.move_to(12, 24)
         cr.show_text("LIVES")
         cr.move_to(12, 48)
         cr.show_text(str(self._state.lives))
-        (_, _, width, _, _, _) = cr.text_extents("SCORE")
-        cr.move_to(rect.width/2 - width/2, 24)
+        (_, _, w, _, _, _) = cr.text_extents("SCORE")
+        cr.move_to(width/2 - w/2, 24)
         cr.show_text("SCORE")
-        cr.move_to(rect.width/2 - width/2, 48)
+        cr.move_to(width/2 - w/2, 48)
         cr.show_text(str(self._state.score))
-        (_, _, width, _, _, _) = cr.text_extents("LEVEL")
-        cr.move_to(rect.width - width - 12, 24)
+        (_, _, w, _, _, _) = cr.text_extents("LEVEL")
+        cr.move_to(width - w - 12, 24)
         cr.show_text("LEVEL")
-        cr.move_to(rect.width - width - 12, 48)
+        cr.move_to(width - w - 12, 48)
         cr.show_text(str(self._state.level))
     
     def tick(self):

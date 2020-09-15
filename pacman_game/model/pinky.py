@@ -7,3 +7,6 @@ class Pinky(Ghost):
 
         @param arena The arena to which this Pinky belongs."""
         Ghost.__init__(self, arena, "pinky")
+    
+    def target(self, avatar, ghosts):
+        return avatar.coordinate

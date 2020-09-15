@@ -3,10 +3,12 @@ from .arena_view import ArenaView
 
 class SquareArenaView(ArenaView):
     def __init__(self, arena):
-        super().__init__(arena)
+        rect = arena.rect
+        super().__init__(arena, rect.width + 24, rect.height + 24)
 
     def draw(self, cr):
         super().draw(cr)
+        cr.translate(12, 12)
         width = self._arena.logical_width
         height = self._arena.logical_height
         for node in self._arena.nodes:
