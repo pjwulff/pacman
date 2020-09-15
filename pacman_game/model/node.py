@@ -100,6 +100,8 @@ class Node:
         return True
     
     def astar(self, target, prev):
+        if self == target:
+            return None
         queue = PriorityQueue()
         unique = count()
         for neighbour in self.neighbours:
@@ -116,6 +118,8 @@ class Node:
             prev = path[-2]
             if node == target:
                 return path
+            elif node == self:
+                continue
             for neighbour in node.neighbours:
                 if neighbour == prev:
                     continue

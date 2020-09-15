@@ -12,6 +12,7 @@ class GhostView(SpriteView):
 
         @param screen The PyGame screen to which this sprite to draw."""
         cr.save()
+        #self._draw_path(cr)
         cr.set_line_width(3)
         self._set_colour(cr)
         cr.arc(self._sprite.start_pos.x, self._sprite.start_pos.y, 12, 0, 2*math.pi)
@@ -25,6 +26,18 @@ class GhostView(SpriteView):
             if self._sprite.alive:
                 self._draw_body(cr, coord.x, coord.y)
             self._draw_eyes(cr, coord.x, coord.y)
+
+    def _draw_path(self, cr):
+        cr.save()
+        cr.set_source_rgb(1, 1, 1)
+        cr.set_line_width(1)
+        path = self._sprite._path
+        if path is not None:
+            for i in range(1, len(path)-1):
+                cr.move_to(path[i].x, path[i].y)
+                cr.line_to(path[i+1].x, path[i+1].y)
+                cr.stroke()
+        cr.restore()
 
     def _set_colour(self, cr):
         if self._sprite.name == "blinky":
