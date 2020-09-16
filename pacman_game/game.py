@@ -33,5 +33,6 @@ class Game(Gtk.Application):
         self._win.view = view
 
     def _display_banner(self, next, score = None):
+        self._win.enable()
         view = BannerView(self.start_game, score)
         self._win.view = view
