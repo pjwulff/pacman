@@ -48,14 +48,6 @@ class Ghost(MovingSprite):
     def alive(self, alive):
         self._alive = alive
     
-    @property
-    def return_position(self):
-        return self._arena.ghost_return_position()
-    
-    @property
-    def scatter_target(self):
-        return self._arena.scatter_target(self.name)
-    
     def path(self, source, target, prev = None):
         target_node = self._arena.closest_node(target.x, target.y)
         unique = count()

@@ -33,7 +33,7 @@ class GameView(Gtk.DrawingArea):
         self.connect("draw", self.draw)
         self.connect("key-press-event", self.on_key_press)
         self.connect("key-release-event", self.on_key_release)
-        GObject.timeout_add(1000.0/240.0, self.tick)
+        GObject.timeout_add(1000.0/60.0, self.tick)
         
     
     def draw(self, widget, cr):
@@ -73,7 +73,7 @@ class GameView(Gtk.DrawingArea):
     
     def tick(self):
         self.queue_draw()
-        cont = self._controller.step()
+        cont = not self._state.over
         if not cont:
             self._next(self._state.condition, self._state.score)
         return cont

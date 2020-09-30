@@ -1,3 +1,4 @@
+import threading
 import time
 from .avatar_controller import AvatarController
 from .ghost_controller import GhostController
@@ -18,30 +19,34 @@ class InternalController:
         self.state.scatter_duration = 20.0
         self.state.frighten_duration = 7.0
         self._reset(time.monotonic())
+        self._thread = threading.Thread(target = self.step)
+        self._thread.start()
     
     @property
     def state(self):
         return self._state
 
     def step(self):
-        current_time = time.monotonic()
-        delta = current_time - self._current_time
-        self._current_time = current_time
-        nodes = self.state.arena.nodes
-        
-        if len(self.state.dots) == 0:
-            self._win(current_time)
-            return True
-        self._update_ghosts(delta)
-        self._avatar_controller.step(delta)
+        while True:
+            current_time = time.monotonic()
+            delta = current_time - self._current_time
+            self._current_time = current_time
 
-        self._eat_dots()
-        self._eat_powers()
-        self._check_ghost_hit()
-        if self.state.over:
-            return False
-        return True
-    
+            if len(self.state.dots) == 0:
+                self._win(current_time)
+                time.sleep(2.0)
+                continue
+            self._update_ghosts(delta)
+            self._avatar_controller.step(delta)
+
+            self._eat_dots()
+            self._eat_powers()
+            self._check_ghost_hit()
+            if self.state.over:
+                break
+            time.sleep(1.0/300.)
+
+
     def _update_ghosts(self, delta):
         avatar = self.state.avatar
         ghosts = self.state.ghosts
@@ -58,7 +63,7 @@ class InternalController:
                 next_ghost_behaviour = "chase"
                 self.state.current_ghost_behaviour = "chase"
                 self.state.ghost_behaviour_duration = self.state.chase_duration
-            elif self.state.current_ghost_behaviour == "chase":
+            else:
                 next_ghost_behaviour = "scatter"
                 self.state.current_ghost_behaviour = "scatter"
                 self.state.ghost_behaviour_duration = self.state.scatter_duration
@@ -115,7 +120,6 @@ class InternalController:
 
     def _lose(self):
         self.state.over = True
-        self.state.condition = "lose"
 
     def _win(self, time):
         self._increase_difficulty()

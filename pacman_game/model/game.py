@@ -90,14 +90,6 @@ class GameState:
         self._lives = lives
     
     @property
-    def condition(self):
-        return self._condition
-    
-    @condition.setter
-    def condition(self, condition):
-        self._condition = condition
-    
-    @property
     def over(self):
         return self._over
     
