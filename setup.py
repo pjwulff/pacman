@@ -14,5 +14,7 @@ setup(
         'pacman_game.view',
     ],
     install_requires = ['pygobject'],
+    include_package_data = True,
+    package_data = {'pacman_game': ['data/*']},
     scripts = ['pacman']
 )

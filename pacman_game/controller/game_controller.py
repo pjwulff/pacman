@@ -46,7 +46,6 @@ class InternalController:
                 break
             time.sleep(1.0/300.)
 
-
     def _update_ghosts(self, delta):
         avatar = self.state.avatar
         ghosts = self.state.ghosts

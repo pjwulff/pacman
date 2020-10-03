@@ -75,7 +75,7 @@ class GameView(Gtk.DrawingArea):
         self.queue_draw()
         cont = not self._state.over
         if not cont:
-            self._next(self._state.condition, self._state.score)
+            self._next(self._state.score)
         return cont
     
     def on_key_press(self, widget, event):
