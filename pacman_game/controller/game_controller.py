@@ -4,7 +4,7 @@ from .avatar_controller import AvatarController
 from .ghost_controller import GhostController
 from ..model.game import GameState
 
-class InternalController:
+class GameController:
     def __init__(self, state):
         self._state = state
         self._avatar_controller = AvatarController(state.avatar)
@@ -117,6 +117,10 @@ class InternalController:
             for ghost in self.state.ghosts:
                 self.state.ghosts[ghost].return_to_spawn()
 
+    def stop(self):
+        self.state.over = True
+        self._thread.join()
+
     def _lose(self):
         self.state.over = True
 
@@ -161,10 +165,14 @@ class InternalController:
         self._avatar_controller.set_direction(direction)
 
 
-class GameController:
+class GameControllerFactory:
     def __init__(self):
         pass
     
-    def start_game(self, difficulty, shape):
-        state = GameState(difficulty, shape)
-        return InternalController(state)
+    @classmethod
+    def make_controller(cls,
+                        difficulty = "easy",
+                        shape = "square",
+                        size="small"):
+        state = GameState(difficulty, shape, size)
+        return GameController(state)

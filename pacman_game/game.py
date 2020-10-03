@@ -1,11 +1,10 @@
-import pkg_resources
-import sys
-
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio
 
-from .controller.game_controller import GameController
+from .controller.game_controller import GameControllerFactory
+from .controller.high_scores_controller import HighScoresController
+from .view.enter_high_score_dialogue import EnterHighScoreDialogue
 from .view.game_view import GameView
 from .view.window import PacmanWindow
 
@@ -13,7 +12,7 @@ class Game(Gtk.Application):
     def __init__(self):
         super().__init__(application_id='org.peterleddiman.Pacman',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self._controller = GameController()
+        self._controller = None
 
     def do_activate(self):
         self._window = self.props.active_window
@@ -24,11 +23,20 @@ class Game(Gtk.Application):
 
     def start_game(self, difficulty, shape, size):
         self._disable()
-        controller = self._controller.start_game(difficulty, shape)
-        view = GameView(controller, controller.state, self.game_over)
+        self._controller = GameControllerFactory.make_controller(
+            difficulty = difficulty,
+            shape = shape,
+            size = size)
+        view = GameView(self._controller, self._controller.state, self.game_over)
         self._window.display_game_view(view)
 
-    def game_over(self, score):
+    def game_over(self, score, difficulty, shape, size):
+        self._controller = None
+        dialogue = EnterHighScoreDialogue(score)
+        dialogue.run()
+        initials = dialogue.get_result()
+        if initials is not None and initials != "":
+            HighScoresController.insert_high_score(initials, score, difficulty, shape, size)
         self.display_start_screen()
 
     def display_start_screen(self):
@@ -41,5 +49,7 @@ class Game(Gtk.Application):
     def _disable(self):
         self._window.disable()
 
-    def on_quit(self, action, param):
-        self.quit()
+    def do_shutdown(self):
+        Gtk.Application.do_shutdown(self)
+        if self._controller is not None:
+            self._controller.stop()

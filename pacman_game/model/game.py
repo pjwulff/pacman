@@ -10,19 +10,31 @@ from .clyde import Clyde
 from .rect import Rect
 
 class GameState:
-    def __init__(self, difficulty, shape):
+    def __init__(self, difficulty, shape, size):
         """! Construct a new GameState object."""
         self.difficulty = difficulty
         self.shape = shape
+        self.size = size
         self.lives = 3
         self.score = 0
         self.level = 1
+        width = 0
+        height = 0
+        if size == "small":
+            width = 13
+            height = 8
+        elif size == "medium":
+            width = 17
+            height = 10
+        elif size == "large":
+            width = 21
+            height = 13
         if shape == "square":
-            self._arena = SquareArena(13, 8)
+            self._arena = SquareArena(width, height)
         elif shape == "hexagonal":
-            self._arena = HexagonalArena(13, 8)
+            self._arena = HexagonalArena(width, height)
         elif shape == "graph":
-            self._arena = GraphArena(13, 8)
+            self._arena = GraphArena(width, height)
         self._avatar = Avatar(self._arena)
         self._ghosts = {
             "blinky": Blinky(self._arena),
@@ -166,3 +178,11 @@ class GameState:
     @score.setter
     def score(self, score):
         self._score = score
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        self._size = size
