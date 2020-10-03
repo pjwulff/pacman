@@ -111,7 +111,6 @@ class GameController:
         if self.state.lives == 0:
             self._lose()
         else:
-            self.state.score -= 100
             self.state.lives -= 1
             self.state.avatar.return_to_spawn()
             for ghost in self.state.ghosts:
@@ -130,7 +129,7 @@ class GameController:
         bonus = 500 - (time - self.state.start_time)
         bonus *= self.state.level
         if bonus > 0:
-            self.state.score += int(bonus)
+            self.state.score += 10 * int(bonus/10.)
         self._reset(time)
     
     def _reset(self, time):
