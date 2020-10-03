@@ -29,6 +29,8 @@ class GameView(Gtk.DrawingArea):
             self._ghost_views[ghost] = GhostView(state.ghosts[ghost])
         rect = self._arena_view.rect
         self.set_size_request((rect.width + 48) * self._scale, (rect.height + 96) * self._scale)
+        self.set_hexpand(False)
+        self.set_vexpand(False)
         self.set_visible(True)
         self.connect("draw", self.draw)
         self.connect("key-press-event", self.on_key_press)
@@ -75,7 +77,7 @@ class GameView(Gtk.DrawingArea):
         self.queue_draw()
         cont = not self._state.over
         if not cont:
-            self._next(self._state.score)
+            self._next(self._state.score, self._state.difficulty, self._state.shape, self._state.size)
         return cont
     
     def on_key_press(self, widget, event):
@@ -87,7 +89,10 @@ class GameView(Gtk.DrawingArea):
             self._keys[2] = True
         elif event.keyval == Gdk.KEY_Right:
             self._keys[3] = True
+        elif event.keyval == Gdk.KEY_q:
+            self._controller.stop()
         self._controller.set_direction(self._direction(self._keys))
+        return True
     
     def on_key_release(self, widget, event):
         if event.keyval == Gdk.KEY_Down:
@@ -98,7 +103,10 @@ class GameView(Gtk.DrawingArea):
             self._keys[2] = False
         elif event.keyval == Gdk.KEY_Right:
             self._keys[3] = False
+        elif event.keyval == Gdk.KEY_q:
+            self._controller.stop()
         self._controller.set_direction(self._direction(self._keys))
+        return True
 
     def _direction(self, keys):
         x = 0

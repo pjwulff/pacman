@@ -1,5 +1,6 @@
 from pkg_resources import resource_filename
 from gi.repository import Gtk
+from .high_scores_dialogue import HighScoresDialogue
 
 def selected_radio(group):
     for radio in group:
@@ -28,7 +29,8 @@ class PacmanWindow(Gtk.ApplicationWindow):
         return obj
 
     def on_high_scores_button_activate(self, *args):
-        pass
+        dialogue = HighScoresDialogue()
+        dialogue.run()
     
     def on_main_window_destroy(self, *args):
         Gtk.main_quit()
@@ -41,11 +43,21 @@ class PacmanWindow(Gtk.ApplicationWindow):
         game_view = self._stack.get_child_by_name("game-view")
         if game_view is not None:
             self._stack.remove(game_view)
+            game_view.destroy()
+        #self._fix_size()
     
+    def _fix_size(self):
+        child = self._stack.get_visible_child()
+        if child is not None:
+            (_, width) = child.get_preferred_width()
+            (_, height) = child.get_preferred_height()
+            self._stack.set_size_request(width, height)
+
     def display_game_view(self, view):
         self._stack.add_named(view, "game-view")
         self._stack.set_visible_child_name("game-view")
-    
+        #self._fix_size()
+
     def disable(self):
         self._high_scores_button.set_sensitive(False)
     
