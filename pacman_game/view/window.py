@@ -1,101 +1,92 @@
-# Copyright 2020 Peter Leddiman
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+from pkg_resources import resource_filename
 from gi.repository import Gtk
-from .banner_view import BannerView
-from .game_view import GameView
-from .popover_menu import PopoverMenu
-    
 
-class MenuButton(Gtk.MenuButton):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.set_visible(True)
-        self.set_can_focus(True)
-        self.set_image(Gtk.Image.new_from_icon_name("open-menu-symbolic", Gtk.IconSize.MENU))
-        self._popover = PopoverMenu()
-        self.set_popover(self._popover)
-    
-    def disable(self):
-        self.set_sensitive(False)
-        self._popover.disable()
-    
-    def enable(self):
-        self.set_sensitive(True)
-        self._popover.enable()
-        
-    @property
-    def difficulty(self):
-        return self._popover.difficulty
-        
-    @property
-    def shape(self):
-        return self._popover.shape
-
-class TitleBar(Gtk.HeaderBar):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.set_title("Pacman")
-        self.set_show_close_button(True)
-        self.set_visible(True)
-        self._menu_button = MenuButton()
-        self.pack_end(self._menu_button)
-    
-    def disable(self):
-        self._menu_button.disable()
-    
-    def enable(self):
-        self._menu_button.enable()
-        
-    @property
-    def difficulty(self):
-        return self._menu_button.difficulty
-        
-    @property
-    def shape(self):
-        return self._menu_button.shape
+def selected_radio(group):
+    for radio in group:
+        if radio.get_active():
+            return radio
 
 class PacmanWindow(Gtk.ApplicationWindow):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self._titlebar = TitleBar()
-        self.set_titlebar(self._titlebar)
-        self.set_resizable(False)
-        self._view = None
+    __gtype_name__ = "PacmanWindow"
     
-    @property
-    def view(self):
-        return self._view
+    def __init(self, next, builder):
+        super().__init__()
+        self._next = next
+        self._high_scores_button = builder.get_object("high-scores-button")
+        self._difficulty_group = builder.get_object("difficulty-easy").get_group()
+        self._shape_group = builder.get_object("shape-square").get_group()
+        self._size_group = builder.get_object("size-small").get_group()
+        self._stack = builder.get_object("main-stack")
+        
+    def __new__(cls, next):
+        builder = Gtk.Builder()
+        path = resource_filename("pacman_game", "data/ui/window.glade")
+        builder.add_from_file(path)
+        obj = builder.get_object("main-window")
+        obj.__init(next, builder)
+        builder.connect_signals(obj)
+        return obj
+
+    def on_high_scores_button_activate(self, *args):
+        pass
     
-    @view.setter
-    def view(self, view):
-        if self._view is not None:
-            self.remove(self._view)
-        self._view = view
-        self.add(view)
+    def on_main_window_destroy(self, *args):
+        Gtk.main_quit()
+    
+    def on_start_button_clicked(self, *args):
+        self._next(self.difficulty, self.shape, self.size)
+    
+    def display_start_screen(self):
+        self._stack.set_visible_child_name("main-view")
+        game_view = self._stack.get_child_by_name("game-view")
+        if game_view is not None:
+            self._stack.remove(game_view)
+    
+    def display_game_view(self, view):
+        self._stack.add_named(view, "game-view")
+        self._stack.set_visible_child_name("game-view")
     
     def disable(self):
-        self._titlebar.disable()
+        self._high_scores_button.set_sensitive(False)
     
     def enable(self):
-        self._titlebar.enable()
+        self._high_scores_button.set_sensitive(True)
         
     @property
     def difficulty(self):
-        return self._titlebar.difficulty
-        
+        radio = selected_radio(self._difficulty_group)
+        name = radio.get_name()
+        if name == "difficulty-easy":
+            return "easy"
+        elif name == "difficulty-medium":
+            return "medium"
+        elif name == "difficulty-hard":
+            return "hard"
+        else:
+            return None
+
     @property
     def shape(self):
-        return self._titlebar.shape
+        radio = selected_radio(self._shape_group)
+        name = radio.get_name()
+        if name == "shape-square":
+            return "square"
+        elif name == "shape-hexagonal":
+            return "hexagonal"
+        elif name == "shape-graph":
+            return "graph"
+        else:
+            return None
+
+    @property
+    def size(self):
+        radio = selected_radio(self._size_group)
+        name = radio.get_name()
+        if name == "size-small":
+            return "small"
+        elif name == "size-medium":
+            return "medium"
+        elif name == "size-large":
+            return "large"
+        else:
+            return None

@@ -27,7 +27,6 @@ class InternalController:
         current_time = time.monotonic()
         delta = current_time - self._current_time
         self._current_time = current_time
-        nodes = self.state.arena.nodes
         
         if len(self.state.dots) == 0:
             self._win(current_time)
