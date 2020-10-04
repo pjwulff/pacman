@@ -21,11 +21,11 @@ class GameState:
         width = 0
         height = 0
         if size == "small":
+            width = 8
+            height = 5
+        elif size == "medium":
             width = 13
             height = 8
-        elif size == "medium":
-            width = 17
-            height = 10
         elif size == "large":
             width = 21
             height = 13
