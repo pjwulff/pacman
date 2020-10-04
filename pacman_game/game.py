@@ -27,7 +27,9 @@ class Game(Gtk.Application):
             difficulty = difficulty,
             shape = shape,
             size = size)
-        view = GameView(self._controller, self._controller.state, self.game_over)
+        world = self._controller.world
+        l = lambda: self.game_over(world.score, difficulty, shape, size)
+        view = GameView(self._controller, self._controller.world, l)
         self._window.display_game_view(view)
 
     def game_over(self, score, difficulty, shape, size):
@@ -52,4 +54,4 @@ class Game(Gtk.Application):
     def do_shutdown(self):
         Gtk.Application.do_shutdown(self)
         if self._controller is not None:
-            self._controller.stop()
+            self._controller.quit()

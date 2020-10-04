@@ -12,13 +12,18 @@ class Arena:
     It also spawns the dots and power pills contained in the maze. This class
     extracts information from the JSON maze file and makes it available to
     other objects."""
-    def __init__(self, logical_width, logical_height, width, height):
+    def __init__(self, logical_width, logical_height, width, height, shape):
+        self._shape = shape
         self._width = width
         self._height = height
         self._logical_width = logical_width
         self._logical_height = logical_height
         self.generate()
     
+    @property
+    def shape(self):
+        return self._shape
+
     def generate(self):
         width = self.logical_width
         height = self.logical_height
