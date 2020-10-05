@@ -4,7 +4,7 @@ from .node import Node
 
 class SquareArena(Arena):
     def __init__(self, width, height):
-        super().__init__(width, height, (width-1)*24, (height-1)*24)
+        super().__init__(width, height, (width-1)*24, (height-1)*24, "square")
     
     def _generate_nodes(self, width, height):
         num_nodes = width * height

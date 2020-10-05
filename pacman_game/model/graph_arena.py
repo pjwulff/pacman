@@ -7,7 +7,7 @@ from .node import Node
 
 class GraphArena(Arena):
     def __init__(self, width, height):
-        super().__init__(width, height, (width-1)*24, (height-1)*24)
+        super().__init__(width, height, (width-1)*24, (height-1)*24, "graph")
 
     def _too_close(self, node, nodes):
         for n in nodes:

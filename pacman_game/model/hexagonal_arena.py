@@ -6,7 +6,7 @@ HEX_SCALE = 0.866
 
 class HexagonalArena(Arena):
     def __init__(self, width, height):
-        super().__init__(width, height, (width-1)*24+12, (height-1)*24*HEX_SCALE)
+        super().__init__(width, height, (width-1)*24+12, (height-1)*24*HEX_SCALE, "hexagonal")
 
     def _generate_nodes(self, width, height):
         num_nodes = width * height
