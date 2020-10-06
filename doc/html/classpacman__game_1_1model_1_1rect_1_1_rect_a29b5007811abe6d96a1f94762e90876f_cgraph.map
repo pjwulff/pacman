@@ -1,0 +1,4 @@
+<map id="pacman_game.model.rect.Rect.width" name="pacman_game.model.rect.Rect.width">
+<area shape="rect" id="node1" title="Set the width of the rectangle." alt="" coords="5,5,271,32"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#ae3ca5526bde8804574cf2634b2131a15" title="Get the width of the rectangle." alt="" coords="319,5,584,32"/>
+</map>

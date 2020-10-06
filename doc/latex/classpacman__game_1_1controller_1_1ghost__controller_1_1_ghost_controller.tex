@@ -1,0 +1,318 @@
+\hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller}{}\doxysection{pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller Class Reference}
+\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller}\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+
+
+A generic controller for all ghosts.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a75b5b0cc76e249a79dacf105d31c694f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad4479f2cb733652a2f2717d525d85013}{sprite}}, difficulty)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller}{Ghost\+Controller}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a98217ebf07c7b375e66b74fa7485867b}{reset}} (self)
+\begin{DoxyCompactList}\small\item\em Reset this ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a4ef90e8d53ca07a0082517f443778967}{increase\+\_\+difficulty}} (self)
+\begin{DoxyCompactList}\small\item\em Increase the difficulty for this ghost, which currently only means increasing the ghost\textquotesingle{}s speed. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_adb2bbe25dab66852185325429ae06ade}{update\+\_\+target}} (self, avatar, ghosts)
+\begin{DoxyCompactList}\small\item\em Recalculate the target for this ghost; i.\+e., where this ghost should go when in `chase' mode. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a889262839641bed1bf340cd4c4ffbe7a}{kill}} (self)
+\begin{DoxyCompactList}\small\item\em Kill the ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a31736f042d83c4985323f0cb1d7a6e69}{alive}} (self)
+\begin{DoxyCompactList}\small\item\em Get whether or not this ghost is `alive'. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a787b4fa399c5fed8a89d0420d8da67bc}{alive}} (self, alive)
+\begin{DoxyCompactList}\small\item\em Set whether or not this ghost is alive. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a2babeac064b224cc90cc96f542e4f38a}{mode}} (self)
+\begin{DoxyCompactList}\small\item\em Get the current mode or behaviour for this ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a295efc6c099c20bb4c1199de76599c14}{mode}} (self, mode)
+\begin{DoxyCompactList}\small\item\em Set the current mode or behaviour for this ghost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a37843e7aaa928559d6e78ad93fd55938}{speed\+\_\+scale}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a584e1354c7716f55680acf660ee09069}{alive}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a40126a03a92fa2ff8470f236dc9f7f60}{from\+\_\+pos}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_ae8eedaf3628a480b75503b5db84086c5}{mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A generic controller for all ghosts. 
+
+Definition at line 7 of file ghost\+\_\+controller.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a75b5b0cc76e249a79dacf105d31c694f}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a75b5b0cc76e249a79dacf105d31c694f}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sprite,  }\item[{}]{difficulty }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller}{Ghost\+Controller}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The ghost this controller should control. \\
+\hline
+{\em difficulty} & The difficulty level of the game, used to decide the speed of the ghost. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file ghost\+\_\+controller.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a31736f042d83c4985323f0cb1d7a6e69}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a31736f042d83c4985323f0cb1d7a6e69}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!alive@{alive}}
+\index{alive@{alive}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+alive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get whether or not this ghost is `alive'. 
+
+\begin{DoxyReturn}{Returns}
+True if this ghost is alive. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file ghost\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a31736f042d83c4985323f0cb1d7a6e69_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a787b4fa399c5fed8a89d0420d8da67bc}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a787b4fa399c5fed8a89d0420d8da67bc}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!alive@{alive}}
+\index{alive@{alive}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+alive (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alive }\end{DoxyParamCaption})}
+
+
+
+Set whether or not this ghost is alive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alive} & If the ghost is alive or not. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file ghost\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a787b4fa399c5fed8a89d0420d8da67bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a4ef90e8d53ca07a0082517f443778967}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a4ef90e8d53ca07a0082517f443778967}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!increase\_difficulty@{increase\_difficulty}}
+\index{increase\_difficulty@{increase\_difficulty}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{increase\_difficulty()}{increase\_difficulty()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+increase\+\_\+difficulty (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Increase the difficulty for this ghost, which currently only means increasing the ghost\textquotesingle{}s speed. 
+
+
+
+Definition at line 36 of file ghost\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a889262839641bed1bf340cd4c4ffbe7a}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a889262839641bed1bf340cd4c4ffbe7a}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!kill@{kill}}
+\index{kill@{kill}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+kill (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Kill the ghost. 
+
+Callec when the Avatar eats the ghost. This makes the ghost intangible and head back to its spawn location. 
+
+Definition at line 52 of file ghost\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a2babeac064b224cc90cc96f542e4f38a}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a2babeac064b224cc90cc96f542e4f38a}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!mode@{mode}}
+\index{mode@{mode}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+mode (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the current mode or behaviour for this ghost. 
+
+\begin{DoxyReturn}{Returns}
+The current mode or behaviour for this ghost. Should only be \char`\"{}scatter\char`\"{}, \char`\"{}chase\char`\"{} or \char`\"{}frighten\char`\"{}. 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file ghost\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a2babeac064b224cc90cc96f542e4f38a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a295efc6c099c20bb4c1199de76599c14}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a295efc6c099c20bb4c1199de76599c14}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!mode@{mode}}
+\index{mode@{mode}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+mode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the current mode or behaviour for this ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The current mode of behaviour for this ghost. Should only be \char`\"{}scatter\char`\"{}, \char`\"{}chase\char`\"{} or \char`\"{}frighten\char`\"{}. Normally ghosts cannot reverse their directions, but they can when they change mode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file ghost\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a295efc6c099c20bb4c1199de76599c14_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a98217ebf07c7b375e66b74fa7485867b}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a98217ebf07c7b375e66b74fa7485867b}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!reset@{reset}}
+\index{reset@{reset}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reset this ghost. 
+
+This moves the ghost back to its spawn location, make the ghost `alive' and changes its current behaviour to `scatter' 
+
+Definition at line 28 of file ghost\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a98217ebf07c7b375e66b74fa7485867b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_adb2bbe25dab66852185325429ae06ade}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_adb2bbe25dab66852185325429ae06ade}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!update\_target@{update\_target}}
+\index{update\_target@{update\_target}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{update\_target()}{update\_target()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+update\+\_\+target (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{avatar,  }\item[{}]{ghosts }\end{DoxyParamCaption})}
+
+
+
+Recalculate the target for this ghost; i.\+e., where this ghost should go when in `chase' mode. 
+
+Each ghost has its own targeting method, and as controller works generically for all ghosts, this uses the Sprite\textquotesingle{}s `target' function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em avatar} & The avatar sprite. \\
+\hline
+{\em ghosts} & A list of ghosts in the game. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file ghost\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_adb2bbe25dab66852185325429ae06ade_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a584e1354c7716f55680acf660ee09069}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a584e1354c7716f55680acf660ee09069}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!alive@{alive}}
+\index{alive@{alive}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{alive}{alive}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+alive}
+
+
+
+Definition at line 53 of file ghost\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a40126a03a92fa2ff8470f236dc9f7f60}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a40126a03a92fa2ff8470f236dc9f7f60}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!from\_pos@{from\_pos}}
+\index{from\_pos@{from\_pos}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{from\_pos}{from\_pos}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+from\+\_\+pos}
+
+
+
+Definition at line 107 of file ghost\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_ae8eedaf3628a480b75503b5db84086c5}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_ae8eedaf3628a480b75503b5db84086c5}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!mode@{mode}}
+\index{mode@{mode}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+mode}
+
+
+
+Definition at line 145 of file ghost\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a37843e7aaa928559d6e78ad93fd55938}\label{classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller_a37843e7aaa928559d6e78ad93fd55938}} 
+\index{pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}!speed\_scale@{speed\_scale}}
+\index{speed\_scale@{speed\_scale}!pacman\_game.controller.ghost\_controller.GhostController@{pacman\_game.controller.ghost\_controller.GhostController}}
+\doxysubsubsection{\texorpdfstring{speed\_scale}{speed\_scale}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+ghost\+\_\+controller.\+Ghost\+Controller.\+speed\+\_\+scale}
+
+
+
+Definition at line 17 of file ghost\+\_\+controller.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/controller/\mbox{\hyperlink{ghost__controller_8py}{ghost\+\_\+controller.\+py}}\end{DoxyCompactItemize}

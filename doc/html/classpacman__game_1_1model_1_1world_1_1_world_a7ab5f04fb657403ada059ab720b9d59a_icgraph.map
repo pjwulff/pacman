@@ -1,0 +1,4 @@
+<map id="pacman_game.model.world.World.arena" name="pacman_game.model.world.World.arena">
+<area shape="rect" id="node1" title="Get the arena associated with this game state." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1world_1_1_world.html#a0829e178df413e840ed335fd0a04886a" title=" " alt="" coords="5,5,212,47"/>
+</map>

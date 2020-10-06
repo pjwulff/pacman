@@ -1,0 +1,10 @@
+<map id="pacman_game.model.moving_sprite.MovingSprite" name="pacman_game.model.moving_sprite.MovingSprite">
+<area shape="rect" id="node1" title="An abstract base class for all moving sprites." alt="" coords="261,68,477,109"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1avatar_1_1_avatar.html" title="Represents the yellow Avatar in the game." alt="" coords="525,35,737,76"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1ghost_1_1_ghost.html" title="Abstract base class for all Ghosts in the game." alt="" coords="528,100,735,141"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="5,68,213,109"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1blinky_1_1_blinky.html" title="The red &quot;Blinky&quot; ghost." alt="" coords="793,5,1001,47"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1clyde_1_1_clyde.html" title="The orange &quot;Clyde&quot; ghost." alt="" coords="793,71,1000,112"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1model_1_1inky_1_1_inky.html" title="The cyan &quot;Inky&quot; ghost." alt="" coords="785,137,1008,163"/>
+<area shape="rect" id="node8" href="$classpacman__game_1_1model_1_1pinky_1_1_pinky.html" title="The pink &quot;Pinky&quot; ghost." alt="" coords="795,188,999,229"/>
+</map>

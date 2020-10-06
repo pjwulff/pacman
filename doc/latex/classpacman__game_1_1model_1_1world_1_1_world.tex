@@ -1,0 +1,308 @@
+\hypertarget{classpacman__game_1_1model_1_1world_1_1_world}{}\doxysection{pacman\+\_\+game.\+model.\+world.\+World Class Reference}
+\label{classpacman__game_1_1model_1_1world_1_1_world}\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+
+
+A composite object that encapsulates everything about the current state of the `world' of a running game.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a6dd897dfeb65c4db3c95441126778b06}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, size, shape)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world}{World}} object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a9ad02d75de360e8bc509adeb97cf7b5c}{lives}} (self)
+\begin{DoxyCompactList}\small\item\em Get the number of lives left. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_aff44f19e34c2236127ec87ef51ce2902}{lives}} (self, lives)
+\begin{DoxyCompactList}\small\item\em Set the number of lives. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_ad82518488457eb415096e7ad7ba9a58e}{score}} (self)
+\begin{DoxyCompactList}\small\item\em Get the current score. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a69e893e45d51f07855cf1f9e78862db2}{score}} (self, score)
+\begin{DoxyCompactList}\small\item\em Set the current score. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a883ccdf8d9c9e361b46e77234d7e78aa}{level}} (self)
+\begin{DoxyCompactList}\small\item\em Get the current level number. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_ac164e018426c5d8919ea7a371661ed0b}{level}} (self, level)
+\begin{DoxyCompactList}\small\item\em Set the current level number. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a2feb102b7dc7cad71acb451c53b2f9e7}{avatar}} (self)
+\begin{DoxyCompactList}\small\item\em Get the Avatar in this game world. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a36f30102f6bfe4bee2fd194ccef96560}{ghosts}} (self)
+\begin{DoxyCompactList}\small\item\em Get the Ghosts in this game world. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a5961d7c80ab518b0e8bca0a4babdc23f}{dots}} (self)
+\begin{DoxyCompactList}\small\item\em Get the dots in this game world. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a09289703127d1e67f06f25dec8364318}{powers}} (self)
+\begin{DoxyCompactList}\small\item\em Get the power pills in this game world. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a7ab5f04fb657403ada059ab720b9d59a}{arena}} (self)
+\begin{DoxyCompactList}\small\item\em Get the Arena object of this game world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a70b28c3f58235cefac479db862d32a0d}{lives}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_a8b7b1812ce0b4b0a69eebf9df835b725}{score}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world_adf05e395a918c5c9c2d672e99d60538d}{level}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A composite object that encapsulates everything about the current state of the `world' of a running game. 
+
+Definition at line 12 of file world.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a6dd897dfeb65c4db3c95441126778b06}\label{classpacman__game_1_1model_1_1world_1_1_world_a6dd897dfeb65c4db3c95441126778b06}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size,  }\item[{}]{shape }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classpacman__game_1_1model_1_1world_1_1_world}{World}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the Arena. Should only be \char`\"{}small\char`\"{}, \char`\"{}medium\char`\"{} or \char`\"{}large\char`\"{}. \\
+\hline
+{\em shape} & The shape of the Arena. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file world.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a7ab5f04fb657403ada059ab720b9d59a}\label{classpacman__game_1_1model_1_1world_1_1_world_a7ab5f04fb657403ada059ab720b9d59a}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!arena@{arena}}
+\index{arena@{arena}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{arena()}{arena()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+arena (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the Arena object of this game world. 
+
+\begin{DoxyReturn}{Returns}
+An Arena object. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a2feb102b7dc7cad71acb451c53b2f9e7}\label{classpacman__game_1_1model_1_1world_1_1_world_a2feb102b7dc7cad71acb451c53b2f9e7}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!avatar@{avatar}}
+\index{avatar@{avatar}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{avatar()}{avatar()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+avatar (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the Avatar in this game world. 
+
+\begin{DoxyReturn}{Returns}
+An Avatar object. 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a5961d7c80ab518b0e8bca0a4babdc23f}\label{classpacman__game_1_1model_1_1world_1_1_world_a5961d7c80ab518b0e8bca0a4babdc23f}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!dots@{dots}}
+\index{dots@{dots}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{dots()}{dots()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+dots (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the dots in this game world. 
+
+\begin{DoxyReturn}{Returns}
+A list of dots. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a36f30102f6bfe4bee2fd194ccef96560}\label{classpacman__game_1_1model_1_1world_1_1_world_a36f30102f6bfe4bee2fd194ccef96560}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!ghosts@{ghosts}}
+\index{ghosts@{ghosts}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{ghosts()}{ghosts()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+ghosts (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the Ghosts in this game world. 
+
+\begin{DoxyReturn}{Returns}
+A dictionary of ghosts. 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a883ccdf8d9c9e361b46e77234d7e78aa}\label{classpacman__game_1_1model_1_1world_1_1_world_a883ccdf8d9c9e361b46e77234d7e78aa}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!level@{level}}
+\index{level@{level}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{level()}{level()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+level (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the current level number. 
+
+\begin{DoxyReturn}{Returns}
+The current level number. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_ac164e018426c5d8919ea7a371661ed0b}\label{classpacman__game_1_1model_1_1world_1_1_world_ac164e018426c5d8919ea7a371661ed0b}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!level@{level}}
+\index{level@{level}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{level()}{level()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+level (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{level }\end{DoxyParamCaption})}
+
+
+
+Set the current level number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level numer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a9ad02d75de360e8bc509adeb97cf7b5c}\label{classpacman__game_1_1model_1_1world_1_1_world_a9ad02d75de360e8bc509adeb97cf7b5c}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!lives@{lives}}
+\index{lives@{lives}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{lives()}{lives()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+lives (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the number of lives left. 
+
+\begin{DoxyReturn}{Returns}
+The number of remaining lives. 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_aff44f19e34c2236127ec87ef51ce2902}\label{classpacman__game_1_1model_1_1world_1_1_world_aff44f19e34c2236127ec87ef51ce2902}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!lives@{lives}}
+\index{lives@{lives}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{lives()}{lives()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+lives (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lives }\end{DoxyParamCaption})}
+
+
+
+Set the number of lives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lives} & The number of lives. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a09289703127d1e67f06f25dec8364318}\label{classpacman__game_1_1model_1_1world_1_1_world_a09289703127d1e67f06f25dec8364318}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!powers@{powers}}
+\index{powers@{powers}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{powers()}{powers()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+powers (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the power pills in this game world. 
+
+\begin{DoxyReturn}{Returns}
+A list of power pills. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_ad82518488457eb415096e7ad7ba9a58e}\label{classpacman__game_1_1model_1_1world_1_1_world_ad82518488457eb415096e7ad7ba9a58e}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!score@{score}}
+\index{score@{score}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{score()}{score()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+score (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the current score. 
+
+\begin{DoxyReturn}{Returns}
+The current score. 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a69e893e45d51f07855cf1f9e78862db2}\label{classpacman__game_1_1model_1_1world_1_1_world_a69e893e45d51f07855cf1f9e78862db2}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!score@{score}}
+\index{score@{score}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{score()}{score()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+world.\+World.\+score (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{score }\end{DoxyParamCaption})}
+
+
+
+Set the current score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The score. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file world.\+py.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_adf05e395a918c5c9c2d672e99d60538d}\label{classpacman__game_1_1model_1_1world_1_1_world_adf05e395a918c5c9c2d672e99d60538d}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!level@{level}}
+\index{level@{level}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+model.\+world.\+World.\+level}
+
+
+
+Definition at line 21 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a70b28c3f58235cefac479db862d32a0d}\label{classpacman__game_1_1model_1_1world_1_1_world_a70b28c3f58235cefac479db862d32a0d}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!lives@{lives}}
+\index{lives@{lives}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{lives}{lives}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+model.\+world.\+World.\+lives}
+
+
+
+Definition at line 19 of file world.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1world_1_1_world_a8b7b1812ce0b4b0a69eebf9df835b725}\label{classpacman__game_1_1model_1_1world_1_1_world_a8b7b1812ce0b4b0a69eebf9df835b725}} 
+\index{pacman\_game.model.world.World@{pacman\_game.model.world.World}!score@{score}}
+\index{score@{score}!pacman\_game.model.world.World@{pacman\_game.model.world.World}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+model.\+world.\+World.\+score}
+
+
+
+Definition at line 20 of file world.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{world_8py}{world.\+py}}\end{DoxyCompactItemize}

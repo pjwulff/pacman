@@ -2,11 +2,20 @@ import cairo
 import math
 from .arena_view import ArenaView
 
+## Concrete class of type ArenaView. This one class can be used for both
+## viewing HexagonalArenas and GraphArenas.
 class GraphArenaView(ArenaView):
+
+    ## Create a new GraphArenaView.
+    #
+    # @param arena The Arena object we are viewing.
     def __init__(self, arena):
         rect = arena.rect
         super().__init__(arena, rect.width, rect.height)
 
+    ## Draw the arena.
+    #
+    # @param cr The cairo context to be used for drawing.
     def draw(self, cr):
         width = self._arena.logical_width
         height = self._arena.logical_height

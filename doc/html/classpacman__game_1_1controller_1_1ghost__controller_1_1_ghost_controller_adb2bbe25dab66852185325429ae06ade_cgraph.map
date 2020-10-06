@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.ghost_controller.GhostController.update_target" name="pacman_game.controller.ghost_controller.GhostController.update_target">
+<area shape="rect" id="node1" title="Recalculate the target for this ghost; i.e., where this ghost should go when in ‘chase’ mode." alt="" coords="5,5,296,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#ad4479f2cb733652a2f2717d525d85013" title="Gets the sprite this controller is controlling." alt="" coords="344,5,672,47"/>
+</map>

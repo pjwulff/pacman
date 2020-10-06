@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.ghost_controller.GhostController.alive" name="pacman_game.controller.ghost_controller.GhostController.alive">
+<area shape="rect" id="node1" title="Set whether or not this ghost is alive." alt="" coords="5,5,236,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#ad4479f2cb733652a2f2717d525d85013" title="Gets the sprite this controller is controlling." alt="" coords="284,5,612,47"/>
+</map>

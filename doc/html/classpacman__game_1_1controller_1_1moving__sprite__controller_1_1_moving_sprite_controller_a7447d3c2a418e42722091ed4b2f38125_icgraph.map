@@ -1,0 +1,7 @@
+<map id="pacman_game.controller.moving_sprite_controller.MovingSpriteController.direction" name="pacman_game.controller.moving_sprite_controller.MovingSpriteController.direction">
+<area shape="rect" id="node1" title="Gets the direction in which this sprite is currently actually moving (which may or may not be its tar..." alt="" coords="384,93,732,135"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a295efc6c099c20bb4c1199de76599c14" title="Set the current mode or behaviour for this ghost." alt="" coords="53,5,289,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="17,71,324,98"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a83de83cbb1613a0b23c67a575fbc6b7f" title="Update this sprite over ‘delta’ time." alt="" coords="11,123,330,164"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#acc1fe614fd53cf083e02d35691887158" title="Set the target direction this sprite would like to move in." alt="" coords="5,189,336,245"/>
+</map>

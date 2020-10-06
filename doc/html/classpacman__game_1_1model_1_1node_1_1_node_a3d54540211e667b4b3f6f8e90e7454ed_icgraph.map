@@ -1,0 +1,4 @@
+<map id="pacman_game.model.node.Node.direction" name="pacman_game.model.node.Node.direction">
+<area shape="rect" id="node1" title="Calculate the angle or direction from this node to another." alt="" coords="360,5,659,32"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="5,5,312,32"/>
+</map>

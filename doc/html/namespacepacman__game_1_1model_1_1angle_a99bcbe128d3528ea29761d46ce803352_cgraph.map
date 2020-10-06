@@ -1,0 +1,5 @@
+<map id="pacman_game.model.angle.opposite" name="pacman_game.model.angle.opposite">
+<area shape="rect" id="node1" title="A predicate to decide if two angles are pointing in sufficiently opposite directions according to som..." alt="" coords="5,5,268,32"/>
+<area shape="rect" id="node2" href="$namespacepacman__game_1_1model_1_1angle.html#a2ec757c2cabdd60cdd2dd192c4e11897" title="A predicate to decide if two angles are ‘close’ according to some threshold." alt="" coords="316,5,557,32"/>
+<area shape="rect" id="node3" href="$namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="605,5,877,32"/>
+</map>

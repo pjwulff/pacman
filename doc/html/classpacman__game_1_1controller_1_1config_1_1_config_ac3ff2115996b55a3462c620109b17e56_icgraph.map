@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.config.Config.start_time" name="pacman_game.controller.config.Config.start_time">
+<area shape="rect" id="node1" title="The time when this level was started." alt="" coords="284,5,515,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#ae75d56d6f946ff374d2a109e183b42f1" title="Set the time when this level was started." alt="" coords="5,5,236,47"/>
+</map>

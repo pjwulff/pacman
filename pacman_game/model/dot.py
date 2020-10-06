@@ -2,11 +2,11 @@ from .sprite import Sprite
 
 DOT_RADIUS = 3
 
+## Represents a `dot' in the maze.
 class Dot(Sprite):
-    """! Represents a dot in the maze."""
-    def __init__(self, coordinate):
-        """! Construct a new dot object.
 
-        @param arena The arena to which this dot belongs.
-        @param x,y The coordinates where this dot should spawn."""
+    ## Create a new dot object.
+    #
+    # @param coordinate The coordinates where this dot will be located.
+    def __init__(self, coordinate):
         Sprite.__init__(self, coordinate, DOT_RADIUS, "dot")

@@ -1,0 +1,6 @@
+<map id="pacman_game.model.arena.Arena.closest_node" name="pacman_game.model.arena.Arena.closest_node">
+<area shape="rect" id="node1" title="Get the node in the graph that is the closest to some arbitrary coordinates." alt="" coords="5,71,213,112"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#af376c292c8586424e5c1bf9e1704feec" title="Join two nodes in the graph together by creating an edge between them." alt="" coords="261,5,469,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a9e3fa07059fe17b2c89600ddd4df223d" title="Get the node in the graph that is the closest to some arbitrary coordinates." alt="" coords="261,71,469,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a214807675e6c6b67e723e4579b8a5c7d" title="Remove any dead ends remaining in the maze." alt="" coords="261,136,469,177"/>
+</map>

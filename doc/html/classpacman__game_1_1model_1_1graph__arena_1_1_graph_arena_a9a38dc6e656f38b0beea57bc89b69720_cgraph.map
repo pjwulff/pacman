@@ -1,0 +1,6 @@
+<map id="pacman_game.model.graph_arena.GraphArena.__init__" name="pacman_game.model.graph_arena.GraphArena.__init__">
+<area shape="rect" id="node1" title="Create a new GraphArena." alt="" coords="5,35,209,76"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1graph__arena_1_1_graph_arena.html#a25b13c77524cc253698cae6dd53e45d1" title="When generating nodes randomly we don&#39;t want them too close together." alt="" coords="268,5,488,47"/>
+<area shape="rect" id="node3" href="$namespacepacman__game_1_1model_1_1angle.html#a2ec757c2cabdd60cdd2dd192c4e11897" title="A predicate to decide if two angles are ‘close’ according to some threshold." alt="" coords="257,71,499,98"/>
+<area shape="rect" id="node4" href="$namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="547,71,819,98"/>
+</map>

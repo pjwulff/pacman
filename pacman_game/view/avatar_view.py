@@ -5,11 +5,19 @@ from .sprite_view import SpriteView
 
 AVATAR_RADIUS = 9
 
+## A view class for Avatars.
 class AvatarView(SpriteView):
+
+    ## Create a new AvatarView.
+    #
+    # @param avatar The Avatar object to view.
     def __init__(self, avatar):
         SpriteView.__init__(self, avatar)
         self._last_angle = 0
 
+    ## Draw the Avatar.
+    #
+    # @param cr The cairo context to be used for drawing.
     def draw(self, cr):
         coord = self._sprite.coordinate
         x = coord.x

@@ -1,0 +1,227 @@
+\hypertarget{classpacman__game_1_1view_1_1game__view_1_1_game_view}{}\doxysection{pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View Class Reference}
+\label{classpacman__game_1_1view_1_1game__view_1_1_game_view}\index{pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}}
+
+
+A View to handle viewing the game.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view_a4c4a4dd476811ccfdf8d18538090004e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, controller, world, next, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view}{Game\+View}} object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view_a945c206ed8977596eaa813ba80a924f8}{draw}} (self, widget, cr)
+\begin{DoxyCompactList}\small\item\em A callback to be called when we need to draw the view. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view_a2458e603e7d143c80a328c275b10af85}{tick}} (self)
+\begin{DoxyCompactList}\small\item\em A callback used by a timer to trigger the `draw' event. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3e89b79580b4b4d0af26561a0c8be796}{on\+\_\+key\+\_\+press}} (self, widget, event)
+\begin{DoxyCompactList}\small\item\em A callback triggered when the user presses a key. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3d7b15e2cda427c4d235a7a4e3a04911}{on\+\_\+key\+\_\+release}} (self, widget, event)
+\begin{DoxyCompactList}\small\item\em A callback triggered when the user releases a key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A View to handle viewing the game. 
+
+Many viewing tasks are delegated to sub-\/view objects. 
+
+Definition at line 13 of file game\+\_\+view.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1game__view_1_1_game_view_a4c4a4dd476811ccfdf8d18538090004e}\label{classpacman__game_1_1view_1_1game__view_1_1_game_view_a4c4a4dd476811ccfdf8d18538090004e}} 
+\index{pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{controller,  }\item[{}]{world,  }\item[{}]{next,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classpacman__game_1_1view_1_1game__view_1_1_game_view}{Game\+View}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & The Game\+Controller used for this game. We will send this controller user input. \\
+\hline
+{\em world} & The World object representing the state of the game. We will use this model as a source for information of what to draw. \\
+\hline
+{\em next} & A callback to be called with the game ends, \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file game\+\_\+view.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a4c4a4dd476811ccfdf8d18538090004e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1game__view_1_1_game_view_a945c206ed8977596eaa813ba80a924f8}\label{classpacman__game_1_1view_1_1game__view_1_1_game_view_a945c206ed8977596eaa813ba80a924f8}} 
+\index{pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}!draw@{draw}}
+\index{draw@{draw}!pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View.\+draw (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{widget,  }\item[{}]{cr }\end{DoxyParamCaption})}
+
+
+
+A callback to be called when we need to draw the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget which raised the signal which called this function. \\
+\hline
+{\em cr} & The cairo context to be used for drawing. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file game\+\_\+view.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a945c206ed8977596eaa813ba80a924f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a945c206ed8977596eaa813ba80a924f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3e89b79580b4b4d0af26561a0c8be796}\label{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3e89b79580b4b4d0af26561a0c8be796}} 
+\index{pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}!on\_key\_press@{on\_key\_press}}
+\index{on\_key\_press@{on\_key\_press}!pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}}
+\doxysubsubsection{\texorpdfstring{on\_key\_press()}{on\_key\_press()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View.\+on\+\_\+key\+\_\+press (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{widget,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+A callback triggered when the user presses a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget which triggered the event. \\
+\hline
+{\em event} & The event associated with the key press. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file game\+\_\+view.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3e89b79580b4b4d0af26561a0c8be796_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3e89b79580b4b4d0af26561a0c8be796_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3d7b15e2cda427c4d235a7a4e3a04911}\label{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3d7b15e2cda427c4d235a7a4e3a04911}} 
+\index{pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}!on\_key\_release@{on\_key\_release}}
+\index{on\_key\_release@{on\_key\_release}!pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}}
+\doxysubsubsection{\texorpdfstring{on\_key\_release()}{on\_key\_release()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View.\+on\+\_\+key\+\_\+release (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{widget,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+A callback triggered when the user releases a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em widget} & The widget which triggered the event. \\
+\hline
+{\em event} & The event associated with the key release. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 132 of file game\+\_\+view.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3d7b15e2cda427c4d235a7a4e3a04911_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a3d7b15e2cda427c4d235a7a4e3a04911_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1game__view_1_1_game_view_a2458e603e7d143c80a328c275b10af85}\label{classpacman__game_1_1view_1_1game__view_1_1_game_view_a2458e603e7d143c80a328c275b10af85}} 
+\index{pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}!tick@{tick}}
+\index{tick@{tick}!pacman\_game.view.game\_view.GameView@{pacman\_game.view.game\_view.GameView}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+game\+\_\+view.\+Game\+View.\+tick (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+A callback used by a timer to trigger the `draw' event. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer should be triggered again (because the game is not over), False otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file game\+\_\+view.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1game__view_1_1_game_view_a2458e603e7d143c80a328c275b10af85_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/view/\mbox{\hyperlink{game__view_8py}{game\+\_\+view.\+py}}\end{DoxyCompactItemize}

@@ -4,10 +4,18 @@ from .sprite_view import SpriteView
 
 POWER_RADIUS = 4
 
+## A view to draw power pills.
 class PowerView(SpriteView):
-    def __init__(self, power,):
+
+    ## Create a new PowerViwe object.
+    #
+    # @param power The power pill we are viewing.
+    def __init__(self, power):
         SpriteView.__init__(self, power)
 
+    ## Draw the power pill.
+    #
+    # @param cr The cairo context to be used for drawing.
     def draw(self, cr):
         coord = self._sprite.coordinate
         x = coord.x

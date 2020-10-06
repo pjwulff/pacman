@@ -1,0 +1,5 @@
+<map id="pacman_game.view.game_view.GameView.on_key_press" name="pacman_game.view.game_view.GameView.on_key_press">
+<area shape="rect" id="node1" title="A callback triggered when the user presses a key." alt="" coords="5,39,231,80"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1game__view_1_1_game_view.html#ae6197476261c0db3a8afacccc09adcbc" title="Calculate the direction the user is pressing as an angle in radians." alt="" coords="283,5,485,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1view_1_1game__view_1_1_game_view.html#abd2f674fa603080532efbb9dfd4e10e4" title="Get the index into an array for an arrow keypress." alt="" coords="279,71,489,112"/>
+</map>

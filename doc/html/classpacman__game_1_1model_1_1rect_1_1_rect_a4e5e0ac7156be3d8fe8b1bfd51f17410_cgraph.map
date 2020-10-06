@@ -1,0 +1,4 @@
+<map id="pacman_game.model.rect.Rect.height" name="pacman_game.model.rect.Rect.height">
+<area shape="rect" id="node1" title="Set the height of the rectangle." alt="" coords="5,5,276,32"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#a232c8ff89bcaf57b38ce62c67c1eb2a6" title="Get the height of the rectangle." alt="" coords="324,5,595,32"/>
+</map>

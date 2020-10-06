@@ -1,0 +1,239 @@
+\hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate}{}\doxysection{pacman\+\_\+game.\+model.\+coordinate.\+Coordinate Class Reference}
+\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate}\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+
+
+A class to represent coordinates.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a0bfd34eaaaf05f9230067e5363488528}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a879bcbfc48a8a9e9e5d8ccb6b9596f10}{x}}=0, \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_afbe3670fc4b95b5460079455b34b4150}{y}}=0)
+\begin{DoxyCompactList}\small\item\em Create new coordinates. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a879bcbfc48a8a9e9e5d8ccb6b9596f10}{x}} (self)
+\begin{DoxyCompactList}\small\item\em Get the x-\/coordinate. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a18575b67dd0fc6e1a72aef1bb2533ead}{x}} (self, x)
+\begin{DoxyCompactList}\small\item\em Set the x-\/coordinate. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_afbe3670fc4b95b5460079455b34b4150}{y}} (self)
+\begin{DoxyCompactList}\small\item\em Get the y-\/coordinate. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a078d4bd043f5200eea93680edffa14f2}{y}} (self, y)
+\begin{DoxyCompactList}\small\item\em Set the y-\/coordiate. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a05e7855fd2bfb680aeff4385d57f9fa6}{move}} (self, other)
+\begin{DoxyCompactList}\small\item\em Return a new coordinate based on this one but shifted by some amount. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a34a17dd79fedd2540cfa73af4f7e40ab}{distance}} (self, other)
+\begin{DoxyCompactList}\small\item\em Calculate the distance between two points in space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent coordinates. 
+
+Definition at line 4 of file coordinate.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a0bfd34eaaaf05f9230067e5363488528}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a0bfd34eaaaf05f9230067e5363488528}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x = {\ttfamily 0},  }\item[{}]{y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Create new coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate (defaults to zero). \\
+\hline
+{\em y} & The y coordinate (defaults to zero). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file coordinate.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a34a17dd79fedd2540cfa73af4f7e40ab}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a34a17dd79fedd2540cfa73af4f7e40ab}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!distance@{distance}}
+\index{distance@{distance}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Calculate the distance between two points in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other coordinates.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between these coordinates and the other coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file coordinate.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a34a17dd79fedd2540cfa73af4f7e40ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a05e7855fd2bfb680aeff4385d57f9fa6}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a05e7855fd2bfb680aeff4385d57f9fa6}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!move@{move}}
+\index{move@{move}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+move (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Return a new coordinate based on this one but shifted by some amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another coordinate object that decides by how much to shift. Equivalently the two coordinates can be viewed as vectors, in which case this is just vector addition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new shifted coordinate/vector. 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file coordinate.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a05e7855fd2bfb680aeff4385d57f9fa6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a879bcbfc48a8a9e9e5d8ccb6b9596f10}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a879bcbfc48a8a9e9e5d8ccb6b9596f10}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!x@{x}}
+\index{x@{x}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+x (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the x-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+The x-\/coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file coordinate.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a879bcbfc48a8a9e9e5d8ccb6b9596f10_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a18575b67dd0fc6e1a72aef1bb2533ead}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a18575b67dd0fc6e1a72aef1bb2533ead}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!x@{x}}
+\index{x@{x}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+x (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Set the x-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file coordinate.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a18575b67dd0fc6e1a72aef1bb2533ead_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a18575b67dd0fc6e1a72aef1bb2533ead_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_afbe3670fc4b95b5460079455b34b4150}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_afbe3670fc4b95b5460079455b34b4150}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!y@{y}}
+\index{y@{y}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+y (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the y-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+The y-\/coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file coordinate.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_afbe3670fc4b95b5460079455b34b4150_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a078d4bd043f5200eea93680edffa14f2}\label{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a078d4bd043f5200eea93680edffa14f2}} 
+\index{pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}!y@{y}}
+\index{y@{y}!pacman\_game.model.coordinate.Coordinate@{pacman\_game.model.coordinate.Coordinate}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+coordinate.\+Coordinate.\+y (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+
+
+Set the y-\/coordiate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file coordinate.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a078d4bd043f5200eea93680edffa14f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1coordinate_1_1_coordinate_a078d4bd043f5200eea93680edffa14f2_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{coordinate_8py}{coordinate.\+py}}\end{DoxyCompactItemize}

@@ -193,7 +193,7 @@ class GameController:
 
     ## Stops the game because the player lost (i.e., all lives were lost).
     def _lose(self):
-        self._stop()
+        self.stop()
 
     ## Indicate that the player has `won' (in other words, beaten this level).
     ## This moves to a new level, resets the game, and increases the difficulty.

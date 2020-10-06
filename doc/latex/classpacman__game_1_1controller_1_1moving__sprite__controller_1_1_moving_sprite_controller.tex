@@ -1,0 +1,405 @@
+\hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller}{}\doxysection{pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller Class Reference}
+\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller}\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+
+
+A generic controller for all moving sprites.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a2b138cc75b3cfa8ba814a0009f25adea}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad4479f2cb733652a2f2717d525d85013}{sprite}})
+\begin{DoxyCompactList}\small\item\em Create a generic \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller}{Moving\+Sprite\+Controller}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a398aca1a4451874cbd78d53871f79779}{return\+\_\+to\+\_\+spawn}} (self)
+\begin{DoxyCompactList}\small\item\em Return this sprite to its spawn location in the map. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad132b765a9266cd3e296d70947fad68a}{target\+\_\+direction}} (self)
+\begin{DoxyCompactList}\small\item\em Get the target direction this sprite would like to move in. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_acc1fe614fd53cf083e02d35691887158}{target\+\_\+direction}} (self, target\+\_\+direction)
+\begin{DoxyCompactList}\small\item\em Set the target direction this sprite would like to move in. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_afd7cbd8ae0b0dafff083f547fa9573fb}{set\+\_\+direction}} (self, \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a7447d3c2a418e42722091ed4b2f38125}{direction}})
+\begin{DoxyCompactList}\small\item\em Set the target direction for this sprite. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a24822f169cabd95e2bc65f36fe2ad222}{from\+\_\+pos}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the node in the maze from which this sprite is currently moving. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad4479f2cb733652a2f2717d525d85013}{sprite}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the sprite this controller is controlling. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a7447d3c2a418e42722091ed4b2f38125}{direction}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the direction in which this sprite is currently actually moving (which may or may not be its target direction). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_aea4e90886680b0123604fd29bf5bcaf3}{speed}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the current movement speed of this sprite. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a72f70db6bc51d3e6830b521934127c77}{speed}} (self, speed)
+\begin{DoxyCompactList}\small\item\em Set the movement speed for this sprite. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_adf9a54227ac0ef271afd0b04c6416978}{speed\+\_\+scale}} (self)
+\begin{DoxyCompactList}\small\item\em Get the speed scale for this sprite. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ac9de0a9514e8fbf91e8bf0ad0126dee5}{speed\+\_\+scale}} (self, speed\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Set the speed scale for this sprite. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a83de83cbb1613a0b23c67a575fbc6b7f}{step}} (self, delta)
+\begin{DoxyCompactList}\small\item\em Update this sprite over `delta' time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a2536fcc46a1f9a058957bda02e3fcece}{speed\+\_\+scale}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a8bd9eebd57f0bddee7d00f29c9e8076c}{target\+\_\+direction}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a32886b13af66e81ceb8d7575c79d2ed9}{speed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A generic controller for all moving sprites. 
+
+Intended to be used via inheritance by Avatar\+Controller and Ghost\+Controller, as much of the logic of how these sprites move is identical. 
+
+Definition at line 6 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a2b138cc75b3cfa8ba814a0009f25adea}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a2b138cc75b3cfa8ba814a0009f25adea}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Create a generic \mbox{\hyperlink{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller}{Moving\+Sprite\+Controller}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The sprite to control. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpacman__game_1_1controller_1_1avatar__controller_1_1_avatar_controller_a70fa49943f0c22bf98ca1d4a605374a6}{pacman\+\_\+game.\+controller.\+avatar\+\_\+controller.\+Avatar\+Controller}}.
+
+
+
+Definition at line 10 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a7447d3c2a418e42722091ed4b2f38125}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a7447d3c2a418e42722091ed4b2f38125}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!direction@{direction}}
+\index{direction@{direction}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+direction (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the direction in which this sprite is currently actually moving (which may or may not be its target direction). 
+
+\begin{DoxyReturn}{Returns}
+A direction. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a7447d3c2a418e42722091ed4b2f38125_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a7447d3c2a418e42722091ed4b2f38125_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a24822f169cabd95e2bc65f36fe2ad222}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a24822f169cabd95e2bc65f36fe2ad222}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!from\_pos@{from\_pos}}
+\index{from\_pos@{from\_pos}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{from\_pos()}{from\_pos()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+from\+\_\+pos (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the node in the maze from which this sprite is currently moving. 
+
+\begin{DoxyReturn}{Returns}
+A node in the maze. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a24822f169cabd95e2bc65f36fe2ad222_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a398aca1a4451874cbd78d53871f79779}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a398aca1a4451874cbd78d53871f79779}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!return\_to\_spawn@{return\_to\_spawn}}
+\index{return\_to\_spawn@{return\_to\_spawn}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{return\_to\_spawn()}{return\_to\_spawn()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+return\+\_\+to\+\_\+spawn (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Return this sprite to its spawn location in the map. 
+
+This function also resets the sprite\textquotesingle{}s speed and direction. 
+
+Definition at line 17 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a398aca1a4451874cbd78d53871f79779_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_afd7cbd8ae0b0dafff083f547fa9573fb}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_afd7cbd8ae0b0dafff083f547fa9573fb}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!set\_direction@{set\_direction}}
+\index{set\_direction@{set\_direction}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{set\_direction()}{set\_direction()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+set\+\_\+direction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{direction }\end{DoxyParamCaption})}
+
+
+
+Set the target direction for this sprite. 
+
+
+
+Definition at line 42 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_afd7cbd8ae0b0dafff083f547fa9573fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_aea4e90886680b0123604fd29bf5bcaf3}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_aea4e90886680b0123604fd29bf5bcaf3}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!speed@{speed}}
+\index{speed@{speed}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{speed()}{speed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+speed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the current movement speed of this sprite. 
+
+\begin{DoxyReturn}{Returns}
+A speed as a floating point number. 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a72f70db6bc51d3e6830b521934127c77}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a72f70db6bc51d3e6830b521934127c77}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!speed@{speed}}
+\index{speed@{speed}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{speed()}{speed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+speed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{speed }\end{DoxyParamCaption})}
+
+
+
+Set the movement speed for this sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & The speed of this sprite as a floating point number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_adf9a54227ac0ef271afd0b04c6416978}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_adf9a54227ac0ef271afd0b04c6416978}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!speed\_scale@{speed\_scale}}
+\index{speed\_scale@{speed\_scale}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{speed\_scale()}{speed\_scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+speed\+\_\+scale (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the speed scale for this sprite. 
+
+Every sprite has its own speed scale, which dictates how quickly it can move between vertices in the maze.
+
+\begin{DoxyReturn}{Returns}
+The speed scale for this sprite. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ac9de0a9514e8fbf91e8bf0ad0126dee5}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ac9de0a9514e8fbf91e8bf0ad0126dee5}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!speed\_scale@{speed\_scale}}
+\index{speed\_scale@{speed\_scale}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{speed\_scale()}{speed\_scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+speed\+\_\+scale (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{speed\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Set the speed scale for this sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed\+\_\+scale} & The speed scale. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 102 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ac9de0a9514e8fbf91e8bf0ad0126dee5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad4479f2cb733652a2f2717d525d85013}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad4479f2cb733652a2f2717d525d85013}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!sprite@{sprite}}
+\index{sprite@{sprite}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{sprite()}{sprite()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+sprite (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the sprite this controller is controlling. 
+
+\begin{DoxyReturn}{Returns}
+A sprite. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad4479f2cb733652a2f2717d525d85013_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a83de83cbb1613a0b23c67a575fbc6b7f}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a83de83cbb1613a0b23c67a575fbc6b7f}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!step@{step}}
+\index{step@{step}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+step (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{delta }\end{DoxyParamCaption})}
+
+
+
+Update this sprite over `delta' time. 
+
+This involves moving it through the maze. When it reaches a vertex in the maze it has the opportunity to choose a new direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & The length of time passed since this sprite last moved. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 121 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a83de83cbb1613a0b23c67a575fbc6b7f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad132b765a9266cd3e296d70947fad68a}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_ad132b765a9266cd3e296d70947fad68a}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!target\_direction@{target\_direction}}
+\index{target\_direction@{target\_direction}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{target\_direction()}{target\_direction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+target\+\_\+direction (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the target direction this sprite would like to move in. 
+
+\begin{DoxyReturn}{Returns}
+The target direction. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_acc1fe614fd53cf083e02d35691887158}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_acc1fe614fd53cf083e02d35691887158}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!target\_direction@{target\_direction}}
+\index{target\_direction@{target\_direction}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{target\_direction()}{target\_direction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+target\+\_\+direction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{target\+\_\+direction }\end{DoxyParamCaption})}
+
+
+
+Set the target direction this sprite would like to move in. 
+
+If possible, this will allow the sprite to turn around.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+direction} & The target direction. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_acc1fe614fd53cf083e02d35691887158_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a32886b13af66e81ceb8d7575c79d2ed9}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a32886b13af66e81ceb8d7575c79d2ed9}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!speed@{speed}}
+\index{speed@{speed}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+speed}
+
+
+
+Definition at line 22 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a2536fcc46a1f9a058957bda02e3fcece}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a2536fcc46a1f9a058957bda02e3fcece}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!speed\_scale@{speed\_scale}}
+\index{speed\_scale@{speed\_scale}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{speed\_scale}{speed\_scale}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+speed\+\_\+scale}
+
+
+
+Definition at line 12 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a8bd9eebd57f0bddee7d00f29c9e8076c}\label{classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller_a8bd9eebd57f0bddee7d00f29c9e8076c}} 
+\index{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}!target\_direction@{target\_direction}}
+\index{target\_direction@{target\_direction}!pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController@{pacman\_game.controller.moving\_sprite\_controller.MovingSpriteController}}
+\doxysubsubsection{\texorpdfstring{target\_direction}{target\_direction}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+controller.\+moving\+\_\+sprite\+\_\+controller.\+Moving\+Sprite\+Controller.\+target\+\_\+direction}
+
+
+
+Definition at line 21 of file moving\+\_\+sprite\+\_\+controller.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/controller/\mbox{\hyperlink{moving__sprite__controller_8py}{moving\+\_\+sprite\+\_\+controller.\+py}}\end{DoxyCompactItemize}

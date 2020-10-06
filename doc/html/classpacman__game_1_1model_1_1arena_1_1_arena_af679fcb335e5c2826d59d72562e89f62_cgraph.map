@@ -1,0 +1,19 @@
+<map id="pacman_game.model.arena.Arena.__init__" name="pacman_game.model.arena.Arena.__init__">
+<area shape="rect" id="node1" title="Create a new Arena." alt="" coords="5,463,213,504"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a308c1cadabb7a12f0b58085cf7eca547" title="Generate a new random maze." alt="" coords="261,463,469,504"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#ac6c334bcb36935c6bd6c104079f195da" title="Having generated a maze we need to create all the dots that will exist in the maze." alt="" coords="560,5,768,47"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#aa1a1186bbe51a7f34f7f80a05b30aca5" title="Used by the ‘_generate_heuristics’ function, this calculates the shortest path to this node from ever..." alt="" coords="560,71,768,112"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a063cf30406d2d047feb772835f1152a5" title="Some sprites in the game will require the use of an A*&#45;search to find the best path through the maze." alt="" coords="560,136,768,177"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#afb1e8ef7ea013dd5b797b248451a9df3" title="Generate a maze." alt="" coords="560,201,768,243"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1model_1_1graph__arena_1_1_graph_arena.html#af4780641f10bb53a88a43fdd75d383ad" title="Generate nodes randomly." alt="" coords="533,267,795,308"/>
+<area shape="rect" id="node8" href="$classpacman__game_1_1model_1_1hexagonal__arena_1_1_hexagonal_arena.html#ab30972142b2168ad50e28b66e736abd5" title="Generate nodes based on a hexagonal grid." alt="" coords="517,332,811,373"/>
+<area shape="rect" id="node9" href="$classpacman__game_1_1model_1_1square__arena_1_1_square_arena.html#a043512b80b64694f0c259bd739f80a33" title="Generate nodes in a grid." alt="" coords="530,397,798,439"/>
+<area shape="rect" id="node10" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#af08e8af7f1098d4f2b231e1920aed70a" title="Generate a list of powers that will exist in the maze." alt="" coords="560,463,768,504"/>
+<area shape="rect" id="node11" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a6477b30cc4a07c4fec9ff53a3cd59061" title="Get the node in the graph that is the most bottom&#45;left; this is where &quot;Clyde&quot; will spawn." alt="" coords="560,528,768,569"/>
+<area shape="rect" id="node12" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#aabc6165f07a324a7df884d1f060f76e1" title="Get the node in the graph that is the most bottom&#45;right; this is where &quot;Inky&quot; will spawn." alt="" coords="560,593,768,635"/>
+<area shape="rect" id="node13" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#adea57006d27dd09f0d1648b1f4965d23" title="Get the node in the graph which is the closest towards the centre; this is where the Avatar will spaw..." alt="" coords="560,659,768,700"/>
+<area shape="rect" id="node14" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a095d8dc03abb4b0f4871cf5d08f63012" title="Get the node in the graph that is the most top&#45;left; this is where &quot;Pinky&quot; will spawn." alt="" coords="560,724,768,765"/>
+<area shape="rect" id="node15" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#aeddc65d844846ceb85d9c87adeb2dff5" title="Get the node in the graph that is the most top&#45;right; this is where &quot;Blinky&quot; will spawn." alt="" coords="560,789,768,831"/>
+<area shape="rect" id="node16" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a06704c06260d04991eddbb67a517bcd6" title="Get the logical height of the Arena." alt="" coords="560,855,768,896"/>
+<area shape="rect" id="node17" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#ad029aa85e69b1176234692faac83f7f7" title="Get the logical width of the Arena." alt="" coords="560,920,768,961"/>
+</map>

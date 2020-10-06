@@ -17,9 +17,6 @@ var hierarchy =
       [ "pacman_game.view.square_arena_view.SquareArenaView", "classpacman__game_1_1view_1_1square__arena__view_1_1_square_arena_view.html", null ]
     ] ],
     [ "pacman_game.view.arena_view_factory.ArenaViewFactory", "classpacman__game_1_1view_1_1arena__view__factory_1_1_arena_view_factory.html", null ],
-    [ "ButtonBox", null, [
-      [ "pacman_game.view.popover_menu.ToggleGroup", "classpacman__game_1_1view_1_1popover__menu_1_1_toggle_group.html", null ]
-    ] ],
     [ "pacman_game.controller.config.Config", "classpacman__game_1_1controller_1_1config_1_1_config.html", null ],
     [ "pacman_game.model.coordinate.Coordinate", "classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html", null ],
     [ "pacman_game.model.db.DB", "classpacman__game_1_1model_1_1db_1_1_d_b.html", null ],
@@ -28,7 +25,6 @@ var hierarchy =
       [ "pacman_game.view.high_scores_dialogue.HighScoresDialogue", "classpacman__game_1_1view_1_1high__scores__dialogue_1_1_high_scores_dialogue.html", null ]
     ] ],
     [ "DrawingArea", null, [
-      [ "pacman_game.view.banner_view.BannerView", "classpacman__game_1_1view_1_1banner__view_1_1_banner_view.html", null ],
       [ "pacman_game.view.game_view.GameView", "classpacman__game_1_1view_1_1game__view_1_1_game_view.html", null ]
     ] ],
     [ "pacman_game.controller.game_controller.GameController", "classpacman__game_1_1controller_1_1game__controller_1_1_game_controller.html", null ],
@@ -43,9 +39,6 @@ var hierarchy =
       [ "pacman_game.controller.ghost_controller.GhostController", "classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html", null ]
     ] ],
     [ "pacman_game.model.node.Node", "classpacman__game_1_1model_1_1node_1_1_node.html", null ],
-    [ "PopoverMenu", null, [
-      [ "pacman_game.view.popover_menu.PopoverMenu", "classpacman__game_1_1view_1_1popover__menu_1_1_popover_menu.html", null ]
-    ] ],
     [ "pacman_game.model.shape.Shape", "classpacman__game_1_1model_1_1shape_1_1_shape.html", [
       [ "pacman_game.model.circle.Circle", "classpacman__game_1_1model_1_1circle_1_1_circle.html", null ],
       [ "pacman_game.model.rect.Rect", "classpacman__game_1_1model_1_1rect_1_1_rect.html", null ]

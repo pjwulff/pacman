@@ -4,10 +4,22 @@ from .node import Node
 
 HEX_SCALE = 0.866
 
+## A hexagonal based Arena
 class HexagonalArena(Arena):
+
+    ## Create a new HexagonalArena
+    #
+    # @param width The logical width of the Arena.
+    # @param height The logical height of the Arena.
     def __init__(self, width, height):
         super().__init__(width, height, (width-1)*24+12, (height-1)*24*HEX_SCALE, "hexagonal")
 
+    ## Generate nodes based on a hexagonal grid.
+    #
+    # @param width The logical width of the Arena.
+    # @param height The logical height of the Arena.
+    #
+    # @return A list of nodes.
     def _generate_nodes(self, width, height):
         num_nodes = width * height
         nodes = [None] * num_nodes

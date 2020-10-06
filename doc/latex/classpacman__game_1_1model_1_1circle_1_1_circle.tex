@@ -1,0 +1,191 @@
+\hypertarget{classpacman__game_1_1model_1_1circle_1_1_circle}{}\doxysection{pacman\+\_\+game.\+model.\+circle.\+Circle Class Reference}
+\label{classpacman__game_1_1model_1_1circle_1_1_circle}\index{pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}}
+
+
+A circle shape, used for hit detection by the sprites.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+model.\+circle.\+Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpacman__game_1_1model_1_1circle_1_1_circle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pacman\+\_\+game.\+model.\+circle.\+Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpacman__game_1_1model_1_1circle_1_1_circle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1circle_1_1_circle_af40e2d3d8bcca1d4f5461ca4b2da43ff}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1circle_1_1_circle_a696e912c12512f2f92741e3d434da064}{radius}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1shape_1_1_shape_a660b131727a1d818e4bbcaf09e6be45d}{coordinate}}=None)
+\begin{DoxyCompactList}\small\item\em Create a new circle. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1circle_1_1_circle_a696e912c12512f2f92741e3d434da064}{radius}} (self)
+\begin{DoxyCompactList}\small\item\em Get the radius of the circle. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1circle_1_1_circle_a79e8ccfac2bd43f6ce849cfed1250f94}{radius}} (self, radius)
+\begin{DoxyCompactList}\small\item\em Set the radius of the circle. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1circle_1_1_circle_ad010fd357acb69295161959b231ee313}{move}} (self, offset)
+\begin{DoxyCompactList}\small\item\em Create a new circle with the same properties as this one but moved by some offset. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1circle_1_1_circle_ac3cdff850479f7721e9fc729ecc0d195}{collide}} (self, other)
+\begin{DoxyCompactList}\small\item\em Detects if two circles overlap by any amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A circle shape, used for hit detection by the sprites. 
+
+Definition at line 4 of file circle.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1circle_1_1_circle_af40e2d3d8bcca1d4f5461ca4b2da43ff}\label{classpacman__game_1_1model_1_1circle_1_1_circle_af40e2d3d8bcca1d4f5461ca4b2da43ff}} 
+\index{pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+circle.\+Circle.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{radius,  }\item[{}]{coordinate = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Create a new circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle. \\
+\hline
+{\em coordinate} & The coordinates of the centre of the circle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file circle.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1circle_1_1_circle_ac3cdff850479f7721e9fc729ecc0d195}\label{classpacman__game_1_1model_1_1circle_1_1_circle_ac3cdff850479f7721e9fc729ecc0d195}} 
+\index{pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}!collide@{collide}}
+\index{collide@{collide}!pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{collide()}{collide()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+circle.\+Circle.\+collide (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Detects if two circles overlap by any amount. 
+
+Used for hit detection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other circle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two circles overlap by any amount. 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file circle.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1circle_1_1_circle_ac3cdff850479f7721e9fc729ecc0d195_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1circle_1_1_circle_ad010fd357acb69295161959b231ee313}\label{classpacman__game_1_1model_1_1circle_1_1_circle_ad010fd357acb69295161959b231ee313}} 
+\index{pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}!move@{move}}
+\index{move@{move}!pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+circle.\+Circle.\+move (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{offset }\end{DoxyParamCaption})}
+
+
+
+Create a new circle with the same properties as this one but moved by some offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The amount by which to move the circle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new circle, moved by some offset. 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file circle.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1circle_1_1_circle_ad010fd357acb69295161959b231ee313_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1circle_1_1_circle_a696e912c12512f2f92741e3d434da064}\label{classpacman__game_1_1model_1_1circle_1_1_circle_a696e912c12512f2f92741e3d434da064}} 
+\index{pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}!radius@{radius}}
+\index{radius@{radius}!pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{radius()}{radius()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+circle.\+Circle.\+radius (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the radius of the circle. 
+
+\begin{DoxyReturn}{Returns}
+The radius of the circle. 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file circle.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1circle_1_1_circle_a696e912c12512f2f92741e3d434da064_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1circle_1_1_circle_a79e8ccfac2bd43f6ce849cfed1250f94}\label{classpacman__game_1_1model_1_1circle_1_1_circle_a79e8ccfac2bd43f6ce849cfed1250f94}} 
+\index{pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}!radius@{radius}}
+\index{radius@{radius}!pacman\_game.model.circle.Circle@{pacman\_game.model.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{radius()}{radius()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+circle.\+Circle.\+radius (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{radius }\end{DoxyParamCaption})}
+
+
+
+Set the radius of the circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file circle.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1circle_1_1_circle_a79e8ccfac2bd43f6ce849cfed1250f94_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{circle_8py}{circle.\+py}}\end{DoxyCompactItemize}

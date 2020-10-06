@@ -1,0 +1,7 @@
+<map id="pacman_game.game.Game.start_game" name="pacman_game.game.Game.start_game">
+<area shape="rect" id="node1" title="Called when the user wishes to start the game." alt="" coords="5,42,285,69"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1game_1_1_game.html#a6bf690ff0b2b6159c04618848e1127d9" title="Disable the GUI." alt="" coords="369,5,576,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1game_1_1_game.html#a91c3ef65091d90b78360cb29f8b808e8" title="A callback to be called when the game is over." alt="" coords="333,71,612,98"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="660,31,867,72"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="660,96,867,137"/>
+</map>

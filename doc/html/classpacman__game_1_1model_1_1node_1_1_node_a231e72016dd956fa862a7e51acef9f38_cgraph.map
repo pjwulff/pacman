@@ -1,0 +1,14 @@
+<map id="pacman_game.model.node.Node.neighbour" name="pacman_game.model.node.Node.neighbour">
+<area shape="rect" id="node1" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="5,129,312,156"/>
+<area shape="rect" id="node2" href="$namespacepacman__game_1_1model_1_1angle.html#ac1604daedb25232f0f5c7699eead8acb" title="Returns the angle between two other angles (or equivalently between two unit length vectors)." alt="" coords="413,5,655,32"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a7447d3c2a418e42722091ed4b2f38125" title="Gets the direction in which this sprite is currently actually moving (which may or may not be its tar..." alt="" coords="360,57,708,98"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#a735800eec75cccaae8917d275a6c992b" title="Get the direction this sprite is currently facing." alt="" coords="425,122,643,163"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a3d54540211e667b4b3f6f8e90e7454ed" title="Calculate the angle or direction from this node to another." alt="" coords="385,188,683,215"/>
+<area shape="rect" id="node12" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a3a3452621670298dec9ef1e068a74b5c" title="Get the neighbours of this node; that is, other nodes which are connected to this one by an edge." alt="" coords="377,239,691,265"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#ad4479f2cb733652a2f2717d525d85013" title="Gets the sprite this controller is controlling." alt="" coords="756,30,1084,71"/>
+<area shape="rect" id="node7" href="$namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="784,96,1056,123"/>
+<area shape="rect" id="node8" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#a879bcbfc48a8a9e9e5d8ccb6b9596f10" title="Get the x&#45;coordinate." alt="" coords="800,147,1040,189"/>
+<area shape="rect" id="node9" href="$classpacman__game_1_1model_1_1node_1_1_node.html#ac1b587b4e3000ebcf5f48777c60f7a46" title="Get the x&#45;coordinate of this node." alt="" coords="795,213,1045,240"/>
+<area shape="rect" id="node10" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#afbe3670fc4b95b5460079455b34b4150" title="Get the y&#45;coordinate." alt="" coords="800,265,1040,306"/>
+<area shape="rect" id="node11" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a9e31f9b66defd393d433b5db7bdb0aed" title="Get the y&#45;coordinate of this node." alt="" coords="795,331,1045,357"/>
+</map>

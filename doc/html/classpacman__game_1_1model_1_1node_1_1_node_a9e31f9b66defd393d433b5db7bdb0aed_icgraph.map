@@ -1,0 +1,6 @@
+<map id="pacman_game.model.node.Node.y" name="pacman_game.model.node.Node.y">
+<area shape="rect" id="node1" title="Get the y&#45;coordinate of this node." alt="" coords="707,31,956,57"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a3d54540211e667b4b3f6f8e90e7454ed" title="Calculate the angle or direction from this node to another." alt="" coords="360,5,659,32"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a9662f136187ff4fffa3b0bc5aa834683" title="Calculates the distance between this node and another node." alt="" coords="361,56,657,83"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="5,5,312,32"/>
+</map>

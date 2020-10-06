@@ -1,14 +1,23 @@
 from .coordinate import Coordinate
 from .ghost import Ghost
 
+## The cyan "Inky" ghost.
 class Inky(Ghost):
-    """! The cyan 'Inky' ghost."""
-    def __init__(self, arena):
-        """! Construct a new Inky ghost.
 
-        @param arena The arena object to which this Inky belongs."""
+    ## Create a new Inky ghost.
+    #
+    # @param arena The Arena object where this Inky ghost will live.
+    def __init__(self, arena):
         Ghost.__init__(self, arena, "inky")
     
+    ## Returns Inky's target when in chase mode, which as in the original game,
+    ## is based on the Avatar's current location, direction, and Blinky's
+    ## direction.
+    #
+    # @param avatar The Avatar object.
+    # @param ghosts A dictionary of the ghosts.
+    #
+    # @return The target coordinates.
     def target(self, avatar, ghosts):
         avatar_from = avatar.from_pos
         avatar_to = avatar.to_pos

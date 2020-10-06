@@ -1,0 +1,4 @@
+<map id="pacman_game.view.square_arena_view.SquareArenaView.draw" name="pacman_game.view.square_arena_view.SquareArenaView.draw">
+<area shape="rect" id="node1" title="Draw the arena." alt="" coords="5,5,263,47"/>
+<area shape="rect" id="node2" href="$namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="311,13,583,39"/>
+</map>

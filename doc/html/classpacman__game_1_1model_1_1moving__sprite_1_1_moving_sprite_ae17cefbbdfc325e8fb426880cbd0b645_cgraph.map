@@ -1,0 +1,6 @@
+<map id="pacman_game.model.moving_sprite.MovingSprite.return_to_spawn" name="pacman_game.model.moving_sprite.MovingSprite.return_to_spawn">
+<area shape="rect" id="node1" title="Return this sprite to its spawn location,." alt="" coords="5,31,221,87"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#aa09d8ccd02ad46bd4f12a3f57eeb1c47" title="Get the sprite&#39;s starting position (also its spawn location)." alt="" coords="269,5,489,47"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a12a86dca8ddc47c8f0e88cf8b9dd2d46" title="Get the starting location for a particular sprite." alt="" coords="275,71,483,112"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a7a59a05a5367cab8907e5bee469bc5bf" title=" " alt="" coords="537,5,745,47"/>
+</map>

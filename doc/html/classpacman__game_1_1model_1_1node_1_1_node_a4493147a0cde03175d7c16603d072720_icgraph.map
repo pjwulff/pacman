@@ -1,0 +1,11 @@
+<map id="pacman_game.model.node.Node.coordinate" name="pacman_game.model.node.Node.coordinate">
+<area shape="rect" id="node1" title="Get the coordinates of this node." alt="" coords="576,166,887,193"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html#ac3cdff850479f7721e9fc729ecc0d195" title="Detects if two circles overlap by any amount." alt="" coords="291,5,498,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html#ad010fd357acb69295161959b231ee313" title="Create a new circle with the same properties as this one but moved by some offset." alt="" coords="291,71,498,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#a2a6c98a0cbd4043a596738efa871b4c7" title="Create a new rectangle by moving this one by some offset." alt="" coords="261,137,528,163"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1clyde_1_1_clyde.html#af04b9bfb390e79d54c784ea8022bba4f" title="Returns Cylde&#39;s target when in chase mode, which is the Avatar&#39;s location when close enough,..." alt="" coords="291,188,498,229"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a42ab58b6adb98ba608bf85a84f869696" title=" " alt="" coords="291,253,499,295"/>
+<area shape="rect" id="node8" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#af23fb01a70256410a15d1e90d45f3738" title=" " alt="" coords="291,319,499,360"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#aec5648ea21d8524088ddefbf64fad2ec" title=" " alt="" coords="5,253,213,295"/>
+<area shape="rect" id="node9" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a20c1ee2effc5a4e2b61eeb0074c40eac" title=" " alt="" coords="5,319,213,360"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="pacman_game.game.Game.game_over" name="pacman_game.game.Game.game_over">
+<area shape="rect" id="node1" title="A callback to be called when the game is over." alt="" coords="604,13,883,39"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1game_1_1_game.html#a99555fa2833aa705a4b65dfff107b5a7" title="Called when the user wishes to start the game." alt="" coords="276,13,556,39"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1game_1_1_game.html#a7ef0517b81b772b036e1d1dd48dac2cf" title="A callback called when the Gtk.Application is started." alt="" coords="5,5,228,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.config.Config.ghost_behaviour_start_time" name="pacman_game.controller.config.Config.ghost_behaviour_start_time">
+<area shape="rect" id="node1" title="Get the time at which the ghosts started their current behaviour." alt="" coords="303,5,552,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#a8a79804f2cccb1d57135995bed0084a5" title="Set the time at which the ghosts started their current behaviour." alt="" coords="5,5,255,47"/>
+</map>

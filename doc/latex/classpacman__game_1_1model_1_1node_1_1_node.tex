@@ -1,0 +1,449 @@
+\hypertarget{classpacman__game_1_1model_1_1node_1_1_node}{}\doxysection{pacman\+\_\+game.\+model.\+node.\+Node Class Reference}
+\label{classpacman__game_1_1model_1_1node_1_1_node}\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+
+
+Represents a node or vertex in the directed graph of the maze.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a8db1502228159fb256fd6c7e1fdf5b17}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a4493147a0cde03175d7c16603d072720}{coordinate}})
+\begin{DoxyCompactList}\small\item\em Create a new node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_ac1b587b4e3000ebcf5f48777c60f7a46}{x}} (self)
+\begin{DoxyCompactList}\small\item\em Get the x-\/coordinate of this node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a9e31f9b66defd393d433b5db7bdb0aed}{y}} (self)
+\begin{DoxyCompactList}\small\item\em Get the y-\/coordinate of this node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a3a3452621670298dec9ef1e068a74b5c}{neighbours}} (self)
+\begin{DoxyCompactList}\small\item\em Get the neighbours of this node; that is, other nodes which are connected to this one by an edge. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_ad38f4929c1b3a1e87bdd940d74d4e5ca}{geoneighbours}} (self)
+\begin{DoxyCompactList}\small\item\em Get the geoneighbours of this node; that is, nodes which are `next to' this node in space, but which may not be connected by an edge in the graph. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a4493147a0cde03175d7c16603d072720}{coordinate}} (self)
+\begin{DoxyCompactList}\small\item\em Get the coordinates of this node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_aa1d7bb49a3d2f41d09b8f4adbfdf7ab0}{add\+\_\+neighbour}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}{neighbour}})
+\begin{DoxyCompactList}\small\item\em Add another node as a neighbour of this node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a55b891d0690b7680a17750063ab81ec2}{remove\+\_\+neighbour}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}{neighbour}})
+\begin{DoxyCompactList}\small\item\em Remove another node as a neighbour of this node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a0b9d5e630751159c4e69f52e7be00a0c}{add\+\_\+geoneighbour}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}{neighbour}})
+\begin{DoxyCompactList}\small\item\em Add another node as a geoneighbour to this node; that is, a neighbour in space, but not necessarily in the directed graph. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a0057d54344b90d59c45f5d0d7ea6e11f}{remove\+\_\+geoneighbour}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}{neighbour}})
+\begin{DoxyCompactList}\small\item\em Remove another node as a geoneighbour to this node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a9662f136187ff4fffa3b0bc5aa834683}{distance}} (self, other)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between this node and another node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a76b417437263b514054eb9a7545c54b9}{is\+\_\+neighbour}} (self, node)
+\begin{DoxyCompactList}\small\item\em A predicate to detect if two nodes are neighbours. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a7148dc9045c926139fadfd493b4b57c0}{is\+\_\+geoneighbour}} (self, node)
+\begin{DoxyCompactList}\small\item\em A predicate to detect if two nodes are geoneighbours. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}{neighbour}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a3d54540211e667b4b3f6f8e90e7454ed}{direction}}, threshold=math.\+pi/8.)
+\begin{DoxyCompactList}\small\item\em Finds the neighbouring node which is closest to the desired direction within some threshold. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1node_1_1_node_a3d54540211e667b4b3f6f8e90e7454ed}{direction}} (self, node)
+\begin{DoxyCompactList}\small\item\em Calculate the angle or direction from this node to another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a node or vertex in the directed graph of the maze. 
+
+Definition at line 8 of file node.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a8db1502228159fb256fd6c7e1fdf5b17}\label{classpacman__game_1_1model_1_1node_1_1_node_a8db1502228159fb256fd6c7e1fdf5b17}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{coordinate }\end{DoxyParamCaption})}
+
+
+
+Create a new node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & The coordinates where this node is located. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file node.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a0b9d5e630751159c4e69f52e7be00a0c}\label{classpacman__game_1_1model_1_1node_1_1_node_a0b9d5e630751159c4e69f52e7be00a0c}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!add\_geoneighbour@{add\_geoneighbour}}
+\index{add\_geoneighbour@{add\_geoneighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{add\_geoneighbour()}{add\_geoneighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+add\+\_\+geoneighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{neighbour }\end{DoxyParamCaption})}
+
+
+
+Add another node as a geoneighbour to this node; that is, a neighbour in space, but not necessarily in the directed graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbour} & The geoneighour to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a0b9d5e630751159c4e69f52e7be00a0c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_aa1d7bb49a3d2f41d09b8f4adbfdf7ab0}\label{classpacman__game_1_1model_1_1node_1_1_node_aa1d7bb49a3d2f41d09b8f4adbfdf7ab0}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!add\_neighbour@{add\_neighbour}}
+\index{add\_neighbour@{add\_neighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{add\_neighbour()}{add\_neighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+add\+\_\+neighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{neighbour }\end{DoxyParamCaption})}
+
+
+
+Add another node as a neighbour of this node. 
+
+That is, add a directed edge from this node to the other node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbour} & The node which to add as a neighbour. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_aa1d7bb49a3d2f41d09b8f4adbfdf7ab0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a4493147a0cde03175d7c16603d072720}\label{classpacman__game_1_1model_1_1node_1_1_node_a4493147a0cde03175d7c16603d072720}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!coordinate@{coordinate}}
+\index{coordinate@{coordinate}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{coordinate()}{coordinate()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+coordinate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the coordinates of this node. 
+
+\begin{DoxyReturn}{Returns}
+The coordinates of this node. 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file node.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a4493147a0cde03175d7c16603d072720_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a3d54540211e667b4b3f6f8e90e7454ed}\label{classpacman__game_1_1model_1_1node_1_1_node_a3d54540211e667b4b3f6f8e90e7454ed}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!direction@{direction}}
+\index{direction@{direction}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+direction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node }\end{DoxyParamCaption})}
+
+
+
+Calculate the angle or direction from this node to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The other node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle between them if travelling from this node to the other node. 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a3d54540211e667b4b3f6f8e90e7454ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a3d54540211e667b4b3f6f8e90e7454ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a9662f136187ff4fffa3b0bc5aa834683}\label{classpacman__game_1_1model_1_1node_1_1_node_a9662f136187ff4fffa3b0bc5aa834683}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!distance@{distance}}
+\index{distance@{distance}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between this node and another node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between them. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a9662f136187ff4fffa3b0bc5aa834683_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_ad38f4929c1b3a1e87bdd940d74d4e5ca}\label{classpacman__game_1_1model_1_1node_1_1_node_ad38f4929c1b3a1e87bdd940d74d4e5ca}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!geoneighbours@{geoneighbours}}
+\index{geoneighbours@{geoneighbours}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{geoneighbours()}{geoneighbours()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+geoneighbours (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the geoneighbours of this node; that is, nodes which are `next to' this node in space, but which may not be connected by an edge in the graph. 
+
+\begin{DoxyReturn}{Returns}
+A list of geoneighbouring nodes. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file node.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_ad38f4929c1b3a1e87bdd940d74d4e5ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a7148dc9045c926139fadfd493b4b57c0}\label{classpacman__game_1_1model_1_1node_1_1_node_a7148dc9045c926139fadfd493b4b57c0}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!is\_geoneighbour@{is\_geoneighbour}}
+\index{is\_geoneighbour@{is\_geoneighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{is\_geoneighbour()}{is\_geoneighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+is\+\_\+geoneighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node }\end{DoxyParamCaption})}
+
+
+
+A predicate to detect if two nodes are geoneighbours. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The other node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the nodes are geoneighbours. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a7148dc9045c926139fadfd493b4b57c0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a76b417437263b514054eb9a7545c54b9}\label{classpacman__game_1_1model_1_1node_1_1_node_a76b417437263b514054eb9a7545c54b9}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!is\_neighbour@{is\_neighbour}}
+\index{is\_neighbour@{is\_neighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{is\_neighbour()}{is\_neighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+is\+\_\+neighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node }\end{DoxyParamCaption})}
+
+
+
+A predicate to detect if two nodes are neighbours. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The other node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the nodes are neighbours. 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a76b417437263b514054eb9a7545c54b9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}\label{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!neighbour@{neighbour}}
+\index{neighbour@{neighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{neighbour()}{neighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+neighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{direction,  }\item[{}]{threshold = {\ttfamily math.pi/8.} }\end{DoxyParamCaption})}
+
+
+
+Finds the neighbouring node which is closest to the desired direction within some threshold. 
+
+May return if this node has no neighbour in the desired direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction in which to look for a neighbour. \\
+\hline
+{\em threshold} & The threshold angle to decide if a neighbouring node is sufficiently in the target direction. Defaults to pi/8.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A node if a neighbour could be found, or None otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file node.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a231e72016dd956fa862a7e51acef9f38_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a3a3452621670298dec9ef1e068a74b5c}\label{classpacman__game_1_1model_1_1node_1_1_node_a3a3452621670298dec9ef1e068a74b5c}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{neighbours()}{neighbours()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+neighbours (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the neighbours of this node; that is, other nodes which are connected to this one by an edge. 
+
+\begin{DoxyReturn}{Returns}
+A list of neighbouring nodes. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file node.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a3a3452621670298dec9ef1e068a74b5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a0057d54344b90d59c45f5d0d7ea6e11f}\label{classpacman__game_1_1model_1_1node_1_1_node_a0057d54344b90d59c45f5d0d7ea6e11f}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!remove\_geoneighbour@{remove\_geoneighbour}}
+\index{remove\_geoneighbour@{remove\_geoneighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{remove\_geoneighbour()}{remove\_geoneighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+remove\+\_\+geoneighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{neighbour }\end{DoxyParamCaption})}
+
+
+
+Remove another node as a geoneighbour to this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbour} & The geoneighbour to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file node.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a55b891d0690b7680a17750063ab81ec2}\label{classpacman__game_1_1model_1_1node_1_1_node_a55b891d0690b7680a17750063ab81ec2}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!remove\_neighbour@{remove\_neighbour}}
+\index{remove\_neighbour@{remove\_neighbour}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{remove\_neighbour()}{remove\_neighbour()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+remove\+\_\+neighbour (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{neighbour }\end{DoxyParamCaption})}
+
+
+
+Remove another node as a neighbour of this node. 
+
+That is, remove the edge from this node to the other node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbour} & The neighbouring node to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file node.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_ac1b587b4e3000ebcf5f48777c60f7a46}\label{classpacman__game_1_1model_1_1node_1_1_node_ac1b587b4e3000ebcf5f48777c60f7a46}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!x@{x}}
+\index{x@{x}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+x (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the x-\/coordinate of this node. 
+
+\begin{DoxyReturn}{Returns}
+The x-\/coordinate of this node. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file node.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_ac1b587b4e3000ebcf5f48777c60f7a46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1node_1_1_node_a9e31f9b66defd393d433b5db7bdb0aed}\label{classpacman__game_1_1model_1_1node_1_1_node_a9e31f9b66defd393d433b5db7bdb0aed}} 
+\index{pacman\_game.model.node.Node@{pacman\_game.model.node.Node}!y@{y}}
+\index{y@{y}!pacman\_game.model.node.Node@{pacman\_game.model.node.Node}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+node.\+Node.\+y (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the y-\/coordinate of this node. 
+
+\begin{DoxyReturn}{Returns}
+The y-\/coordinate of this node. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file node.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1node_1_1_node_a9e31f9b66defd393d433b5db7bdb0aed_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{node_8py}{node.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="pacman_game.model.shape.Shape" name="pacman_game.model.shape.Shape">
+<area shape="rect" id="node1" title="A base class for shapes." alt="" coords="123,5,334,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html" title="A circle shape, used for hit detection by the sprites." alt="" coords="5,95,212,136"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html" title="A class to represent rectangles by their size and position." alt="" coords="236,102,461,129"/>
+</map>

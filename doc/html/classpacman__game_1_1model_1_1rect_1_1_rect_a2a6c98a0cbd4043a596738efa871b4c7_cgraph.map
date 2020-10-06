@@ -1,0 +1,9 @@
+<map id="pacman_game.model.rect.Rect.move" name="pacman_game.model.rect.Rect.move">
+<area shape="rect" id="node1" title="Create a new rectangle by moving this one by some offset." alt="" coords="5,159,272,185"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a4493147a0cde03175d7c16603d072720" title="Get the coordinates of this node." alt="" coords="320,5,631,32"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1shape_1_1_shape.html#a660b131727a1d818e4bbcaf09e6be45d" title="Get the coordinates of this shape." alt="" coords="370,57,581,98"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a65bc162bab11027e3470ea33375a9764" title="Get the actual height of the Arena." alt="" coords="371,122,579,163"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#a232c8ff89bcaf57b38ce62c67c1eb2a6" title="Get the height of the rectangle." alt="" coords="340,188,611,215"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a329f065c502fd944331477b951d03cf0" title="Get the actual width of the Arena." alt="" coords="371,239,579,281"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#ae3ca5526bde8804574cf2634b2131a15" title="Get the width of the rectangle." alt="" coords="343,305,608,332"/>
+</map>

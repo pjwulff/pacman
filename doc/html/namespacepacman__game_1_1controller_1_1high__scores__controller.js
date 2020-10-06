@@ -1,0 +1,4 @@
+var namespacepacman__game_1_1controller_1_1high__scores__controller =
+[
+    [ "HighScoresController", "classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller.html", "classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller" ]
+];

@@ -1,0 +1,4 @@
+<map id="pacman_game.model.rect.Rect" name="pacman_game.model.rect.Rect">
+<area shape="rect" id="node1" title="A class to represent rectangles by their size and position." alt="" coords="5,95,231,121"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1shape_1_1_shape.html" title="A base class for shapes." alt="" coords="13,5,223,47"/>
+</map>

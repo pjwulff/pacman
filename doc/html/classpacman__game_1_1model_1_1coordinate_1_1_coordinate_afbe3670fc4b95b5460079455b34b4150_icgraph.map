@@ -1,0 +1,9 @@
+<map id="pacman_game.model.coordinate.Coordinate.y" name="pacman_game.model.coordinate.Coordinate.y">
+<area shape="rect" id="node1" title="Get the y&#45;coordinate." alt="" coords="995,97,1235,139"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a3d54540211e667b4b3f6f8e90e7454ed" title="Calculate the angle or direction from this node to another." alt="" coords="360,62,659,89"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#a34a17dd79fedd2540cfa73af4f7e40ab" title="Calculate the distance between two points in space." alt="" coords="707,32,947,73"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a9662f136187ff4fffa3b0bc5aa834683" title="Calculates the distance between this node and another node." alt="" coords="361,149,657,175"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#a05e7855fd2bfb680aeff4385d57f9fa6" title="Return a new coordinate based on this one but shifted by some amount." alt="" coords="707,163,947,204"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#a078d4bd043f5200eea93680edffa14f2" title="Set the y&#45;coordiate." alt="" coords="707,97,947,139"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="5,62,312,89"/>
+</map>

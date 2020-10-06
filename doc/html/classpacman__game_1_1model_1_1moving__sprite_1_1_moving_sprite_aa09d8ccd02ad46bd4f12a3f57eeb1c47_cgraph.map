@@ -1,0 +1,4 @@
+<map id="pacman_game.model.moving_sprite.MovingSprite.start_pos" name="pacman_game.model.moving_sprite.MovingSprite.start_pos">
+<area shape="rect" id="node1" title="Get the sprite&#39;s starting position (also its spawn location)." alt="" coords="5,5,225,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a7a59a05a5367cab8907e5bee469bc5bf" title=" " alt="" coords="273,5,481,47"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="pacman_game.model.angle.normalise" name="pacman_game.model.angle.normalise">
+<area shape="rect" id="node1" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="1085,151,1357,178"/>
+<area shape="rect" id="node2" href="$namespacepacman__game_1_1model_1_1angle.html#a2ec757c2cabdd60cdd2dd192c4e11897" title="A predicate to decide if two angles are ‘close’ according to some threshold." alt="" coords="767,71,1009,98"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a3d54540211e667b4b3f6f8e90e7454ed" title="Calculate the angle or direction from this node to another." alt="" coords="739,122,1037,149"/>
+<area shape="rect" id="node8" href="$classpacman__game_1_1view_1_1square__arena__view_1_1_square_arena_view.html#ac35d029fcddd55b464f5c97c71c52532" title="Draw the arena." alt="" coords="759,173,1017,215"/>
+<area shape="rect" id="node9" href="$namespacepacman__game_1_1model_1_1angle.html#a97fa22b62690df0e8fa30f50c53029ac" title="Flips an angle by pi radians so that it points in the opposite direction." alt="" coords="775,239,1001,266"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1graph__arena_1_1_graph_arena.html#a9a38dc6e656f38b0beea57bc89b69720" title="Create a new GraphArena." alt="" coords="435,5,639,47"/>
+<area shape="rect" id="node4" href="$namespacepacman__game_1_1model_1_1angle.html#a99bcbe128d3528ea29761d46ce803352" title="A predicate to decide if two angles are pointing in sufficiently opposite directions according to som..." alt="" coords="406,71,669,98"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#acc1fe614fd53cf083e02d35691887158" title="Set the target direction this sprite would like to move in." alt="" coords="5,57,336,113"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="384,122,691,149"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="pacman_game.view.arena_view.ArenaView.draw" name="pacman_game.view.arena_view.ArenaView.draw">
+<area shape="rect" id="node1" title="Draw this view." alt="" coords="5,71,199,112"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a29049337841b22a8c5e6c0ec4a3e7f83" title="Get a rectangle describing the Arena in terms of width and height." alt="" coords="247,5,455,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a17b268a95a4590d1689d30d4348916db" title=" " alt="" coords="247,71,455,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1view_1_1arena__view_1_1_arena_view.html#a58f849559bf37bcde4eb477a483804d7" title="Get a rectangle object that represents this view." alt="" coords="254,136,447,177"/>
+</map>

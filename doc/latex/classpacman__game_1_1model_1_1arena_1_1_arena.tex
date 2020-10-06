@@ -1,0 +1,424 @@
+\hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena}{}\doxysection{pacman\+\_\+game.\+model.\+arena.\+Arena Class Reference}
+\label{classpacman__game_1_1model_1_1arena_1_1_arena}\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+
+
+The \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}} represents the maze in the game, including the location of all the vertices, the edges between them, and the locations of objects (such as, dots, powers, and spawn locations).  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+model.\+arena.\+Arena\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_af679fcb335e5c2826d59d72562e89f62}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_ad029aa85e69b1176234692faac83f7f7}{logical\+\_\+width}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a06704c06260d04991eddbb67a517bcd6}{logical\+\_\+height}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a329f065c502fd944331477b951d03cf0}{width}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a65bc162bab11027e3470ea33375a9764}{height}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a31f5c996625da25daa43108d43b24eb1}{shape}})
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a31f5c996625da25daa43108d43b24eb1}{shape}} (self)
+\begin{DoxyCompactList}\small\item\em Get the shape of this maze. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a308c1cadabb7a12f0b58085cf7eca547}{generate}} (self)
+\begin{DoxyCompactList}\small\item\em Generate a new random maze. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_aaba7d7acc1af3937cb1e22e137730789}{heuristic}} (self, source, target)
+\begin{DoxyCompactList}\small\item\em Returns the length of the shortest possible path from the source node to the target. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a4c5ecd209a39eae1568224aa0aa19260}{closest\+\_\+node}} (self, x, y)
+\begin{DoxyCompactList}\small\item\em Get the node in the graph that is the closest to some arbitrary coordinates. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a12a86dca8ddc47c8f0e88cf8b9dd2d46}{start\+\_\+pos}} (self, name)
+\begin{DoxyCompactList}\small\item\em Get the starting location for a particular sprite. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_ad029aa85e69b1176234692faac83f7f7}{logical\+\_\+width}} (self)
+\begin{DoxyCompactList}\small\item\em Get the logical width of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a06704c06260d04991eddbb67a517bcd6}{logical\+\_\+height}} (self)
+\begin{DoxyCompactList}\small\item\em Get the logical height of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a8f3f7ff83c177deaedc6fc1ac9c2accb}{dots}} (self)
+\begin{DoxyCompactList}\small\item\em Get the dots in the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a7c4d2460516494c15ee2b956e297bed6}{powers}} (self)
+\begin{DoxyCompactList}\small\item\em Get the power pills in the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a7f872ec027bdafc2136a1cac5e2f5eb8}{nodes}} (self)
+\begin{DoxyCompactList}\small\item\em Get the nodes in the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a29049337841b22a8c5e6c0ec4a3e7f83}{rect}} (self)
+\begin{DoxyCompactList}\small\item\em Get a rectangle describing the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}} in terms of width and height. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a329f065c502fd944331477b951d03cf0}{width}} (self)
+\begin{DoxyCompactList}\small\item\em Get the actual width of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena_a65bc162bab11027e3470ea33375a9764}{height}} (self)
+\begin{DoxyCompactList}\small\item\em Get the actual height of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}} represents the maze in the game, including the location of all the vertices, the edges between them, and the locations of objects (such as, dots, powers, and spawn locations). 
+
+This is an abstract base class to be inherited by actual maze shapes (such as square or hexagonal). 
+
+Definition at line 15 of file arena.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_af679fcb335e5c2826d59d72562e89f62}\label{classpacman__game_1_1model_1_1arena_1_1_arena_af679fcb335e5c2826d59d72562e89f62}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{logical\+\_\+width,  }\item[{}]{logical\+\_\+height,  }\item[{}]{width,  }\item[{}]{height,  }\item[{}]{shape }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logical\+\_\+width} & The logical width of the maze in terms of number of vertices. \\
+\hline
+{\em logical\+\_\+height} & The logical height of the maze in terms of number of vertices. \\
+\hline
+{\em width} & The actual width of the maze in some units. \\
+\hline
+{\em height} & The actual height of the maze in some units. \\
+\hline
+{\em shape} & The shape of the maze. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file arena.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_af679fcb335e5c2826d59d72562e89f62_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a4c5ecd209a39eae1568224aa0aa19260}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a4c5ecd209a39eae1568224aa0aa19260}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!closest\_node@{closest\_node}}
+\index{closest\_node@{closest\_node}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{closest\_node()}{closest\_node()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+closest\+\_\+node (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+
+
+Get the node in the graph that is the closest to some arbitrary coordinates. 
+
+This public function is a wrapper for the internal `\+\_\+most\+\_\+target' function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The target x coordinate. \\
+\hline
+{\em y} & The target y coordinate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node in the graph that is closest to the target coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file arena.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a4c5ecd209a39eae1568224aa0aa19260_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a8f3f7ff83c177deaedc6fc1ac9c2accb}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a8f3f7ff83c177deaedc6fc1ac9c2accb}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!dots@{dots}}
+\index{dots@{dots}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{dots()}{dots()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+dots (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the dots in the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+A list of dots. 
+\end{DoxyReturn}
+
+
+Definition at line 313 of file arena.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a308c1cadabb7a12f0b58085cf7eca547}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a308c1cadabb7a12f0b58085cf7eca547}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!generate@{generate}}
+\index{generate@{generate}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+generate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Generate a new random maze. 
+
+This function ultimately calls the abstract protected `\+\_\+generate\+\_\+nodes', overridden by sub-\/classes, to generate the the nodes of the maze according to some rules (such as the shape), but also handles duties like deciding where spawn locations should be, and creating the dots and powers of the maze. 
+
+Definition at line 46 of file arena.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a308c1cadabb7a12f0b58085cf7eca547_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a308c1cadabb7a12f0b58085cf7eca547_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a65bc162bab11027e3470ea33375a9764}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a65bc162bab11027e3470ea33375a9764}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!height@{height}}
+\index{height@{height}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+height (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the actual height of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+The height of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+\end{DoxyReturn}
+
+
+Definition at line 348 of file arena.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a65bc162bab11027e3470ea33375a9764_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_aaba7d7acc1af3937cb1e22e137730789}\label{classpacman__game_1_1model_1_1arena_1_1_arena_aaba7d7acc1af3937cb1e22e137730789}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!heuristic@{heuristic}}
+\index{heuristic@{heuristic}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{heuristic()}{heuristic()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+heuristic (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source,  }\item[{}]{target }\end{DoxyParamCaption})}
+
+
+
+Returns the length of the shortest possible path from the source node to the target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source node. \\
+\hline
+{\em target} & The target node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the shortest path between them. 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file arena.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_aaba7d7acc1af3937cb1e22e137730789_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a06704c06260d04991eddbb67a517bcd6}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a06704c06260d04991eddbb67a517bcd6}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!logical\_height@{logical\_height}}
+\index{logical\_height@{logical\_height}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{logical\_height()}{logical\_height()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+logical\+\_\+height (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the logical height of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+The logical height of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+\end{DoxyReturn}
+
+
+Definition at line 306 of file arena.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a06704c06260d04991eddbb67a517bcd6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_ad029aa85e69b1176234692faac83f7f7}\label{classpacman__game_1_1model_1_1arena_1_1_arena_ad029aa85e69b1176234692faac83f7f7}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!logical\_width@{logical\_width}}
+\index{logical\_width@{logical\_width}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{logical\_width()}{logical\_width()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+logical\+\_\+width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the logical width of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+The logical width of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file arena.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_ad029aa85e69b1176234692faac83f7f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a7f872ec027bdafc2136a1cac5e2f5eb8}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a7f872ec027bdafc2136a1cac5e2f5eb8}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!nodes@{nodes}}
+\index{nodes@{nodes}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{nodes()}{nodes()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+nodes (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the nodes in the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+A list of nodes. 
+\end{DoxyReturn}
+
+
+Definition at line 327 of file arena.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a7c4d2460516494c15ee2b956e297bed6}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a7c4d2460516494c15ee2b956e297bed6}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!powers@{powers}}
+\index{powers@{powers}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{powers()}{powers()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+powers (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the power pills in the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+A list of powers. 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file arena.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a29049337841b22a8c5e6c0ec4a3e7f83}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a29049337841b22a8c5e6c0ec4a3e7f83}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!rect@{rect}}
+\index{rect@{rect}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+rect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get a rectangle describing the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}} in terms of width and height. 
+
+\begin{DoxyReturn}{Returns}
+A rectangle. 
+\end{DoxyReturn}
+
+
+Definition at line 334 of file arena.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a29049337841b22a8c5e6c0ec4a3e7f83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a31f5c996625da25daa43108d43b24eb1}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a31f5c996625da25daa43108d43b24eb1}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!shape@{shape}}
+\index{shape@{shape}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+shape (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the shape of this maze. 
+
+\begin{DoxyReturn}{Returns}
+The shape of this maze. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file arena.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a31f5c996625da25daa43108d43b24eb1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a12a86dca8ddc47c8f0e88cf8b9dd2d46}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a12a86dca8ddc47c8f0e88cf8b9dd2d46}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!start\_pos@{start\_pos}}
+\index{start\_pos@{start\_pos}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{start\_pos()}{start\_pos()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+start\+\_\+pos (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Get the starting location for a particular sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the sprite. Should be \char`\"{}avatar\char`\"{}, \char`\"{}blinky\char`\"{}, \char`\"{}pinky\char`\"{}, \char`\"{}inky\char`\"{} or \char`\"{}clyde\char`\"{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node where the sprite will start. 
+\end{DoxyReturn}
+
+
+Definition at line 281 of file arena.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a12a86dca8ddc47c8f0e88cf8b9dd2d46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1arena_1_1_arena_a329f065c502fd944331477b951d03cf0}\label{classpacman__game_1_1model_1_1arena_1_1_arena_a329f065c502fd944331477b951d03cf0}} 
+\index{pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}!width@{width}}
+\index{width@{width}!pacman\_game.model.arena.Arena@{pacman\_game.model.arena.Arena}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+arena.\+Arena.\+width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the actual width of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+
+\begin{DoxyReturn}{Returns}
+The width of the \mbox{\hyperlink{classpacman__game_1_1model_1_1arena_1_1_arena}{Arena}}. 
+\end{DoxyReturn}
+
+
+Definition at line 341 of file arena.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1arena_1_1_arena_a329f065c502fd944331477b951d03cf0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{arena_8py}{arena.\+py}}\end{DoxyCompactItemize}

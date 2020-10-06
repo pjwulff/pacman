@@ -1,0 +1,192 @@
+\hypertarget{namespacepacman__game_1_1model_1_1angle}{}\doxysection{pacman\+\_\+game.\+model.\+angle Namespace Reference}
+\label{namespacepacman__game_1_1model_1_1angle}\index{pacman\_game.model.angle@{pacman\_game.model.angle}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_a789c2f52e2e11727505e05b915739cd0}{normalise}} (\mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_ac1604daedb25232f0f5c7699eead8acb}{angle}})
+\begin{DoxyCompactList}\small\item\em Normalises an angle so that it lies between \mbox{[}-\/pi, pi). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_a2ec757c2cabdd60cdd2dd192c4e11897}{close}} (a, b, threshold=math.\+pi/8.\+0)
+\begin{DoxyCompactList}\small\item\em A predicate to decide if two angles are `close' according to some threshold. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_a99bcbe128d3528ea29761d46ce803352}{opposite}} (a, b, threshold=None)
+\begin{DoxyCompactList}\small\item\em A predicate to decide if two angles are pointing in sufficiently opposite directions according to some threshold. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_a97fa22b62690df0e8fa30f50c53029ac}{flip}} (\mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_ac1604daedb25232f0f5c7699eead8acb}{angle}})
+\begin{DoxyCompactList}\small\item\em Flips an angle by pi radians so that it points in the opposite direction. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacepacman__game_1_1model_1_1angle_ac1604daedb25232f0f5c7699eead8acb}{angle}} (a, b)
+\begin{DoxyCompactList}\small\item\em Returns the angle between two other angles (or equivalently between two unit length vectors). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepacman__game_1_1model_1_1angle_ac1604daedb25232f0f5c7699eead8acb}\label{namespacepacman__game_1_1model_1_1angle_ac1604daedb25232f0f5c7699eead8acb}} 
+\index{pacman\_game.model.angle@{pacman\_game.model.angle}!angle@{angle}}
+\index{angle@{angle}!pacman\_game.model.angle@{pacman\_game.model.angle}}
+\doxysubsubsection{\texorpdfstring{angle()}{angle()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+angle.\+angle (\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+
+
+Returns the angle between two other angles (or equivalently between two unit length vectors). 
+
+The order of the two input arguments is not important, as the absolute value of the angle is taken.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first angle. \\
+\hline
+{\em b} & The second angle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle between them as a value between \mbox{[}-\/pi, pi). 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file angle.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_ac1604daedb25232f0f5c7699eead8acb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepacman__game_1_1model_1_1angle_a2ec757c2cabdd60cdd2dd192c4e11897}\label{namespacepacman__game_1_1model_1_1angle_a2ec757c2cabdd60cdd2dd192c4e11897}} 
+\index{pacman\_game.model.angle@{pacman\_game.model.angle}!close@{close}}
+\index{close@{close}!pacman\_game.model.angle@{pacman\_game.model.angle}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+angle.\+close (\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{threshold = {\ttfamily math.pi~/~8.0} }\end{DoxyParamCaption})}
+
+
+
+A predicate to decide if two angles are `close' according to some threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first angle. \\
+\hline
+{\em b} & The second angle. \\
+\hline
+{\em threshold} & The threshold to decide how close two angles need to be. Defaults to pi/8. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value to indicate if the two angles are close according to the threshold. 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file angle.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_a2ec757c2cabdd60cdd2dd192c4e11897_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_a2ec757c2cabdd60cdd2dd192c4e11897_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepacman__game_1_1model_1_1angle_a97fa22b62690df0e8fa30f50c53029ac}\label{namespacepacman__game_1_1model_1_1angle_a97fa22b62690df0e8fa30f50c53029ac}} 
+\index{pacman\_game.model.angle@{pacman\_game.model.angle}!flip@{flip}}
+\index{flip@{flip}!pacman\_game.model.angle@{pacman\_game.model.angle}}
+\doxysubsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+angle.\+flip (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+
+
+Flips an angle by pi radians so that it points in the opposite direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The input angle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input angle flipped by pi radians. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file angle.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_a97fa22b62690df0e8fa30f50c53029ac_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepacman__game_1_1model_1_1angle_a789c2f52e2e11727505e05b915739cd0}\label{namespacepacman__game_1_1model_1_1angle_a789c2f52e2e11727505e05b915739cd0}} 
+\index{pacman\_game.model.angle@{pacman\_game.model.angle}!normalise@{normalise}}
+\index{normalise@{normalise}!pacman\_game.model.angle@{pacman\_game.model.angle}}
+\doxysubsubsection{\texorpdfstring{normalise()}{normalise()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+angle.\+normalise (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+
+
+Normalises an angle so that it lies between \mbox{[}-\/pi, pi). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle to be normalised. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An angle between \mbox{[}-\/pi, pi). 
+\end{DoxyReturn}
+
+
+Definition at line 7 of file angle.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_a789c2f52e2e11727505e05b915739cd0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepacman__game_1_1model_1_1angle_a99bcbe128d3528ea29761d46ce803352}\label{namespacepacman__game_1_1model_1_1angle_a99bcbe128d3528ea29761d46ce803352}} 
+\index{pacman\_game.model.angle@{pacman\_game.model.angle}!opposite@{opposite}}
+\index{opposite@{opposite}!pacman\_game.model.angle@{pacman\_game.model.angle}}
+\doxysubsubsection{\texorpdfstring{opposite()}{opposite()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+angle.\+opposite (\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{threshold = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+A predicate to decide if two angles are pointing in sufficiently opposite directions according to some threshold. 
+
+That is, the two angles do not need to be exactly pi radians apart, but close enough to pi radians apparent within the threshold.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first angle. \\
+\hline
+{\em b} & The second angle. \\
+\hline
+{\em threshold} & The threshold.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value indicating if the two angles are pointing in sufficiently opposite directions. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file angle.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_a99bcbe128d3528ea29761d46ce803352_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepacman__game_1_1model_1_1angle_a99bcbe128d3528ea29761d46ce803352_icgraph}
+\end{center}
+\end{figure}

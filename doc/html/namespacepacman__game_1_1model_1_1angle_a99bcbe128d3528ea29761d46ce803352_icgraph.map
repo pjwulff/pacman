@@ -1,0 +1,4 @@
+<map id="pacman_game.model.angle.opposite" name="pacman_game.model.angle.opposite">
+<area shape="rect" id="node1" title="A predicate to decide if two angles are pointing in sufficiently opposite directions according to som..." alt="" coords="384,20,647,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#acc1fe614fd53cf083e02d35691887158" title="Set the target direction this sprite would like to move in." alt="" coords="5,5,336,61"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pacman_game.model.arena.Arena.shape" name="pacman_game.model.arena.Arena.shape">
+<area shape="rect" id="node1" title="Get the shape of this maze." alt="" coords="263,13,471,54"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#a64d75b51e106043d4fb649891b83081b" title="A callback called when the user clicks the ‘Start’ button." alt="" coords="5,5,215,61"/>
+</map>

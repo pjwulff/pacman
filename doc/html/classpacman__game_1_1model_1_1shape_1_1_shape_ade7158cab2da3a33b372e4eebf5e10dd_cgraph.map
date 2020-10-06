@@ -1,0 +1,4 @@
+<map id="pacman_game.model.shape.Shape.y" name="pacman_game.model.shape.Shape.y">
+<area shape="rect" id="node1" title="Set the y&#45;coordinate of this shape." alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1shape_1_1_shape.html#ac4e4efde448d6831775ef6cfea1e7825" title="Get the y&#45;coordinate of this shape." alt="" coords="264,5,475,47"/>
+</map>

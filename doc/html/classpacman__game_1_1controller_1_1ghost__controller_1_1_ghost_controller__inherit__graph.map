@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.ghost_controller.GhostController" name="pacman_game.controller.ghost_controller.GhostController">
+<area shape="rect" id="node1" title="A generic controller for all ghosts." alt="" coords="38,95,261,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html" title="A generic controller for all moving sprites." alt="" coords="5,5,293,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pacman_game.model.shape.Shape.x" name="pacman_game.model.shape.Shape.x">
+<area shape="rect" id="node1" title="Get the x&#45;coordinate of this shape." alt="" coords="264,5,475,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1shape_1_1_shape.html#a8167e3143136ffb7d0a49b7311c625c3" title="Set the x&#45;coordinate of this shape." alt="" coords="5,5,216,47"/>
+</map>

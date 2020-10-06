@@ -2,10 +2,22 @@ from .arena import Arena
 from .coordinate import Coordinate
 from .node import Node
 
+## A square (or rather rectangular grid) based Arena.
 class SquareArena(Arena):
+
+    ## Create a new SquareArena
+    #
+    # @param width The logical width of the graph.
+    # @param height The logical height of the graph.
     def __init__(self, width, height):
         super().__init__(width, height, (width-1)*24, (height-1)*24, "square")
     
+    ## Generate nodes in a grid.
+    #
+    # @param width The logical width of the Arena.
+    # @param height The logical height of the Arena.
+    #
+    # @return A list of nodes.
     def _generate_nodes(self, width, height):
         num_nodes = width * height
         nodes = [None] * num_nodes

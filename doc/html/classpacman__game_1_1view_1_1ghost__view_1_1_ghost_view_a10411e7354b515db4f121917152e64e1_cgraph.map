@@ -1,0 +1,7 @@
+<map id="pacman_game.view.ghost_view.GhostView.draw" name="pacman_game.view.ghost_view.GhostView.draw">
+<area shape="rect" id="node1" title="Draw this ghost." alt="" coords="5,108,197,149"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1ghost__view_1_1_ghost_view.html#aef312d734c129377aac54db713310715" title="Draw the body of the ghost when not scared/eaten." alt="" coords="245,5,460,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1view_1_1ghost__view_1_1_ghost_view.html#a706e8042e64fd8684f0ce0b127c14899" title="Draw the eyes of the ghost." alt="" coords="246,71,459,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1view_1_1ghost__view_1_1_ghost_view.html#a4e919da624f3a70185c713e973f2de21" title="Draw the ghost when in the &quot;scared&quot; or &quot;frighten&quot; state." alt="" coords="257,137,449,193"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1view_1_1ghost__view_1_1_ghost_view.html#a74e08dddc03a6cd8f0df785ee17a8b6e" title="Set the cairo colour for this ghost." alt="" coords="247,217,458,259"/>
+</map>

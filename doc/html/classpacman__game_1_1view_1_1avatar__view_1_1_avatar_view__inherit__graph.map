@@ -1,0 +1,4 @@
+<map id="pacman_game.view.avatar_view.AvatarView" name="pacman_game.view.avatar_view.AvatarView">
+<area shape="rect" id="node1" title="A view class for Avatars." alt="" coords="5,95,204,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view.html" title="An abstract base class for drawing sprites." alt="" coords="8,5,201,47"/>
+</map>

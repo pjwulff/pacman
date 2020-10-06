@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classpacman__game_1_1model_1_1shape_1_1_shape.html" title="A base class for shapes." alt="" coords="5,35,216,76"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html" title="A circle shape, used for hit detection by the sprites." alt="" coords="273,5,480,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html" title="A class to represent rectangles by their size and position." alt="" coords="264,71,489,98"/>
+</map>

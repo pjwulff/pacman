@@ -1,0 +1,4 @@
+<map id="pacman_game.model.angle.flip" name="pacman_game.model.angle.flip">
+<area shape="rect" id="node1" title="Flips an angle by pi radians so that it points in the opposite direction." alt="" coords="5,5,232,32"/>
+<area shape="rect" id="node2" href="$namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="280,5,552,32"/>
+</map>

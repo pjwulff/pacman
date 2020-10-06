@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['make_5farena_466',['make_arena',['../classpacman__game_1_1model_1_1arena__factory_1_1_arena_factory.html#a137f038e8b354908aa61de5f2881969f',1,'pacman_game::model::arena_factory::ArenaFactory']]],
-  ['make_5farena_5fview_467',['make_arena_view',['../classpacman__game_1_1view_1_1arena__view__factory_1_1_arena_view_factory.html#abec5ff29a727d1dec4d0c3a171664d9d',1,'pacman_game::view::arena_view_factory::ArenaViewFactory']]],
-  ['make_5fcontroller_468',['make_controller',['../classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_factory.html#a70e268c3f73b153f30a485a3731065c5',1,'pacman_game::controller::game_controller::GameControllerFactory']]],
-  ['mode_469',['mode',['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a2babeac064b224cc90cc96f542e4f38a',1,'pacman_game.controller.ghost_controller.GhostController.mode(self)'],['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a295efc6c099c20bb4c1199de76599c14',1,'pacman_game.controller.ghost_controller.GhostController.mode(self, mode)'],['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#a92f6ac6ba148bf927bc8a9428e561e3d',1,'pacman_game.model.ghost.Ghost.mode(self)'],['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#a239c0b834770b2cf4953656c2260dfed',1,'pacman_game.model.ghost.Ghost.mode(self, mode)']]],
-  ['move_470',['move',['../classpacman__game_1_1model_1_1circle_1_1_circle.html#ad010fd357acb69295161959b231ee313',1,'pacman_game.model.circle.Circle.move()'],['../classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#a05e7855fd2bfb680aeff4385d57f9fa6',1,'pacman_game.model.coordinate.Coordinate.move()'],['../classpacman__game_1_1model_1_1rect_1_1_rect.html#a2a6c98a0cbd4043a596738efa871b4c7',1,'pacman_game.model.rect.Rect.move()']]]
+  ['name_451',['name',['../classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a7a59a05a5367cab8907e5bee469bc5bf',1,'pacman_game::model::sprite::Sprite']]],
+  ['neighbour_452',['neighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38',1,'pacman_game::model::node::Node']]],
+  ['neighbours_453',['neighbours',['../classpacman__game_1_1model_1_1node_1_1_node.html#a3a3452621670298dec9ef1e068a74b5c',1,'pacman_game::model::node::Node']]],
+  ['nodes_454',['nodes',['../classpacman__game_1_1model_1_1arena_1_1_arena.html#a7f872ec027bdafc2136a1cac5e2f5eb8',1,'pacman_game::model::arena::Arena']]],
+  ['normalise_455',['normalise',['../namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0',1,'pacman_game::model::angle']]]
 ];

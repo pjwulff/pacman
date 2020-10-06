@@ -1,0 +1,4 @@
+<map id="pacman_game.view.power_view.PowerView" name="pacman_game.view.power_view.PowerView">
+<area shape="rect" id="node1" title="A view to draw power pills." alt="" coords="5,95,201,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view.html" title="An abstract base class for drawing sprites." alt="" coords="7,5,200,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pacman_game.model.moving_sprite.MovingSprite" name="pacman_game.model.moving_sprite.MovingSprite">
+<area shape="rect" id="node1" title="An abstract base class for all moving sprites." alt="" coords="5,95,221,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="9,5,217,47"/>
+</map>

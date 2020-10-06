@@ -1,0 +1,4 @@
+<map id="pacman_game.model.node.Node.add_neighbour" name="pacman_game.model.node.Node.add_neighbour">
+<area shape="rect" id="node1" title="Add another node as a neighbour of this node." alt="" coords="5,5,271,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a3a3452621670298dec9ef1e068a74b5c" title="Get the neighbours of this node; that is, other nodes which are connected to this one by an edge." alt="" coords="319,13,632,39"/>
+</map>

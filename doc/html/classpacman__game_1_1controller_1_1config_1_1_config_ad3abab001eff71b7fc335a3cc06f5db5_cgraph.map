@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.config.Config.current_ghost_behaviour" name="pacman_game.controller.config.Config.current_ghost_behaviour">
+<area shape="rect" id="node1" title="Set the current behaviour of the ghosts." alt="" coords="5,5,236,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#afb27b10899a7aa818732695f72841f51" title="Get the current behaviour of the ghosts." alt="" coords="284,5,515,47"/>
+</map>

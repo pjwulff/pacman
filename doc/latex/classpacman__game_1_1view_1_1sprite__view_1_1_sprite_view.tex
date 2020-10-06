@@ -1,0 +1,88 @@
+\hypertarget{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view}{}\doxysection{pacman\+\_\+game.\+view.\+sprite\+\_\+view.\+Sprite\+View Class Reference}
+\label{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view}\index{pacman\_game.view.sprite\_view.SpriteView@{pacman\_game.view.sprite\_view.SpriteView}}
+
+
+An abstract base class for drawing sprites.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+view.\+sprite\+\_\+view.\+Sprite\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view_a2fb3eb42d748191411aefc6605951798}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, sprite)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view}{Sprite\+View}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view_aacf30481f5a2a937ecc5acee65e45b29}{draw}} (self, cr)
+\begin{DoxyCompactList}\small\item\em Draw the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class for drawing sprites. 
+
+Definition at line 2 of file sprite\+\_\+view.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view_a2fb3eb42d748191411aefc6605951798}\label{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view_a2fb3eb42d748191411aefc6605951798}} 
+\index{pacman\_game.view.sprite\_view.SpriteView@{pacman\_game.view.sprite\_view.SpriteView}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.view.sprite\_view.SpriteView@{pacman\_game.view.sprite\_view.SpriteView}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+sprite\+\_\+view.\+Sprite\+View.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view}{Sprite\+View}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The sprite to be viewed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpacman__game_1_1view_1_1power__view_1_1_power_view_a07ac970d0332e4836c3f5fa73bc8bf13}{pacman\+\_\+game.\+view.\+power\+\_\+view.\+Power\+View}}, \mbox{\hyperlink{classpacman__game_1_1view_1_1ghost__view_1_1_ghost_view_a1d82e64091391d9027ff1aa366d1d6cc}{pacman\+\_\+game.\+view.\+ghost\+\_\+view.\+Ghost\+View}}, \mbox{\hyperlink{classpacman__game_1_1view_1_1dot__view_1_1_dot_view_aae2ebe526117fdb05e0ae122c6aa9d93}{pacman\+\_\+game.\+view.\+dot\+\_\+view.\+Dot\+View}}, and \mbox{\hyperlink{classpacman__game_1_1view_1_1avatar__view_1_1_avatar_view_a93378e1eafe3269cff87cab5c0f64e0e}{pacman\+\_\+game.\+view.\+avatar\+\_\+view.\+Avatar\+View}}.
+
+
+
+Definition at line 7 of file sprite\+\_\+view.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view_aacf30481f5a2a937ecc5acee65e45b29}\label{classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view_aacf30481f5a2a937ecc5acee65e45b29}} 
+\index{pacman\_game.view.sprite\_view.SpriteView@{pacman\_game.view.sprite\_view.SpriteView}!draw@{draw}}
+\index{draw@{draw}!pacman\_game.view.sprite\_view.SpriteView@{pacman\_game.view.sprite\_view.SpriteView}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+view.\+sprite\+\_\+view.\+Sprite\+View.\+draw (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cr }\end{DoxyParamCaption})}
+
+
+
+Draw the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cr} & The cairo context to be used for drawing. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpacman__game_1_1view_1_1power__view_1_1_power_view_a591df64605c885187504999db0445731}{pacman\+\_\+game.\+view.\+power\+\_\+view.\+Power\+View}}, \mbox{\hyperlink{classpacman__game_1_1view_1_1ghost__view_1_1_ghost_view_a10411e7354b515db4f121917152e64e1}{pacman\+\_\+game.\+view.\+ghost\+\_\+view.\+Ghost\+View}}, \mbox{\hyperlink{classpacman__game_1_1view_1_1dot__view_1_1_dot_view_aa9ab666fca567c7082a559e5a4cd7df3}{pacman\+\_\+game.\+view.\+dot\+\_\+view.\+Dot\+View}}, and \mbox{\hyperlink{classpacman__game_1_1view_1_1avatar__view_1_1_avatar_view_a0a5d0fe16659d39c89c1bede9f143d65}{pacman\+\_\+game.\+view.\+avatar\+\_\+view.\+Avatar\+View}}.
+
+
+
+Definition at line 13 of file sprite\+\_\+view.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/view/\mbox{\hyperlink{sprite__view_8py}{sprite\+\_\+view.\+py}}\end{DoxyCompactItemize}

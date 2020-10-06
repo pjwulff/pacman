@@ -1,0 +1,4 @@
+<map id="pacman_game.view.game_view.GameView.draw" name="pacman_game.view.game_view.GameView.draw">
+<area shape="rect" id="node1" title="A callback to be called when we need to draw the view." alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1game__view_1_1_game_view.html#a03a1b3d8cdcfefdde87b741a88c91301" title="Draw the HUD (i.e., level, score, lives)." alt="" coords="247,5,453,47"/>
+</map>

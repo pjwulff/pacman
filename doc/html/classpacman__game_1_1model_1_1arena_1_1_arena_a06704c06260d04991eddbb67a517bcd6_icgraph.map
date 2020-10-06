@@ -1,0 +1,5 @@
+<map id="pacman_game.model.arena.Arena.logical_height" name="pacman_game.model.arena.Arena.logical_height">
+<area shape="rect" id="node1" title="Get the logical height of the Arena." alt="" coords="517,5,725,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a308c1cadabb7a12f0b58085cf7eca547" title="Generate a new random maze." alt="" coords="261,5,469,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#af679fcb335e5c2826d59d72562e89f62" title="Create a new Arena." alt="" coords="5,5,213,47"/>
+</map>

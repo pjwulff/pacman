@@ -1,0 +1,266 @@
+\hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost}{}\doxysection{pacman\+\_\+game.\+model.\+ghost.\+Ghost Class Reference}
+\label{classpacman__game_1_1model_1_1ghost_1_1_ghost}\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+
+
+Abstract base class for all Ghosts in the game.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+model.\+ghost.\+Ghost\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1ghost_1_1_ghost__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pacman\+\_\+game.\+model.\+ghost.\+Ghost\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classpacman__game_1_1model_1_1ghost_1_1_ghost__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a68e7cb595eca2f5939af6d0ce6e8d4c2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, arena, \mbox{\hyperlink{classpacman__game_1_1model_1_1sprite_1_1_sprite_a7a59a05a5367cab8907e5bee469bc5bf}{name}})
+\begin{DoxyCompactList}\small\item\em Create a new ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2a78d6c39805c08d1d934631ce832115}{target}} (self, avatar, ghosts)
+\begin{DoxyCompactList}\small\item\em This abstract function needs to be overridden by sub-\/classes. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a92f6ac6ba148bf927bc8a9428e561e3d}{mode}} (self)
+\begin{DoxyCompactList}\small\item\em Get the current mode or behaviour for this ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a239c0b834770b2cf4953656c2260dfed}{mode}} (self, mode)
+\begin{DoxyCompactList}\small\item\em Set the current mode or behaviour for this ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2f0ca334d39da7cfed48b2ce70d2d29c}{scared}} (self)
+\begin{DoxyCompactList}\small\item\em Get whether or not this ghost is currently \char`\"{}scared\char`\"{} (because the Avatar has consumed a power pill). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a96f294853ee37b88593ac7cf2ff468ed}{alive}} (self)
+\begin{DoxyCompactList}\small\item\em Returns whether or not this ghost is currently `alive'; that is, if has has not been eaten by the Avatar. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_abe4bc0b20a078c389957e26e61a3ebf0}{alive}} (self, alive)
+\begin{DoxyCompactList}\small\item\em Sets whether or not this ghost is currently `alive'. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a70b4f10760e4c4b5879e130539870d21}{path}} (self, source, \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2a78d6c39805c08d1d934631ce832115}{target}}, prev=None)
+\begin{DoxyCompactList}\small\item\em Perform an A$\ast$-\/search to find the shortest path between some source node and target coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a17baec976426ab07e525099fbbe99b25}{alive}}
+\item 
+\mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a28182b0c319a966ed5fa9a0c0bd4c575}{mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all Ghosts in the game. 
+
+This class handles duties common to all ghosts. 
+
+Definition at line 10 of file ghost.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a68e7cb595eca2f5939af6d0ce6e8d4c2}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a68e7cb595eca2f5939af6d0ce6e8d4c2}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{arena,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Create a new ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The Arena where this ghost will live. \\
+\hline
+{\em name} & The name of this ghost. Should be either \char`\"{}blinky\char`\"{}, \char`\"{}clyde\char`\"{}, \char`\"{}inky\char`\"{} or \char`\"{}pinky\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file ghost.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a96f294853ee37b88593ac7cf2ff468ed}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a96f294853ee37b88593ac7cf2ff468ed}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!alive@{alive}}
+\index{alive@{alive}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+alive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns whether or not this ghost is currently `alive'; that is, if has has not been eaten by the Avatar. 
+
+\begin{DoxyReturn}{Returns}
+True if the ghost is alive. 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_abe4bc0b20a078c389957e26e61a3ebf0}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_abe4bc0b20a078c389957e26e61a3ebf0}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!alive@{alive}}
+\index{alive@{alive}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+alive (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alive }\end{DoxyParamCaption})}
+
+
+
+Sets whether or not this ghost is currently `alive'. 
+
+This should be set to False when the ghost is eaten by the Avatar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em alive} & Whether or not the ghost is alive. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a92f6ac6ba148bf927bc8a9428e561e3d}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a92f6ac6ba148bf927bc8a9428e561e3d}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!mode@{mode}}
+\index{mode@{mode}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+mode (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the current mode or behaviour for this ghost. 
+
+\begin{DoxyReturn}{Returns}
+The current mode or behaviour for this ghost. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a239c0b834770b2cf4953656c2260dfed}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a239c0b834770b2cf4953656c2260dfed}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!mode@{mode}}
+\index{mode@{mode}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+mode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the current mode or behaviour for this ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The current mode or behaviour for this ghost. Should only be \char`\"{}scatter\char`\"{}, \char`\"{}chase\char`\"{} or \char`\"{}frighten\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a70b4f10760e4c4b5879e130539870d21}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a70b4f10760e4c4b5879e130539870d21}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!path@{path}}
+\index{path@{path}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+path (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source,  }\item[{}]{target,  }\item[{}]{prev = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Perform an A$\ast$-\/search to find the shortest path between some source node and target coordinate. 
+
+This function takes into account the fact that ghosts cannot reverse direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source node from which to start the search. \\
+\hline
+{\em target} & The target coordinates. \\
+\hline
+{\em prev} & The previously visited node. This node will be excluded from the search as ghosts cannot reverse direction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of nodes representing the shortest path between the source and the target. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2f0ca334d39da7cfed48b2ce70d2d29c}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2f0ca334d39da7cfed48b2ce70d2d29c}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!scared@{scared}}
+\index{scared@{scared}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{scared()}{scared()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+scared (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get whether or not this ghost is currently \char`\"{}scared\char`\"{} (because the Avatar has consumed a power pill). 
+
+Equivalently, if this ghost\textquotesingle{}s current mode is \char`\"{}frighten\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+True if this ghost is frightened. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2a78d6c39805c08d1d934631ce832115}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2a78d6c39805c08d1d934631ce832115}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!target@{target}}
+\index{target@{target}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{target()}{target()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+target (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{avatar,  }\item[{}]{ghosts }\end{DoxyParamCaption})}
+
+
+
+This abstract function needs to be overridden by sub-\/classes. 
+
+It should calculate the target for the ghost when in chase mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em avatar} & The Avatar object. \\
+\hline
+{\em ghosts} & A dictionary for the ghosts.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The coordinates of the ghost\textquotesingle{}s target. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classpacman__game_1_1model_1_1pinky_1_1_pinky_a9b278d7a86cea5ac3851b201cd9fa15f}{pacman\+\_\+game.\+model.\+pinky.\+Pinky}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1inky_1_1_inky_a596182a0fc7a8a2f5e062190342b5c0b}{pacman\+\_\+game.\+model.\+inky.\+Inky}}, \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde_af04b9bfb390e79d54c784ea8022bba4f}{pacman\+\_\+game.\+model.\+clyde.\+Clyde}}, and \mbox{\hyperlink{classpacman__game_1_1model_1_1blinky_1_1_blinky_a639c5fcc9fa498a12e499c7a3cfd473e}{pacman\+\_\+game.\+model.\+blinky.\+Blinky}}.
+
+
+
+Definition at line 30 of file ghost.\+py.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a17baec976426ab07e525099fbbe99b25}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a17baec976426ab07e525099fbbe99b25}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!alive@{alive}}
+\index{alive@{alive}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{alive}{alive}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+alive}
+
+
+
+Definition at line 19 of file ghost.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1ghost_1_1_ghost_a28182b0c319a966ed5fa9a0c0bd4c575}\label{classpacman__game_1_1model_1_1ghost_1_1_ghost_a28182b0c319a966ed5fa9a0c0bd4c575}} 
+\index{pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}!mode@{mode}}
+\index{mode@{mode}!pacman\_game.model.ghost.Ghost@{pacman\_game.model.ghost.Ghost}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily pacman\+\_\+game.\+model.\+ghost.\+Ghost.\+mode}
+
+
+
+Definition at line 20 of file ghost.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{ghost_8py}{ghost.\+py}}\end{DoxyCompactItemize}

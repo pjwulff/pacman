@@ -1,0 +1,4 @@
+var namespacepacman__game_1_1view_1_1enter__high__score__dialogue =
+[
+    [ "EnterHighScoreDialogue", "classpacman__game_1_1view_1_1enter__high__score__dialogue_1_1_enter_high_score_dialogue.html", "classpacman__game_1_1view_1_1enter__high__score__dialogue_1_1_enter_high_score_dialogue" ]
+];

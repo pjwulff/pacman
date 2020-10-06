@@ -1,0 +1,4 @@
+<map id="pacman_game.model.moving_sprite.MovingSprite.direction" name="pacman_game.model.moving_sprite.MovingSprite.direction">
+<area shape="rect" id="node1" title="Get the direction this sprite is currently facing." alt="" coords="360,5,577,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="5,13,312,39"/>
+</map>

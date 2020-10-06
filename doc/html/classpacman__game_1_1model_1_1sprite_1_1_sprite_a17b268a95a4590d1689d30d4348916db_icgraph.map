@@ -1,0 +1,5 @@
+<map id="pacman_game.model.sprite.Sprite.rect" name="pacman_game.model.sprite.Sprite.rect">
+<area shape="rect" id="node1" title=" " alt="" coords="488,5,696,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1arena__view_1_1_arena_view.html#a4a762f16361cc89ccad6912f2e09ab15" title="Draw this view." alt="" coords="247,5,440,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1view_1_1game__view_1_1_game_view.html#a4c4a4dd476811ccfdf8d18538090004e" title="Create a new GameView object." alt="" coords="5,5,199,47"/>
+</map>

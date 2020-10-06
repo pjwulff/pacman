@@ -1,0 +1,4 @@
+<map id="pacman_game.view.ghost_view.GhostView" name="pacman_game.view.ghost_view.GhostView">
+<area shape="rect" id="node1" title="A View class for representing ghosts." alt="" coords="6,95,198,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1sprite__view_1_1_sprite_view.html" title="An abstract base class for drawing sprites." alt="" coords="5,5,199,47"/>
+</map>

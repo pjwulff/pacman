@@ -1,0 +1,80 @@
+\hypertarget{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller}{}\doxysection{pacman\+\_\+game.\+controller.\+high\+\_\+scores\+\_\+controller.\+High\+Scores\+Controller Class Reference}
+\label{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller}\index{pacman\_game.controller.high\_scores\_controller.HighScoresController@{pacman\_game.controller.high\_scores\_controller.HighScoresController}}
+
+
+A controller to handle interfacing with the high score table.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller_a95f060431f8624e9a3d870fd4a8db185}{insert\+\_\+high\+\_\+score}} (cls, initials, score, difficulty, shape, size)
+\begin{DoxyCompactList}\small\item\em Insert a high score into the table, used when the player finishes a game. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller_a83544e992fa0954aae3e524590c949f8}{high\+\_\+scores}} (cls, f)
+\begin{DoxyCompactList}\small\item\em Get a list of high scores, filtered according to some parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A controller to handle interfacing with the high score table. 
+
+Definition at line 4 of file high\+\_\+scores\+\_\+controller.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller_a83544e992fa0954aae3e524590c949f8}\label{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller_a83544e992fa0954aae3e524590c949f8}} 
+\index{pacman\_game.controller.high\_scores\_controller.HighScoresController@{pacman\_game.controller.high\_scores\_controller.HighScoresController}!high\_scores@{high\_scores}}
+\index{high\_scores@{high\_scores}!pacman\_game.controller.high\_scores\_controller.HighScoresController@{pacman\_game.controller.high\_scores\_controller.HighScoresController}}
+\doxysubsubsection{\texorpdfstring{high\_scores()}{high\_scores()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+high\+\_\+scores\+\_\+controller.\+High\+Scores\+Controller.\+high\+\_\+scores (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{f }\end{DoxyParamCaption})}
+
+
+
+Get a list of high scores, filtered according to some parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The parameters by which to filter the results. Should be a dictionary mapping different game characteristics (e.\+g., \char`\"{}difficulty-\/easy\char`\"{}) to boolean values, indicating if the results should be included or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An ordered, filtered list of high scores. Each list element is a tuple, the first element of which is the initials, the second of which is the score itself. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file high\+\_\+scores\+\_\+controller.\+py.
+
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller_a95f060431f8624e9a3d870fd4a8db185}\label{classpacman__game_1_1controller_1_1high__scores__controller_1_1_high_scores_controller_a95f060431f8624e9a3d870fd4a8db185}} 
+\index{pacman\_game.controller.high\_scores\_controller.HighScoresController@{pacman\_game.controller.high\_scores\_controller.HighScoresController}!insert\_high\_score@{insert\_high\_score}}
+\index{insert\_high\_score@{insert\_high\_score}!pacman\_game.controller.high\_scores\_controller.HighScoresController@{pacman\_game.controller.high\_scores\_controller.HighScoresController}}
+\doxysubsubsection{\texorpdfstring{insert\_high\_score()}{insert\_high\_score()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+high\+\_\+scores\+\_\+controller.\+High\+Scores\+Controller.\+insert\+\_\+high\+\_\+score (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{initials,  }\item[{}]{score,  }\item[{}]{difficulty,  }\item[{}]{shape,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+Insert a high score into the table, used when the player finishes a game. 
+
+The parameters for this function are the initials of the player, and details of the game that were played.
+
+
+\begin{DoxyParams}{Parameters}
+{\em initials} & The initials of the user. \\
+\hline
+{\em score} & The score. \\
+\hline
+{\em difficulty} & The difficulty of the game. \\
+\hline
+{\em shape} & The shape of the maze. \\
+\hline
+{\em size} & The size of the maze. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file high\+\_\+scores\+\_\+controller.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/controller/\mbox{\hyperlink{high__scores__controller_8py}{high\+\_\+scores\+\_\+controller.\+py}}\end{DoxyCompactItemize}

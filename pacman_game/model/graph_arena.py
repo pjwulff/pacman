@@ -5,16 +5,36 @@ from .arena import Arena
 from .coordinate import Coordinate
 from .node import Node
 
+## An arbitary graph based Arena.
 class GraphArena(Arena):
+
+    ## Create a new GraphArena.
+    #
+    # @param width The logical width of the graph.
+    # @param height The logical height of the graph.
     def __init__(self, width, height):
         super().__init__(width, height, (width-1)*24, (height-1)*24, "graph")
 
+    ## When generating nodes randomly we don't want them too close together.
+    ## This functions returns true if some node is too close to some other
+    ## nodes.
+    #
+    # @param node The node to test.
+    # @param nodes A list of nodes against which to test the node.
+    #
+    # @return True if the node is too close to any in the list of nodes.
     def _too_close(self, node, nodes):
         for n in nodes:
             if n.distance(node) <= 24.0:
                 return True
         return False
 
+    ## Generate nodes randomly.
+    #
+    # @param width The logical width of the Arena.
+    # @param height The logical height of the Arena.
+    #
+    # @return A list of nodes.
     def _generate_nodes(self, width, height):
         nodes = []
         max_nodes = width * height

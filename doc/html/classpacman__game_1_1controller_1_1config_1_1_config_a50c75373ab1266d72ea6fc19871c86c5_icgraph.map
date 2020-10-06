@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.config.Config.ghost_behaviour_duration" name="pacman_game.controller.config.Config.ghost_behaviour_duration">
+<area shape="rect" id="node1" title="Get the duration length of the ghosts&#39; current behaviour." alt="" coords="289,5,525,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#ab07e9cb9612f7e7ffc4b65a139ab06b1" title="Set the duration length of the ghosts&#39; current behaviour." alt="" coords="5,5,241,47"/>
+</map>

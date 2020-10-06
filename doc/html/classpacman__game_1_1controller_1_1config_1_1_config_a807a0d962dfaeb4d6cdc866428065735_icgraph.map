@@ -1,0 +1,4 @@
+<map id="pacman_game.controller.config.Config.shape" name="pacman_game.controller.config.Config.shape">
+<area shape="rect" id="node1" title="Set the shape of this configuration." alt="" coords="263,13,493,54"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#a64d75b51e106043d4fb649891b83081b" title="A callback called when the user clicks the ‘Start’ button." alt="" coords="5,5,215,61"/>
+</map>

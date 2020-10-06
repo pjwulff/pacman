@@ -1,0 +1,7 @@
+<map id="pacman_game.model.sprite.Sprite.name" name="pacman_game.model.sprite.Sprite.name">
+<area shape="rect" id="node1" title=" " alt="" coords="801,50,1009,91"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#aa09d8ccd02ad46bd4f12a3f57eeb1c47" title="Get the sprite&#39;s starting position (also its spawn location)." alt="" coords="533,50,753,91"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#ae17cefbbdfc325e8fb426880cbd0b645" title="Return this sprite to its spawn location,." alt="" coords="269,5,485,61"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1model_1_1clyde_1_1_clyde.html#af04b9bfb390e79d54c784ea8022bba4f" title="Returns Cylde&#39;s target when in chase mode, which is the Avatar&#39;s location when close enough,..." alt="" coords="274,86,481,127"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#a4aa0c8e76137874b9bd3385142554045" title="Create a new MovingSprite." alt="" coords="5,13,221,54"/>
+</map>

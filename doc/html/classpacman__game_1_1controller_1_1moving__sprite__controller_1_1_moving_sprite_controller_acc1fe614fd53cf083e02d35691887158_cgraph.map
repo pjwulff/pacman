@@ -1,0 +1,9 @@
+<map id="pacman_game.controller.moving_sprite_controller.MovingSpriteController.target_direction" name="pacman_game.controller.moving_sprite_controller.MovingSpriteController.target_direction">
+<area shape="rect" id="node1" title="Set the target direction this sprite would like to move in." alt="" coords="5,79,336,135"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a41add3dc0385d9e0d2ddd2f32b638ce6" title="Causes the sprite to turn around and reverse its direction." alt="" coords="413,5,703,61"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a7447d3c2a418e42722091ed4b2f38125" title="Gets the direction in which this sprite is currently actually moving (which may or may not be its tar..." alt="" coords="384,86,732,127"/>
+<area shape="rect" id="node5" href="$namespacepacman__game_1_1model_1_1angle.html#a99bcbe128d3528ea29761d46ce803352" title="A predicate to decide if two angles are pointing in sufficiently opposite directions according to som..." alt="" coords="427,152,689,179"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#ad4479f2cb733652a2f2717d525d85013" title="Gets the sprite this controller is controlling." alt="" coords="780,86,1108,127"/>
+<area shape="rect" id="node6" href="$namespacepacman__game_1_1model_1_1angle.html#a2ec757c2cabdd60cdd2dd192c4e11897" title="A predicate to decide if two angles are ‘close’ according to some threshold." alt="" coords="823,152,1065,179"/>
+<area shape="rect" id="node7" href="$namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0" title="Normalises an angle so that it lies between [&#45;pi, pi)." alt="" coords="1156,152,1428,179"/>
+</map>

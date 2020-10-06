@@ -1,0 +1,5 @@
+<map id="pacman_game.model.coordinate.Coordinate.distance" name="pacman_game.model.coordinate.Coordinate.distance">
+<area shape="rect" id="node1" title="Calculate the distance between two points in space." alt="" coords="5,39,245,80"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#a879bcbfc48a8a9e9e5d8ccb6b9596f10" title="Get the x&#45;coordinate." alt="" coords="293,5,533,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1coordinate_1_1_coordinate.html#afbe3670fc4b95b5460079455b34b4150" title="Get the y&#45;coordinate." alt="" coords="293,71,533,112"/>
+</map>

@@ -1,7 +1,14 @@
 from .graph_arena_view import GraphArenaView
 from .square_arena_view import SquareArenaView
 
+## A factory class to return a concrete ArenaView.
 class ArenaViewFactory:
+
+    ## Create a new ArenaView for the given Arena.
+    #
+    # @param arena The Arena object to view.
+    #
+    # @return An ArenaView object.
     @classmethod
     def make_arena_view(cls, arena):
         shape = arena.shape
@@ -12,4 +19,4 @@ class ArenaViewFactory:
         elif shape == "graph":
             return GraphArenaView(Arena)
         else:
-            raise ValueError("shape not recognised")
+            raise ValueError(f"shape {shape} not recognised")

@@ -1,0 +1,5 @@
+<map id="pacman_game.controller.moving_sprite_controller.MovingSpriteController.return_to_spawn" name="pacman_game.controller.moving_sprite_controller.MovingSpriteController.return_to_spawn">
+<area shape="rect" id="node1" title="Return this sprite to its spawn location in the map." alt="" coords="285,31,616,87"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#a4aa0c8e76137874b9bd3385142554045" title="Create a new MovingSprite." alt="" coords="13,5,229,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a98217ebf07c7b375e66b74fa7485867b" title="Reset this ghost." alt="" coords="5,71,237,112"/>
+</map>

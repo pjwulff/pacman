@@ -1,0 +1,4 @@
+<map id="pacman_game.model.arena.Arena.height" name="pacman_game.model.arena.Arena.height">
+<area shape="rect" id="node1" title="Get the actual height of the Arena." alt="" coords="320,5,528,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#a2a6c98a0cbd4043a596738efa871b4c7" title="Create a new rectangle by moving this one by some offset." alt="" coords="5,13,272,39"/>
+</map>

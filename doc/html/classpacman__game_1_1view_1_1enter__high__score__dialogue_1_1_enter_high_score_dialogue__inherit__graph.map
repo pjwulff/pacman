@@ -1,0 +1,4 @@
+<map id="pacman_game.view.enter_high_score_dialogue.EnterHighScoreDialogue" name="pacman_game.view.enter_high_score_dialogue.EnterHighScoreDialogue">
+<area shape="rect" id="node1" title="A dialogue box for entering high scores." alt="" coords="5,80,236,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="73,5,168,32"/>
+</map>

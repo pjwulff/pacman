@@ -1,0 +1,4 @@
+<map id="pacman_game.view.game_view.GameView" name="pacman_game.view.game_view.GameView">
+<area shape="rect" id="node1" title="A View to handle viewing the game." alt="" coords="5,80,199,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="33,5,171,32"/>
+</map>

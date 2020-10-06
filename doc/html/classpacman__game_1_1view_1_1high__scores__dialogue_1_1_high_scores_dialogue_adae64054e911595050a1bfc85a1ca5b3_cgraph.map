@@ -1,0 +1,4 @@
+<map id="pacman_game.view.high_scores_dialogue.HighScoresDialogue.on_filter_toggled" name="pacman_game.view.high_scores_dialogue.HighScoresDialogue.on_filter_toggled">
+<area shape="rect" id="node1" title="A callback called when one of the filter checkboxes is toggled." alt="" coords="5,5,216,61"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1high__scores__dialogue_1_1_high_scores_dialogue.html#a850d31a2efb216d42251371992ab0c10" title="Constructs a new dictionary representing the values of the filter checkboxes." alt="" coords="264,5,475,61"/>
+</map>

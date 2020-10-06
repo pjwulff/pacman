@@ -1,0 +1,4 @@
+<map id="pacman_game.model.graph_arena.GraphArena" name="pacman_game.model.graph_arena.GraphArena">
+<area shape="rect" id="node1" title="An arbitary graph based Arena." alt="" coords="7,95,211,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html" title="The Arena represents the maze in the game, including the location of all the vertices,..." alt="" coords="5,5,213,47"/>
+</map>

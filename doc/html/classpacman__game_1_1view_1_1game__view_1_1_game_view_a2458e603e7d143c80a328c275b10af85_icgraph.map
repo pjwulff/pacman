@@ -1,0 +1,4 @@
+<map id="pacman_game.view.game_view.GameView.tick" name="pacman_game.view.game_view.GameView.tick">
+<area shape="rect" id="node1" title="A callback used by a timer to trigger the ‘draw’ event." alt="" coords="247,5,440,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1game__view_1_1_game_view.html#a4c4a4dd476811ccfdf8d18538090004e" title="Create a new GameView object." alt="" coords="5,5,199,47"/>
+</map>

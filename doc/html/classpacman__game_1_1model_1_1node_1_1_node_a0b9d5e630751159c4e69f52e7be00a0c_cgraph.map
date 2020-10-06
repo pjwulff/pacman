@@ -1,0 +1,4 @@
+<map id="pacman_game.model.node.Node.add_geoneighbour" name="pacman_game.model.node.Node.add_geoneighbour">
+<area shape="rect" id="node1" title="Add another node as a geoneighbour to this node; that is, a neighbour in space, but not necessarily i..." alt="" coords="5,5,271,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#ad38f4929c1b3a1e87bdd940d74d4e5ca" title="Get the geoneighbours of this node; that is, nodes which are ‘next to’ this node in space,..." alt="" coords="319,13,656,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="pacman_game.model.rect.Rect.height" name="pacman_game.model.rect.Rect.height">
+<area shape="rect" id="node1" title="Get the height of the rectangle." alt="" coords="324,31,595,57"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#a4e5e0ac7156be3d8fe8b1bfd51f17410" title="Set the height of the rectangle." alt="" coords="5,5,276,32"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1rect_1_1_rect.html#a2a6c98a0cbd4043a596738efa871b4c7" title="Create a new rectangle by moving this one by some offset." alt="" coords="7,56,274,83"/>
+</map>

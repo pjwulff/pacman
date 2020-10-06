@@ -1,0 +1,6 @@
+<map id="pacman_game.model.circle.Circle.radius" name="pacman_game.model.circle.Circle.radius">
+<area shape="rect" id="node1" title="Get the radius of the circle." alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html#ac3cdff850479f7721e9fc729ecc0d195" title="Detects if two circles overlap by any amount." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html#ad010fd357acb69295161959b231ee313" title="Create a new circle with the same properties as this one but moved by some offset." alt="" coords="5,71,212,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html#a79e8ccfac2bd43f6ce849cfed1250f94" title="Set the radius of the circle." alt="" coords="5,136,212,177"/>
+</map>

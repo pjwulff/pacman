@@ -1,0 +1,4 @@
+<map id="pacman_game.model.moving_sprite.MovingSprite.calculate_position" name="pacman_game.model.moving_sprite.MovingSprite.calculate_position">
+<area shape="rect" id="node1" title="Calculate this sprite&#39;s current coordinates based on its from&#45;pos, to&#45;pos and trans&#45;position." alt="" coords="5,5,224,61"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#af1fc782d2a13e28b4bc8640c0a6962c6" title="Get the sprite&#39;s current ‘to’ node; that is, which node this sprite is current moving towards." alt="" coords="272,13,488,54"/>
+</map>

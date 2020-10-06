@@ -1,0 +1,6 @@
+<map id="pacman_game.model.node.Node.neighbours" name="pacman_game.model.node.Node.neighbours">
+<area shape="rect" id="node1" title="Get the neighbours of this node; that is, other nodes which are connected to this one by an edge." alt="" coords="360,78,673,105"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#aa1d7bb49a3d2f41d09b8f4adbfdf7ab0" title="Add another node as a neighbour of this node." alt="" coords="26,5,291,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a76b417437263b514054eb9a7545c54b9" title="A predicate to detect if two nodes are neighbours." alt="" coords="33,71,285,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38" title="Finds the neighbouring node which is closest to the desired direction within some threshold." alt="" coords="5,137,312,163"/>
+</map>

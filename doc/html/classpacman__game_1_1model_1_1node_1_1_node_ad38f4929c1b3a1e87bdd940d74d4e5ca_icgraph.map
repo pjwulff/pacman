@@ -1,0 +1,5 @@
+<map id="pacman_game.model.node.Node.geoneighbours" name="pacman_game.model.node.Node.geoneighbours">
+<area shape="rect" id="node1" title="Get the geoneighbours of this node; that is, nodes which are ‘next to’ this node in space,..." alt="" coords="319,46,656,73"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a0b9d5e630751159c4e69f52e7be00a0c" title="Add another node as a geoneighbour to this node; that is, a neighbour in space, but not necessarily i..." alt="" coords="5,5,271,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1model_1_1node_1_1_node.html#a7148dc9045c926139fadfd493b4b57c0" title="A predicate to detect if two nodes are geoneighbours." alt="" coords="12,71,264,112"/>
+</map>

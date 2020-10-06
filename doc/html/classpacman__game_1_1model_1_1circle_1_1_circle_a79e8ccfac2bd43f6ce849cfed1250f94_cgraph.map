@@ -1,0 +1,4 @@
+<map id="pacman_game.model.circle.Circle.radius" name="pacman_game.model.circle.Circle.radius">
+<area shape="rect" id="node1" title="Set the radius of the circle." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1model_1_1circle_1_1_circle.html#a696e912c12512f2f92741e3d434da064" title="Get the radius of the circle." alt="" coords="260,5,467,47"/>
+</map>

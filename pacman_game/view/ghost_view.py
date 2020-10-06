@@ -2,15 +2,21 @@ import cairo
 import math
 from .sprite_view import SpriteView
 
+## A View class for representing ghosts. This one view can be used for all
+## ghosts.
 class GhostView(SpriteView):
+
+    ## Create a new GhostView.
+    #
+    # @param ghost The ghost we are to view.
     def __init__(self, ghost):
         SpriteView.__init__(self, ghost)
         self._last_angle = 0
 
+    ## Draw this ghost.
+    #
+    # @param cr The cairo context to be used for drawing.
     def draw(self, cr):
-        """! Draw this sprite to the screen.
-
-        @param screen The PyGame screen to which this sprite to draw."""
         cr.save()
         # self._draw_path(cr)
         cr.set_line_width(3)
@@ -27,6 +33,9 @@ class GhostView(SpriteView):
                 self._draw_body(cr, coord.x, coord.y)
             self._draw_eyes(cr, coord.x, coord.y)
 
+    ## Draw the ghost's current path (if it has one).
+    #
+    # @param cr The cairo context to be used for drawing.
     def _draw_path(self, cr):
         cr.save()
         self._set_colour(cr)
@@ -39,6 +48,11 @@ class GhostView(SpriteView):
                 cr.stroke()
         cr.restore()
 
+    ## Set the cairo colour for this ghost. This is obviously a bit of an
+    ## anti-pattern, but there are only four ghosts and no more will be added,
+    ## so it's not a big deal.
+    #
+    # @param cr The cairo context to be used for drawing.
     def _set_colour(self, cr):
         if self._sprite.name == "blinky":
             cr.set_source_rgb(1.0, 0.0, 0.0)
@@ -49,6 +63,12 @@ class GhostView(SpriteView):
         elif self._sprite.name == "clyde":
             cr.set_source_rgb(1.0, 0.5, 0.0)
 
+    ## Draw the ghost when in the "scared" or "frighten" state. All ghosts
+    ## are drawn blue with squiggle mouths.
+    #
+    # @param cr The cairo context to be used for drawing.
+    # @param x The x-coordinate where to draw the ghost.
+    # @param y The y-coordinate where to draw the ghost.
     def _draw_scared(self, cr, x, y):
         cr.set_source_rgb(0, 0.25, 0.75)
         cr.move_to(x, y)
@@ -84,6 +104,11 @@ class GhostView(SpriteView):
         cr.arc(x+6, y+4, 1, math.pi, 0)
         cr.stroke()
 
+    ## Draw the body of the ghost when not scared/eaten.
+    #
+    # @param cr The cairo context to be used for drawing.
+    # @param x The x-coordinate where to draw the ghost.
+    # @param y The y-coordinate where to draw the ghost.
     def _draw_body(self, cr, x, y):
         self._set_colour(cr)
         cr.move_to(x, y)
@@ -97,6 +122,12 @@ class GhostView(SpriteView):
         cr.close_path()
         cr.fill()
 
+    ## Draw the eyes of the ghost. The eyes will point in the direction in which
+    ## the ghost is heading. This is only called if the ghost is not scared.
+    #
+    # @param cr The cairo context to be used for drawing.
+    # @param x The x-coordinate where to draw the ghost.
+    # @param y The y-coordinate where to draw the ghost.
     def _draw_eyes(self, cr, x, y):
         angle = self._sprite.direction
         if angle is None:

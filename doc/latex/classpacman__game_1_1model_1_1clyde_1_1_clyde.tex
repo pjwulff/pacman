@@ -1,0 +1,106 @@
+\hypertarget{classpacman__game_1_1model_1_1clyde_1_1_clyde}{}\doxysection{pacman\+\_\+game.\+model.\+clyde.\+Clyde Class Reference}
+\label{classpacman__game_1_1model_1_1clyde_1_1_clyde}\index{pacman\_game.model.clyde.Clyde@{pacman\_game.model.clyde.Clyde}}
+
+
+The orange \char`\"{}\+Clyde\char`\"{} ghost.  
+
+
+
+
+Inheritance diagram for pacman\+\_\+game.\+model.\+clyde.\+Clyde\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classpacman__game_1_1model_1_1clyde_1_1_clyde__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pacman\+\_\+game.\+model.\+clyde.\+Clyde\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classpacman__game_1_1model_1_1clyde_1_1_clyde__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde_a0e7364f099fc85bf3a0fb7364d2dc649}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, arena)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde}{Clyde}} ghost. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde_af04b9bfb390e79d54c784ea8022bba4f}{target}} (self, avatar, ghosts)
+\begin{DoxyCompactList}\small\item\em Returns Cylde\textquotesingle{}s target when in chase mode, which is the Avatar\textquotesingle{}s location when close enough, or \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde}{Clyde}}\textquotesingle{}s spawn location when close to the Avatar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The orange \char`\"{}\+Clyde\char`\"{} ghost. 
+
+Definition at line 4 of file clyde.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1clyde_1_1_clyde_a0e7364f099fc85bf3a0fb7364d2dc649}\label{classpacman__game_1_1model_1_1clyde_1_1_clyde_a0e7364f099fc85bf3a0fb7364d2dc649}} 
+\index{pacman\_game.model.clyde.Clyde@{pacman\_game.model.clyde.Clyde}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.model.clyde.Clyde@{pacman\_game.model.clyde.Clyde}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+clyde.\+Clyde.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{arena }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde}{Clyde}} ghost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The Arena object where this \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde}{Clyde}} ghost will live. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file clyde.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpacman__game_1_1model_1_1clyde_1_1_clyde_af04b9bfb390e79d54c784ea8022bba4f}\label{classpacman__game_1_1model_1_1clyde_1_1_clyde_af04b9bfb390e79d54c784ea8022bba4f}} 
+\index{pacman\_game.model.clyde.Clyde@{pacman\_game.model.clyde.Clyde}!target@{target}}
+\index{target@{target}!pacman\_game.model.clyde.Clyde@{pacman\_game.model.clyde.Clyde}}
+\doxysubsubsection{\texorpdfstring{target()}{target()}}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+model.\+clyde.\+Clyde.\+target (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{avatar,  }\item[{}]{ghosts }\end{DoxyParamCaption})}
+
+
+
+Returns Cylde\textquotesingle{}s target when in chase mode, which is the Avatar\textquotesingle{}s location when close enough, or \mbox{\hyperlink{classpacman__game_1_1model_1_1clyde_1_1_clyde}{Clyde}}\textquotesingle{}s spawn location when close to the Avatar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em avatar} & The Avatar object. \\
+\hline
+{\em ghosts} & A dictionary of the ghosts.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The target coordinates. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpacman__game_1_1model_1_1ghost_1_1_ghost_a2a78d6c39805c08d1d934631ce832115}{pacman\+\_\+game.\+model.\+ghost.\+Ghost}}.
+
+
+
+Definition at line 19 of file clyde.\+py.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpacman__game_1_1model_1_1clyde_1_1_clyde_af04b9bfb390e79d54c784ea8022bba4f_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pacman\+\_\+game/model/\mbox{\hyperlink{clyde_8py}{clyde.\+py}}\end{DoxyCompactItemize}

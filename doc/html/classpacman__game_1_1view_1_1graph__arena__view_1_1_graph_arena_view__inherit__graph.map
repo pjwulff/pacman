@@ -1,0 +1,4 @@
+<map id="pacman_game.view.graph_arena_view.GraphArenaView" name="pacman_game.view.graph_arena_view.GraphArenaView">
+<area shape="rect" id="node1" title="Concrete class of type ArenaView." alt="" coords="5,95,221,136"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1arena__view_1_1_arena_view.html" title="An abstract base class for viewing an Arena." alt="" coords="17,5,210,47"/>
+</map>
