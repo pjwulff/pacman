@@ -1,4 +1,4 @@
 var annotated_dup =
 [
-    [ "pacman", "namespacepacman.html", "namespacepacman" ]
+    [ "pacman_game", "namespacepacman__game.html", "namespacepacman__game" ]
 ];

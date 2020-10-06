@@ -1,4 +1,0 @@
-<map id="pacman.ghost.Ghost.kill" name="pacman.ghost.Ghost.kill">
-<area shape="rect" id="node1" title="Called when this ghost is touched by the avatar while a power pill is active." alt="" coords="5,13,185,39"/>
-<area shape="rect" id="node2" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#a64a8cbf78e04ec12ff7dd9fc87142ea0" title=" " alt="" coords="233,5,456,47"/>
-</map>

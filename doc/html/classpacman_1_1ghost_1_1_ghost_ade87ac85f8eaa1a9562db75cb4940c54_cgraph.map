@@ -1,6 +1,0 @@
-<map id="pacman.ghost.Ghost.draw" name="pacman.ghost.Ghost.draw">
-<area shape="rect" id="node1" title="Draw this ghost to the screen." alt="" coords="5,31,197,57"/>
-<area shape="rect" id="node2" href="$classpacman_1_1arena_1_1_arena.html#a3c90c9c135f6cf3963c4df596c7993c6" title=" " alt="" coords="245,5,432,32"/>
-<area shape="rect" id="node3" href="$classpacman_1_1sprite_1_1_sprite.html#a60a4e5614a8155f6e16d53c931715ed3" title="Get the rect object describing this sprite." alt="" coords="245,56,432,83"/>
-<area shape="rect" id="node4" href="$classpacman_1_1sprite_1_1_sprite.html#a5f4f303c713a3792e458cdec5faeaaa1" title="Get the coordinates of this sprite." alt="" coords="480,56,693,83"/>
-</map>

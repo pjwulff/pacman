@@ -1,5 +1,0 @@
-<map id="pacman.moving_sprite.MovingSprite.__init__" name="pacman.moving_sprite.MovingSprite.__init__">
-<area shape="rect" id="node1" title="Construct a new moving sprite object." alt="" coords="5,39,228,80"/>
-<area shape="rect" id="node2" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#aba5d887b83ea90e61f01ee1ab885215a" title=" " alt="" coords="276,5,499,47"/>
-<area shape="rect" id="node3" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html#ac118614163beac3364ac4e9f4b92f965" title="Instructs this moving sprite to return to its spawn location." alt="" coords="276,71,499,112"/>
-</map>

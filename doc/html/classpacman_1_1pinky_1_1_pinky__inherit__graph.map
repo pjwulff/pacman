@@ -1,6 +1,0 @@
-<map id="pacman.pinky.Pinky" name="pacman.pinky.Pinky">
-<area shape="rect" id="node1" title="The pink &#39;Pinky&#39; ghost." alt="" coords="41,244,192,271"/>
-<area shape="rect" id="node2" href="$classpacman_1_1ghost_1_1_ghost.html" title="Base class for all Ghost types." alt="" coords="39,169,195,196"/>
-<area shape="rect" id="node3" href="$classpacman_1_1moving__sprite_1_1_moving_sprite.html" title="Base class for all sprites which move during gameplay." alt="" coords="5,80,228,121"/>
-<area shape="rect" id="node4" href="$classpacman_1_1sprite_1_1_sprite.html" title="Base class for all displayable sprites." alt="" coords="38,5,195,32"/>
-</map>

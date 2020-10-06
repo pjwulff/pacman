@@ -29,6 +29,7 @@ var NAVTREE =
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
@@ -37,8 +38,9 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -49,7 +51,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"____init_____8py.html"
+"____init_____8py.html",
+"classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html#af9a3a726df2ba5e0a82fe79c065f0119",
+"moving__sprite__controller_8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['arena_37',['arena',['../namespacepacman_1_1arena.html',1,'pacman']]],
-  ['avatar_38',['avatar',['../namespacepacman_1_1avatar.html',1,'pacman']]],
-  ['blinky_39',['blinky',['../namespacepacman_1_1blinky.html',1,'pacman']]],
-  ['clyde_40',['clyde',['../namespacepacman_1_1clyde.html',1,'pacman']]],
-  ['dot_41',['dot',['../namespacepacman_1_1dot.html',1,'pacman']]],
-  ['game_42',['game',['../namespacepacman_1_1game.html',1,'pacman']]],
-  ['game_5fstate_43',['game_state',['../namespacepacman_1_1game__state.html',1,'pacman']]],
-  ['ghost_44',['ghost',['../namespacepacman_1_1ghost.html',1,'pacman']]],
-  ['inky_45',['inky',['../namespacepacman_1_1inky.html',1,'pacman']]],
-  ['moving_5fsprite_46',['moving_sprite',['../namespacepacman_1_1moving__sprite.html',1,'pacman']]],
-  ['node_47',['node',['../namespacepacman_1_1node.html',1,'pacman']]],
-  ['pacman_48',['pacman',['../namespacepacman.html',1,'']]],
-  ['pacman_2epy_49',['pacman.py',['../pacman_8py.html',1,'']]],
-  ['pacman_5fgame_50',['pacman_game',['../namespacepacman.html#a7427e88a720172df4bae24ed0593b22a',1,'pacman']]],
-  ['pinky_51',['Pinky',['../classpacman_1_1pinky_1_1_pinky.html',1,'pacman.pinky.Pinky'],['../namespacepacman_1_1pinky.html',1,'pacman.pinky']]],
-  ['pinky_2epy_52',['pinky.py',['../pinky_8py.html',1,'']]],
-  ['portal_53',['portal',['../classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce',1,'pacman::node::Node']]],
-  ['position_54',['position',['../classpacman_1_1sprite_1_1_sprite.html#a5f4f303c713a3792e458cdec5faeaaa1',1,'pacman::sprite::Sprite']]],
-  ['power_55',['Power',['../classpacman_1_1power_1_1_power.html',1,'pacman.power.Power'],['../namespacepacman_1_1power.html',1,'pacman.power']]],
-  ['power_2epy_56',['power.py',['../power_8py.html',1,'']]],
-  ['powers_57',['powers',['../classpacman_1_1arena_1_1_arena.html#a2cc7e23e76e60200d42e59885a9d5f20',1,'pacman::arena::Arena']]],
-  ['sprite_58',['sprite',['../namespacepacman_1_1sprite.html',1,'pacman']]]
+  ['name_134',['name',['../classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a7a59a05a5367cab8907e5bee469bc5bf',1,'pacman_game.model.sprite.Sprite.name()'],['../namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f',1,'setup.name()']]],
+  ['neighbour_135',['neighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38',1,'pacman_game::model::node::Node']]],
+  ['neighbours_136',['neighbours',['../classpacman__game_1_1model_1_1node_1_1_node.html#a3a3452621670298dec9ef1e068a74b5c',1,'pacman_game::model::node::Node']]],
+  ['node_137',['Node',['../classpacman__game_1_1model_1_1node_1_1_node.html',1,'pacman_game::model::node']]],
+  ['node_2epy_138',['node.py',['../node_8py.html',1,'']]],
+  ['nodes_139',['nodes',['../classpacman__game_1_1model_1_1arena_1_1_arena.html#a7f872ec027bdafc2136a1cac5e2f5eb8',1,'pacman_game::model::arena::Arena']]],
+  ['normalise_140',['normalise',['../namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0',1,'pacman_game::model::angle']]]
 ];

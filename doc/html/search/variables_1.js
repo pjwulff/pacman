@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pacman_5fgame_150',['pacman_game',['../namespacepacman.html#a7427e88a720172df4bae24ed0593b22a',1,'pacman']]]
+  ['chase_5fduration_528',['chase_duration',['../classpacman__game_1_1controller_1_1config_1_1_config.html#ac1605c65298626a1ac7750833be369c3',1,'pacman_game::controller::config::Config']]]
 ];

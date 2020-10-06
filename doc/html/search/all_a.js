@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['moving_5fsprite_2epy_30',['moving_sprite.py',['../moving__sprite_8py.html',1,'']]],
-  ['movingsprite_31',['MovingSprite',['../classpacman_1_1moving__sprite_1_1_moving_sprite.html',1,'pacman::moving_sprite']]]
+  ['kill_119',['kill',['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a889262839641bed1bf340cd4c4ffbe7a',1,'pacman_game::controller::ghost_controller::GhostController']]]
 ];

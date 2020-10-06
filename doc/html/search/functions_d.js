@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['target_145',['target',['../classpacman_1_1blinky_1_1_blinky.html#a4edec7836b39e9edafc8c3b2979b9d2b',1,'pacman.blinky.Blinky.target()'],['../classpacman_1_1clyde_1_1_clyde.html#aaaa1951e23fae4bd3fc9317260961725',1,'pacman.clyde.Clyde.target()'],['../classpacman_1_1ghost_1_1_ghost.html#a80f8b6c905e1c4516b5be94092128219',1,'pacman.ghost.Ghost.target()'],['../classpacman_1_1inky_1_1_inky.html#a742f1f26abfc1f6e2ef0849ca94a6d8e',1,'pacman.inky.Inky.target()'],['../classpacman_1_1pinky_1_1_pinky.html#a5366dadb6778dc7d44feac9a4a056878',1,'pacman.pinky.Pinky.target()']]],
-  ['to_5fpos_146',['to_pos',['../classpacman_1_1moving__sprite_1_1_moving_sprite.html#a4d82259503ca84931f5f1cd6c7944563',1,'pacman::moving_sprite::MovingSprite']]]
+  ['name_471',['name',['../classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a7a59a05a5367cab8907e5bee469bc5bf',1,'pacman_game::model::sprite::Sprite']]],
+  ['neighbour_472',['neighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#a231e72016dd956fa862a7e51acef9f38',1,'pacman_game::model::node::Node']]],
+  ['neighbours_473',['neighbours',['../classpacman__game_1_1model_1_1node_1_1_node.html#a3a3452621670298dec9ef1e068a74b5c',1,'pacman_game::model::node::Node']]],
+  ['nodes_474',['nodes',['../classpacman__game_1_1model_1_1arena_1_1_arena.html#a7f872ec027bdafc2136a1cac5e2f5eb8',1,'pacman_game::model::arena::Arena']]],
+  ['normalise_475',['normalise',['../namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0',1,'pacman_game::model::angle']]]
 ];

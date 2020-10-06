@@ -1,5 +1,5 @@
 var files_dup =
 [
-    [ "pacman", "dir_76e298618f747179b218d2a83d42adb6.html", "dir_76e298618f747179b218d2a83d42adb6" ],
-    [ "pacman.py", "pacman_8py.html", "pacman_8py" ]
+    [ "pacman_game", "dir_20b6335c353961980e53c79c8949757e.html", "dir_20b6335c353961980e53c79c8949757e" ],
+    [ "setup.py", "setup_8py.html", "setup_8py" ]
 ];

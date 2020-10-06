@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sprite_87',['Sprite',['../classpacman_1_1sprite_1_1_sprite.html',1,'pacman::sprite']]]
+  ['node_298',['Node',['../classpacman__game_1_1model_1_1node_1_1_node.html',1,'pacman_game::model::node']]]
 ];

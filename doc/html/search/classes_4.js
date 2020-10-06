@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['game_79',['Game',['../classpacman_1_1game_1_1_game.html',1,'pacman::game']]],
-  ['gamestate_80',['GameState',['../classpacman_1_1game__state_1_1_game_state.html',1,'pacman::game_state']]],
-  ['ghost_81',['Ghost',['../classpacman_1_1ghost_1_1_ghost.html',1,'pacman::ghost']]]
+  ['enterhighscoredialogue_280',['EnterHighScoreDialogue',['../classpacman__game_1_1view_1_1enter__high__score__dialogue_1_1_enter_high_score_dialogue.html',1,'pacman_game::view::enter_high_score_dialogue']]]
 ];

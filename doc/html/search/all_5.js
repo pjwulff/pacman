@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['erase_18',['erase',['../classpacman_1_1game__state_1_1_game_state.html#a7407ccb87df2fa4aa576118a7ed85069',1,'pacman.game_state.GameState.erase()'],['../classpacman_1_1sprite_1_1_sprite.html#af4f0e4d61ef58a86666337a3d58d19fb',1,'pacman.sprite.Sprite.erase()']]]
+  ['enable_66',['enable',['../classpacman__game_1_1view_1_1popover__menu_1_1_toggle_group.html#a38bdde63331bc7caa3196eaa8a3198a6',1,'pacman_game.view.popover_menu.ToggleGroup.enable()'],['../classpacman__game_1_1view_1_1popover__menu_1_1_popover_menu.html#a1ec16599cc2225ceb84009428e33f3ff',1,'pacman_game.view.popover_menu.PopoverMenu.enable()'],['../classpacman__game_1_1view_1_1window_1_1_pacman_window.html#a9574a66e935fc0795031aac6287326f8',1,'pacman_game.view.window.PacmanWindow.enable()']]],
+  ['enter_5fhigh_5fscore_5fdialogue_2epy_67',['enter_high_score_dialogue.py',['../enter__high__score__dialogue_8py.html',1,'']]],
+  ['enterhighscoredialogue_68',['EnterHighScoreDialogue',['../classpacman__game_1_1view_1_1enter__high__score__dialogue_1_1_enter_high_score_dialogue.html',1,'pacman_game::view::enter_high_score_dialogue']]]
 ];

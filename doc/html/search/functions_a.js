@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['portal_134',['portal',['../classpacman_1_1node_1_1_node.html#a10b4d33b83099c3dec87a0be41eee6ce',1,'pacman::node::Node']]],
-  ['position_135',['position',['../classpacman_1_1sprite_1_1_sprite.html#a5f4f303c713a3792e458cdec5faeaaa1',1,'pacman::sprite::Sprite']]],
-  ['powers_136',['powers',['../classpacman_1_1arena_1_1_arena.html#a2cc7e23e76e60200d42e59885a9d5f20',1,'pacman::arena::Arena']]]
+  ['kill_461',['kill',['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a889262839641bed1bf340cd4c4ffbe7a',1,'pacman_game::controller::ghost_controller::GhostController']]]
 ];
