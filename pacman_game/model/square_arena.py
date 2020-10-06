@@ -37,10 +37,4 @@ class SquareArena(Arena):
                     nodes[i+j*width].add_geoneighbour(nodes[i+(j+1)*width])
                 if 0 < j:
                     nodes[i+j*width].add_geoneighbour(nodes[i+(j-1)*width])
-        self._avatar_start = nodes[width//2 + width*(2*height//3)-1]
-        self._ghost_return = nodes[width//2 + width*height//2]
-        self._pinky_start = nodes[0]
-        self._blinky_start = nodes[width-1]
-        self._inky_start = nodes[num_nodes-1]
-        self._clyde_start = nodes[num_nodes-width]
         return nodes

@@ -49,7 +49,6 @@ class Arena:
         while (True):
             self._nodes = self._generate_nodes(width, height)
             self._avatar_start = self._most_middle()
-            self._ghost_return = self._nodes[0]
             self._pinky_start = self._most_top_left()
             self._blinky_start = self._most_top_right()
             self._inky_start = self._most_bottom_right()

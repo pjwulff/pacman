@@ -5,9 +5,9 @@ import math
 # @param angle The angle to be normalised.
 # @return An angle between [-pi, pi).
 def normalise(angle):
-    while angle > math.pi:
+    while angle >= math.pi:
         angle = angle - 2*math.pi
-    while angle <= -math.pi:
+    while angle < -math.pi:
         angle = angle + 2*math.pi
     return angle
 
@@ -59,7 +59,7 @@ def flip(angle):
 # @param a The first angle.
 # @param b The second angle.
 #
-# @return The angle between them as a value between [-pi, pi).
+# @return The angle between them as a value between [0, pi]
 def angle(a, b):
     error = abs(a - b)
     if error > math.pi:
