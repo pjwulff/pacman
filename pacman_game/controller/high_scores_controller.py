@@ -1,9 +1,17 @@
 from ..model.db import DB
 
+## A controller to handle interfacing with the high score table.
 class HighScoresController:
-    def __init__(self):
-        pass
 
+    ## Insert a high score into the table, used when the player finishes
+    ## a game. The parameters for this function are the initials of the player,
+    ## and details of the game that were played.
+    #
+    # @param initials The initials of the user.
+    # @param score The score.
+    # @param difficulty The difficulty of the game.
+    # @param shape The shape of the maze.
+    # @param size The size of the maze.
     @classmethod
     def insert_high_score(cls, initials, score, difficulty, shape, size):
         db = DB()
@@ -16,6 +24,15 @@ class HighScoresController:
         db.commit()
         db.close()
 
+    ## Get a list of high scores, filtered according to some parameters.
+    #
+    # @param f The parameters by which to filter the results. Should be a
+    # dictionary mapping different game characteristics
+    # (e.g., "difficulty-easy") to boolean values, indicating if the results
+    # should be included or not.
+    # @return An ordered, filtered list of high scores. Each list element is
+    # a tuple, the first element of which is the initials, the second of which
+    # is the score itself.
     @classmethod
     def high_scores(cls, f):
         db = DB()

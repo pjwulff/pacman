@@ -123,6 +123,8 @@ class GameController:
 
     ## Eat a single dot. This should increase the score and remove it from
     ## the game world.
+    #
+    # @param dot The dot to be eaten.
     def _eat_dot(self, dot):
         self.world.score += 10
         self.world.dots.remove(dot)
@@ -131,13 +133,15 @@ class GameController:
     def _eat_powers(self):
         for power in self.world.powers:
             if power.collide(self.world.avatar):
-                self._eat_power()
+                self._eat_power(power)
 
     ## Eat a single power pill. This should increase the score, remove it from
     ## the game world, change the ghosts' behaviour to "frighten" and put the
     ## game in the `power' state (i.e., make it so the Avatar can temporarily
     ## consume the ghosts).
-    def _eat_power(self):
+    #
+    # @param power The power pill to be eaten.
+    def _eat_power(self, power):
         self.config.power_state = True
         self.config.ghost_behaviour_start_time = time.monotonic()
         self.config.ghost_behaviour_duration = self.config.frighten_duration

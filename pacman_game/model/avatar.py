@@ -2,11 +2,11 @@ from .moving_sprite import MovingSprite
 
 AVATAR_RADIUS = 11
 
+## Represents the yellow Avatar in the game.
 class Avatar(MovingSprite):
-    """! Represents the controllable yellow avatar in the game."""
 
+    ## Create a new Avatar.
+    #
+    # @param arena The Arena where this Avatar will live.
     def __init__(self, arena):
-        """! Create a new avatar.
-
-        @param arena The arena object to which this avatar belongs."""
         MovingSprite.__init__(self, arena, AVATAR_RADIUS, "avatar")
