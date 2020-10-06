@@ -4,7 +4,7 @@ from . import arena
 from .coordinate import Coordinate
 from .node import Node
 
-class MockArena(arena.Arena):
+class TestArena(arena.Arena):
     def __init__(self):
         super().__init__(10, 10, 100, 100, "shape")
 
@@ -31,7 +31,7 @@ class MockArena(arena.Arena):
 
 class ArenaTestCase(unittest.TestCase):
     def setUp(self):
-        self.arena = MockArena()
+        self.arena = TestArena()
         self.nodes = self.arena.nodes
 
     def test_shape(self):
