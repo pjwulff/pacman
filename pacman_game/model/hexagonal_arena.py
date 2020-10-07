@@ -12,6 +12,8 @@ class HexagonalArena(Arena):
     # @param width The logical width of the Arena.
     # @param height The logical height of the Arena.
     def __init__(self, width, height):
+        width += width % 2
+        height += height % 2
         super().__init__(width, height, (width-1)*24+12, (height-1)*24*HEX_SCALE, "hexagonal")
 
     ## Generate nodes based on a hexagonal grid.
@@ -40,11 +42,12 @@ class HexagonalArena(Arena):
                         node.add_geoneighbour(nodes[num+1])
                         nodes[num+1].add_geoneighbour(node)
                     elif i % 3 == 1:
-                        if j > 0:
+                        if j > 0 and i < (width - 1):
                             node.add_geoneighbour(nodes[num+1-width])
                             nodes[num+1-width].add_geoneighbour(node)
-                        node.add_geoneighbour(nodes[num+1+width])
-                        nodes[num+1+width].add_geoneighbour(node)
+                        if j < (height - 1) and i < (width - 1):
+                            node.add_geoneighbour(nodes[num+1+width])
+                            nodes[num+1+width].add_geoneighbour(node)
                 else:
                     if i % 3 == 2 and i < (width - 1):
                         node.add_geoneighbour(nodes[num+1])

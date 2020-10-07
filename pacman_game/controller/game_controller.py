@@ -246,7 +246,7 @@ class GameController:
     # how the user is controlling the Avatar (keyboard, mouse, joystick, etc).
     # An angle is used in order to remain agnostic.
     def set_direction(self, direction):
-        self._avatar_controller.set_direction(direction)
+        self._avatar_controller.target_direction = direction
 
 ## A factory class to create a GameController, and also a Config and World
 ## to go with it.

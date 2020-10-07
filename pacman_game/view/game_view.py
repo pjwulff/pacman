@@ -69,7 +69,7 @@ class GameView(Gtk.DrawingArea):
     # @param cr The cairo context to be used for drawing.
     def _draw_hud(self, cr):
         width = self._arena_view.rect.width + 48
-        cr.set_font_size(24)
+        cr.set_font_size(18)
         cr.set_source_rgb(1.0, 1.0, 1.0)
         cr.move_to(12, 24)
         cr.show_text("LIVES")
