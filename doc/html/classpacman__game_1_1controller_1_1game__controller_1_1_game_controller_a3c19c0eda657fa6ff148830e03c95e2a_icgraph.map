@@ -1,5 +1,4 @@
 <map id="pacman_game.controller.game_controller.GameController.config" name="pacman_game.controller.game_controller.GameController.config">
-<area shape="rect" id="node1" title="Get the ‘config’ for this controller." alt="" coords="555,29,793,71"/>
+<area shape="rect" id="node1" title="Get the ‘config’ for this controller." alt="" coords="279,29,517,71"/>
 <area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1game__controller_1_1_game_controller.html#a61bd763eb8dc0b840700e558e9fd5568" title="Quit the game early." alt="" coords="5,29,231,71"/>
-<area shape="rect" id="node3" href="$classpacman__game_1_1controller_1_1game__controller_1_1_game_controller.html#a75f7cb88ea390937367d5e737267923e" title="Stop the game." alt="" coords="279,59,507,100"/>
 </map>

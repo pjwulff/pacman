@@ -8,16 +8,12 @@ The overall controller for the game.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_aa91d6e760cebc274943bd155689c8d8f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3c19c0eda657fa6ff148830e03c95e2a}{config}}, \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3891f1b53de88dccbdd2b09c2f862f9f}{world}})
+def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a14ec33c95bba05cc75b3b505289cd065}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3c19c0eda657fa6ff148830e03c95e2a}{config}}, \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3891f1b53de88dccbdd2b09c2f862f9f}{world}}, next)
 \begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller}{Game\+Controller}}. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a11b18962753dfe880cd505f74ecd99ed}{over}} (self)
-\begin{DoxyCompactList}\small\item\em Get the `over' state of the game; i.\+e., if the game is over or still in play. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3891f1b53de88dccbdd2b09c2f862f9f}{world}} (self)
 \begin{DoxyCompactList}\small\item\em Get the `world' that this controller controls. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3c19c0eda657fa6ff148830e03c95e2a}{config}} (self)
 \begin{DoxyCompactList}\small\item\em Get the `config' for this controller. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a75f7cb88ea390937367d5e737267923e}{stop}} (self)
-\begin{DoxyCompactList}\small\item\em Stop the game. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a61bd763eb8dc0b840700e558e9fd5568}{quit}} (self)
 \begin{DoxyCompactList}\small\item\em Quit the game early. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a8c9dc4904518ddc92a656f4928b90d17}{set\+\_\+direction}} (self, direction)
@@ -34,11 +30,11 @@ Definition at line 11 of file game\+\_\+controller.\+py.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_aa91d6e760cebc274943bd155689c8d8f}\label{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_aa91d6e760cebc274943bd155689c8d8f}} 
+\mbox{\Hypertarget{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a14ec33c95bba05cc75b3b505289cd065}\label{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a14ec33c95bba05cc75b3b505289cd065}} 
 \index{pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}!\_\_init\_\_@{\_\_init\_\_}}
 \index{\_\_init\_\_@{\_\_init\_\_}!pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}}
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+game\+\_\+controller.\+Game\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{world }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+game\+\_\+controller.\+Game\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{world,  }\item[{}]{next }\end{DoxyParamCaption})}
 
 
 
@@ -55,11 +51,12 @@ Create a new \mbox{\hyperlink{classpacman__game_1_1controller_1_1game__controlle
 
 Definition at line 17 of file game\+\_\+controller.\+py.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_aa91d6e760cebc274943bd155689c8d8f_cgraph}
+\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a14ec33c95bba05cc75b3b505289cd065_cgraph}
 \end{center}
 \end{figure}
 
@@ -80,7 +77,7 @@ The config associated with this controller.
 \end{DoxyReturn}
 
 
-Definition at line 52 of file game\+\_\+controller.\+py.
+Definition at line 44 of file game\+\_\+controller.\+py.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -97,23 +94,6 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3c19c0eda657fa6ff148830e03c95e2a_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a11b18962753dfe880cd505f74ecd99ed}\label{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a11b18962753dfe880cd505f74ecd99ed}} 
-\index{pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}!over@{over}}
-\index{over@{over}!pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}}
-\doxysubsubsection{\texorpdfstring{over()}{over()}}
-{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+game\+\_\+controller.\+Game\+Controller.\+over (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
-
-
-Get the `over' state of the game; i.\+e., if the game is over or still in play. 
-
-\begin{DoxyReturn}{Returns}
-If the game is over or not. 
-\end{DoxyReturn}
-
-
-Definition at line 38 of file game\+\_\+controller.\+py.
-
 \mbox{\Hypertarget{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a61bd763eb8dc0b840700e558e9fd5568}\label{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a61bd763eb8dc0b840700e558e9fd5568}} 
 \index{pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}!quit@{quit}}
 \index{quit@{quit}!pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}}
@@ -126,7 +106,7 @@ Quit the game early.
 
 
 
-Definition at line 190 of file game\+\_\+controller.\+py.
+Definition at line 183 of file game\+\_\+controller.\+py.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -155,37 +135,8 @@ This public function is provided so that the `View' can specify in which directi
 \end{DoxyParams}
 
 
-Definition at line 248 of file game\+\_\+controller.\+py.
+Definition at line 243 of file game\+\_\+controller.\+py.
 
-\mbox{\Hypertarget{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a75f7cb88ea390937367d5e737267923e}\label{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a75f7cb88ea390937367d5e737267923e}} 
-\index{pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}!stop@{stop}}
-\index{stop@{stop}!pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}}
-\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
-{\footnotesize\ttfamily def pacman\+\_\+game.\+controller.\+game\+\_\+controller.\+Game\+Controller.\+stop (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
-
-
-Stop the game. 
-
-This will set the game to `over' and calls `join' on the main game thread. 
-
-Definition at line 185 of file game\+\_\+controller.\+py.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a75f7cb88ea390937367d5e737267923e_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a75f7cb88ea390937367d5e737267923e_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3891f1b53de88dccbdd2b09c2f862f9f}\label{classpacman__game_1_1controller_1_1game__controller_1_1_game_controller_a3891f1b53de88dccbdd2b09c2f862f9f}} 
 \index{pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}!world@{world}}
 \index{world@{world}!pacman\_game.controller.game\_controller.GameController@{pacman\_game.controller.game\_controller.GameController}}
@@ -201,7 +152,7 @@ The world associated with this controller.
 \end{DoxyReturn}
 
 
-Definition at line 45 of file game\+\_\+controller.\+py.
+Definition at line 37 of file game\+\_\+controller.\+py.
 
 Here is the caller graph for this function\+:
 \nopagebreak

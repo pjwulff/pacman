@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gio
+from gi.repository import GLib, Gtk, Gio
 
 from .controller.game_controller import GameControllerFactory
 from .controller.high_scores_controller import HighScoresController
@@ -34,28 +34,44 @@ class Game(Gtk.Application):
     def start_game(self, difficulty, shape, size):
         self._disable()
         self._controller = GameControllerFactory.make_controller(
+            self.game_over,
             difficulty = difficulty,
             shape = shape,
             size = size)
         world = self._controller.world
-        l = lambda: self.game_over(world.score, difficulty, shape, size)
-        view = GameView(self._controller, self._controller.world, l)
+        view = GameView(self._controller, self._controller.world)
         self._window.display_game_view(view)
 
     ## A callback to be called when the game is over.
     #
-    # @param score The score achieved by the player.
+    # @param score The score achieved by the player, or None if the player
+    # quit.
     # @param difficulty The difficulty of the game.
     # @param shape The shape of the maze.
     # @param size The size of the maze.
     def game_over(self, score, difficulty, shape, size):
         self._controller = None
-        dialogue = EnterHighScoreDialogue(score)
-        dialogue.run()
-        initials = dialogue.get_result()
-        if initials is not None and initials != "":
-            HighScoresController.insert_high_score(initials, score,
-                                                   difficulty, shape, size)
+        GLib.idle_add(self._game_over_aux, score, difficulty, shape, size)
+
+    ## An auxilliary function for game_over. It is possible for the game_over
+    ## function to be called outside of GLib's main loop, which can cause
+    ## problems if the thread then attempts to use Gtk widgets (such as
+    ## the high score dialogue). game_over will therefore call this function
+    ## in GLib's main thread
+    #
+    # @param score The score achieved by the player, or None if the player
+    # quit.
+    # @param difficulty The difficulty of the game.
+    # @param shape The shape of the maze.
+    # @param size The size of the maze.
+    def _game_over_aux(self, score, difficulty, shape, size):
+        if score is not None:
+            dialogue = EnterHighScoreDialogue(score)
+            dialogue.run()
+            initials = dialogue.get_result()
+            if initials is not None and initials != "":
+                HighScoresController.insert_high_score(initials, score,
+                                                       difficulty, shape, size)
         self._display_start_screen()
 
     ## Renable the window's UI and show the start screen.

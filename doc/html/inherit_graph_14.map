@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classpacman__game_1_1model_1_1world_1_1_world.html" title="A composite object that encapsulates everything about the current state of the ‘world’ of a running g..." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node1" href="$classpacman__game_1_1view_1_1arena__view_1_1_arena_view.html" title="An abstract base class for viewing an Arena." alt="" coords="5,39,199,80"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1graph__arena__view_1_1_graph_arena_view.html" title="Concrete class of type ArenaView." alt="" coords="250,5,466,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1view_1_1square__arena__view_1_1_square_arena_view.html" title="Concrete class of type ArenaView for drawing SquareArenas." alt="" coords="247,71,469,112"/>
 </map>

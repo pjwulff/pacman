@@ -14,9 +14,10 @@ class GameController:
     #
     # @param config The game configuration.
     # @param world The game world.
-    def __init__(self, config, world):
+    def __init__(self, config, world, next):
         self._config = config
         self._world = world
+        self._next = next
         self._avatar_controller = AvatarController(world.avatar)
         ghosts = world.ghosts
         self._ghost_controllers = {
@@ -26,17 +27,8 @@ class GameController:
             "pinky": GhostController(ghosts["pinky"], config.difficulty),
         }
         self._reset(time.monotonic())
-        self._quit = False
         self._thread = threading.Thread(target = self._run)
         self._thread.start()
-    
-    ## Get the `over' state of the game; i.e., if the game is over or
-    ## still in play.
-    #
-    # @return If the game is over or not.
-    @property
-    def over(self):
-        return self._config.over
 
     ## Get the `world' that this controller controls.
     #
@@ -70,7 +62,7 @@ class GameController:
             self._eat_dots()
             self._eat_powers()
             self._check_ghost_hit()
-            if self.config.over or self._quit:
+            if self.config.over:
                 break
             time.sleep(1.0/300.)
 
@@ -182,18 +174,21 @@ class GameController:
 
     ## Stop the game. This will set the game to `over' and calls `join' on the
     ## main game thread.
-    def stop(self):
+    def _stop(self):
         self.config.over = True
-        self._thread.join()
+        self._next(self.world.score, self.config.difficulty,
+                   self.config.shape, self.config.size)
 
     ## Quit the game early.
     def quit(self):
         self.config.over = True
         self._thread.join()
+        self._next(None, self.config.difficulty,
+                   self.config.shape, self.config.size)
 
     ## Stops the game because the player lost (i.e., all lives were lost).
     def _lose(self):
-        self.stop()
+        self._stop()
 
     ## Indicate that the player has `won' (in other words, beaten this level).
     ## This moves to a new level, resets the game, and increases the difficulty.
@@ -264,9 +259,10 @@ class GameControllerFactory:
     # will be used as a default.
     @classmethod
     def make_controller(cls,
+                        next,
                         difficulty = "easy",
                         shape = "square",
                         size = "small"):
         config = Config(difficulty, shape, size)
         world = World(size, shape)
-        return GameController(config, world)
+        return GameController(config, world, next)

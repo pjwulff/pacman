@@ -51,9 +51,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"____init_____8py.html",
-"classpacman__game_1_1model_1_1node_1_1_node.html#a4493147a0cde03175d7c16603d072720",
-"namespacepacman__game_1_1model_1_1arena__factory.html"
+"angle_8py.html",
+"classpacman__game_1_1model_1_1sprite_1_1_sprite.html#a7a59a05a5367cab8907e5bee469bc5bf",
+"classtest_1_1model_1_1node__test_1_1_node_test_case.html#ae69bc915380cb38dc1b4d7985d5be6fc",
+"namespacepacman__game_1_1view.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

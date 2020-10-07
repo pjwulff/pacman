@@ -1,5 +1,6 @@
 <map id="pacman_game.game.Game.game_over" name="pacman_game.game.Game.game_over">
-<area shape="rect" id="node1" title="A callback to be called when the game is over." alt="" coords="5,46,284,73"/>
+<area shape="rect" id="node1" title="A callback to be called when the game is over." alt="" coords="5,78,284,105"/>
 <area shape="rect" id="node2" href="$classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="332,5,539,47"/>
 <area shape="rect" id="node3" href="$classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="332,71,539,112"/>
+<area shape="rect" id="node4" href="$classpacman__game_1_1game_1_1_game.html#a87d1c5ba6681eb63872a8d6406d6ffb6" title="An auxilliary function for game_over." alt="" coords="332,136,539,177"/>
 </map>

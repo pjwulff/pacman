@@ -1,8 +1,11 @@
 <map id="pacman_game.view.window.PacmanWindow.on_start_button_clicked" name="pacman_game.view.window.PacmanWindow.on_start_button_clicked">
-<area shape="rect" id="node1" title="A callback called when the user clicks the ‘Start’ button." alt="" coords="5,97,215,153"/>
-<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#ab1f2ada89aef343c9b9f8bc7e1913cb0" title="Get the selected difficulty in the preferences." alt="" coords="263,5,472,47"/>
-<area shape="rect" id="node4" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a31f5c996625da25daa43108d43b24eb1" title="Get the shape of this maze." alt="" coords="263,71,471,112"/>
-<area shape="rect" id="node5" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#ac553e2014a86e39856cdb9779268441b" title="Get the selected shape in the preferences." alt="" coords="263,136,472,177"/>
-<area shape="rect" id="node6" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#af9e25ecb2d57298346e349e37df343fd" title="Get the selected size in the preferences." alt="" coords="263,201,472,243"/>
-<area shape="rect" id="node3" href="$namespacepacman__game_1_1view_1_1window.html#a4a84a803bf473e7c466c9d250912ee81" title=" " alt="" coords="520,136,784,177"/>
+<area shape="rect" id="node1" title="A callback called when the user clicks the ‘Start’ button." alt="" coords="5,194,215,250"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#a42cc6a4c5141148e9aed6d7904308de2" title="The difficulty of this configuration." alt="" coords="263,5,493,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#ab1f2ada89aef343c9b9f8bc7e1913cb0" title="Get the selected difficulty in the preferences." alt="" coords="273,71,483,112"/>
+<area shape="rect" id="node5" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#a3ab6431b554232ff150605d853592205" title="The shape of this configuration." alt="" coords="263,136,493,177"/>
+<area shape="rect" id="node6" href="$classpacman__game_1_1model_1_1arena_1_1_arena.html#a31f5c996625da25daa43108d43b24eb1" title="Get the shape of this maze." alt="" coords="274,201,482,243"/>
+<area shape="rect" id="node7" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#ac553e2014a86e39856cdb9779268441b" title="Get the selected shape in the preferences." alt="" coords="273,267,483,308"/>
+<area shape="rect" id="node8" href="$classpacman__game_1_1controller_1_1config_1_1_config.html#aec28fbbbb4e082c793d55617c2ae6147" title="The size of this configuration." alt="" coords="263,332,493,373"/>
+<area shape="rect" id="node9" href="$classpacman__game_1_1view_1_1window_1_1_pacman_window.html#af9e25ecb2d57298346e349e37df343fd" title="Get the selected size in the preferences." alt="" coords="273,397,483,439"/>
+<area shape="rect" id="node4" href="$namespacepacman__game_1_1view_1_1window.html#a4a84a803bf473e7c466c9d250912ee81" title=" " alt="" coords="541,267,805,308"/>
 </map>

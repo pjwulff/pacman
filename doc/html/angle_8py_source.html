@@ -90,9 +90,9 @@ $(document).ready(function(){initNavTree('angle_8py_source.html',''); initResiza
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0">    7</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacepacman__game_1_1model_1_1angle.html#a789c2f52e2e11727505e05b915739cd0">normalise</a>(angle):</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">while</span> angle &gt; math.pi:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">while</span> angle &gt;= math.pi:</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        angle = angle - 2*math.pi</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">while</span> angle &lt;= -math.pi:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">while</span> angle &lt; -math.pi:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        angle = angle + 2*math.pi</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> angle</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>

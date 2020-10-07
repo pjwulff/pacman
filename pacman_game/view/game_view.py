@@ -19,12 +19,11 @@ class GameView(Gtk.DrawingArea):
     # @param world The World object representing the state of the game. We will
     # use this model as a source for information of what to draw.
     # @param next A callback to be called with the game ends,
-    def __init__(self, controller, world, next, **kwargs):
+    def __init__(self, controller, world, **kwargs):
         super().__init__(**kwargs)
         self.set_can_focus(True)
         self._controller = controller
         self._world = world
-        self._next = next
         self._scale = 1.5
         self._avatar_view = AvatarView(world.avatar)
         self._arena_view = ArenaViewFactory.make_arena_view(world.arena)
@@ -42,6 +41,7 @@ class GameView(Gtk.DrawingArea):
         self.connect("key-press-event", self.on_key_press)
         self.connect("key-release-event", self.on_key_release)
         GObject.timeout_add(1000.0/60.0, self.tick)
+        self._continue = True
 
     ## A callback to be called when we need to draw the view.
     #
@@ -92,10 +92,10 @@ class GameView(Gtk.DrawingArea):
     # not over), False otherwise.
     def tick(self):
         self.queue_draw()
-        cont = not self._controller.over
-        if not cont:
-            self._next()
-        return cont
+        return self._continue
+
+    def stop(self):
+        self._continue = False
     
     ## Get the index into an array for an arrow keypress.
     #
@@ -122,6 +122,7 @@ class GameView(Gtk.DrawingArea):
             self._keys[index] = True
         if event.keyval == Gdk.KEY_q:
             self._controller.quit()
+            return True
         self._controller.set_direction(self._direction(self._keys))
         return True
     
@@ -135,6 +136,7 @@ class GameView(Gtk.DrawingArea):
             self._keys[index] = False
         if event.keyval == Gdk.KEY_q:
             self._controller.quit()
+            return True
         self._controller.set_direction(self._direction(self._keys))
         return True
 

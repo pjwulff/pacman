@@ -1,6 +1,6 @@
 var dir_e1e0c3791e344769caa330c705b66dcf =
 [
-    [ "__init__.py", "model_2____init_____8py.html", null ],
+    [ "__init__.py", "pacman__game_2model_2____init_____8py.html", null ],
     [ "angle.py", "angle_8py.html", "angle_8py" ],
     [ "arena.py", "arena_8py.html", [
       [ "Arena", "classpacman__game_1_1model_1_1arena_1_1_arena.html", "classpacman__game_1_1model_1_1arena_1_1_arena" ]
@@ -25,9 +25,6 @@ var dir_e1e0c3791e344769caa330c705b66dcf =
       [ "DB", "classpacman__game_1_1model_1_1db_1_1_d_b.html", "classpacman__game_1_1model_1_1db_1_1_d_b" ]
     ] ],
     [ "dot.py", "dot_8py.html", "dot_8py" ],
-    [ "game.py", "model_2game_8py.html", [
-      [ "GameState", "classpacman__game_1_1model_1_1game_1_1_game_state.html", "classpacman__game_1_1model_1_1game_1_1_game_state" ]
-    ] ],
     [ "ghost.py", "ghost_8py.html", "ghost_8py" ],
     [ "graph_arena.py", "graph__arena_8py.html", [
       [ "GraphArena", "classpacman__game_1_1model_1_1graph__arena_1_1_graph_arena.html", "classpacman__game_1_1model_1_1graph__arena_1_1_graph_arena" ]

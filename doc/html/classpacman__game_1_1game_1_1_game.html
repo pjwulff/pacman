@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('classpacman__game_1_1game_1_1_game.htm
 Inheritance diagram for pacman_game.game.Game:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game__inherit__graph.png" border="0" usemap="#apacman__game_8game_8_game_inherit__map" alt="Inheritance graph"/></div>
-<map name="pacman__game_8game_8_game_inherit__map" id="apacman__game_8game_8_game_inherit__map">
+<map name="pacman__game_8game_8_game_inherit__map" id="pacman__game_8game_8_game_inherit__map">
 <area shape="rect" title="A Gtk.Application class to manage the overall game, from creating the window to starting controllers." alt="" coords="5,80,208,107"/>
 <area shape="rect" title=" " alt="" coords="43,5,170,32"/>
 </map>
@@ -105,7 +105,7 @@ Inheritance diagram for pacman_game.game.Game:</div>
 Collaboration diagram for pacman_game.game.Game:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game__coll__graph.png" border="0" usemap="#apacman__game_8game_8_game_coll__map" alt="Collaboration graph"/></div>
-<map name="pacman__game_8game_8_game_coll__map" id="apacman__game_8game_8_game_coll__map">
+<map name="pacman__game_8game_8_game_coll__map" id="pacman__game_8game_8_game_coll__map">
 <area shape="rect" title="A Gtk.Application class to manage the overall game, from creating the window to starting controllers." alt="" coords="5,80,208,107"/>
 <area shape="rect" title=" " alt="" coords="43,5,170,32"/>
 </map>
@@ -181,12 +181,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game_a7ef0517b81b772b036e1d1dd48dac2cf_cgraph.png" border="0" usemap="#aclasspacman__game_1_1game_1_1_game_a7ef0517b81b772b036e1d1dd48dac2cf_cgraph" alt=""/></div>
 <map name="classpacman__game_1_1game_1_1_game_a7ef0517b81b772b036e1d1dd48dac2cf_cgraph" id="aclasspacman__game_1_1game_1_1_game_a7ef0517b81b772b036e1d1dd48dac2cf_cgraph">
-<area shape="rect" title="A callback called when the Gtk.Application is started." alt="" coords="5,35,228,76"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a99555fa2833aa705a4b65dfff107b5a7" title="Called when the user wishes to start the game." alt="" coords="276,42,556,69"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a6bf690ff0b2b6159c04618848e1127d9" title="Disable the GUI." alt="" coords="640,5,847,47"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a91c3ef65091d90b78360cb29f8b808e8" title="A callback to be called when the game is over." alt="" coords="604,71,883,98"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="931,31,1137,72"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="931,96,1137,137"/>
+<area shape="rect" title="A callback called when the Gtk.Application is started." alt="" coords="5,41,228,83"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a99555fa2833aa705a4b65dfff107b5a7" title="Called when the user wishes to start the game." alt="" coords="276,49,556,75"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a6bf690ff0b2b6159c04618848e1127d9" title="Disable the GUI." alt="" coords="640,12,847,53"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a91c3ef65091d90b78360cb29f8b808e8" title="A callback to be called when the game is over." alt="" coords="604,78,883,105"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="931,5,1137,47"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="931,71,1137,112"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a87d1c5ba6681eb63872a8d6406d6ffb6" title="An auxilliary function for game_over." alt="" coords="931,136,1137,177"/>
 </map>
 </div>
 
@@ -210,7 +211,7 @@ Here is the call graph for this function:</div>
 
 <p>A callback called when the application should shut down. </p>
 
-<p class="definition">Definition at line <a class="el" href="game_8py_source.html#l00075">75</a> of file <a class="el" href="game_8py_source.html">game.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8py_source.html#l00091">91</a> of file <a class="el" href="game_8py_source.html">game.py</a>.</p>
 
 </div>
 </div>
@@ -261,7 +262,7 @@ Here is the call graph for this function:</div>
 <p>A callback to be called when the game is over. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">score</td><td>The score achieved by the player. </td></tr>
+    <tr><td class="paramname">score</td><td>The score achieved by the player, or None if the player quit. </td></tr>
     <tr><td class="paramname">difficulty</td><td>The difficulty of the game. </td></tr>
     <tr><td class="paramname">shape</td><td>The shape of the maze. </td></tr>
     <tr><td class="paramname">size</td><td>The size of the maze. </td></tr>
@@ -269,22 +270,23 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="game_8py_source.html#l00051">51</a> of file <a class="el" href="game_8py_source.html">game.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8py_source.html#l00052">52</a> of file <a class="el" href="game_8py_source.html">game.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_cgraph.png" border="0" usemap="#aclasspacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_cgraph" alt=""/></div>
 <map name="classpacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_cgraph" id="aclasspacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_cgraph">
-<area shape="rect" title="A callback to be called when the game is over." alt="" coords="5,46,284,73"/>
+<area shape="rect" title="A callback to be called when the game is over." alt="" coords="5,78,284,105"/>
 <area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="332,5,539,47"/>
 <area shape="rect" href="classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="332,71,539,112"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a87d1c5ba6681eb63872a8d6406d6ffb6" title="An auxilliary function for game_over." alt="" coords="332,136,539,177"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_icgraph.png" border="0" usemap="#aclasspacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_icgraph" alt=""/></div>
-<map name="classpacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_icgraph" id="aclasspacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_icgraph">
+<map name="classpacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_icgraph" id="classpacman__game_1_1game_1_1_game_a91c3ef65091d90b78360cb29f8b808e8_icgraph">
 <area shape="rect" title="A callback to be called when the game is over." alt="" coords="604,13,883,39"/>
 <area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a99555fa2833aa705a4b65dfff107b5a7" title="Called when the user wishes to start the game." alt="" coords="276,13,556,39"/>
 <area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a7ef0517b81b772b036e1d1dd48dac2cf" title="A callback called when the Gtk.Application is started." alt="" coords="5,5,228,47"/>
@@ -347,18 +349,19 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_cgraph.png" border="0" usemap="#aclasspacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_cgraph" alt=""/></div>
 <map name="classpacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_cgraph" id="aclasspacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_cgraph">
-<area shape="rect" title="Called when the user wishes to start the game." alt="" coords="5,42,285,69"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a6bf690ff0b2b6159c04618848e1127d9" title="Disable the GUI." alt="" coords="369,5,576,47"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a91c3ef65091d90b78360cb29f8b808e8" title="A callback to be called when the game is over." alt="" coords="333,71,612,98"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="660,31,867,72"/>
-<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="660,96,867,137"/>
+<area shape="rect" title="Called when the user wishes to start the game." alt="" coords="5,49,285,75"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a6bf690ff0b2b6159c04618848e1127d9" title="Disable the GUI." alt="" coords="369,12,576,53"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a91c3ef65091d90b78360cb29f8b808e8" title="A callback to be called when the game is over." alt="" coords="333,78,612,105"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a02656d4c9ddfc79b1fad828fe0002814" title="Renable the window&#39;s UI and show the start screen." alt="" coords="660,5,867,47"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#ad67e0daed3d350991f31b2640e53866c" title="Enable the GUI." alt="" coords="660,71,867,112"/>
+<area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a87d1c5ba6681eb63872a8d6406d6ffb6" title="An auxilliary function for game_over." alt="" coords="660,136,867,177"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_icgraph.png" border="0" usemap="#aclasspacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_icgraph" alt=""/></div>
-<map name="classpacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_icgraph" id="aclasspacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_icgraph">
+<map name="classpacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_icgraph" id="classpacman__game_1_1game_1_1_game_a99555fa2833aa705a4b65dfff107b5a7_icgraph">
 <area shape="rect" title="Called when the user wishes to start the game." alt="" coords="276,13,556,39"/>
 <area shape="rect" href="classpacman__game_1_1game_1_1_game.html#a7ef0517b81b772b036e1d1dd48dac2cf" title="A callback called when the Gtk.Application is started." alt="" coords="5,5,228,47"/>
 </map>

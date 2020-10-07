@@ -1,6 +1,6 @@
 var dir_10189611785b87beb8234aa72da78c1b =
 [
-    [ "__init__.py", "view_2____init_____8py.html", null ],
+    [ "__init__.py", "pacman__game_2view_2____init_____8py.html", null ],
     [ "arena_view.py", "arena__view_8py.html", [
       [ "ArenaView", "classpacman__game_1_1view_1_1arena__view_1_1_arena_view.html", "classpacman__game_1_1view_1_1arena__view_1_1_arena_view" ]
     ] ],

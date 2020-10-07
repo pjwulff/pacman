@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['mode_519',['mode',['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#ae8eedaf3628a480b75503b5db84086c5',1,'pacman_game.controller.ghost_controller.GhostController.mode()'],['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#a28182b0c319a966ed5fa9a0c0bd4c575',1,'pacman_game.model.ghost.Ghost.mode()']]]
+  ['level_922',['level',['../classpacman__game_1_1model_1_1world_1_1_world.html#adf05e395a918c5c9c2d672e99d60538d',1,'pacman_game::model::world::World']]],
+  ['license_923',['license',['../namespacesetup.html#a8ed6f50a28bd6a8794f8e1153baa6de9',1,'setup']]],
+  ['lives_924',['lives',['../classpacman__game_1_1model_1_1world_1_1_world.html#a70b28c3f58235cefac479db862d32a0d',1,'pacman_game::model::world::World']]]
 ];

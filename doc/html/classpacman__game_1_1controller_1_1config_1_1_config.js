@@ -7,7 +7,6 @@ var classpacman__game_1_1controller_1_1config_1_1_config =
     [ "current_ghost_behaviour", "classpacman__game_1_1controller_1_1config_1_1_config.html#afb27b10899a7aa818732695f72841f51", null ],
     [ "current_ghost_behaviour", "classpacman__game_1_1controller_1_1config_1_1_config.html#ad3abab001eff71b7fc335a3cc06f5db5", null ],
     [ "difficulty", "classpacman__game_1_1controller_1_1config_1_1_config.html#a42cc6a4c5141148e9aed6d7904308de2", null ],
-    [ "difficulty", "classpacman__game_1_1controller_1_1config_1_1_config.html#a8a218c31c72fc2e32db307a89383d788", null ],
     [ "frighten_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#a707924e37cd7d7f9d499bb5eb0bcfe74", null ],
     [ "frighten_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#aaf1b709d76e8cd6f574cf6e09e0b9b15", null ],
     [ "frighten_duration_multiplier", "classpacman__game_1_1controller_1_1config_1_1_config.html#aa417ccc64f7f2c0ddcbf62cbf028f60f", null ],
@@ -23,17 +22,12 @@ var classpacman__game_1_1controller_1_1config_1_1_config =
     [ "scatter_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#ad63163ddc9a40950ab3179b8c297b11e", null ],
     [ "scatter_duration_multiplier", "classpacman__game_1_1controller_1_1config_1_1_config.html#a84fd94e6097dafebb1bd6682b5ad6e82", null ],
     [ "shape", "classpacman__game_1_1controller_1_1config_1_1_config.html#a3ab6431b554232ff150605d853592205", null ],
-    [ "shape", "classpacman__game_1_1controller_1_1config_1_1_config.html#a807a0d962dfaeb4d6cdc866428065735", null ],
     [ "size", "classpacman__game_1_1controller_1_1config_1_1_config.html#aec28fbbbb4e082c793d55617c2ae6147", null ],
-    [ "size", "classpacman__game_1_1controller_1_1config_1_1_config.html#a8dc2f43ad804cd05305d8867e411be83", null ],
     [ "start_time", "classpacman__game_1_1controller_1_1config_1_1_config.html#ac3ff2115996b55a3462c620109b17e56", null ],
     [ "start_time", "classpacman__game_1_1controller_1_1config_1_1_config.html#ae75d56d6f946ff374d2a109e183b42f1", null ],
     [ "chase_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#ac1605c65298626a1ac7750833be369c3", null ],
-    [ "difficulty", "classpacman__game_1_1controller_1_1config_1_1_config.html#a4bdaa61f30b5608c0eed1f7eff7f10de", null ],
     [ "frighten_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#ac08725292132d986fe7dbc45d4fd7730", null ],
     [ "over", "classpacman__game_1_1controller_1_1config_1_1_config.html#a9d3d1fe4ee5351e21d806f4db6052a8a", null ],
     [ "power_state", "classpacman__game_1_1controller_1_1config_1_1_config.html#a0ca205814544bbe73b059bee53087fa3", null ],
-    [ "scatter_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#a3e4c3fc9a36e9bf410b5418a913c6602", null ],
-    [ "shape", "classpacman__game_1_1controller_1_1config_1_1_config.html#a37158b60d9601d0265c4ae584e08b826", null ],
-    [ "size", "classpacman__game_1_1controller_1_1config_1_1_config.html#ab2e930a1419f90d8bc13396eb1d126fc", null ]
+    [ "scatter_duration", "classpacman__game_1_1controller_1_1config_1_1_config.html#a3e4c3fc9a36e9bf410b5418a913c6602", null ]
 ];

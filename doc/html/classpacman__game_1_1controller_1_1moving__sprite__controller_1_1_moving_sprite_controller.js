@@ -4,7 +4,6 @@ var classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_spr
     [ "direction", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a7447d3c2a418e42722091ed4b2f38125", null ],
     [ "from_pos", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a24822f169cabd95e2bc65f36fe2ad222", null ],
     [ "return_to_spawn", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a398aca1a4451874cbd78d53871f79779", null ],
-    [ "set_direction", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#afd7cbd8ae0b0dafff083f547fa9573fb", null ],
     [ "speed", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#aea4e90886680b0123604fd29bf5bcaf3", null ],
     [ "speed", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a72f70db6bc51d3e6830b521934127c77", null ],
     [ "speed_scale", "classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#adf9a54227ac0ef271afd0b04c6416978", null ],

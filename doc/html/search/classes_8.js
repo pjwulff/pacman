@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['movingsprite_284',['MovingSprite',['../classpacman__game_1_1model_1_1moving__sprite_1_1_moving_sprite.html',1,'pacman_game::model::moving_sprite']]],
-  ['movingspritecontroller_285',['MovingSpriteController',['../classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html',1,'pacman_game::controller::moving_sprite_controller']]]
+  ['inky_503',['Inky',['../classpacman__game_1_1model_1_1inky_1_1_inky.html',1,'pacman_game::model::inky']]],
+  ['inkytestcase_504',['InkyTestCase',['../classtest_1_1model_1_1inky__test_1_1_inky_test_case.html',1,'test::model::inky_test']]]
 ];

@@ -1,4 +1,5 @@
 <map id="pacman_game.controller.ghost_controller.GhostController.reset" name="pacman_game.controller.ghost_controller.GhostController.reset">
-<area shape="rect" id="node1" title="Reset this ghost." alt="" coords="5,13,237,54"/>
+<area shape="rect" id="node1" title="Reset this ghost." alt="" coords="5,50,237,91"/>
 <area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#a398aca1a4451874cbd78d53871f79779" title="Return this sprite to its spawn location in the map." alt="" coords="285,5,616,61"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1controller_1_1moving__sprite__controller_1_1_moving_sprite_controller.html#ad4479f2cb733652a2f2717d525d85013" title="Gets the sprite this controller is controlling." alt="" coords="287,86,615,127"/>
 </map>

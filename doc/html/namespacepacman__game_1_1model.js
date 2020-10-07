@@ -9,7 +9,6 @@ var namespacepacman__game_1_1model =
     [ "coordinate", "namespacepacman__game_1_1model_1_1coordinate.html", "namespacepacman__game_1_1model_1_1coordinate" ],
     [ "db", "namespacepacman__game_1_1model_1_1db.html", "namespacepacman__game_1_1model_1_1db" ],
     [ "dot", "namespacepacman__game_1_1model_1_1dot.html", "namespacepacman__game_1_1model_1_1dot" ],
-    [ "game", "namespacepacman__game_1_1model_1_1game.html", "namespacepacman__game_1_1model_1_1game" ],
     [ "ghost", "namespacepacman__game_1_1model_1_1ghost.html", "namespacepacman__game_1_1model_1_1ghost" ],
     [ "graph_arena", "namespacepacman__game_1_1model_1_1graph__arena.html", "namespacepacman__game_1_1model_1_1graph__arena" ],
     [ "hexagonal_arena", "namespacepacman__game_1_1model_1_1hexagonal__arena.html", "namespacepacman__game_1_1model_1_1hexagonal__arena" ],

@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,60,69,87"/>
-<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1enter__high__score__dialogue_1_1_enter_high_score_dialogue.html" title="A dialogue box for entering high scores." alt="" coords="117,5,348,61"/>
-<area shape="rect" id="node3" href="$classpacman__game_1_1view_1_1high__scores__dialogue_1_1_high_scores_dialogue.html" title="A dialogue box for viewing and filtering high scores." alt="" coords="127,85,338,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,112,39"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1view_1_1game__view_1_1_game_view.html" title="A View to handle viewing the game." alt="" coords="160,5,353,47"/>
 </map>

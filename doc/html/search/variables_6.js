@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['include_5fpackage_5fdata_514',['include_package_data',['../namespacesetup.html#a35139105b25ef46629d31888bad595d8',1,'setup']]],
-  ['install_5frequires_515',['install_requires',['../namespacesetup.html#abead4f26b530856f858f0d44c7cf2588',1,'setup']]]
+  ['hex_5fscale_917',['HEX_SCALE',['../namespacepacman__game_1_1model_1_1hexagonal__arena.html#a614fa2d87d7e287a8acfe4b8fd3b884f',1,'pacman_game::model::hexagonal_arena']]]
 ];

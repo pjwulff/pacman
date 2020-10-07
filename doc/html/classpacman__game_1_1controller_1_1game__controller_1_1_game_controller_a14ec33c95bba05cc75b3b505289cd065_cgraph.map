@@ -1,0 +1,5 @@
+<map id="pacman_game.controller.game_controller.GameController.__init__" name="pacman_game.controller.game_controller.GameController.__init__">
+<area shape="rect" id="node1" title="Create a new GameController." alt="" coords="5,31,229,87"/>
+<area shape="rect" id="node2" href="$classpacman__game_1_1controller_1_1game__controller_1_1_game_controller.html#ab8e7827b52f38ff357b318b79b1e7184" title="Reset the game world." alt="" coords="277,5,517,47"/>
+<area shape="rect" id="node3" href="$classpacman__game_1_1controller_1_1game__controller_1_1_game_controller.html#ab05782d4bc20c6cf256267365bcb36d4" title="Run the game." alt="" coords="283,71,511,112"/>
+</map>

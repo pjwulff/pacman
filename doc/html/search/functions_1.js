@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['add_5fgeoneighbour_394',['add_geoneighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#a0b9d5e630751159c4e69f52e7be00a0c',1,'pacman_game::model::node::Node']]],
-  ['add_5fneighbour_395',['add_neighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#aa1d7bb49a3d2f41d09b8f4adbfdf7ab0',1,'pacman_game::model::node::Node']]],
-  ['alive_396',['alive',['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a31736f042d83c4985323f0cb1d7a6e69',1,'pacman_game.controller.ghost_controller.GhostController.alive(self)'],['../classpacman__game_1_1controller_1_1ghost__controller_1_1_ghost_controller.html#a787b4fa399c5fed8a89d0420d8da67bc',1,'pacman_game.controller.ghost_controller.GhostController.alive(self, alive)'],['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#a96f294853ee37b88593ac7cf2ff468ed',1,'pacman_game.model.ghost.Ghost.alive(self)'],['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#abe4bc0b20a078c389957e26e61a3ebf0',1,'pacman_game.model.ghost.Ghost.alive(self, alive)']]],
-  ['angle_397',['angle',['../namespacepacman__game_1_1model_1_1angle.html#ac1604daedb25232f0f5c7699eead8acb',1,'pacman_game::model::angle']]],
-  ['arena_398',['arena',['../classpacman__game_1_1model_1_1game_1_1_game_state.html#a95ae9dcab5f03426e2f3e9dfd99c5cde',1,'pacman_game.model.game.GameState.arena(self)'],['../classpacman__game_1_1model_1_1game_1_1_game_state.html#a7f7cc16f1c960f2f483b59bcadb5daf2',1,'pacman_game.model.game.GameState.arena(self, arena)'],['../classpacman__game_1_1model_1_1world_1_1_world.html#a7ab5f04fb657403ada059ab720b9d59a',1,'pacman_game.model.world.World.arena()']]],
-  ['avatar_399',['avatar',['../classpacman__game_1_1model_1_1game_1_1_game_state.html#a6eb647357660c9ef42893ea8f513401c',1,'pacman_game.model.game.GameState.avatar()'],['../classpacman__game_1_1model_1_1world_1_1_world.html#a2feb102b7dc7cad71acb451c53b2f9e7',1,'pacman_game.model.world.World.avatar()']]]
+  ['add_5fgeoneighbour_679',['add_geoneighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#a0b9d5e630751159c4e69f52e7be00a0c',1,'pacman_game::model::node::Node']]],
+  ['add_5fneighbour_680',['add_neighbour',['../classpacman__game_1_1model_1_1node_1_1_node.html#aa1d7bb49a3d2f41d09b8f4adbfdf7ab0',1,'pacman_game::model::node::Node']]],
+  ['alive_681',['alive',['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#a96f294853ee37b88593ac7cf2ff468ed',1,'pacman_game.model.ghost.Ghost.alive(self)'],['../classpacman__game_1_1model_1_1ghost_1_1_ghost.html#abe4bc0b20a078c389957e26e61a3ebf0',1,'pacman_game.model.ghost.Ghost.alive(self, alive)']]],
+  ['angle_682',['angle',['../namespacepacman__game_1_1model_1_1angle.html#ac1604daedb25232f0f5c7699eead8acb',1,'pacman_game::model::angle']]],
+  ['arena_683',['arena',['../classpacman__game_1_1model_1_1world_1_1_world.html#a7ab5f04fb657403ada059ab720b9d59a',1,'pacman_game::model::world::World']]],
+  ['avatar_684',['avatar',['../classpacman__game_1_1model_1_1world_1_1_world.html#a2feb102b7dc7cad71acb451c53b2f9e7',1,'pacman_game::model::world::World']]]
 ];

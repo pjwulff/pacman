@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['level_516',['level',['../classpacman__game_1_1model_1_1game_1_1_game_state.html#a8c757a80c598de3d2ad375fc9cb982a8',1,'pacman_game.model.game.GameState.level()'],['../classpacman__game_1_1model_1_1world_1_1_world.html#adf05e395a918c5c9c2d672e99d60538d',1,'pacman_game.model.world.World.level()']]],
-  ['license_517',['license',['../namespacesetup.html#a8ed6f50a28bd6a8794f8e1153baa6de9',1,'setup']]],
-  ['lives_518',['lives',['../classpacman__game_1_1model_1_1game_1_1_game_state.html#a06075f3b1d7a05acdf2c8bcd8c022d79',1,'pacman_game.model.game.GameState.lives()'],['../classpacman__game_1_1model_1_1world_1_1_world.html#a70b28c3f58235cefac479db862d32a0d',1,'pacman_game.model.world.World.lives()']]]
+  ['include_5fpackage_5fdata_918',['include_package_data',['../namespacesetup.html#a35139105b25ef46629d31888bad595d8',1,'setup']]],
+  ['inky_919',['inky',['../classtest_1_1model_1_1inky__test_1_1_inky_test_case.html#a106b54da9a79851961a232dba1e542d8',1,'test::model::inky_test::InkyTestCase']]],
+  ['inky_5ftests_920',['inky_tests',['../namespacetest_1_1model_1_1inky__test.html#aa7bf597aae71e9831c383f37e8c79af7',1,'test::model::inky_test']]],
+  ['install_5frequires_921',['install_requires',['../namespacesetup.html#abead4f26b530856f858f0d44c7cf2588',1,'setup']]]
 ];

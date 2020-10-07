@@ -56,6 +56,7 @@ class PacmanWindow(Gtk.ApplicationWindow):
     def display_start_screen(self):
         game_view = self._stack.get_child_by_name("game-view")
         if game_view is not None:
+            game_view.stop()
             self._stack.remove(game_view)
             game_view.destroy()
 
