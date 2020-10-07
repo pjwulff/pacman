@@ -51,4 +51,4 @@ class Sprite:
     
     @property
     def rect(self):
-        return 
+        pass 

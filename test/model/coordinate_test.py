@@ -1,5 +1,5 @@
 import unittest
-from . import coordinate
+from pacman_game.model import coordinate
 
 class CoordinateTestCase(unittest.TestCase):
     def test_x(self):

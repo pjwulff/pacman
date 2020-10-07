@@ -1,6 +1,6 @@
 import unittest
-from . import power
-from .coordinate import Coordinate
+from pacman_game.model import power
+from pacman_game.model.coordinate import Coordinate
 
 class PowerTestCase(unittest.TestCase):
     def test_name(self):

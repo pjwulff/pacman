@@ -1,6 +1,6 @@
 import unittest
-from . import node
-from .coordinate import Coordinate
+from pacman_game.model import node
+from pacman_game.model.coordinate import Coordinate
 
 class NodeTestCase(unittest.TestCase):
     def setUp(self):

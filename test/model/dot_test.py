@@ -1,6 +1,6 @@
 import unittest
-from . import dot
-from .coordinate import Coordinate
+from pacman_game.model import dot
+from pacman_game.model.coordinate import Coordinate
 
 class DotTestCase(unittest.TestCase):
     def test_name(self):

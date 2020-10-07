@@ -27,9 +27,9 @@ class GhostController(MovingSpriteController):
     ## make the ghost `alive' and changes its current behaviour to `scatter'
     def reset(self):
         self.return_to_spawn()
-        self._sprite.alive = True
+        self.sprite.alive = True
         self._reverse = False
-        self._sprite.mode = "scatter"
+        self.sprite.mode = "scatter"
         
     ## Increase the difficulty for this ghost, which currently only means
     ## increasing the ghost's speed.
@@ -50,22 +50,8 @@ class GhostController(MovingSpriteController):
     ## Kill the ghost. Callec when the Avatar eats the ghost. This makes the
     ## ghost intangible and head back to its spawn location.
     def kill(self):
-        self.alive = False
+        self.sprite.alive = False
         self._reverse = True
-
-    ## Get whether or not this ghost is `alive'.
-    #
-    # @return True if this ghost is alive.
-    @property
-    def alive(self):
-        return self.sprite.alive
-
-    ## Set whether or not this ghost is alive.
-    #
-    # @param alive If the ghost is alive or not.
-    @alive.setter
-    def alive(self, alive):
-        self.sprite.alive = alive
 
     ## Get the current mode or behaviour for this ghost.
     #
@@ -105,7 +91,7 @@ class GhostController(MovingSpriteController):
     # @return A direction.
     def _respawn_direction(self):
         if self.from_pos == self.sprite.start_pos:
-            self.alive = True
+            self.sprite.alive = True
         pos = self.sprite.start_pos
         target = Coordinate(pos.x, pos.y)
         return self._generic_direction(target)
@@ -140,7 +126,7 @@ class GhostController(MovingSpriteController):
         return self._generic_direction(self._target)
 
     def _new_direction(self):
-        if not self.alive:
+        if not self.sprite.alive:
             return self._respawn_direction()
         elif self.mode == "scatter":
             return self._scatter_direction()

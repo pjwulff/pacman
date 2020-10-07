@@ -7,9 +7,9 @@ class Config:
     # @param shape The shape of the maze.
     # @param size The size of the maze.
     def __init__(self, difficulty, shape, size):
-        self.difficulty = difficulty
-        self.shape = shape
-        self.size = size
+        self._difficulty = difficulty
+        self._shape = shape
+        self._size = size
         self.over = False
         self.power_state = False
         self.chase_duration = 5.0
@@ -35,13 +35,6 @@ class Config:
     def difficulty(self):
         return self._difficulty
 
-    ## Set the difficulty of this configuration
-    #
-    # @param difficulty The difficulty.
-    @difficulty.setter
-    def difficulty(self, difficulty):
-        self._difficulty = difficulty
-
     ## The shape of this configuration.
     #
     # @return The shape of this configuration.
@@ -49,26 +42,12 @@ class Config:
     def shape(self):
         return self._shape
 
-    ## Set the shape of this configuration.
-    #
-    # @param shape The shape.
-    @shape.setter
-    def shape(self, shape):
-        self._shape = shape
-
     ## The size of this configuration
     #
     # @return The size of this configuration.
     @property
     def size(self):
         return self._size
-
-    ## Set the size of this configuration.
-    #
-    # @param size The size.
-    @size.setter
-    def size(self, size):
-        self._size = size
 
     ## The length of time the ghosts should spend chasing the avatar.
     #

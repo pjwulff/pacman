@@ -1,7 +1,7 @@
 import unittest
-from . import inky
-from .coordinate import Coordinate
-from .node import Node
+from pacman_game.model import inky
+from pacman_game.model.coordinate import Coordinate
+from pacman_game.model.node import Node
 
 class MockArena:
     def start_pos(self, name):

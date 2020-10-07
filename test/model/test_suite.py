@@ -13,6 +13,10 @@ from .moving_sprite_test import moving_sprite_tests
 from .node_test import node_tests
 from .pinky_test import pinky_tests
 from .power_test import power_tests
+from .rect_test import rect_tests
+from .shape_test import shape_tests
+from .sprite_test import sprite_tests
+from .world_test import world_tests
 
 tests = unittest.TestSuite((
     angle_tests,
@@ -29,4 +33,8 @@ tests = unittest.TestSuite((
     node_tests,
     pinky_tests,
     power_tests,
+    rect_tests,
+    shape_tests,
+    sprite_tests,
+    world_tests,
 ))

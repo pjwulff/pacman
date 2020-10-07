@@ -1,6 +1,6 @@
 import unittest
-from . import circle
-from .coordinate import Coordinate
+from pacman_game.model import circle
+from pacman_game.model.coordinate import Coordinate
 
 class CircleTestCase(unittest.TestCase):
     def test_radius(self):

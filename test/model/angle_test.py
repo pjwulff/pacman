@@ -1,6 +1,6 @@
 import math
 import unittest
-from . import angle
+from pacman_game.model import angle
 
 class NormaliseTestCase(unittest.TestCase):
     def test_smoke(self):

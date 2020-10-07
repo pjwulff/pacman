@@ -35,12 +35,9 @@ class MovingSpriteController:
     @target_direction.setter
     def target_direction(self, target_direction):
         self._target_direction = target_direction
-        if target_direction is not None and self.direction is not None and opposite(target_direction, self.direction) and not self._arrived:
+        if target_direction is not None and self.direction is not None and \
+            opposite(target_direction, self.direction) and not self._arrived:
             self._turn_around()
-    
-    ## Set the target direction for this sprite.
-    def set_direction(self, direction):
-        self.target_direction = direction
     
     ## Causes the sprite to turn around and reverse its direction.
     def _turn_around(self):
