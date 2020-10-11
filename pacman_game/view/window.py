@@ -60,6 +60,13 @@ class PacmanWindow(Gtk.ApplicationWindow):
             self._stack.remove(game_view)
             game_view.destroy()
 
+    ## Instruct the internal GameView to stop.
+    def stop(self):
+        game_view = self._stack.get_child_by_name("game-view")
+        if game_view is not None:
+            game_view.stop()
+
+
     ## Instruct the window to display a GameView.
     #
     # @param view The GameView object to be displayed in the window.

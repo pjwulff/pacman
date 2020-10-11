@@ -17,6 +17,6 @@ class ArenaViewFactory:
         elif shape == "hexagonal":
             return GraphArenaView(arena)
         elif shape == "graph":
-            return GraphArenaView(Arena)
+            return GraphArenaView(arena)
         else:
             raise ValueError(f"shape {shape} not recognised")

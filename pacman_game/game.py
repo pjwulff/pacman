@@ -51,6 +51,7 @@ class Game(Gtk.Application):
     # @param size The size of the maze.
     def game_over(self, score, difficulty, shape, size):
         self._controller = None
+        self._window.stop()
         GLib.idle_add(self._game_over_aux, score, difficulty, shape, size)
 
     ## An auxilliary function for game_over. It is possible for the game_over
